@@ -1,6 +1,6 @@
 | Data       | Versão | Descrição            | Autor             |
 |:----------:|:------:|:--------------------:|:-----------------:|
-| 20/03/2019 | 0.1 | Criação do documento com template inicial  | João Vitor |
+| 20/03/2019 | 0.1 | Criação do documento com template inicial  | João Vitor, Bruno Dantas, Ateldy Brasil e Vitor Gomes|
 
 ## Nome da Issue
 Caso a issue seja uma história de usuário deve-se criar a issue da seguinte forma:
