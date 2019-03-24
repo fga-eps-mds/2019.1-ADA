@@ -1,4 +1,4 @@
-# Contributing 
+# Contributing guidelines
 
 Thank you for taking the time to contribute! :tada:
 
