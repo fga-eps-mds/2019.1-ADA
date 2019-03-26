@@ -4,4 +4,4 @@
 - [Abertura e Especificação](#) 
   - [EAP](/#)
   - [TAP](/#)
-  - [Issue Template](/md_files/issue_template.md)
+  - [Issue Template](/docs/issue_template.md)
