@@ -1,6 +1,11 @@
-| Data       | Versão | Descrição            | Autor             |
-|:----------:|:------:|:--------------------:|:-----------------:|
-| 20/03/2019 | 0.1 | Criação do documento com template inicial  | João Vitor, Bruno Dantas, Ateldy Brasil e Vitor Gomes|
+---
+name: Issue template
+about: Template a ser seguido para criação de issues no projeto
+title: ''
+labels: ''
+assignees: ''
+
+---
 
 ## Nome da Issue
 Caso a issue seja uma história de usuário deve-se criar a issue da seguinte forma:
@@ -19,6 +24,13 @@ Todas as atividades a serem realizadas devem estar elencadas em tópicos e ao se
 - [ ] Task 1
 - [ ] Task 2
 - [ ] Task 3
+
+### Critérios de aceitação
+Caso os critérios de aceitação já tenham sido claramente definidos pela equipe, sobretudo pelo Product Owner, acrescentá-los na forma a seguir. Caso contrário, estes devem ser adicionados em um comentário pelo PO.
+
+- [ ] Critério de aceitação 1
+- [ ] Critério de aceitação 2
+- [ ] Critério de aceitação 3
 
 ## Assignees
 A issue deve ser atribuída a pelo menos um colaborador do projeto.
