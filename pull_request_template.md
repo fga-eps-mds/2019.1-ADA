@@ -25,7 +25,7 @@ WIP #1 NovoDocumento
 * Para o conteúdo do pull request, deve ser descrito de forma sucinta.
 
 ```
-Neste pull request se realizou:
+Neste pull request realizou-se:
   * US 01
   * Validação
   * Testes
@@ -36,8 +36,8 @@ Neste pull request se realizou:
 
 * Deve conter um ou mais ```Assignees```, em que indica os membros da equipe que contribuíram com as modificações realizadas.
 
-* Deve conter ```Labels```, em que adicionam-se as labels referentes ao pull request, de forma similar às da issue correspondente.
+* Deve conter ```Labels```, em que adiciona-se as labels referentes ao pull request, de forma similar às da issue correspondente.
 
 * Deve conter a ```Milestone```, em que é adicionada a sprint correspondente à execução das modificações.
 
-* Deve conter a ```Issue```, em que após a criação do pull request, deve-se conectar ele à sua issue correspondente através da interface do Github.
+* Deve conter a ```Issue```, a qual o pull request em questão refere-se e está conectado.
