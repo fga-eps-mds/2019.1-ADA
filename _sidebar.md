@@ -3,7 +3,7 @@
 - [Home](README.md)
 - [Abertura e Especificação](#) 
   - [EAP](/#)
-  - [TAP](/#)
+  - [TAP](/docs/opening_and_specification/termo_de_abertura_do_projeto.md)
 - [Políticas](/docs/policies/policies.md)
   - [Branches](/docs/policies/branches.md)
   - [Commits](/docs/policies/commits.md)
