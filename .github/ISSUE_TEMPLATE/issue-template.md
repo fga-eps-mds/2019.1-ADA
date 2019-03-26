@@ -25,6 +25,13 @@ Todas as atividades a serem realizadas devem estar elencadas em tópicos e ao se
 - [ ] Task 2
 - [ ] Task 3
 
+### Critérios de aceitação
+Caso os critérios de aceitação já tenham sido claramente definidos pela equipe, sobretudo pelo Product Owner, acrescentá-los na forma a seguir. Caso contrário, estes devem ser adicionados em um comentário pelo PO.
+
+- [ ] Critério de aceitação 1
+- [ ] Critério de aceitação 2
+- [ ] Critério de aceitação 3
+
 ## Assignees
 A issue deve ser atribuída a pelo menos um colaborador do projeto.
 
