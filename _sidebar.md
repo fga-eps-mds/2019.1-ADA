@@ -6,6 +6,8 @@
   - [TAP](/docs/opening_and_specification/termo_de_abertura_do_projeto.md)
 - [Requisitos](#) 
   - [Entrevista](/docs/requirements_engineering/interview_summary.md)
+- [Projeto](#)
+  - [Plano de Comunicação](/docs/project/communication_plan.md)
 - [Políticas](/docs/policies/policies.md)
   - [Branches](/docs/policies/branches.md)
   - [Commits](/docs/policies/commits.md)
