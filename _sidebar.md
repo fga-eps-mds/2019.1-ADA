@@ -3,7 +3,7 @@
 - [Home](README.md)
 - [Abertura e Especificação](#)
   - [EAP](/#)
-  - [Documento de Visão](/docs/opening_and_specification/Vision_document.md)
+  - [Documento de Visão](/docs/opening_and_specification/vision_document.md)
   - [TAP](/docs/opening_and_specification/termo_de_abertura_do_projeto.md)
 - [Requisitos](#)
   - [Entrevista](/docs/requirements_engineering/interview_summary.md)
