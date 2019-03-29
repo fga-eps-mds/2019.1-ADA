@@ -18,6 +18,8 @@
 - [Sprint 0](#)
   - [Planejamento Sprint 0](/docs/sprints/planejamento_sprint0.md)
   - [Resultados Sprint 0](/docs/sprints/resultados_sprint0.md)
+- [Sprint 1](#)
+  - [Planejamento Sprint 1](/docs/sprints/planejamento_sprint1.md)
 
 
 
