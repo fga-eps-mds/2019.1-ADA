@@ -5,6 +5,7 @@
   - [EAP](/#)
   - [Documento de Visão](/docs/opening_and_specification/vision_document.md)
   - [TAP](/docs/opening_and_specification/termo_de_abertura_do_projeto.md)
+  - [Rich Pictures](/docs/opening_and_specification/rich_picture.md)
 - [Requisitos](#)
   - [Entrevista](/docs/requirements_engineering/interview_summary.md)
 - [Projeto](#)
