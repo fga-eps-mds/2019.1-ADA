@@ -15,20 +15,20 @@ Isso contribui para com o levantamento dos requisitos, uma das
 
 #### Autor: Caio Vinicius 
 
-<img src="/docs/img/rich_pictures/caio_picture.png" height = "500" width="500" alt="rich picture">
+![rich picture caio](../img/rich_pictures/caio_picture.png)
 
 #### Autor: Erick Giffoni
 
-<img src="/docs/img/rich_pictures/erick_picture.png" height = "500" width="500" alt="rich picture">
+![rich picture erick](../img/rich_pictures/erick_picture.png)
 
 #### Autor: Guilherme Mendes 
 
-<img src="/docs/img/rich_pictures/guilherme_picture.jpg" height = "500" width="500" alt="rich picture">
+![rich picture guilherme](../img/rich_pictures/guilherme_picture.png)
 
 #### Autor: João Pedro
 
-<img src="/docs/img/rich_pictures/joao_picture.jpg" height = "500" width="500" alt="rich picture">
+![rich picture joao pedro](../img/rich_pictures/joao_picture.png)
 
 #### Autor: Lucas Fellipe
 
-<img src="/docs/img/rich_pictures/lucas_picture.jpg" height = "500" width="500" alt="rich picture">
+![rich picture lucas](../img/rich_pictures/lucas_picture.png)
