@@ -196,7 +196,7 @@ Os usuários poderão realizar a interação com o ChatOps Ada a partir do Teleg
 
 <p style="text-align:justify">&emsp;&emsp;O produto, inicialmente, tem como objetivo fazer a gerência de serviços em uma plataforma de hospedagem de código-fonte. O produto tem como propósito facilitar a organização de tarefas em projetos. O nosso produto é baseado no ChatOps (ChatBots + DevOps), que é a prática do desenvolvimento e operação orientado por conversas. Esse sistema, visa, principalmente, viabilizar a relação entre usuário e máquina, fazendo com que as equipes possam automatizar tarefas e colaborar, trabalhando melhor, mais barato e mais rápido. Existem ferramentas, atualmente, para a realização do ChatOps, tais como, <i>Integram</i>, <i>GitHub Bot</i>, entre outros. O <i>Integram</i> é um ChatOps que visa ajudar equipes de operação e desenvolvimento a obterem resultados mais rápidos a partir da integração com o Telegram. O nosso produto possui diversas funcionalidades e se destaca em relação a outros produtos, como o <i>Integram</i>, pois, além de integrar conversas, notificar os usuários, ele realizará ações imperativas, como, realizar <i>commits</i>, realizar <i><i>Pull Requests</i></i>, realizar a criação de <i><i>Issues</i></i> e realizar o controle da versão mais estável da <i>Releases</i></p>
 
-<img src="/docs/img/chatops.png" alt="chatops">
+![chatops](../img/chatops.png)
 
 ### 4.2 Funções do produto
 
