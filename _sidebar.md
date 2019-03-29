@@ -2,7 +2,7 @@
 
 - [Home](README.md)
 - [Abertura e Especificação](#)
-  - [EAP](/#)
+  - [EAP](/docs/opening_and_specification/eap.md)
   - [Documento de Visão](/docs/opening_and_specification/vision_document.md)
   - [TAP](/docs/opening_and_specification/termo_de_abertura_do_projeto.md)
   - [Rich Pictures](/docs/opening_and_specification/rich_picture.md)
