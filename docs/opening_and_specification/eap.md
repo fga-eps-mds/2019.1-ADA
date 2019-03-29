@@ -4,14 +4,18 @@
 | --- | --- | --- | --- |
 | 24/03/2019 | 1.0 | Construção da versão inicial | Ateldy Brasil e Vítor Gomes |
 | 27/03/2019 | 2.0 | Construção de versão após feedback | Vítor Gomes |
+| 29/03/2019 | 2.1 | Insere link para imagem em maior tamanho | João Vitor 
 
 # EAP v2.0
 
-<img src="/docs/img/eap/eap_v2.jpg"  alt="eap_v2">
+![eap v2.0](../img/eap/eap_v2.jpg)
+
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-Grupo-3/22-ElaborarEAP/docs/img/eap/eap_v2.jpg)
 
 # EAP v1.0
 
-<img src="/docs/img/eap/eap_v1.jpg"  alt="eap_v1">
+![eap v1.0](../img/eap/eap_v1.jpg)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-Grupo-3/22-ElaborarEAP/docs/img/eap/eap_v1.jpg)
 
 ## Referências
 
