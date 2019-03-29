@@ -2,6 +2,7 @@
 
 - [Home](README.md)
 - [Abertura e Especificação](#)
+  - [CANVAS](/docs/opening_and_specification/canvas.md)
   - [EAP](/#)
   - [Documento de Visão](/docs/opening_and_specification/vision_document.md)
   - [TAP](/docs/opening_and_specification/termo_de_abertura_do_projeto.md)
