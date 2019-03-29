@@ -19,7 +19,7 @@ Isso contribui para com o levantamento dos requisitos, uma das
 
 #### Autor: Erick Giffoni
 
-<img src="/docs/img/rich_pictures/erick_picture.png" height = "500" width="500" alt="rich picture">
+![](../img/rich_pictures/erick_picture.png)
 
 #### Autor: Guilherme Mendes 
 
