@@ -1,6 +1,6 @@
 | Data | Versão | Descrição | Autor |
 |:----:|:------:|:---------:|:-----:|
-|28/03/2019|0.1|Criação da versão inicial do gitflow | João Vitor |
+|28/03/2019|1.0|Criação da versão inicial do gitflow | João Vitor |
 
 # Visão Geral
 
@@ -16,7 +16,7 @@ Após a criação da _branch_, os _commits_ devem ser feitos de acordo com a [po
 
 Após a finalização da funcionalidade, um Pull Request deve ser aberto, de acordo com a [política de Pull Requests](/docs/policies/pull_request.md), da _branch_ em que se foi feito o trabalho para a branch de homologação, devel. **Importante** - Um _Pull Request_ só será aceito caso o estágio de _teste_ estiver passado pelo gitlabCI.
 
-Ao _Pull Request_ ser aceito_ para a branch de homologação, ele passa por todos os estágios(teste, build e deploy) e se todos esses estiverem funcionando corretamente, passa pelo estágio de _deploy_ para o ambiente de homologação.
+Ao _Pull Request_ ser aceito para a branch de homologação, ele passa por todos os estágios(teste, build e deploy) e se todos esses estiverem funcionando corretamente, passa pelo estágio de _deploy_ para o ambiente de homologação.
 
 Após a realização dos testes em ambiente de homologação na _branch_ devel e a validação de um usuário real, é aberto um _pull request_ para a branch master.
 
