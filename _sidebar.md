@@ -24,6 +24,8 @@
 - [Sprint 1](#)
   - [Planejamento Sprint 1](/docs/sprints/planejamento_sprint1.md)
   - [Resultados Sprint 1](/docs/sprints/resultados_sprint1.md)
+- [Sprint 2](#)
+  - [Planejamento Sprint 2](/docs/sprints/planejamento_sprint2.md)
 
 
 
