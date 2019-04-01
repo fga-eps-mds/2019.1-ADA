@@ -223,17 +223,18 @@ from subprocess import Popen, PIPE
 
 ##### Exemplo Bom:
 ```ruby
-# Aaaaa.
-# Comment line.
-# Another comment line.
+"""
+comment line
+another comment line
+
+"""
 ```
 
 ##### Exemplo Ruim:
 ```ruby
-"""
-comment line
-another comment line
-"""
+# Aaaaa.
+# Comment line.
+# Another comment line.
 ```
 
 ## 8. Nomenclatura
