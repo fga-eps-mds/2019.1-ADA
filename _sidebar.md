@@ -12,6 +12,7 @@
   - [Entrevista](/docs/requirements_engineering/interview_summary.md)
 - [Projeto](#)
   - [Plano de Comunicação](/docs/project/communication_plan.md)
+  - [Documento de Arquitetura](/docs/project/architecture_doc.md)
   - [Gitflow](/docs/project/gitflow.md)
 - [Políticas](/docs/policies/policies.md)
   - [Branches](/docs/policies/branches.md)
