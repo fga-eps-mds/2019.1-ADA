@@ -10,12 +10,12 @@
 
 ![eap v2.0](../img/eap/eap_v2.jpg)
 
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-Grupo-3/22-ElaborarEAP/docs/img/eap/eap_v2.jpg)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/img/eap/eap_v2.jpg)
 
 # EAP v1.0
 
 ![eap v1.0](../img/eap/eap_v1.jpg)
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-Grupo-3/22-ElaborarEAP/docs/img/eap/eap_v1.jpg)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/img/eap/eap_v1.jpg)
 
 ## Referências
 
