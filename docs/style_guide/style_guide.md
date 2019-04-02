@@ -140,10 +140,7 @@ def complex(real, img = 0.0):
 	return magic(r = real, i = imag)
 ```
 #### 4.2.9 Assinaturas de métodos devem seguir as mesmas regras de espaços para vírgulas 
-```ruby
-def munge(input: AnyStr): ...
-def munge() -> AnyStr: ...
-```
+
 ##### Exemplo Bom: 
 ```ruby
 def munge(input: AnyStr): ...
@@ -154,23 +151,6 @@ def munge() -> AnyStr: ...
 ```ruby
 def munge(input:AnyStr): ...
 def munge()->AnyStr: …
-```
-
-### 4.3 Condições
-#### 4.3.1 Múltiplas condições não devem ser em apenas uma linha
-##### Exemplo Bom: 
-```ruby
-if foo == 'blah':
-    do_blah_thing()
-do_one()
-do_two()
-do_three()
-```
-
-##### Exemplo Ruim:
-```ruby
-if foo == 'blah': do_blah_thing()
-do_one(); do_two(); do_three()
 ```
 
 ## 5. Padronização
