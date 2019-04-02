@@ -5,8 +5,11 @@ mongoengine.register_connection(alias='core', name='Telegram_User_DataBase')
 
 class User(mongoengine.Document):
     name = mongoengine.StringField()
-    user = mongoengine.StringField()
+    last_name = mongoengine.StringField()
+    username = mongoengine.StringField()
     telegramID = mongoengine.StringField()
+    is_bot = mongoengine.BooleanField()
+    #language_code = mongoengine.StringField()
 
     #def __init__(self):
     #    """Construtor User"""
@@ -14,17 +17,19 @@ class User(mongoengine.Document):
 
     def getUser(self):
         """ Retorna o trio nome, user e telegramID"""
-        return  self.name, self.user, self.telegramID
-    def newUser(self, name, user, telegramID):
+        return  self.name, self.last_name, self.username, self.telegramID, self.is_bot
+    def newUser(self, name, last_name, username, telegramID, is_bot):
         """Cria um novo usuario"""
         self.name = name
-        self.user = user
+        self.last_name = last_name
+        self.username = username
         self.telegramID = telegramID
+        self.is_bot = is_bot
         #self.save() # acho que isso aqui que realmente salva o usuario no database
 
 # testing ...
 user1 = User()
-user1.newUser("erick", "eu", "1234")
+user1.newUser("erick", "giff", "egf", "1234", False)
 #user1.name = input("qual o seu nome ? ")
 print(user1.name) # eu queria converter isso pra string normal
 print(type(user1))
