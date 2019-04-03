@@ -14,6 +14,6 @@ class Telegram(mongoengine.Document):
         pass
 
 #testing
-chat1 = Telegram()
-chat1.username = "chatopsMDS"
-chat1.save() #salva no banco de dados
+#chat1 = Telegram()
+#chat1.username = "chatopsMDS"
+#chat1.save() #salva no banco de dados
