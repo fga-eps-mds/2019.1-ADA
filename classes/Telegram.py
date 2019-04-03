@@ -1,19 +1,21 @@
 import mongoengine
 import User
 
+
 class Telegram(mongoengine.Document):
     username = mongoengine.StringField()
     token = mongoengine.StringField()
 
-    users = list() #lista de usuarios ?
+    user_id = mongoengine.ListField()
 
-    def getNotifications():
+    def getNotifications(self):
         pass
 
-    def sendNotifications():
+    def sendNotifications(self):
         pass
 
-#testing
+# testing
 #chat1 = Telegram()
 #chat1.username = "chatopsMDS"
-#chat1.save() #salva no banco de dados
+#chat1.save()  # salva no banco de dados
+#>>>>>>> cf05758d169666c0b051eee444b7511df2506d6b
