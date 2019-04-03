@@ -1,2 +1,4 @@
 Flask==1.0.2
 Flask-PyMongo
+rasa-core==0.13.1
+rasa-nlu==0.14.1

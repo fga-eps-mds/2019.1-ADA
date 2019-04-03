@@ -16,5 +16,7 @@ services:
       - APP_SETTINGS=project.config.DevelopmentConfig # sets environemnt config
   mongo:
     image: mongo
+    volumes:
+      - /mongo_rasa:/data/db
     ports:
-      - 27017:27017
+      - 27017:27017    
