@@ -16,7 +16,7 @@ class Repo(mongoengine.Document):
         """ Retorna o nome, url e descricao do repositório"""
         return (self.repo_name, self.repo_url, self.repo_description)
 
-    def newRepo(repo_url, repo_name, repo_description):
+    def newRepo(self, repo_url, repo_name, repo_description):
         """Cria um novo repositório"""
         self.repo_url = repo.url
         self.repo_name = last_name
