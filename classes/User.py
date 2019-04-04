@@ -1,7 +1,7 @@
 import mongoengine
 
 #mongoengine.register_connection(alias='core', name='Telegram_User_DataBase')
-mongoengine.connect(db="Telegram_User_DataBase")#, alias="telegramUDB", host="MacBook-Pro-de-Erick.local:27017", port=27017)
+#mongoengine.connect(db="Telegram_User_DataBase")#, alias="telegramUDB", host="MacBook-Pro-de-Erick.local:27017", port=27017)
 #ATENCAO:
 #erro na linha 4 caso descomente: you have not defined a default connection
 
@@ -30,10 +30,10 @@ class User(mongoengine.Document):
         self.save() # acho que isso aqui que realmente salva o usuario no database
 
 # testing ...
-user1 = User()
-user1.newUser("erick", "giff", "egf", "1234", False)
-#user1.name = input("qual o seu nome ? ")
-print(user1.name) # eu queria converter isso pra string normal
-print(type(user1))
-
-print(user1.getUser())
+#user1 = User()
+#user1.newUser("erick", "giff", "egf", "1234", False)
+##user1.name = input("qual o seu nome ? ")
+#print(user1.name) # eu queria converter isso pra string normal
+#print(type(user1))
+#
+#print(user1.getUser())
