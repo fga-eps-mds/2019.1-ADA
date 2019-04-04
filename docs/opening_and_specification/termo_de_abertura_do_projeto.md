@@ -1,4 +1,4 @@
-**Termo de Abertura do Projeto**
+# Termo de Abertura do Projeto
 
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
@@ -180,5 +180,3 @@ AUGUSTO, Guilherme; OLIVEIRA, Ícaro; SOUZA, Letícia de. **Lino, o Bot - Termo 
 **LOVEMONDAYS**. Salários para programadores júnior e engenheiros de software. Disponível em: [https://www.lovemondays.com.br/](https://www.lovemondays.com.br/).
 
 COWORKCENTER ÁGUAS CLARAS OFFICER. **Cowork e Escritório Virtual**. Disponível em https://www.aguasclarasoffice.com/
-
-
