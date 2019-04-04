@@ -7,6 +7,7 @@
   - [Documento de Visão](/docs/opening_and_specification/vision_document.md)
   - [TAP](/docs/opening_and_specification/termo_de_abertura_do_projeto.md)
   - [Personalidade do Bot](/docs/opening_and_specification/bot_personality.md)
+  - [Identidade Visual](/docs/opening_and_specification/visual_identity.md)
   - [Rich Pictures](/docs/opening_and_specification/rich_picture.md)
 - [Requisitos](#)
   - [Entrevista](/docs/requirements_engineering/interview_summary.md)
