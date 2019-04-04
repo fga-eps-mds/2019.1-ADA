@@ -1,5 +1,5 @@
 import mongoengine
-import User
+from data.User import User
 
 
 class Telegram(mongoengine.Document):
@@ -16,6 +16,6 @@ class Telegram(mongoengine.Document):
 
 
 # testing
-chat1 = Telegram()
-chat1.username = "chatopsMDS"
-chat1.save()  # salva no banco de dados
+#chat1 = Telegram()
+#chat1.username = "chatopsMDS"
+#chat1.save()  # salva no banco de dados
