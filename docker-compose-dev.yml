@@ -9,7 +9,7 @@ services:
     volumes:
       - './services/api:/usr/src/app'
     ports:
-      - 5001:5000
+      - 5001:5001
     environment:
       - FLASK_APP=project/__init__.py
       - FLASK_ENV=development
@@ -19,4 +19,4 @@ services:
     volumes:
       - /mongo_rasa:/data/db
     ports:
-      - 27017:27017    
+      - 27017:27017
