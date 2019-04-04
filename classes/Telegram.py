@@ -1,5 +1,5 @@
 import mongoengine
-import User
+from classes.User import User
 
 
 class Telegram(mongoengine.Document):
