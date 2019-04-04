@@ -13,3 +13,8 @@ instance/*
 ### Flask.Python Stack ###
 __pycache__/
 
+### Mac OS ###
+# Geral
+.DS_Store
+.AppleDouble
+.LSOverride
