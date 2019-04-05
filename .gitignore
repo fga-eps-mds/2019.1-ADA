@@ -18,3 +18,10 @@ __pycache__/
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# File with credentials
+.env
+
+# Bot training
+/services/api/models/*
+/services/api/rasa_core.log
