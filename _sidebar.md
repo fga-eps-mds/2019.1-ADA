@@ -13,6 +13,7 @@
   - [Entrevista](/docs/requirements_engineering/interview_summary.md)
   - [Questionário](/docs/requirements_engineering/questionnaire.md)
 - [Projeto](#)
+  - [Backlog](/docs/project/backlog.md)
   - [Plano de Comunicação](/docs/project/communication_plan.md)
   - [Documento de Arquitetura](/docs/project/architecture_doc.md)
   - [Gitflow](/docs/project/gitflow.md)
@@ -30,6 +31,3 @@
   - [Resultados Sprint 1](/docs/sprints/resultados_sprint1.md)
 - [Sprint 2](#)
   - [Planejamento Sprint 2](/docs/sprints/planejamento_sprint2.md)
-
-
-
