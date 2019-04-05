@@ -23,16 +23,12 @@ db.init_app(app)
 
 class User(db.Document):
     meta = {'collection': 'users'}
-    
+
     name = db.StringField()
     username = db.StringField()
     telegramID = db.StringField()
     is_bot = db.BooleanField()
-    #language_code = mongoengine.StringField()
 
-    # def __init__(self):
-    #    """Construtor User"""
-    # nao e necessaerio ter metodo __init__(https://stackoverflow.com/questions/38363726/mongoengine-attributeerror)
     def get_user(self):
         """ Retorna o trio nome, user e telegramID"""
         return  self.name, self.last_name, self.username, self.telegramID, self.is_bot
@@ -77,27 +73,12 @@ def find_user_by_username(username):
         "status": "success",
         "message": "user finded"
     })
-    #search = User()
-    #search = search.find_user_by_username(username)
-    #if user:
-    #    return jsonify({
-    #    "status": "success",
-    #    "message": "user finded"
-    #})
-    #return jsonify({
-    #    "status": "failed",
-    #    "message": "user not found"
-    #})
 
-#@app.route('/api/getuser', methods=['GET'])
-#def get_user():
-#    user = User()
-#    user = user.find_user_by_username("erickdev")
-#    first_name, last_name, username, telegramID, is_bot = user.getUser()
-#    return jsonify({
-#        'name': first_name,
-#        'last_name': last_name,
-#        'username': username,
-#        'telegramID': telegramID,
-#        'is_bot': is_bot
-#    })
+@app.route("/api/delete/user/<username>", methods=["DELETE"])
+def delete_user_by_username(username):
+    User.objects(username=username).delete()
+    return jsonify({
+        "status": "success",
+        "message": "user deleted"
+    })
+    
