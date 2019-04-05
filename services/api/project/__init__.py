@@ -61,5 +61,5 @@ def add_user():
     user.save()
     return jsonify({
         'status': 'success',
-        'message': 'added user!'
+        'message': 'user added!'
     })
