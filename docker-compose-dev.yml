@@ -11,6 +11,9 @@ services:
     ports:
       - 5001:5001
     environment:
+      - ACCESS_TOKEN=${ACCESS_TOKEN}
+      - BOT_NAME=${BOT_NAME}
+      - WEBHOOK_URL=${WEBHOOK_URL}
       - FLASK_APP=project/__init__.py
       - FLASK_ENV=development
       - APP_SETTINGS=project.config.DevelopmentConfig # sets environemnt config
@@ -20,3 +23,4 @@ services:
       - /mongo_rasa:/data/db
     ports:
       - 27017:27017
+    
