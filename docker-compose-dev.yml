@@ -19,4 +19,4 @@ services:
     volumes:
       - /mongo_rasa:/data/db
     ports:
-      - 27017:27017    
+      - 27017:27017
