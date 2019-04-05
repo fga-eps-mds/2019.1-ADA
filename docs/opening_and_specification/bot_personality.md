@@ -1,5 +1,16 @@
-<font size="6"><b><center> PERSONALIDADE DO BOT</center></b></font>
+# Personalidade da Bot
 
+
+## **Histórico de Revisão**
+
+| **Data** | **Versão** | **Descrição** | **Autor** |
+| --- | --- | --- | --- |
+| 29/03/2019 | 0.1 | Construção do tópico 1 - Personalidade da Ada| Lucas Fellipe|
+| 29/03/2019 | 0.2 | Construção do tópico 1.1 - Termos e Siglas| Lucas Fellipe |
+| 29/03/2019 | 0.3 | Construção do tópico 1.2 - Ferramentas Utilizadas para a Escolha| Lucas Fellipe |
+| 29/03/2019 | 0.4 | Construção do tópico 1.3 - Processo de Escolha| Lucas Fellipe |
+| 29/03/2019 | 0.5 | Construção do tópico 1.4 - Descrição da Personalidade| João Pedro Guedes e Lucas Fellipe |
+| 29/03/2019 | 1.0 | Construção do tópico 1.5 - Descrição da Personalidade e Revisão do Documento| João Pedro Guedes e Lucas Fellipe |
 
 
 ## 1. Personalidade da Ada
