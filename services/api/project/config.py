@@ -12,7 +12,10 @@ class BaseConfig:
 
 class DevelopmentConfig(BaseConfig):
     """Development configuration"""
-    MONGO_URI = 'mongodb://mongo:27017/api'
+    MONGODB_SETTINGS = {
+        'db': 'api',
+        'host': 'mongodb://mongo:27017/api'
+    }
 
 
 class TestingConfig(BaseConfig):
