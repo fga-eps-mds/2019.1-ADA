@@ -4,6 +4,18 @@
 <p align="justify"> &emsp;&emsp;
   O projeto é um bot que visa ajudar desenvolvedores a construir seu software por meio do acompanhamento de todo o pipeline de desenvolvimento de um software.</p>
 
+### Utilização
+
+<b>O que você está esperando para gerenciar o seu repositório direto do celular?</b>
+
+Com a bot Ada é possível receber notificações sobre todas as mudanças que ocorrem no seu repositório, além de poder comentar em Issues, receber relatórios com vários dados sobre seu repositório, entre várias outras ferramentas.
+
+<center>
+
+![](docs/img/readme/prototipo_ada.gif)
+
+</center>
+
 ### Guia de Contribuição
 
 #### Políticas
