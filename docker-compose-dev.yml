@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  ada:
+    build:
+      context: .
+      dockerfile: ./docker/ada.Dockerfile
+    ports:
+      - 5000:5000
+    environment:
+      - ACCESS_TOKEN=${ACCESS_TOKEN}
+      - BOT_NAME=${BOT_NAME}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+  # actions:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/actions.Dockerfile
+  #   ports:
+  #     - 5055:5055
+  #   volumes:
+  #     - ./ada/actions:/ada/actions
+  #     - ./ada/Makefile:/ada/Makefile
+  #   command: "make run-actions"
+
+  mongo:
+    image: mongo
+    volumes:
+      - /mongo_rasa:/data/db
+    ports:
+      - 27017:27017
+    
