@@ -1,22 +1,27 @@
 version: '3.7'
 
 services:
-
-  api:
+  ada:
     build:
-      context: ./services/api
-      dockerfile: Dockerfile-dev
-    volumes:
-      - './services/api:/usr/src/app'
+      context: .
+      dockerfile: ./docker/ada.Dockerfile
     ports:
-      - 5001:5001
+      - 5000:5000
     environment:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
-      - FLASK_APP=project/__init__.py
-      - FLASK_ENV=development
-      - APP_SETTINGS=project.config.DevelopmentConfig # sets environemnt config
+  # actions:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/actions.Dockerfile
+  #   ports:
+  #     - 5055:5055
+  #   volumes:
+  #     - ./ada/actions:/ada/actions
+  #     - ./ada/Makefile:/ada/Makefile
+  #   command: "make run-actions"
+
   mongo:
     image: mongo
     volumes:
