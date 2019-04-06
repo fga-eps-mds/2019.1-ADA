@@ -14,6 +14,7 @@
   - [Rich Pictures](/docs/opening_and_specification/rich_picture.md)
 - [Roadmaps](#)
   - [Roadmap do Produto](/docs/roadmaps/product_roadmap.md)
+  - [Roadmap de Papéis](/docs/roadmaps/roles_roadmap.md)
 - [Projeto](#)
   - [Backlog](/docs/project/backlog.md)
   - [Plano de Comunicação](/docs/project/communication_plan.md)
