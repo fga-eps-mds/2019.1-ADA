@@ -15,6 +15,7 @@
 - [Roadmaps](#)
   - [Roadmap do Produto](/docs/roadmaps/product_roadmap.md)
 - [Projeto](#)
+  - [Backlog](/docs/project/backlog.md)
   - [Plano de Comunicação](/docs/project/communication_plan.md)
   - [Documento de Arquitetura](/docs/project/architecture_doc.md)
   - [Gitflow](/docs/project/gitflow.md)
