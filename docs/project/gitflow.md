@@ -1,6 +1,7 @@
 | Data | Versão | Descrição | Autor |
 |:----:|:------:|:---------:|:-----:|
 |28/03/2019|1.0|Criação da versão inicial do gitflow | João Vitor |
+|06/04/2019|2.0|Criação da versão inicial do gitflow | João Vitor |
 
 # Visão Geral
 
