@@ -99,7 +99,7 @@ Uma forma comum para estruturar categorias dos riscos usa a estrutura analítica
 | RN16 | Grande | Média | 12 | Realocar as tarefas entre os membros com equipamentos que funcionam | Incentivar a manutenção recorrente de equipamentos |
 | RN17 | Crítico | Muito Baixa | 5 | Oferecer a melhor possibilidade de produto para o cliente | Manter comunicação constante com o cliente |
 | RN18 | Crítico | Muito Alta | 25 | Realizar refatoração de código, testes e validação com o cliente | Realizar treinamentos de todas as tecnologias utilizadas, garantir a realização de testes, boas práticas de programação e validação com o cliente |
-| RN19 | Crítico | Média | 15 | - | - |
+| RN19 | Crítico | Média | 15 | Aceitar o risco | - |
 
 ### 5.1. Tabela de Probabilidade
 
