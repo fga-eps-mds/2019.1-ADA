@@ -16,7 +16,7 @@ O objetivo do Plano de Gerenciamento de Riscos é documentar os riscos associado
 
 Uma forma comum para estruturar categorias dos riscos usa a estrutura analítica dos riscos (EAR), uma representação hierárquica de possíveis fontes de riscos. Uma EAR ajuda a equipe do projeto a considerar toda a gama de fontes das quais podem surgir cada risco do projeto. Isso pode ser útil para identificar os riscos ou para categorizá-los.
 
-![Estrutura Analítica dos Riscos deste projeto.](/docs/img/risks/EAR.jpg)
+![Estrutura Analítica dos Riscos deste projeto.](../img/risks/EAR.jpg)
 
 [Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/img/risks/EAR.jpg)
 
@@ -99,7 +99,7 @@ Uma forma comum para estruturar categorias dos riscos usa a estrutura analítica
 | RN16 | Grande | Média | 12 | Realocar as tarefas entre os membros com equipamentos que funcionam | Incentivar a manutenção recorrente de equipamentos |
 | RN17 | Crítico | Muito Baixa | 5 | Oferecer a melhor possibilidade de produto para o cliente | Manter comunicação constante com o cliente |
 | RN18 | Crítico | Muito Alta | 25 | Realizar refatoração de código, testes e validação com o cliente | Realizar treinamentos de todas as tecnologias utilizadas, garantir a realização de testes, boas práticas de programação e validação com o cliente |
-| RN19 | Crítico | Média | 15 | - | - |
+| RN19 | Crítico | Média | 15 | Aceitar o risco | - |
 
 ### 5.1. Tabela de Probabilidade
 
