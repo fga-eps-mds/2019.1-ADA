@@ -9,9 +9,9 @@
 ## Modelo de Negócios v1.0
 
 ![canvas v1.0](../img/canvas/canvas_v1.png)
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-Grupo-3/20-ElaborarCanvas/docs/img/canvas/canvas_v1.png)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/img/canvas/canvas_v1.png)
 
 ## Modelo de Negócios v0.1
 
 ![canvas v0.1](../img/canvas/canvas_v0_1.jpeg)
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-Grupo-3/20-ElaborarCanvas/docs/img/canvas/canvas_v0_1.jpeg)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/img/canvas/canvas_v0_1.jpeg)
