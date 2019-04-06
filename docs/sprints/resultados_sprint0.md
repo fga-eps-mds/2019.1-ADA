@@ -28,9 +28,9 @@ O velocity original é de 23 pontos.
 
 ![](../img/sprints/sprint0/velocity_sprint0.jpg)
 
-## Quadro de Conhecimento Inicial
+## Quadro de Conhecimento
 
-A equipe de EPS elaborou um quadro de conhecimento inicial, com tecnologias consideradas essenciais para o desenvolvimento. Com ele foi possível ter um overview das capacidades da equipe de desenvolvimento e gerência, e servirá como referência inicial para rastrear a evolução técnica da equipe. 
+A equipe de EPS elaborou um quadro de conhecimento com tecnologias consideradas essenciais para o desenvolvimento. Com ele foi possível ter um overview das capacidades da equipe de desenvolvimento e gerência, e servirá como referência inicial para rastrear a evolução técnica da equipe. 
 
 ![](../img/sprints/sprint0/quadro_de_conhecimentos_sprint0.png)
 

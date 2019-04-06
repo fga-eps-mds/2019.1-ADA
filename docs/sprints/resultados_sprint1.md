@@ -73,9 +73,9 @@ A métrica de Work Capacity mede o quanto de esforço cada membro teve em cada d
 
 ![](/docs/img/sprints/sprint1/tvi_sprint1.png)
 
-## Quadro de Conhecimento Inicial
+## Quadro de Conhecimento
 
-A equipe de EPS elaborou um quadro de conhecimento inicial, com tecnologias consideradas essenciais para o desenvolvimento. Com ele foi possível ter um overview das capacidades da equipe de desenvolvimento e gerência. 
+A equipe de EPS elaborou um quadro de conhecimento, com ele é possível ter um overview das capacidades da equipe de desenvolvimento e gerência. 
 
 ![](../img/sprints/sprint1/quadro_de_conhecimentos_sprint1.png)
 
