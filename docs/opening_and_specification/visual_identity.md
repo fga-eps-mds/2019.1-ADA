@@ -1,20 +1,24 @@
 
-<font size="6"><b><center> IDENTIDADE VISUAL</center></b></font>
+# Identidade Visual
 
 
 ## **Histórico de Revisão**
 
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
-| 22/03/2019 | 1.0 | Construção dos tópicos 1 e 2| João Pedro Guedes |
+| 03/04/2019 | 0.1 | Construção do tópico 1 - Paleta de Cores| João Pedro Guedes |
+| 03/04/2019 | 0.2 | Construção do tópico 2 - Tipografia| João Pedro Guedes |
+| 03/04/2019 | 1.0 | Revisão do Documento| João Pedro Guedes |
+| 05/04/2019 | 1.1 | Revisão de todos os tópicos| João Pedro Guedes |
 
 
-## 1. Cores
+## 1. Paleta de Cores
+A escolha da paleta de cores foi feita pensando em cores que representariam Ada Lovelace.
 
 ![pallete](../img/visual_identity/color_palette.png)
 
-## 2. Fontes
+## 2. Tipografia
 
-As fontes escolhidas para serem utilzidas no projeto foram:
+As fontes escolhidas para serem utilizadas no projeto foram:
 * Raleway, para títulos e afins;
 * Roboto, para o escopo de textos e afins.
