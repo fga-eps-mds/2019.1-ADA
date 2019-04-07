@@ -21,12 +21,12 @@
 
 ### Ferramenta para Integração Contínua
 
-![ci](../img/questionnaire/ci.png)
+![ci](../assets/img/product/questionnaire/ci.png)
 
 >A ferramenta mais votada para a Integração Contínua foi o Gitlab CI, visto que ela está sempre em evolução e apresentar ser bastante completa nesse meio.
 
 ### Ferramenta para Deploy
 
-![deploy](../img/questionnaire/deploy.png)
+![deploy](../assets/img/product/questionnaire/deploy.png)
 
 >Para esse tópico escolhemos a Amazon como ferramneta de deploy, apesar do Heroku ter ficado como preferência. Isso ocorreu pois grande parte do público, que respondeu o questionário são estudantes, e o Heroku é mais usado para fins didáticos. Já a Amazon é utilizada por grandes empressas.

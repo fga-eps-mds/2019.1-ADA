@@ -21,18 +21,18 @@ __Pontos Planejados Concluídos:__ 23
 
 Por problemas em relação a organização, a sprint 0 ocorreu, mas não teve uma organização formal até o dia do fechamente, por isso obteve essa representação do burndown.
 
-![](../img/sprints/sprint0/burndown_sprint0.png)
+![](../../assets/img/sprints/sprint0/burndown_sprint0.png)
 
 ## Velocity
 O velocity original é de 23 pontos.
 
-![](../img/sprints/sprint0/velocity_sprint0.jpg)
+![](../../assets/img/sprints/sprint0/velocity_sprint0.jpg)
 
 ## Quadro de Conhecimento
 
 A equipe de EPS elaborou um quadro de conhecimento com tecnologias consideradas essenciais para o desenvolvimento. Com ele foi possível ter um overview das capacidades da equipe de desenvolvimento e gerência, e servirá como referência inicial para rastrear a evolução técnica da equipe. 
 
-![](../img/sprints/sprint0/quadro_de_conhecimentos_sprint0.png)
+![](../../assets/img/sprints/sprint0/quadro_de_conhecimentos_sprint0.png)
 
 ## Avaliação do Scrum Master
 

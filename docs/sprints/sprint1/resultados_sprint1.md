@@ -55,29 +55,29 @@ __Pontos Planejados Concluídos:__ 78
 
 O gráfico de burndown demonstra a entrega de pontos durante os dias da sprint. 
 
-![](../img/sprints/sprint1/burndown_sprint1.png)
+![](../../assets/img/sprints/sprint1/burndown_sprint1.png)
 
 ## Velocity
 O velocity é de 50.1 pontos.
 
-![](../img/sprints/sprint1/velocity_sprint1.png)
+![](../../assets/img/sprints/sprint1/velocity_sprint1.png)
 
 ## Work Capacity
 
 A métrica de Work Capacity mede o quanto de esforço cada membro teve em cada dia da sprint. O total de esforço foi de 130,5. Isso significa que as tarefas planejadas exigiram mais esforço do que o imaginado.
 
-![](../img/sprints/sprint1/work_capacity_sprint1.png)
+![](../../assets/img/sprints/sprint1/work_capacity_sprint1.png)
 
 
 ## Targeted Value Increase (TVI+)
 
-![](/docs/img/sprints/sprint1/tvi_sprint1.png)
+![](../../assets/img/sprints/sprint1/tvi_sprint1.png)
 
 ## Quadro de Conhecimento
 
 A equipe de EPS elaborou um quadro de conhecimento, com ele é possível ter um overview das capacidades da equipe de desenvolvimento e gerência. 
 
-![](../img/sprints/sprint1/quadro_de_conhecimentos_sprint1.png)
+![](../../assets/img/sprints/sprint1/quadro_de_conhecimentos_sprint1.png)
 
 ## Avaliação do Scrum Master
 
