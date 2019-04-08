@@ -38,4 +38,4 @@
   - [Planejamento Sprint 2](/docs/sprints/planejamento_sprint2.md)
   - [Resultado Sprint 2](/docs/sprints/resultados_sprint2.md)
 - [Sprint 3](#)
-  - [Resultado Sprint 3](/docs/sprints/planejamento_sprint3.md)
+  - [Planejamento Sprint 3](/docs/sprints/planejamento_sprint3.md)
