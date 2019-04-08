@@ -72,7 +72,7 @@ A métrica de Work Capacity mede o quanto de esforço cada membro teve em cada d
 
 ## Targeted Value Increase (TVI+)
 
-![](/docs/img/sprints/sprint2/tvi_sprint2.png)
+![](../img/sprints/sprint2/tvi_sprint2.png)
 
 ## Quadro de Conhecimento
 
