@@ -8,7 +8,7 @@ Com a bot Ada é possível receber notificações sobre todas as mudanças que o
 
 <center>
 
-![](docs/assets/asseproduct/ts/img/product/readme/prototipo_ada.gif)
+![](docs/assets/gifs/prototipo_ada.gif)
 
 </center>
 

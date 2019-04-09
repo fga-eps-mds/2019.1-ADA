@@ -6,6 +6,7 @@
   - [Documento de visão](docs/product/vision_document.md)
   - [Entrevista](/docs/product/interview_summary.md)
   - [Estrutura Analítica do Projeto](docs/product/eap.md)
+  - [Escopo](docs/product/scope.md)
   - [Identidade visual](docs/product/visual_identity.md)
   - [Personalidade do bot](docs/product/bot_personality.md)
   - [Questionário](/docs/product/questionnaire.md)

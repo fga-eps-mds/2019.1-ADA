@@ -74,6 +74,7 @@ A métrica de Work Capacity mede o quanto de esforço cada membro teve em cada d
 
 ![](../../assets/img/sprints/sprint2/tvi_sprint2.png)
 
+
 ## Quadro de Conhecimento
 
 A equipe de EPS elaborou um quadro de conhecimento com tecnologias consideradas essenciais para o desenvolvimento. Com ele é possível ter um overview das capacidades da equipe de desenvolvimento e gerência. 
