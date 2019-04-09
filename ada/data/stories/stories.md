@@ -25,3 +25,7 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+
+## apresentar_se
+* apresentar_se
+  - utter_apresentar_se
