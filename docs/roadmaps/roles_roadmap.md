@@ -6,6 +6,6 @@
 
 ## Roadmaps v1.0
 
-![roadmap de papéis v1.0](../img/roadmaps/roles_roadmap_v1.jpg)
+![roadmap de papéis v1.0](../assets/img/roadmaps/roles_roadmap_v1.jpg)
 
 [Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/img/roadmaps/roles_roadmap_v1.jpg)
