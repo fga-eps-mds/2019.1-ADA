@@ -48,3 +48,15 @@
 - not very good
 - extremely sad
 - so sad
+
+## intent:apresentar_se
+- quem é você
+- me conta sobre você
+- conta sobre você
+- voce é
+- quem és tu
+- o que é você
+- se apresente
+- apresente-se
+- introduza-se
+- se introduza
