@@ -5,6 +5,7 @@ intents:
   - mood_deny
   - mood_great
   - mood_unhappy
+  - apresentar_se
 
 actions:
 - utter_greet
@@ -12,6 +13,7 @@ actions:
 - utter_did_that_help
 - utter_happy
 - utter_goodbye
+- utter_apresentar_se
 
 templates:
   utter_greet:
@@ -29,3 +31,7 @@ templates:
 
   utter_goodbye:
   - text: "Bye"
+
+  utter_apresentar_se:
+  - text: "Meu nome é ADA, sou a assistente avançada de desenvolvimento
+           de software."
