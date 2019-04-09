@@ -1,9 +1,9 @@
 FROM python:3.6-jessie
 
-ADD ./requirements.txt /tmp
+ADD ./docker/ada.requirements.txt /tmp
 ADD ./ada /ada
 
-RUN pip install -r /tmp/requirements.txt
+RUN pip install -r /tmp/ada.requirements.txt
 
 WORKDIR /ada
 
