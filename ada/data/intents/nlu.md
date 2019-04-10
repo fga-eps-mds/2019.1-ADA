@@ -1,23 +1,48 @@
-## intent:greet
+## intent:cumprimentar
 - hey
-- hello
-- hi
-- good morning
-- good evening
-- hey there
+- olá
+- ola
+- oi
+- oie
+- turu bom 
+- oi Ada
+- bom dia
+- boa tarde
+- boa noite
+- eai
+- iai
+- iae
+- quale
+- qualé
+- fala ai
+- fala aí
+- opa
+- opa, blz
+- opa, beleza
+- opa, de boa
+- de boa
+- ADA
+- ada
+- Ada
 
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
+## intent:tchau
+- tchau
+- até logo
+- depois a gente conversa
+- ate depois
+- a gente se ve
+- obrigado, tchau
+- vlw flw
+- valeu falou
+- falou valeu
+- flw vlw
 
-## intent:mood_affirm
-- yes
-- indeed
-- of course
-- that sounds good
-- correct
+## intent:usr_feliz
+- sim
+- de fato
+- claro
+- correto
+- perfeitamente
 
 ## intent:mood_deny
 - no
@@ -51,6 +76,8 @@
 
 ## intent:apresentar_se
 - quem é você
+- quem e vc
+- quem é vc
 - me conta sobre você
 - conta sobre você
 - voce é
@@ -60,3 +87,15 @@
 - apresente-se
 - introduza-se
 - se introduza
+
+## intent:mais_info?
+- sim
+- claro
+- com certeza
+- lógico
+- mas é claro
+- sim, por favor
+- so mais um pouco
+- decerto
+- é certo que sim
+- por que nao

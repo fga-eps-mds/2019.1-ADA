@@ -1,31 +1,33 @@
 ## happy path
-* greet
-  - utter_greet
+* cumprimentar
+  - utter_cumprimentar
 * mood_great
-  - utter_happy
+  - utter_usr_feliz
 
 ## sad path 1
-* greet
-  - utter_greet
+* cumprimentar
+  - utter_cumprimentar
 * mood_unhappy
   - utter_cheer_up
   - utter_did_that_help
-* mood_affirm
-  - utter_happy
+* usr_feliz
+  - utter_usr_feliz
 
 ## sad path 2
-* greet
-  - utter_greet
+* cumprimentar
+  - utter_cumprimentar
 * mood_unhappy
   - utter_cheer_up
   - utter_did_that_help
 * mood_deny
-  - utter_goodbye
+  - utter_tchau
 
 ## say goodbye
-* goodbye
-  - utter_goodbye
+* tchau
+  - utter_tchau
 
 ## apresentar_se
 * apresentar_se
   - utter_apresentar_se
+* mais_info?
+  - utter_mais_info?
