@@ -35,6 +35,6 @@
 
 ## action path
 * greet
-  - utter_greet
+  - utter_cumprimentar
 * action_test
   - action_test

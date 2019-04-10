@@ -18,10 +18,7 @@ actions:
 - utter_mais_info?
 - action_test
 
-templates:
-  
-  utter_greet:
-  - text: "Hey! How are you?"
+templates:  
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
