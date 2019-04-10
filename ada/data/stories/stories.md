@@ -25,3 +25,9 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+
+## action path
+* greet
+  - utter_greet
+* action_test
+  - action_test
