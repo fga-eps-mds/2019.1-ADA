@@ -31,3 +31,10 @@
   - utter_apresentar_se
 * mais_info?
   - utter_mais_info?
+
+
+## action path
+* greet
+  - utter_greet
+* action_test
+  - action_test

@@ -20,4 +20,4 @@ def train_dialogue(domain_file,
                                       )
 
 if __name__ == "__main__":
-    train_dialogue('domain.yml', 'models/dialogue', 'data/stories/', 'policy_config.yml')
+    train_dialogue('domain.yml', 'models/dialogue/', 'data/stories/', 'policy_config.yml')

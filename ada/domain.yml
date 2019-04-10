@@ -16,10 +16,12 @@ actions:
 - utter_tchau
 - utter_apresentar_se
 - utter_mais_info?
+- action_test
 
 templates:
-  utter_cumprimentar:
-  - text: "Olá. Posso ajudar?"
+  
+  utter_greet:
+  - text: "Hey! How are you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -42,3 +44,6 @@ templates:
 
   utter_mais_info?:
   - text: "Gostaria de saber mais sobre mim ?"
+  
+  utter_cumprimentar:
+  - text: "Olá. Posso ajudar?"

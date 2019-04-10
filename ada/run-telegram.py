@@ -10,12 +10,14 @@ from rasa_core.channels.telegram import TelegramInput
 from rasa_core.utils import configure_colored_logging, read_yaml_file, AvailableEndpoints
 from rasa_core.run import start_server, load_agent
 from rasa_core.interpreter import NaturalLanguageInterpreter
+from rasa_core.tracker_store import TrackerStore
 
 logger = logging.getLogger(__name__)
 configure_colored_logging(loglevel='DEBUG')
 
 def run(core_dir, nlu_dir):
-    _endpoints = AvailableEndpoints.read_endpoints(None)
+
+    _endpoints = AvailableEndpoints.read_endpoints('endpoints.yml')
     _interpreter = NaturalLanguageInterpreter.create(nlu_dir)
 
     input_channel = TelegramInput(
@@ -24,7 +26,8 @@ def run(core_dir, nlu_dir):
         webhook_url=os.getenv('WEBHOOK_URL', '')
     )
 
-    _agent = load_agent(core_dir, interpreter=_interpreter,
+    _agent = load_agent(core_dir,
+                        interpreter=_interpreter,
                         endpoints=_endpoints)
 
     http_server = _agent.handle_channels(
