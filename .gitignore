@@ -21,6 +21,7 @@ __pycache__/
 
 # File with credentials
 .env
+export.sh
 
 # Bot training
 /services/api/models/*
