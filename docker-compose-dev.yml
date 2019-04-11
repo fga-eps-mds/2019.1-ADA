@@ -11,6 +11,8 @@ services:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
+    depends_on:
+      - actions   
   actions:
     build:
       context: .
@@ -21,11 +23,10 @@ services:
       - ./ada/actions:/ada/actions
       - ./ada/Makefile:/ada/Makefile
     command: "make run-actions"
-    
+
   mongo-telegram:
     image: mongo
     volumes:
       - /mongo_telegram:/data/db
     ports:
       - 27017:27017
-    
