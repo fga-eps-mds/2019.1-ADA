@@ -29,12 +29,13 @@
 ## apresentar_se
 * apresentar_se
   - utter_apresentar_se
+
+# mais_info?
 * mais_info?
   - utter_mais_info?
 
-
 ## action path
-* greet
+* cumprimentar
   - utter_cumprimentar
 * action_test
   - action_test

@@ -4,7 +4,7 @@
 - ola
 - oi
 - oie
-- turu bom 
+- turu bom
 - oi Ada
 - bom dia
 - boa tarde
@@ -99,3 +99,6 @@
 - decerto
 - é certo que sim
 - por que nao
+- mais informações
+- mais informações por favor
+- mais info

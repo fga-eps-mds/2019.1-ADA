@@ -7,6 +7,7 @@ intents:
   - mood_unhappy
   - apresentar_se
   - mais_info?
+  - quem_e_ada
 
 actions:
 - utter_cumprimentar
@@ -17,8 +18,9 @@ actions:
 - utter_apresentar_se
 - utter_mais_info?
 - action_test
+- action_quem_e_ada
 
-templates:  
+templates:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -41,6 +43,6 @@ templates:
 
   utter_mais_info?:
   - text: "Gostaria de saber mais sobre mim ?"
-  
+
   utter_cumprimentar:
   - text: "Olá. Posso ajudar?"
