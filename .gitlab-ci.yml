@@ -1,0 +1,8 @@
+stages:
+  - test
+
+lint-flake8:
+  image: ejplatform/python:alpine
+  stage: test
+  script:
+    - flake8
