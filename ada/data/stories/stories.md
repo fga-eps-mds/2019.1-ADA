@@ -33,3 +33,9 @@
 ## help path
 * help{"command": "help"}
   - utter_help
+
+## get_build path
+* greet
+  - utter_greet
+* get_build
+  - get_build

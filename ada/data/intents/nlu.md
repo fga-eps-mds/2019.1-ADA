@@ -56,3 +56,9 @@
 ## intent:help
 - help
 - /help
+
+## intent:get_build
+- build
+- mostre a build
+- sobre a build
+- status da build
