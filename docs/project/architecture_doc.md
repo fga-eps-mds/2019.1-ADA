@@ -53,9 +53,13 @@ O software ADA funciona com base na seguinte representação arquitetural:
 
 ![arquitetura](../assets/img/project/architecture/Arquitetura_1.0.png)
 
-<p style="text-align:justify">&emsp;&emsp;No centro do diagrama acima encontra-se a ADA. Ela é responsável por, via Rasa, interpretar diferentes mensagens e gerar respostas, as quais são passadas ao usuário via Telegram, assim estabelecendo uma comunicação ativa, rápida, simples e eficiente. Para buscar as respostas e passá-las, posteriormente, ao usuário, ADA recorre à ferramenta GitHub API. Mais informações a respeito do funcionamento desse diagrama de relações são apresentadas abaixo. </p>
+<p style="text-align:justify">&emsp;&emsp;No centro do diagrama acima encontra-se a ADA. Ela é responsável por, via Rasa, interpretar diferentes mensagens e gerar respostas, as quais são passadas ao usuário via Telegram, assim estabelecendo uma comunicação ativa, rápida, simples e eficiente. A arquitetura utilizada será o m </p>
 
-### 2.2 Tecnologias
+### 2.2 Representação dos Microserviços
+
+
+
+### 2.3 Tecnologias
 
 #### GitHub API
 
