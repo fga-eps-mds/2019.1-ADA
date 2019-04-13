@@ -35,3 +35,5 @@
     - [**Sprint 3**](#)
         - [Planejamento Sprint 3](/docs/sprints/sprint3/planejamento_sprint3.md)
         - [Resultado Sprint 3](/docs/sprints/sprint3/resultados_sprint3.md)
+    - [**Sprint 4**](#)
+        - [Planejamento Sprint 4](/docs/sprints/sprint4/planejamento_sprint4.md)
