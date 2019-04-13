@@ -1,4 +1,4 @@
-## intent:cumprimentar
+## intent:greet
 - hey
 - olá
 - ola
@@ -40,7 +40,7 @@
 - oi princesa
 - oi sumida
 
-## intent:tchau
+## intent:bye
 - tchau
 - até logo
 - depois a gente conversa
@@ -56,7 +56,7 @@
 - tchau princesa
 - beijo
 
-## intent:usr_feliz
+## intent:usr_happy
 - sim
 - de fato
 - claro
@@ -93,7 +93,7 @@
 - extremely sad
 - so sad
 
-## intent:apresentar_se
+## intent:intoduce_ada
 - quem é você
 - quem e vc
 - quem é vc
@@ -106,9 +106,9 @@
 - apresente-se
 - introduza-se
 - se introduza
-- me fala de você 
+- me fala de você
 
-## intent:mais_info?
+## intent:more_info?
 - sim
 - claro
 - com certeza

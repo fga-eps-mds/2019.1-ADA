@@ -1,24 +1,24 @@
 intents:
-  - cumprimentar
-  - tchau
-  - usr_feliz
+  - greet
+  - bye
+  - usr_happy
   - mood_deny
   - mood_great
   - mood_unhappy
-  - apresentar_se
-  - mais_info?
-  - quem_e_ada
+  - intoduce_ada
+  - more_info?
+  - who_is_ada
 
 actions:
-- utter_cumprimentar
+- utter_greet
 - utter_cheer_up
 - utter_did_that_help
-- utter_usr_feliz
-- utter_tchau
-- utter_apresentar_se
-- utter_mais_info?
+- utter_usr_happy
+- utter_bye
+- utter_intoduce_ada
+- utter_more_info?
 - action_test
-- action_quem_e_ada
+- action_who_is_ada
 
 templates:
 
@@ -29,20 +29,20 @@ templates:
   utter_did_that_help:
   - text: "Did that help you?"
 
-  utter_usr_feliz:
+  utter_usr_happy:
   - text: "Fico contente."
   - text: "Continue assim."
 
-  utter_tchau:
+  utter_bye:
   - text: "Até breve."
   - text: "Bom trabalho!"
 
-  utter_apresentar_se:
+  utter_intoduce_ada:
   - text: "Meu nome é ADA, sou a assistente avançada de desenvolvimento
            de software."
 
-  utter_mais_info?:
+  utter_more_info?:
   - text: "Gostaria de saber mais sobre mim ?"
 
-  utter_cumprimentar:
+  utter_greet:
   - text: "Olá. Posso ajudar?"

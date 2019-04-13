@@ -12,7 +12,7 @@ services:
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
     depends_on:
-      - actions   
+      - actions
   actions:
     build:
       context: .
