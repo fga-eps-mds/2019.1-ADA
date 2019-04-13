@@ -35,7 +35,7 @@ templates:
 
   utter_tchau:
   - text: "Até breve."
-  - text: "Bom trabalho"
+  - text: "Bom trabalho!"
 
   utter_apresentar_se:
   - text: "Meu nome é ADA, sou a assistente avançada de desenvolvimento
