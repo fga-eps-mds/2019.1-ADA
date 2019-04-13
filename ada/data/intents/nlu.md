@@ -24,6 +24,21 @@
 - ADA
 - ada
 - Ada
+- olar
+- tudo bom
+- oi amiga
+- amiga
+- miga
+- princesa
+- oi bb
+- oi bebê
+- oiii
+- hello
+- eae
+- fala ae
+- ei
+- oi princesa
+- oi sumida
 
 ## intent:tchau
 - tchau
@@ -36,6 +51,10 @@
 - valeu falou
 - falou valeu
 - flw vlw
+- tchau anjo
+- tchau bebê
+- tchau princesa
+- beijo
 
 ## intent:usr_feliz
 - sim
@@ -87,6 +106,7 @@
 - apresente-se
 - introduza-se
 - se introduza
+- me fala de você 
 
 ## intent:mais_info?
 - sim
@@ -102,3 +122,7 @@
 - mais informações
 - mais informações por favor
 - mais info
+- pode ser
+- ok
+- blz
+- beleza
