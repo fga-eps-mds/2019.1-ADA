@@ -48,3 +48,11 @@
 - not very good
 - extremely sad
 - so sad
+
+## intent:start
+- start
+- /start
+
+## intent:help
+- help
+- /help

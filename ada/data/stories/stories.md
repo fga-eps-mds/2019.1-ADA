@@ -25,3 +25,11 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+
+## start path
+* start{"command": "start"}
+  - utter_start
+
+## help path
+* help{"command": "help"}
+  - utter_help

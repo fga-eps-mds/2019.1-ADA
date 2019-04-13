@@ -5,6 +5,8 @@ intents:
   - mood_deny
   - mood_great
   - mood_unhappy
+  - start
+  - help
 
 actions:
 - utter_greet
@@ -12,6 +14,9 @@ actions:
 - utter_did_that_help
 - utter_happy
 - utter_goodbye
+- utter_start
+- utter_default
+- utter_help
 
 templates:
   utter_greet:
@@ -29,3 +34,16 @@ templates:
 
   utter_goodbye:
   - text: "Bye"
+
+  utter_start:
+  - text: |
+      Olá, sou a Ada! 
+      E sou responsável por auxiliar você no controle dos seus repositórios do Git. Fui a primeira pessoa a criar um algoritmo computacional e agora sou responsável por auxiliar os desenvolvedores para que um dia possam deixar sua marca no mundo assim como eu fiz.
+  
+  utter_default:
+  - text: |
+      Desculpe, não entendi! Pode repetir?
+
+  utter_help:
+  - text: |
+      Posso ajudar a notificar você sobre mudanças em seu repositório, como novos commits, novas issues, além de você poder, pelo próprio Telegram, comentar as Issues e fazer o controle de versões caso alguma versão esteja instável.
