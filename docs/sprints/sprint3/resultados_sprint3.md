@@ -71,7 +71,7 @@ A métrica de Work Capacity mede o quanto de esforço cada membro teve em cada d
 
 ## Burndown de Riscos
 
-[<img src="../../assets/img/sprints/sprint3/burndown_de_riscos_sprint3.png">](https://docs.google.com/spreadsheets/d/1G8-T3FLlQzlU4nXsHyqAN90bHexrcHYGM2LAcBi4Ph0/edit#gid=0)
+[![S6](../../assets/img/sprints/sprint3/burndown_de_riscos_sprint3.png "Clique para ver em detalhes")](https://docs.google.com/spreadsheets/d/1G8-T3FLlQzlU4nXsHyqAN90bHexrcHYGM2LAcBi4Ph0/edit#gid=0) 
 
 __Total de pontos de riscos:__ 332
 
