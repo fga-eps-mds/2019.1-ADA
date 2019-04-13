@@ -1,8 +1,7 @@
-[<img src="docs/assets/img/logo/logoAda.png" width="300" height="300">]()
+<img src="docs/assets/img/logo/Ada_logo_horizontal.png" width="720" height="250">
 
 
-# Ada 
+![](docs/assets/gifs/BackGround.gif)
 
-> ChatBot para Gerência de Repositórios de código fontes.
 
-![color](#f9dbbd)
+

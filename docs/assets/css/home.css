@@ -59,13 +59,16 @@
   margin-top: 2em !important; 
 }
 
-.has-mask{
+.has-mask {
   background-attachment: fixed !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
 
+.mask {
+  background-color: transparent !important; 
+}
 
 body h1{
 font-size: 2.5em !important;
