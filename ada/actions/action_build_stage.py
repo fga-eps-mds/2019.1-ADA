@@ -7,6 +7,6 @@ class BuildStage(Action):
 
     def run(self, dispatcher, tracker, domain):
         is_there_any_build = False
-        if(is_there_any_build):
+        if(not is_there_any_build):
             default = "Não há build's em andamento, mas continuo te informando.\n"
             dispatcher.utter_message(default)
