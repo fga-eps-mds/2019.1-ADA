@@ -8,6 +8,7 @@ intents:
   - intoduce_ada
   - more_info?
   - who_is_ada
+  - build_stage
 
 actions:
 - utter_greet
@@ -19,6 +20,8 @@ actions:
 - utter_more_info?
 - action_test
 - action_who_is_ada
+- utter_build_stage
+- action_build_stage
 
 templates:
 
@@ -46,3 +49,7 @@ templates:
 
   utter_greet:
   - text: "Olá. Posso ajudar?"
+
+  uteer_build_stage:
+  - text: "Aguarde um momento. \n
+           Vou verificar..."
