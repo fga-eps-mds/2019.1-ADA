@@ -26,8 +26,16 @@
 * goodbye
   - utter_goodbye
 
-## action path
+## path who_is_ada
+* who_is_ada
+  - utter_who_is_ada
+
+## path_action_get_pipeline
 * greet
   - utter_greet
-* action_test
-  - action_test
+* action_get_pipeline
+  - action_get_pipeline
+
+## path get_pipeline
+* action_get_pipeline
+  - action_get_pipeline

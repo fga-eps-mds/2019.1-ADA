@@ -1,4 +1,4 @@
-FROM python:3.6-jessie
+FROM python:3.6-slim
 
 RUN apt update && apt install -y git gcc make curl
 

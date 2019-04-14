@@ -48,3 +48,20 @@
 - not very good
 - extremely sad
 - so sad
+
+## intent:who_is_ada
+- quem e voce?
+- o que voce faz?
+- de onde voce e?
+- me fala sobre voce
+- me fala sobre o que voce fez?
+- me conta sobre voce
+
+## intent:action_get_pipeline
+- me mostra o pipeline do repositorio, por favor
+- pipeline, por favor
+- pipeline do meu projeto, ada
+- pipeline do meu projeto
+- me mostra o pipe
+- pipe, por favor
+- pipe

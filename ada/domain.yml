@@ -6,7 +6,9 @@ intents:
   - mood_great
   - mood_unhappy
 
-  - action_test
+  - who_is_ada
+
+  - action_get_pipeline
 
 actions:
   - utter_greet
@@ -15,7 +17,18 @@ actions:
   - utter_happy
   - utter_goodbye
 
-  - action_test
+  - utter_who_is_ada
+
+  - action_get_pipeline
+
+entities:
+  - repositorio
+
+
+# slots:
+#   repositorio:
+#     type: "text"
+#     initial_value: ""
 
 templates:
   
@@ -24,7 +37,6 @@ templates:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -34,3 +46,7 @@ templates:
 
   utter_goodbye:
   - text: "Bye"
+
+  utter_who_is_ada:
+  - text: "Olá, sou a Ada Lovelace, nasci em 10 de dezembro de 1815 e fui uma matemática e escritora inglesa. Fui reconhecida por ter escrito o primeiro algoritmo
+    para ser processado por uma máquina, a máquina análitica de Charles Babbage. Devido a esse trabalho, sou reconhecida por ser a primeira programadora da história."

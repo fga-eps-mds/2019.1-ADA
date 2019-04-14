@@ -31,7 +31,7 @@ def run(core_dir, nlu_dir):
                         endpoints=_endpoints)
 
     http_server = _agent.handle_channels(
-        [input_channel], 5000, ""
+        [input_channel], 5001, ""
     )
 
     try:
