@@ -6,4 +6,7 @@ class BuildStage(Action):
         return "action_build_stage"
 
     def run(self, dispatcher, tracker, domain):
-        pass
+        is_there_any_build = False
+        if(is_there_any_build):
+            default = "Não há build's em andamento, mas continuo te informando.\n"
+            dispatcher.utter_message(default)
