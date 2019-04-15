@@ -14,12 +14,21 @@
 - fala pra mim se tem build em progresso
 - me diz o estágio da build, ada
 - como está a build
-- a build está terminando ?
-- a build tá começando ?
-- a build parou ?
+- a build está terminando?
+- a build tá começando?
+- a build parou?
 - quantas builds tem
 - quantas builds eu tenho ?
 - em qual job a build se encontra ?
 - qual o job da build atual
 - tem job em andamento ?
-- qual a job atual 
+- qual a job atual
+- quantas builds eu tenho?
+- minhas builds
+- mostre a build
+- builds recentes
+- quais são as builds
+- diga-me as builds
+- as builds
+- git build
+- quais as builds

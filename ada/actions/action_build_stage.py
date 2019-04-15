@@ -1,5 +1,5 @@
 from rasa_core_sdk import Action
-
+import requests
 
 class BuildStage(Action):
     def name(self):
