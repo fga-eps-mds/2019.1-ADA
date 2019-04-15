@@ -19,3 +19,7 @@
 - a build parou ?
 - quantas builds tem
 - quantas builds eu tenho ?
+- em qual job a build se encontra ?
+- qual o job da build atual
+- tem job em andamento ?
+- qual a job atual 
