@@ -28,10 +28,10 @@ Sprint reservada para treinamentos, elaboração de templates iniciais e conheci
 __Total:__ 23
 
 ## Papéis
-__Scrum Master:__ Ateldy Brasil
-__Product Owner:__ Vítor Gomes
-__Arquiteto:__ Bruno Dantas
-__DevOps:__ João Vítor Ramos
+* __Scrum Master:__ Ateldy Brasil
+* __Product Owner:__ Vítor Gomes
+* __Arquiteto:__ Bruno Dantas
+* __DevOps:__ João Vítor Ramos
 
 __Desenvolvedores:__
 * Caio Fernandes 

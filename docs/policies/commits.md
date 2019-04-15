@@ -1,8 +1,8 @@
+# Política de Commits
+
 | Data       | Versão | Descrição            | Autor             |
 |:----------:|:------:|:--------------------:|:-----------------:|
 | 20/03/2019 | 0.1 | Criação do documento com template inicial  | João Vitor, Bruno Dantas, Ateldy Brasil e Vitor Gomes|
-
-## Política de Commits
 
  Os commits devem seguir o seguinte padrão:
 

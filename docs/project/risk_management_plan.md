@@ -18,7 +18,7 @@ Uma forma comum para estruturar categorias dos riscos usa a estrutura analítica
 
 ![Estrutura Analítica dos Riscos deste projeto.](../assets/img/project/risks/EAR.jpg)
 
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/img/risks/EAR.jpg)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/assets/img/risks/EAR.jpg)
 
 ### 3.1. Risco Técnico
 

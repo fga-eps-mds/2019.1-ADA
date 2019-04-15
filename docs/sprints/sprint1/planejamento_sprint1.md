@@ -37,10 +37,10 @@ Por ser uma sprint focada em documentação, decidimos fazer em conjunto, forman
 __Total:__ 78
 
 ## Papéis
-__Scrum Master:__ Ateldy Brasil
-__Product Owner:__ Vítor Gomes
-__Arquiteto:__ Bruno Dantas
-__DevOps:__ João Vítor Ramos
+* __Scrum Master:__ Ateldy Brasil
+* __Product Owner:__ Vítor Gomes
+* __Arquiteto:__ Bruno Dantas
+* __DevOps:__ João Vítor Ramos
 
 __Desenvolvedores:__
 * Caio Fernandes 

@@ -1,4 +1,4 @@
-## Rich Pictures
+# Rich Pictures
 
 <p style="text-align:justify">&emsp;&emsp;Rich Picture trata-se de uma forma de modelagem de ideias, pouco formal, e
 ideal para reuniões com clientes e/ou em times de desenvolvimento. Além disso, ela se baseia em rascunhar desenhos e usar textos curtos e objetivos

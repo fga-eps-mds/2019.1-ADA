@@ -16,7 +16,7 @@ Com a bot Ada é possível receber notificações sobre todas as mudanças que o
 
 #### Políticas
 
-As políticas de _branches_, _commits_, _pull requests_ e _issues_ se encontram [aqui](/docs/assets/poliproduct/cies/policies.md)
+As políticas de [_branches_](/docs/policies/branches.md), [_commits_](/docs/policies/commits.md), [_pull requests_](/docs/policies/pull_request.md) e [_issues_](/docs/policies/issues.md) se encontram [aqui](/docs/policies/policies.md)
 
 
 <h1 class="display-1 sub-title2">Time</h1>

@@ -1,8 +1,8 @@
+# Política de Pull Requests
+
 | Data       | Versão | Descrição            | Autor             |
 |:----------:|:------:|:--------------------:|:-----------------:|
 | 21/03/2019 | 0.1 | Criação do documento com template inicial  | João Vitor, Bruno Dantas, Ateldy Brasil e Vitor Gomes|
-
-## Política de Pull Requests
 
 Os pull requests devem seguir o seguinte padrão:
 

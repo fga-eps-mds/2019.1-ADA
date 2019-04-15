@@ -5,13 +5,13 @@
 |28/03/2019|1.0|Criação da versão inicial do gitflow | João Vitor |
 |06/04/2019|2.0|Criação da versão inicial do gitflow | João Vitor |
 
-# Visão Geral
+## 1. Visão Geral
 
 Foi idealizado um _Gitflow_ (fluxo de trabalho) automatizado visando entregas de funcionalidade mais rápidas e de mais qualidade.
 
 O fluxo de trabalho contará com 3 estágios de verificação até o envio do serviço para o ambiente de produção. Os estágios de **teste**, **build** e **deploy**.
 
-# Workflow
+## 2. Workflow
 
 Quando iniciado o desenvolvimento de uma funcionalidade deve-se primeiro iniciar o docker. E depois do ambiente rodando corretamente, deve-se criar uma _branch_ seguindo a [política de branches](/docs/policies/branches.md).
 
@@ -25,22 +25,22 @@ Após a realização dos testes em ambiente de homologação na _branch_ devel e
 
 A _branch_ master é o ambiente de produção. Local em que todas alterações devem estar funcionando corretamente. Porém caso ocorra algo que não foi localizado em alguma das etapas anteriores, todos os estágios de _teste_, _build_ e _deploy_ são rodados novamente.
 
-# Tecnologias
+## 3. Tecnologias
 
-## Docker
+### Docker
   O docker terá duas funcionalidades principais: padronização e isolamento do ambiente.
 
   Para a padronização do ambiente de desenvolvimento, servirá para o ambiente ser exatamente o mesmo independentemente de Sistema Operacional(SO), visto que dentro da equipe existe uma grande diversidade desses. Mitigando o risco de erros não previstos por conta dessa diferença de SO's.
 
-## DockerHub
+### DockerHub
   O DockerHub é uma ferramenta que servirá como _registry_. O que é basicamente um repositório de imagens de Docker.
 
   Ao decorrer do projeto serão geradas imagens de docker e essas serão enviadas ao repositório no DockerHub. Sendo facilmente utilizadas por todos os serviços do produto..
 
-## Github
+### Github
   É uma ferramenta de controle de versão adotada mundialmente. Através dela é possível que diversas pessoas possam contribuir simultaneamente no mesmo projeto.
 
   Assim, fizemos o versionamento do código será realizado via Github e adaptado de acordo com os padrões de Software Livre.
 
-## Gitlab-CI
+### Gitlab-CI
   O gitlab será utilizado para a automatização do _pipeline_ de entrega contínua das funcionalidades a serem desenvolvidas.

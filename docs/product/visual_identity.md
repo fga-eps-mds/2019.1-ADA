@@ -1,9 +1,6 @@
 
 # Identidade Visual
 
-
-## **Histórico de Revisão**
-
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
 | 03/04/2019 | 0.1 | Construção do tópico 1 - Paleta de Cores| João Pedro Guedes |

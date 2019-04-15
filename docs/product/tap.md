@@ -6,15 +6,15 @@
 | 22/03/2019 | 1.0 | Construção dos tópicos 1, 2, 3, 4, 5, 6, 7, 9, 10, 11. | Ateldy Brasil e Vítor Gomes |
 | 22/03/2019 | 1.1 | Construção do tópico 8. Estimativa de Custo | Ateldy Brasil |
 
-**1. Introdução**
+## 1. Introdução
 
- Este documento tem o objetivo de formalizar o projeto [nome do projeto], permitindo que os recursos alocados pelos gerentes de projeto sejam aplicados. As informações presentes neste documento proporcionam uma visão inicial e de alto nível de objetivos, requisitos, riscos e custos para a viabilização do projeto.
+ Este documento tem o objetivo de formalizar o projeto ADA, permitindo que os recursos alocados pelos gerentes de projeto sejam aplicados. As informações presentes neste documento proporcionam uma visão inicial e de alto nível de objetivos, requisitos, riscos e custos para a viabilização do projeto.
 
-**2. Descrição**
+## 2. Descrição
 
- O [nome do projeto] é uma ferramenta para o auxílio de gerenciamento de tarefas para DevOps em projetos de desenvolvimento de software. Inicialmente, será um bot aplicado na plataforma Telegram que realiza uma série de atividades de gerenciamento de repositórios.
+ A ADA é uma ferramenta para o auxílio de gerenciamento de tarefas para DevOps em projetos de desenvolvimento de software. Inicialmente, será um bot aplicado na plataforma Telegram que realiza uma série de atividades de gerenciamento de repositórios.
 
-**3. Propósito e Justificativa**
+## 3. Propósito e Justificativa
 
  O surgimento de metodologias ágeis se deu a fim de adaptar as práticas e processos de desenvolvimento de software frente a grande série de mudanças que ocorreram no mundo desde a década de 70 com a crescente difusão de tecnologias de informação no mundo todo.
 
@@ -26,13 +26,13 @@
 
 Portanto, o ChatOps tem o intuito de facilitar as práticas relacionadas a, sobretudo, o papel de DevOps. Assim, a verificação de manutenção de serviço online e a criação e o acompanhamento de issues, por exemplo, tornam-se mais práticos através de um bot no Telegram.
 
-**4. Objetivos**
+## 4. Objetivos
 
  O projeto tem como objetivo facilitar o gerenciamento de tarefas dentro de um projeto de desenvolvimento de software, sobretudo aquelas relacionadas ao papel de DevOps. A partir de um acesso rápido a informações através do bot no Telegram e possibilidade de realização de algumas tarefas através dele, diminui-se o esforço e tempo necessários para manter o projeto em organizado e em funcionamento.
 
  Para verificar o alcance dos objetivos, pode-se medir a melhoria no tempo de resposta a acontecimentos como quebra de integração contínua e no tempo para recolocação do serviço no ar. Além disso, pode-se medir a satisfação do usuário do sistema através de modelos amplamente utilizados na indústria como D&amp;M (DeLone &amp; McLean, 2003) ou TAM (Davis, 1989).
 
-**5. Requisitos de Alto Nível**
+## 5. Requisitos de Alto Nível
 
 - Interação através de linguagem natural para uma melhor usabilidade;
 - Fluxos de conversas objetivos e práticos;
@@ -42,9 +42,7 @@ Portanto, o ChatOps tem o intuito de facilitar as práticas relacionadas a, sobr
 - Captura de informações sobre deploy contínuo do repositório
 - Gerenciamento do pipeline de produção
 
-**6. Riscos**
-
-
+## 6. Riscos
 
 | **Riscos** | **Impacto** | **Medidas Preventivas** |
 | --- | --- | --- |
@@ -55,7 +53,7 @@ Portanto, o ChatOps tem o intuito de facilitar as práticas relacionadas a, sobr
 | Mudança no escopo devido a um pedido do cliente | Atraso ou projeto não ser concluído a tempo | Priorizar funcionalidades que agregam valor ao cliente. |
 | Perda ou defeitos em equipamentos | Atraso na entrega do projeto | Fazer manutenção regularmente para evitar defeitos. |
 
-**7. Cronograma e marcos**
+## 7. Cronograma e marcos
 
  O projeto tem como principais marcos suas main releases, definidas e representadas nas disciplinas como Release 1 e Release 2.
 
@@ -67,9 +65,9 @@ Dessa maneira, o cronograma do projeto é formulado e adaptado segundo cada um d
 | Release 1 | 30/04/2019 | Entrega da primeira versão do sistema, com documentação e alguns funcionalidades |
 | Release 2 | 25/06/2019 | Entrega da versão final do sistema, com todo o escopo desenvolvido. |
 
-**8. Estimativa de Custo**
+## 8. Estimativa de Custo
 
-8.1 Custo de Pessoal
+### 8.1 Custo de Pessoal
 
 A estimativa será feita para um valor mensal para 10 horas de trabalho semanais.
 
@@ -79,7 +77,7 @@ A estimativa será feita para um valor mensal para 10 horas de trabalho semanais
 | Equipe de Gerência de Projeto | 4 | R$ 7.351,00 | R$ 29.404,00 |
 | **Total** | **R$ 41,159,00** |
 
-8.2 Custo de aquisição
+### 8.2 Custo de aquisição
 
 | **Equipamento/Serviço** | **Quantidade** | **Motivo** | **Valor Unitário** | **Valor Mensal Total** |
 | --- | --- | --- | --- | --- |
@@ -97,9 +95,7 @@ A estimativa será feita para um valor mensal para 10 horas de trabalho semanais
 
 \*\*\*\*Preço de um Coworking localizado em Águas Claras, com energia, luz e internet incluídas.
 
-8.3 Ferramentas
-
-
+### 8.3 Ferramentas
 
 | **Ferramenta** | **Custo** |
 | --- | --- |
@@ -109,7 +105,7 @@ A estimativa será feita para um valor mensal para 10 horas de trabalho semanais
 | Draw.io | R$ 0,00 |
 | Adobe Illustrator | R$ 90,00/mês |
 
-8.4 Custo Total Estimado
+### 8.4 Custo Total Estimado
 
 | **Recurso** | **Valor** |
 | --- | --- |
@@ -123,9 +119,9 @@ Observações:
 
 \*Tempo da disciplina
 
-**9. Equipe e Partes Interessadas**
+## 9. Equipe e Partes Interessadas
 
-9.1 Equipe
+### 9.1 Equipe
 
 | Nome | Papel | GitHub | Email |
 | --- | --- | --- | --- |
@@ -139,27 +135,25 @@ Observações:
 | João Pedro José Santos da Silva Guedes | Desenvolvedor | sudjoao | isudjoao@gmail.com |
 | Lucas Fellipe Carvalho Moreira | Desenvolvedor | lucasfcm9 | lucasfcm9@gmail.com |
 
+### 9.2 Usuários
 
+* Gerentes de Projetos de Software;
 
-9.2 Usuários
+* Desenvolvedores de software.
 
-Gerentes de Projetos de Software;
+### 9.3 Clientes
 
-Desenvolvedores de software.
+* Carla Silva Rocha Aguiar;
 
-9.3 Clientes
+* Bruna Nayara Moreira Lima.
 
-CARLA SILVA ROCHA AGUIAR;
-
-BRUNA NAYARA MOREIRA LIMA.
-
-**10. Requisitos para Aprovação**
+## 10. Requisitos para Aprovação
 
 - Acesso pelo Telegram;
 - Entrega do escopo do projeto e funcionalidades definidas;
 - Atendimento às especificações dos requisitos levantados.
 
-**11. Referências**
+## 11. Referências
 
 BECK, Kent. Embracing change with extreme programming. **Computer** , n. 10, p. 70-77, 1999.
 
