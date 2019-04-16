@@ -25,8 +25,9 @@ class BuildStage(Action):
               project_owner=project_owner, project_name=project_name), headers=headers)
           requests_build = response.json()
         #   for i in range(3):
-          dispatcher.utter_message(f"A build {requests_build[0]['name']} está no \
-                                     estágio {requests_build[0]['stage']}.\n\n\
+          dispatcher.utter_message(f"A build {requests_build[0]['name']} da \
+                                     pipeline {requests_build[0]['pipeline_ref']} \
+                                     está no estágio {requests_build[0]['stage']}.\n\n\
                                      O status atual dela é {requests_build[0]['status']}.")
           dispatcher.utter_message(f"Você pode encontrar mais informações sobre essa \
                                     build no seguinte endereço:\n\
@@ -34,7 +35,7 @@ class BuildStage(Action):
           #dispatcher.utter_message(requests_build[0]['name'])
           #dispatcher.utter_message(requests_build[0]['stage'])
           #dispatcher.utter_message(requests_build[0]['status'])
-          # dispatcher.utter_message(requests_build[i]['pipeline/ref'])
+          #dispatcher.utter_message(requests_build[i]['pipeline']["ref"])
           # dispatcher.utter_message(requests_build[i]['web_url'])
           is_there_any_build = True
         except ValueError:
