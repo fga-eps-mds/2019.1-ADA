@@ -1,21 +1,21 @@
 ## intent:religion
-- voce acredita em [Deus](religion)
+- você acredita em [Deus](religion)?
 - [Deus] (religion) existe
-- voce e [catolico protestante](religion)
-- voce tem [religiao](religion)
+- você é [católica protestante](religion)
+- você tem [religião]?(religion)
 - [jesus](religion)
 - [Deus](religion)
 - [crente](religion)
-- voce e[evangelica](religion)?
-- voce e [anglicana](religion)?
-- voce é [católico](religion)?
-- voce é [ateu](religion)?
+- voce é [evangélica](religion)?
+- voce é [anglicana](religion)?
+- voce é [católica](religion)?
+- voce é [atéia](religion)?
 - qual a sua [religião](religion)?
-- qual a religiao na inglaterra?
+- qual a religião na inglaterra?
 - Ada, você acredita em alguma [religião](religion)?
 - ada, você acredita em alguma [religião](religion)?
-- [biblia](religion)
-- [religiao](religion)
+- [bíblia](religion)
+- [religião](religion)
 
 ## intent:who_am_i
 - [como você é?](how)
@@ -30,13 +30,15 @@
 - [me manda uma foto sua, por favor](how)
 
 ## intent:name_complete
-- qual o seu [nome](name)?
-- qual seu [nome completo](name)
+- Qual o seu nome?
+- qual o seu nome?
+- Qual o seu [nome](name)?
+- Qual seu [nome completo](name)
 - [nome](name)
 - qual seu [nome](name)?
-- me fala seu nome
-- como voce se [chama](name)?
-- como voce se [chama](name)
+- me fala seu nome, por favor
+- como você se [chama](name)?
+- como você se [chama](name)
 
 ## intent:joke
 - me conta uma [piada](joke)
@@ -50,12 +52,12 @@
 - qual é a sua [licença](license)
 - qual e a sua [licença](license)
 - voce e [licenciado](license)
-- sua [licenca de software](license)
+- sua [licença de software](license)
 - voce e [opensource](license)
 - voce e um [software livre](license)
 - [software livre](license)
 - [licença](license)
-- [licenca](license)
+- [licença](license)
 
 ## intent:good_night
 - boa [noitee](night)
