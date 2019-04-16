@@ -58,40 +58,70 @@
 
 ## intent:usr_happy
 - sim
+- decerto
+- é certo que sim
+- claro
+- com certeza
+- lógico
+- mas é claro
+- sim, por favor
 - de fato
 - claro
 - correto
 - perfeitamente
+- pode ser
+- ok
+- blz
+- beleza
 
 ## intent:mood_deny
 - no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
+- não
+- nao
+- naum
+- nunca
+- penso que nao
+- nao, mas obrigado
+- de forma alguma
+- na verdade nao
+- pra que isso, nao
+- nao, obrigado
+- claro que nao
+- sai fora
+- sai daqui ada
+- quero nao , valeu
+- muito obrigado, mas nao
+- precisa nao, valeu
+- agora nao, obrigado
+- deixa pra depois ada
+- por hora nao
+- por enquanto nao
 
 ## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
+- perfeito
+- muito bem
+- bem demais
+- loucura
+- maravilhoso
+- maravilhosa
+- me sinto muito bem
+- eu estou bem
+- to de boa
 
 ## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
+- triste
+- muito triste
+- infeliz
+- mal
+- muito mal
+- esquisito
+- terrivel
+- nao muito bem
+- extremamente triste
+- bem triste
+- to pra baixo
+- to meio down
+- to bem nao viu ada 
 
 ## intent:intoduce_ada
 - quem é você
@@ -107,22 +137,12 @@
 - introduza-se
 - se introduza
 - me fala de você
+- qual seu nome ?
+- me fala seu nome
+- seu nome é ada ?
 
 ## intent:more_info?
-- sim
-- claro
-- com certeza
-- lógico
-- mas é claro
-- sim, por favor
-- so mais um pouco
-- decerto
-- é certo que sim
-- por que nao
+- so mais um pouco de info
 - mais informações
 - mais informações por favor
 - mais info
-- pode ser
-- ok
-- blz
-- beleza

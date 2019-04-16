@@ -33,6 +33,15 @@
 # more_info?
 * more_info?
   - utter_more_info?
+* usr_happy
+  - utter_intoduce_ada
+  - action_who_is_ada
+
+# more_info?
+* more_info?
+  - utter_more_info?
+* mood_deny
+  - utter_bye
 
 ## action path
 * greet
