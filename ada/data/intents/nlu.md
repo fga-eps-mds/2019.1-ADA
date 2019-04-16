@@ -58,10 +58,8 @@
 - me conta sobre voce
 
 ## intent:action_get_pipeline
-- me mostra o pipeline do repositorio, por favor
-- pipeline, por favor
-- pipeline do meu projeto, ada
-- pipeline do meu projeto
-- me mostra o pipe
-- pipe, por favor
-- pipe
+- me mostra o pipeline do repositorio [abc](repositorio) por favor
+- pipeline repositorio [joaozinho](repositorio) por favor
+- pipeline do meu projeto [2019.1-Projeto](repositorio) ada
+- me mostra o pipe [teste](repositorio)
+

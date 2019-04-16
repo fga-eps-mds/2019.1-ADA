@@ -25,10 +25,9 @@ entities:
   - repositorio
 
 
-# slots:
-#   repositorio:
-#     type: "text"
-#     initial_value: ""
+slots:
+  repositorio:
+    type: unfeaturized
 
 templates:
   
