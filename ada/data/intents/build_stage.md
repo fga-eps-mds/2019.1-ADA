@@ -29,6 +29,7 @@
 - builds recentes
 - quais são as builds
 - diga-me as builds
-- as builds
+- as builds, me mostra ai 
 - git build
 - quais as builds
+- me mostra a build mais recente
