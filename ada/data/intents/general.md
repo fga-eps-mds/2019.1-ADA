@@ -49,6 +49,22 @@
 - oi, miga
 - oi miga
 
+## intent:how_are_you
+- tudo [bem](ok)?
+- Tudo [bem](ok)?
+- vc esta [bem](ok)?
+- [como vc esta](ok)?
+- tudo [ok](ok)?
+- voce ta [bem](ok)?
+- você está [bem](ok)?
+- [Como você está](ok)?
+- [como vc tá](ok)?
+- [tá tudo certo](ok)?
+- você tá [bem](ok)?
+- Você está [bem](ok)?
+- está [bem](ok), ada?
+- Ada, você está [bem](ok)?
+
 ## intent:greet_reply
 - [estou bem](good)
 - [estou super bem](good)
@@ -64,7 +80,7 @@
 - [estou muito bem](good)
 - tô ok
 
-## intent:bye
+## intent:goodbye
 - tchau
 - tchauzinho
 - Até mais
