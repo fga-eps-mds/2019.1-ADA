@@ -146,3 +146,13 @@
 - mais informações
 - mais informações por favor
 - mais info
+- sad
+- very sad
+- unhappy
+- bad
+- very bad
+- awful
+- terrible
+- not very good
+- extremely sad
+- so sad
