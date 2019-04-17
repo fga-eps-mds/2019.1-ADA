@@ -79,10 +79,6 @@
 * creators
   - utter_creators
 
-## happy path
-* greet
-  - utter_greet
-
 ## action path
 * greet
   - utter_greet

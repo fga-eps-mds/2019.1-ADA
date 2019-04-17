@@ -5,6 +5,15 @@
 ## intent:help
 - [help](command)
 - [/help](command)
+- me [ajuda](help)
+- help
+- me salva
+- você poderia me [ajudar](help)?
+- [ajuda](help)
+- você poderia me [ajudar](help), ada?
+- me [ajuda](help), por favor
+- ei, me [ajuda](help)
+- ada, me [ajuda](help)
 
 ## intent:begin
 - [vamos](begin)
@@ -144,7 +153,7 @@
 
 ## intent:deny
 - não
-- nop
+- nope
 - claro que não
 - quero não
 - jamais
