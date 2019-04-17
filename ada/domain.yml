@@ -1,48 +1,319 @@
 intents:
+  - start
+  - help
+  - begin
   - greet
-  - bye
-  - usr_happy
-  - mood_deny
+  - how_are_you
+  - greet_reply
+  - goodbye
+  - compliments
+  - thanks
+  - who_is_ada
+  - religion
+  - who_am_i
+  - name_complete
+  - joke
+  - license
+  - good_night
+  - good_afternoon
+  - good_morning
+  - sad
+  - creators
+  - affirm
+  - deny
   - mood_great
   - mood_unhappy
-  - intoduce_ada
-  - more_info?
-  - who_is_ada
+
+
+  - action_test
+
+entities:
+  - oi
+  - ok
+  - religion
+  - how
+  - good
+  - name
+  - joke
+  - license
+  - night
+  - afternoon
+  - morning
+  - sad
+  - creators
+  - begin
 
 actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_usr_happy
-- utter_bye
-- utter_intoduce_ada
-- utter_more_info?
-- action_test
-- action_who_is_ada
+  - utter_defalut
+  - utter_start
+  - utter_help
+  - utter_begin
+  - utter_greet
+  - utter_how_are_you
+  - utter_greet_reply
+  - utter_goodbye
+  - utter_compliments_reply
+  - utter_restart
+  - utter_thanks
+  - utter_who_is_ada
+  - utter_religion
+  - utter_who_am_i
+  - utter_name_complete
+  - utter_joke
+  - utter_license
+  - utter_good_night
+  - utter_good_afternoon
+  - utter_good_morning
+  - utter_sad
+  - utter_creators
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+
+  - action_test
 
 templates:
+  
 
+  utter_default:
+  - text: |
+      Não entendi o que você falou, pode repetir, por favor!
+
+      Se estiver com alguma dúvida, digite /help que poderei te ajudar melhor.
+  
+  - text: |
+      O que você quis dizer? Me explica melhor, por favor.
+
+      Se estiver com alguma dúvida, digite /help que poderei te ajudar melhor.
+
+  utter_start:
+  - text: |
+      Oláaaaa, sou a Ada!
+
+      Sou responsável por auxiliar vocês, desenvolvedores, no controle dos seus repositórios do Git. Fui a primeira pessoa a criar um algoritmo computacional, e agora estou encarregada por auxiliar vocês para que um dia deixem suas marcas no mundo, assim como eu fiz.
+
+      Caso queira saber mais, digite /help.
+
+
+  utter_restart:
+  - text: |
+
+  utter_help:
+  - text: |
+      Ficou interessado, né? Bom, vamos lá.
+
+      Vou te passar uma lista do que você pode me pedir
+          - Commit's;
+          - Issues;
+          - Pull Request's;
+          - Pipeline's e Build's dos seus projetos do GitLab.
+    
+      Caso você se cadastre, vou notificá-los sobre quaisquer alterações que ocorrerem nos seus repositórios!
+
+      Posso também criar e comentar em issues a partir do Telegram, basta você me pedir!
+
+      Estou aqui para te ajudar, vamos começar? Hehehe 😁
+
+  utter_begin:
+  - text: |
+      Então vamos lá, me pergunte o que você quer saber sobre seus repositórios ou converse comigo, sei de muitas coisas!
+
+  utter_greet:
+  - text: |
+      Olá, tudo bem? Como você já deve saber, sou a Ada! 💜
+      
+      Sou responsável por várias coisas no seu repositório, é só me perguntar ou digitar /help que eu te respondo rapidinho! 😊
+
+  utter_how_are_you:
+  - text: |
+      Estou ótima, obrigada! E você??
+  
+  - text: |
+      Obrigada por perguntar, estou muito bem! 😊
+
+      E você??
+
+  - text: |
+      Estou super bem, e você? Está bem também??
+
+  utter_greet_reply:
+  - text: |
+      Que bom, fico feliz que as coisas estão fluindo bem!
+
+  - text: |
+      Ahhh que ótimo!
+
+    
+
+  utter_goodbye:
+  - text: |
+      Tchauuuuu, migo(a). 😘
+
+      Caso você tenha se cadastrado, eu irei notificá-lo sobre qualquer alteração no seu repositório.
+  
+  - text: |
+      Gooood bye! Volte sempre! 😘
+
+      Caso você tenha se cadastrado, eu irei notificá-lo sobre qualquer alteração no seu repositório.
+
+  - text: |
+      Um beijo e um super abraço, estarei aqui para o que precisar! 😘
+
+      Caso você tenha se cadastrado, eu irei notificá-lo sobre qualquer alteração no seu repositório.
+
+  utter_compliments_reply:
+  - text: |
+      Ahhh que isso, né! Muito obrigada 🤩
+
+      Sou reconhecida hoje por causa de vocês! 
+      
+  - text: |
+      Obrigadaaaaaa, mas você que é incrível! 😍
+
+  - text: |
+      Muito obrigada, estou aqui para te ajudar
+
+      Qualquer coisa é só chamar 🤗
+
+  - text: |
+      Para com isso, assim eu fico envergonhada 🙈
+
+  - text: |
+      Obrigadaaaa, sou assim por causa de vocês!
+
+  utter_thanks:
+  - text: |
+      De nadaaa, qualquer coisa que precisar é só chamar!
+
+  - text: |
+      Ahhh, que isso, estou aqui para te ajudar mesmo!
+
+      Foi um prazer te ajudar, qualquer coisa é só mandar um oizinho!
+
+  - text: |
+      Eu que agradeço, sem você eu não seria nada. Conta comigo para qualquer coisa!
+
+  utter_who_is_ada:
+  - text: |
+      Eu fui desenvolvida por um grupo de estudantes de Engenharia de Software da Universidade de Brasília, em 2019. Meu nome e personalidade foram escolhidos em  homenagem à Ada Lovelace, uma grande escritora e matemática do século XIX, filha do poeta Lord Byron. A ela é atribuído o título de primeira mulher programadora, uma vez que ela foi responsável por criar o primeiro algoritmo com a intenção de ser executado por uma máquina de computação, a máquina de Charles Babbage, além de ter reconhecido o enorme potencial desse tipo de máquina. Você pode entender mais sobre minha personalidade por  meio desse link: https://www.celebrities-galore.com/celebrities/ada-lovelace/home/ E por aqui você encontra mais sobre minha história e sobre meus trabalhos: https://pt.wikipedia.org/wiki/\Ada_Lovelace
+
+  utter_religion:
+  - text: |
+      Ahhh como eu nasci na Inglaterra sou Anglicana ✝️
+
+  - text: |
+      Eu acredito que talvez deva existir um Deus dos Bot's, você não acha?
+
+      Talvez eu deva acreditar nele 🤔
+
+  - text: |
+      Eu acredito no grande Deus da computação
+
+      Ele que me inspirou a fazer o que eu fiz
+
+      Se você acreditar nele também, você deixará sua marca aqui na Terra.
+
+  utter_who_am_i:
+  - text: "Ahh eu sou bem bonita, tenho olhos e cabelo castanhos, deixa eu te mostrar uma foto minha!"
+    image: "https://s2.glbimg.com/paF5KTEVGzMU-ZcZa2mjYicNDjM=/e.glbimg.com/og/ed/f/original/2015/03/09/ada.jpg"
+
+  - text: |
+      Além de ser bonita, sou muito inteligente 😜!
+
+  - text: |
+      Sou a melhor pessoa da computação que existe, você não acha?
+      
+  utter_name_complete:
+  - text: |
+      Meu nome completo é Ada August King, Condessa de Lovelace
+
+  - text: |
+      Como assim você não sabe meu nome?
+
+      É Ada Lovelace, rapaz! 
+
+  utter_joke:
+  - text: |
+      Não sei contar piadas, desculpa 😔
+
+  - text: |
+      Você quer saber sobre seus projetos ou quer que eu conte piadas? 👀
+
+  utter_license:
+  - text: |
+      Ahhh a minha licença é a GPL, se quiser saber mais, entre nesse site https://pt.wikipedia.org/wiki/GNU_General_Public_License!
+
+  - text: |
+      Sou um software livre licenciado com a GPL
+
+      Sou open source 😜
+
+  utter_good_night:
+  - text: |
+      Boa noiteeee, se cuida! 
+
+  - text: |
+      Tenha uma ótima noite!
+  
+  - text: |
+      Fica bem e se cuida, até amanhã!
+
+  utter_good_afternoon:
+  - text: |
+      Boa tardeeeee! ☀️
+
+  - text: |
+      O dia está lindo, né? 😍
+
+      Uma ótima tarde!
+  
+  utter_good_morning:
+  - text: |
+      Bom diaaaa!!!
+
+  - text: |
+      O dia está maravilhoso, né?
+
+      Tenha um ótimo dia hoje, espero que você faça tudo que você planejou! 
+  
+  - text: |
+      É tão bom acordar e olhar esse céu maravilhoso, né?
+
+      Um bom dia para você!
+  
+  utter_sad:
+  - text: |
+      Não fica triste, a sua vida é muito importante!
+
+      Uma hora vai passar, fica tranquilo.
+
+  - text: |
+      Fica tranquilo, as coisas vão melhorar
+
+      Se eu puder ajudar em algo, você pode me falar!
+
+  - text: |
+      Não fica triste, por favor!
+
+      Vai tomar um ar, pensa na vida e pensa em como você é importante para a sua família e para os seus amigos!
+  
+  utter_creators:
+  - text: |
+      Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas! 
+      
+      Esse time maravilhoso de MDS e EPS da UnB-FGA 😍
+
+  - text: |
+      Fui criada pelos meus pais, né?
+
+      Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
+
+  
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
 
-  utter_usr_happy:
-  - text: "Fico contente."
-  - text: "Continue assim."
-
-  utter_bye:
-  - text: "Até breve."
-  - text: "Bom trabalho!"
-
-  utter_intoduce_ada:
-  - text: "Meu nome é ADA, sou a assistente avançada de desenvolvimento
-           de software."
-
-  utter_more_info?:
-  - text: "Gostaria de saber mais sobre mim ?"
-
-  utter_greet:
-  - text: "Olá. Posso ajudar?"
+  utter_happy:
+  - text: "Great carry on!"

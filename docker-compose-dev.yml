@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./docker/ada.Dockerfile
     ports:
-      - 5000:5000
+      - 5001:5001
     environment:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
