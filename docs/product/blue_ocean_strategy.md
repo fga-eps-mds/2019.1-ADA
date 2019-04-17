@@ -28,7 +28,7 @@ Diminuindo a complexidade e aprimorando funcionalidades, facilita-se a transform
 
 ![](../assets/img/product/blue_ocean_strategy/strategy_canvas_v1.png)
 
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/assets/img/product/blue_ocean_strategy/strategy_canvas_v1.png)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/111-MatrizAvaliacaoValor/docs/assets/img/product/blue_ocean_strategy/strategy_canvas_v1.png)
 
 ## Livro Oceano Azul
 A seguir apresentamos também pontos relevantes encontrados no livro da estratégia do oceano azul após sua leitura.
@@ -58,4 +58,4 @@ A seguir apresentamos também pontos relevantes encontrados no livro da estraté
 
 ![](../assets/img/product/blue_ocean_strategy/strategy_canvas_v1.png)
 
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/assets/img/product/blue_ocean_strategy/strategy_canvas_v0_1.png)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/111-MatrizAvaliacaoValor/docs/assets/img/product/blue_ocean_strategy/strategy_canvas_v0_1.png)
