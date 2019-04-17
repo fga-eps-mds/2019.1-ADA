@@ -82,11 +82,7 @@
 ## happy path
 * greet
   - utter_greet
-
-## path who_is_ada
-* who_is_ada
-  - utter_who_is_ada
-
+  
 ## path_action_get_pipeline
 * greet
   - utter_greet

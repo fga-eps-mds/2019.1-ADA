@@ -64,8 +64,6 @@ actions:
   - utter_did_that_help
   - utter_happy
 
-  - utter_who_is_ada
-
   - action_get_pipeline
 
 entities:
