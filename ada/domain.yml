@@ -2,7 +2,6 @@ intents:
   - start
   - help
   - begin
-#   - natural_help
   - greet
   - how_are_you
   - greet_reply
@@ -22,13 +21,12 @@ intents:
   - creators
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
 
 
   - action_test
 
 entities:
+  - command
   - oi
   - ok
   - religion
@@ -50,7 +48,6 @@ actions:
   - utter_start
   - utter_help
   - utter_begin
-#   - utter_natural_help
   - utter_greet
   - utter_how_are_you
   - utter_greet_reply
@@ -69,9 +66,6 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
 
   - action_test
 
@@ -110,7 +104,7 @@ templates:
           - Issues;
           - Pull Request's;
           - Pipeline's e Build's dos seus projetos do GitLab.
-    
+
       Caso você se cadastre, vou notificá-lo sobre quaisquer alterações que ocorrerem nos seus repositórios!
 
       Posso também criar e comentar em issues a partir do Telegram, basta você me pedir!
@@ -120,22 +114,6 @@ templates:
   utter_begin:
   - text: |
       Então vamos lá, me pergunte o que você quer saber sobre seus repositórios ou converse comigo, sei de muitas coisas!
-
-#   utter_natural_help:
-#   - text: |
-#       Ahh, claro que posso te ajudar, vamos lá.
-
-#       Vou te passar uma lista do que você pode me pedir
-#           - Commit's;
-#           - Issues;
-#           - Pull Request's;
-#           - Pipeline's e Build's dos seus projetos do GitLab.
-
-#       Caso você se cadastre, vou notificá-lo sobre quaisquer alterações que ocorrerem nos seus repositórios!
-
-#       Posso também criar e comentar em issues a partir do Telegram, basta você me pedir!
-
-#       Estou aqui para te ajudar, vamos começar? Hehehehe
 
   utter_greet:
   - text: |
@@ -326,13 +304,3 @@ templates:
       Fui criada pelos meus pais, né?
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
-
-  
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great carry on!"

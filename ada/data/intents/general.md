@@ -24,17 +24,6 @@
 - podemos começar
 - vamos, ada
 
-<!-- ## intent:natural_help
-- me [ajuda](help)
-- help
-- me salva
-- você poderia me [ajudar](help)?
-- [ajuda](help)
-- você poderia me [ajudar](help), ada?
-- me [ajuda](help), por favor
-- ei, me [ajuda](help)
-- ada, me [ajuda](help) -->
-
 ## intent:greet
 - oi
 - [hey](oi)
