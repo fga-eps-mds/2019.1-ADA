@@ -143,9 +143,9 @@ Observações:
 
 ### 9.3 Clientes
 
-* Carla Silva Rocha Aguiar;
-
-* Bruna Nayara Moreira Lima.
+  * Organizações que possuem desenvolvimento de software como uma de suas atividades.\*
+  
+  \* Para o início do projeto, as professoras Carla Silva Rocha Aguiar e Bruna Nayara Moreira Lima agiram como clientes por serem experientes na área em questão e, dessa forma, auxiliar no processo de elicitação de requisitos.
 
 ## 10. Requisitos para Aprovação
 
