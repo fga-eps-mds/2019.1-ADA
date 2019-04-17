@@ -1,0 +1,43 @@
+## intent:compliments
+- adorei
+- você é demais
+- tu é incrível
+- você é maravilhosa
+- maravilhosa
+- linda
+- perfeita
+- bonita
+- amei seu serviço, muito melhor que um site
+- sua linda, te amo
+- amo-te
+- te amo
+- você é muito legal
+- você é incrível
+- adorável
+- muito bom
+- você é um pitel
+- pitelzinha
+- lindona
+- não vivo sem você
+- você é a mulher mais competente desse mundo
+- você é top
+- topper
+- topperson
+- bot muito legal
+- gosto muito de você
+- gosto muito de você, ada
+- gata
+- princesa
+- princesinha
+- você é demais
+- voce é incrivel
+- vc é top
+- vc é magnífica
+- você é topper
+- vc é top
+- vc é linda
+- xuxuzinha
+- xuxu
+- xuxuzinho
+- neném
+- bebê
