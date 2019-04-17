@@ -12,24 +12,37 @@ class BuildStage(Action):
     def run(self, dispatcher, tracker, domain):
         is_there_any_build = False
         try:
-            dispatcher.utter_message("Certo! Encontrei a seguinte build no seu "
-                                     "repositório.")
+            dispatcher.utter_message("Certo! Encontrei a build mais "
+                                     "recente do seu repositório.")
             headers = {'Content-Type': 'application/json'}
             project_owner = "adabot"
             project_name = "ada-gitlab"
             response = requests.get(GITLAB_SERVICE_URL +
-                                    "build/{project_owner}/{project_name}"
+                                    "build/{project_owner}/{project_name}/jobs"
                                     .format(project_owner=project_owner, 
                                     project_name=project_name), headers=headers)
             requests_build = response.json()
-            dispatcher.utter_message("A build {name} da "
-                                    "pipeline {pipeline_ref} "
+
+            if requests_build['status'] == "success":
+                status = "E está passando nos critérios de aceitação adotadas pela Build."
+            else:
+                status = "E não está passando nos critérios de aceitação adotadas pela Build."
+            
+            if requests_build['stage'] == "test":
+                stage = "de teste"
+            elif requests_build['stage'] == "build":
+                stage = "de construção"
+            elif requests_build['stage'] == "deploy":
+                stage = "de implementação"
+            
+
+            dispatcher.utter_message("A build {name} do "
+                                    "serviço {ref} "
                                     "está no estágio {stage}."
                                     .format(name=requests_build['name'].capitalize(),
-                                            pipeline_ref=requests_build['pipeline']['ref'].capitalize(),
-                                            stage=requests_build['stage'].capitalize()))
-            dispatcher.utter_message("O status atual dela é {status}."
-                                    .format(status=requests_build['status'].capitalize()))
+                                            ref=requests_build['ref'],
+                                            stage=stage))
+            dispatcher.utter_message("{status}".format(status=status))
             dispatcher.utter_message("Para visualizar essa build no GitLab acesse o link {web_url}"
                                     .format(web_url=requests_build['web_url']))
             is_there_any_build = True
