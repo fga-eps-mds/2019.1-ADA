@@ -6,6 +6,15 @@
 - [help](command)
 - [/help](command)
 
+## intent:begin
+- [vamos](begin)
+- sim
+- [vamos](begin) lá
+- vamos
+- ok
+- podemos começar
+- vamos, ada
+
 ## intent:greet
 - oi
 - [hey](oi)
@@ -79,6 +88,7 @@
 - [tô bem](good)
 - [estou muito bem](good)
 - tô ok
+- sim
 
 ## intent:goodbye
 - tchau

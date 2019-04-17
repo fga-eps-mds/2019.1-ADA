@@ -6,6 +6,10 @@
 * help{"command": "help"}
   - utter_help
 
+## path_begin
+* begin
+  - utter_begin
+
 ## path_greetings
 * greet
   - utter_greet
