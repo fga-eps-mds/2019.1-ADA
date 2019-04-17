@@ -5,11 +5,11 @@
 | --- | --- | --- | --- |
 | 17/04/2019 | 1.0 | Construção do documento | Vítor Gomes |
 
-## Estratégia e Matriz de Avaliação de Valor
+## 1. Estratégia e Matriz de Avaliação de Valor
 A Matriz de Avaliação de Valor é uma prática proposta pela estratégia do oceano azul a fim de analisar os setores, analisando oceanos vermelhos e servindo como base para a criação da estratégia do oceano azul.
 Oceanos vermelhos representam setores existentes hoje, enquanto oceanos azuis simbolizam espaços de mercado inexplorados, caracterizados pela criação de demanda e pelo crescimento altamente lucrativo.
 
-### Matriz Eliminar Reduzir Elevar Criar v1.0
+### 1.1 Matriz Eliminar Reduzir Elevar Criar v1.0
 
 Guiados pelo livro desta estratégia, analisamos o contexto dos setores do mercado atual, identificando atributos e fatores de concorrência. Em seguida, foram identificados alguns aspectos:
 * Atributos anteriormente considerados indispensáveis pelo setor que podem ser eliminados
@@ -21,7 +21,7 @@ A partir disso, pudemos montar nossa Matriz Eliminar-Reduzir-Elevar-Criar, mostr
 
 ![](../assets/img/product/blue_ocean_strategy/errc_grid_v1.png)
 
-### Matriz de Avaliação de Valor v1.0
+### 1.2 Matriz de Avaliação de Valor v1.0
 Subsequentemente, plotou-se a Matriz de Avaliação de Valor da Ada, comparada aos oceanos vermelhos do mercado.
 
 Diminuindo a complexidade e aprimorando funcionalidades, facilita-se a transformação full-stack de funcionários das organizações e a integração entre equipes multidisciplinares no contexto de cada empresa.
@@ -30,7 +30,7 @@ Diminuindo a complexidade e aprimorando funcionalidades, facilita-se a transform
 
 [Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/111-MatrizAvaliacaoValor/docs/assets/img/product/blue_ocean_strategy/strategy_canvas_v1.png)
 
-## Livro Oceano Azul
+## 2. Livro Oceano Azul
 A seguir apresentamos também pontos relevantes encontrados no livro da estratégia do oceano azul após sua leitura.
 
 
@@ -48,14 +48,18 @@ A seguir apresentamos também pontos relevantes encontrados no livro da estraté
 - Ainda, para atingir a meta de custo, as empresas dispõem de três importantes alavancas: 1. dinamizar operações e implementar inovações de custo, desde a fabricação até a distribuição; eliminar, reduzir ou terceirizar atividades de alto custo e baixo valor agregado na cadeia de valor, dentro do possível; reduzir quantidade de componentes do produto ou serviço e número de estágios do processo de produção, dentro do possível; 2. parcerias; 3. mudar o modelo de precificação do setor
 - Finalmente, para evitar a armadilha da concorrência, a empresa precisa monitorar as curvas de valor. Esse monitoramento sinaliza quando inovar valor e quando se deve persistir na estratégia vigente. Quando a curva de valor começa a convergir com as dos concorrentes, chegou a hora de desbravar novo oceano azul
 
-## Versões anteriores das matrizes
+## 3. Versões anteriores das matrizes
 
-### Matriz Eliminar Reduzir Elevar Criar v0.1
+### 3.1 Matriz Eliminar Reduzir Elevar Criar v0.1
 
 ![](../assets/img/product/blue_ocean_strategy/errc_grid_v0_1.png)
 
-### Matriz de Avaliação de Valor v0.1
+### 3.2 Matriz de Avaliação de Valor v0.1
 
 ![](../assets/img/product/blue_ocean_strategy/strategy_canvas_v1.png)
 
 [Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/111-MatrizAvaliacaoValor/docs/assets/img/product/blue_ocean_strategy/strategy_canvas_v0_1.png)
+
+## 4. Referências
+
+Kim, W. Chan, and Renée Mauborgne. A estratégia do oceano azul. São Paulo: Elsevier : Campus, 2005.
