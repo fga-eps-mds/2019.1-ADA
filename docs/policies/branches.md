@@ -1,8 +1,8 @@
+# Política de Branches
+
 | Data       | Versão | Descrição            | Autor             |
 |:----------:|:------:|:--------------------:|:-----------------:|
 | 21/03/2019 | 0.1 | Criação do documento com template inicial  | João Vitor, Bruno Dantas, Ateldy Brasil e Vitor Gomes|
-
-## Política de Branches
 
 As braches devem seguir o seguinte padrão:
 

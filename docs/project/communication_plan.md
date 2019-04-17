@@ -40,7 +40,7 @@ O esforço para realizar cada uma das tarefas é medido com a equipe e assim, es
 
 #### 3.2.2 Daily Meeting
 
-Reuniões com o tempo determinado de 15 minutos, onde cada membro da equipe fala sobre o andamento da tarefa e seu planejamento para terminá-la, além de quantos pontos foi seu esforço até então. As Daily Meeting ocorrem todos os dias 12:00 na Faculdade UnB Gama, caso algum membro não possa comparecer, deve informar o andamento de suas tarefas via Telegram.
+Reuniões com o tempo determinado de 15 minutos, onde cada membro da equipe fala sobre o andamento da tarefa e seu planejamento para terminá-la, além de quantos pontos foi seu esforço até então. As Daily Meeting ocorrem todos os dias 21:30 remotamente via Hangouts. Caso algum membro não possa comparecer, deve informar o andamento de suas tarefas via Telegram.
 
 #### 3.2.3 Sprint Review
 

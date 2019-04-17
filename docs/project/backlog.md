@@ -6,13 +6,13 @@
 
 Todos as features e histórias de usuário são apresentados em sua ordem de priorização.
 
-## Épicos
+## 1. Épicos
 
 - E1 Comunicação com o usuário
 - E2 Gerenciamento do pipeline de produção
 - E3 Relatórios de produção
 
-## Features
+## 2. Features
 
 | **Épico** | **Feature** | **Descrição** |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ Todos as features e histórias de usuário são apresentados em sua ordem de pri
 
 > A feature E2F3 Informações de release foi retirada do escopo do produto para o contexto do projeto.
 
-## Histórias de Usuário
+## 3. Histórias de Usuário
 
 | **Épico** | **Feature** | **História de Usuário** | **Descrição** | **Pontos** |
 | --- | --- | --- | --- | --- |

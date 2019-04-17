@@ -1,8 +1,5 @@
 # Personalidade da Bot
 
-
-## **Histórico de Revisão**
-
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
 | 29/03/2019 | 0.1 | Construção do tópico 1 - Personalidade da Ada| Lucas Fellipe|

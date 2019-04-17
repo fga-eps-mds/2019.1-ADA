@@ -1,26 +1,9 @@
 # Folha de estilo
 
-# Histórico de Versão
-
 | **Data** | **Versão** | **Descrição** | **Autor(es)** |
 | :---: | :---: | :---: | :---: |
 | 01/04/2019 | 0.1 | Abertura do documento | João Vitor |
                                                                                             
-# Sumário
-
-[1. Objetivo](docs/project/style_guide?id=_1-objetivo)<br /><br />
-[2. Como deve ser feito](docs/project/style_guide?id=_2-como-deve-ser-feito)<br /><br />
-[3. Indentação e Espaçamento](docs/project/style_guide?id=_3-indentação-e-espaçamento)<br /><br />
-[4. Sintaxe](docs/project/style_guide?id=_4-sintaxe)<br /><br />
-[5. Padronização](docs/project/style_guide?id=_5-padronização)<br /><br />
-[6. Importações](docs/project/style_guide?id=_6-importações)<br /><br />
-[7. Comentários](docs/project/style_guide?id=_7-comentários)<br /><br />
-[8. Nomenclatura](docs/project/style_guide?id=_8-nomenclatura)<br /><br />
-[9. Referências](docs/project/style_guide?id=_9-referências)<br /><br />
-
-
-
-
 ## 1. Objetivo
 
 Este documento tem como objetivo deixar explícito como o software ADA deve ser programado.
