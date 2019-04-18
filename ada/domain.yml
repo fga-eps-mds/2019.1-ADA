@@ -23,6 +23,9 @@ intents:
   - deny
   
   - action_get_pipeline
+  - action_set_user
+  - action_set_repositorie
+
 
 entities:
   - command
@@ -42,11 +45,15 @@ entities:
   - begin
   - help
 
+  - usuario
   - repositorio
+
 
 slots:
   repositorio:
-    type: unfeaturized
+    type: text
+  usuario:
+    type: text
 
 actions:
   - utter_defalut
@@ -73,6 +80,8 @@ actions:
   - utter_creators
 
   - action_get_pipeline
+  - action_set_user
+  - action_set_repositorie
 
 templates:
   
@@ -95,6 +104,8 @@ templates:
       Sou responsável por auxiliar vocês, desenvolvedores, no controle dos seus repositórios do Git. Fui a primeira pessoa a criar um algoritmo computacional, e agora estou encarregada por auxiliar vocês para que um dia deixem suas marcas no mundo, assim como eu fiz.
 
       Caso queira saber mais, me peça ajuda.
+
+      Para começar me fale o nome do seu usuário no GitLab
 
 
   utter_restart:

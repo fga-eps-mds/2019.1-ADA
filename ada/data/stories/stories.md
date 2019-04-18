@@ -1,6 +1,10 @@
 ## path_start
 * start{"command": "start"}
   - utter_start
+* action_set_user
+  - action_set_user
+* action_set_repositorie
+  - action_set_repositorie
 
 ## path_help
 * help{"command": "help"}
@@ -88,3 +92,11 @@
 ## path get_pipeline
 * action_get_pipeline
   - action_get_pipeline
+
+## path set_user
+* action_set_user
+  - action_set_user
+
+## path set_repositorie
+* action_set_repositorie
+  - action_set_repositorie
