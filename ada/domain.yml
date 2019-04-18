@@ -27,8 +27,10 @@ intents:
   - more_info?
   - who_is_ada
   - build_stage
-
+  - action_test
+  
 entities:
+  - command
   - oi
   - ok
   - religion
@@ -43,6 +45,7 @@ entities:
   - sad
   - creators
   - begin
+  - help
 
 actions:
   - utter_defalut
@@ -83,14 +86,14 @@ templates:
 
   utter_default:
   - text: |
-      Não entendi o que você falou, pode repetir, por favor!
+      Não entendi o que você falou, pode repetir, por favor?
 
-      Se estiver com alguma dúvida, digite /help que poderei te ajudar melhor.
+      Se estiver com alguma dúvida, é só me pedir ajuda.
   
   - text: |
       O que você quis dizer? Me explica melhor, por favor.
 
-      Se estiver com alguma dúvida, digite /help que poderei te ajudar melhor.
+      Se estiver com alguma dúvida, é só me pedir ajuda.
 
   utter_start:
   - text: |
@@ -98,7 +101,7 @@ templates:
 
       Sou responsável por auxiliar vocês, desenvolvedores, no controle dos seus repositórios do Git. Fui a primeira pessoa a criar um algoritmo computacional, e agora estou encarregada por auxiliar vocês para que um dia deixem suas marcas no mundo, assim como eu fiz.
 
-      Caso queira saber mais, digite /help.
+      Caso queira saber mais, me peça ajuda.
 
 
   utter_restart:
@@ -113,8 +116,8 @@ templates:
           - Issues;
           - Pull Request's;
           - Pipeline's e Build's dos seus projetos do GitLab.
-    
-      Caso você se cadastre, vou notificá-los sobre quaisquer alterações que ocorrerem nos seus repositórios!
+
+      Caso você se cadastre, vou notificá-lo sobre quaisquer alterações que ocorrerem nos seus repositórios!
 
       Posso também criar e comentar em issues a partir do Telegram, basta você me pedir!
 
@@ -130,7 +133,7 @@ templates:
   - text: |
       Olá, tudo bem? Como você já deve saber, sou a Ada! 💜
       
-      Sou responsável por várias coisas no seu repositório, é só me perguntar ou digitar /help que eu te respondo rapidinho! 😊
+      Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
   uteer_build_stage:
   - text: "Aguarde um momento. \n
