@@ -64,8 +64,8 @@
 - Boa [noitee](night)
 - Boa [noite](night)
 - Boa [Noite](night)
-- boa [noite](nigth), ada
-- boa [noite](nigth)
+- boa [noite](night), ada
+- boa [noite](night)
 - [boa noite](night)
 - otima [noite](night)
 - [good night](night)
@@ -75,8 +75,8 @@
 - Boa [tardee](afternoon)
 - Boa [tarde](afternoon)
 - Boa [tarde](afternoon)
-- boa [tarde](nigth), ada
-- boa [tarde](nigth)
+- boa [tarde](afternoon), ada
+- boa [tarde](afternoon)
 - [boa tarde](afternoon)
 - otima [tarde](afternoon)
 - [good afternoon](afternoon)
@@ -86,8 +86,8 @@
 - Bom [diaa](morning)
 - bom [dia](morning)
 - bom [dia](morning)
-- bom [dia](nigth), ada
-- bom [dia](nigth)
+- bom [dia](morning), ada
+- bom [dia](morning)
 - [boa dia](morning)
 - otima [dia](morning)
 - [good morning](morning)

@@ -79,10 +79,6 @@
 * creators
   - utter_creators
 
-## happy path
-* greet
-  - utter_greet
-  
 ## path_action_get_pipeline
 * greet
   - utter_greet

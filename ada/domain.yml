@@ -21,8 +21,14 @@ intents:
   - creators
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  
+  - action_get_pipeline
+
+entities:
+  - command
+  - oi
+  - ok
+  - religion
   - how
   - good
   - name
@@ -34,8 +40,13 @@ intents:
   - sad
   - creators
   - begin
+  - help
 
-  - action_get_pipeline
+  - repositorio
+
+slots:
+  repositorio:
+    type: unfeaturized
 
 actions:
   - utter_defalut
@@ -60,33 +71,22 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
 
   - action_get_pipeline
-
-entities:
-  - repositorio
-
-
-slots:
-  repositorio:
-    type: unfeaturized
 
 templates:
   
 
   utter_default:
   - text: |
-      Não entendi o que você falou, pode repetir, por favor!
+      Não entendi o que você falou, pode repetir, por favor?
 
-      Se estiver com alguma dúvida, digite /help que poderei te ajudar melhor.
+      Se estiver com alguma dúvida, é só me pedir ajuda.
   
   - text: |
       O que você quis dizer? Me explica melhor, por favor.
 
-      Se estiver com alguma dúvida, digite /help que poderei te ajudar melhor.
+      Se estiver com alguma dúvida, é só me pedir ajuda.
 
   utter_start:
   - text: |
@@ -94,7 +94,7 @@ templates:
 
       Sou responsável por auxiliar vocês, desenvolvedores, no controle dos seus repositórios do Git. Fui a primeira pessoa a criar um algoritmo computacional, e agora estou encarregada por auxiliar vocês para que um dia deixem suas marcas no mundo, assim como eu fiz.
 
-      Caso queira saber mais, digite /help.
+      Caso queira saber mais, me peça ajuda.
 
 
   utter_restart:
@@ -109,8 +109,8 @@ templates:
           - Issues;
           - Pull Request's;
           - Pipeline's e Build's dos seus projetos do GitLab.
-    
-      Caso você se cadastre, vou notificá-los sobre quaisquer alterações que ocorrerem nos seus repositórios!
+
+      Caso você se cadastre, vou notificá-lo sobre quaisquer alterações que ocorrerem nos seus repositórios!
 
       Posso também criar e comentar em issues a partir do Telegram, basta você me pedir!
 
@@ -124,7 +124,7 @@ templates:
   - text: |
       Olá, tudo bem? Como você já deve saber, sou a Ada! 💜
       
-      Sou responsável por várias coisas no seu repositório, é só me perguntar ou digitar /help que eu te respondo rapidinho! 😊
+      Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
   utter_how_are_you:
   - text: |
@@ -309,13 +309,3 @@ templates:
       Fui criada pelos meus pais, né?
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
-
-  
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great carry on!"
