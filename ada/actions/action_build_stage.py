@@ -54,7 +54,8 @@ class BuildStage(Action):
                                              name1=requests_build['name1']))
             dispatcher.utter_message("Para visualizar sua build "
                                      "no GitLab acesse o link {web_url}"
-                                     .format(web_url=requests_build['web_url']))
+                                     .format(web_url=requests_build
+                                             ['web_url']))
             is_there_any_build = True
         except ValueError:
             dispatcher.utter_message(ValueError)
