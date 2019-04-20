@@ -23,38 +23,38 @@ class BuildStage(Action):
                                     .format(project_owner=project_owner,
                                             project_name=project_name),
                                     headers=headers)
-            received_build = response.json()
+            build_json = response.json()
 
             text_message = "Os passos da build são:\n"
 
-            for i, item in enumerate(received_build):
+            for i, item in enumerate(build_json):
 
-                if received_build[i]['status'] == "success":
+                if build_json[i]['status'] == "success":
                     status = "✅"
-                elif received_build[i]['status'] == "failed":
+                elif build_json[i]['status'] == "failed":
                     status = "❌"
                 else:
                     status = "🔄"
 
                 text_message += "{status} {job_name}\n" \
                                 .format(status=status,
-                                        job_name=received_build[i]['job_name'])
+                                        job_name=build_json[i]['job_name'])
 
             dispatcher.utter_message('A build #{job_id} '
                                      'da branch {branch}, '
                                      'commit "{commit}", '
                                      'está no estágio de "{stage}".'
-                                     .format(job_id=received_build[0]['job_id'],
-                                             branch=received_build[0]['branch'],
-                                             commit=received_build[0]['commit'],
-                                             stage=received_build[0]['stage']))
+                                     .format(job_id=build_json[0]['job_id'],
+                                             branch=build_json[0]['branch'],
+                                             commit=build_json[0]['commit'],
+                                             stage=build_json[0]['stage']))
 
             dispatcher.utter_message(text_message)
 
             dispatcher.utter_message("Para visualizar sua build "
                                      "no GitLab acesse o link {pipeline_url}"
-                                     .format(pipeline_url=received_build \
-                                     [0]['web_url']))
+                                     .format(
+                                     pipeline_url=build_json[0]['web_url']))
 
             is_there_any_build = True
         except ValueError:
