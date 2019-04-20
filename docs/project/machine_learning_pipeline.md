@@ -16,7 +16,7 @@
 
 <p style="text-align:justify">&emsp;&emsp;Dito isso a escolhe ideal é o tensorflow_embedding. </p>
 
-## Tensorflow_enbedding
+## Tensorflow_embedding
 
 ```
 language: "pt"
