@@ -21,10 +21,14 @@ intents:
   - creators
   - affirm
   - deny
-
-
+  - mood_great
+  - mood_unhappy
+  - intoduce_ada
+  - more_info?
+  - who_is_ada
+  - build_stage
   - action_test
-
+  
 entities:
   - command
   - oi
@@ -66,11 +70,19 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-
+  - utter_cheer_up
+  - utter_happy
+  - utter_did_that_help
+  - utter_usr_happy
+  - utter_bye
+  - utter_intoduce_ada
+  - utter_more_info?
   - action_test
+  - action_who_is_ada
+  - utter_build_stage
+  - action_build_stage
 
 templates:
-  
 
   utter_default:
   - text: |
@@ -116,11 +128,17 @@ templates:
       Então vamos lá, me pergunte o que você quer saber sobre seus repositórios ou converse comigo, sei de muitas coisas!
 
   utter_greet:
+  - text: "Olá. Posso ajudar?"
+  
   - text: |
       Olá, tudo bem? Como você já deve saber, sou a Ada! 💜
       
       Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
+  uteer_build_stage:
+  - text: "Aguarde um momento. \n
+           Vou verificar..."
+  
   utter_how_are_you:
   - text: |
       Estou ótima, obrigada! E você??
@@ -139,8 +157,6 @@ templates:
 
   - text: |
       Ahhh que ótimo!
-
-    
 
   utter_goodbye:
   - text: |
@@ -304,3 +320,12 @@ templates:
       Fui criada pelos meus pais, né?
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great carry on!"
