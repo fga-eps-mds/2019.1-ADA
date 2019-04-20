@@ -25,7 +25,7 @@ intents:
   - action_get_pipeline
   - action_set_user
   - action_set_repositorie
-
+  - build_stage
 
 entities:
   - command
@@ -82,9 +82,10 @@ actions:
   - action_get_pipeline
   - action_set_user
   - action_set_repositorie
+  - utter_build_stage
+  - action_build_stage
 
 templates:
-  
 
   utter_default:
   - text: |
@@ -132,11 +133,17 @@ templates:
       Então vamos lá, me pergunte o que você quer saber sobre seus repositórios ou converse comigo, sei de muitas coisas!
 
   utter_greet:
+  - text: "Olá. Posso ajudar?"
+  
   - text: |
       Olá, tudo bem? Como você já deve saber, sou a Ada! 💜
       
       Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
+  uteer_build_stage:
+  - text: "Aguarde um momento. \n
+           Vou verificar..."
+  
   utter_how_are_you:
   - text: |
       Estou ótima, obrigada! E você??
@@ -155,8 +162,6 @@ templates:
 
   - text: |
       Ahhh que ótimo!
-
-    
 
   utter_goodbye:
   - text: |
