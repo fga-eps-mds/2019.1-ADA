@@ -6,7 +6,7 @@
 
 ## Pipeline Rasa NLU
 
-<p style="text-align:justify">&emsp;&emsp;No Rasa NLU, as mensagens recebidas são processadas por uma seqüência de componentes. Esses componentes são executados um após o outro em um chamado pipeline de processamento. Existem componentes para extração de entidade, para classificação de intenção, pré-processamento e outros. Você pode adicionar seu próprio componente, por exemplo, para executar uma verificação ortográfica ou fazer uma análise de sentimento. </p>
+<p style="text-align:justify">&emsp;&emsp;No Rasa NLU, as mensagens recebidas são processadas por uma sequência de componentes. Esses componentes são executados um após o outro em um chamado pipeline de processamento. Existem componentes para extração de entidade, para classificação de intenção, pré-processamento e outros. Você pode adicionar seu próprio componente, por exemplo, para executar uma verificação ortográfica ou fazer uma análise de sentimento. </p>
 
 <p style="text-align:justify">&emsp;&emsp;Cada componente processa a entrada e cria uma saída. A saída pode ser usada por qualquer componente que venha após esse componente no pipeline. Existem componentes que apenas produzem informações que são usadas por outros componentes no pipeline e há outros componentes que produzem Outputatributos que serão retornados após o processamento ter sido concluído. </p>
 
@@ -19,12 +19,12 @@
 ## Tensorflow_enbedding
 
 ```
-language: "en"
+language: "pt"
 
 pipeline: "tensorflow_embedding"
 ```
 
-<p style="text-align:justify">&emsp;&emsp;O tensorflow_embedding comporta mais de 1000 declarações rotuladas. Porém a sua maior vantagem é que seus vetores de palavra serão personalizados para seu domínio. Por exemplo, em geral, a palavra “equilíbrio” está intimamente relacionada à “simetria”, mas muito diferente da palavra “dinheiro”. Em um domínio bancário, "saldo" e "dinheiro" estão intimamente relacionados e você gostaria que seu modelo captasse isso. Esse pipeline não usa um modelo específico de idioma.</p>
+<p style="text-align:justify">&emsp;&emsp;O tensorflow_embedding comporta mais de 1000 declarações rotuladas. Porém a sua maior vantagem é que seus vetores de palavra serão personalizados para seu domínio. Por exemplo, em geral, a palavra “equilíbrio” está intimamente relacionada à “simetria”, mas muito diferente da palavra “dinheiro”. Em um domínio bancário, "saldo" e "dinheiro" estão intimamente relacionados e você gostaria que seu modelo captasse isso. Esse pipeline não usa um modelo específico de idioma, porém é uma boa prática definir a configuração de linguagem do seu projeto.</p>
 
 <p style="text-align:justify">&emsp;&emsp;Além disso, esse é o único modelo que pode realizar múltiplas intenções que as divide em vários rótulos.</p>
 
