@@ -7,12 +7,15 @@ services:
       dockerfile: ./docker/ada.Dockerfile
     ports:
       - 5001:5001
-    networks:
-      - adanetwork
     environment:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
+    depends_on:
+      - actions
+    volumes:
+      - ./ada:/ada
+
   actions:
     build:
       context: .
@@ -22,10 +25,6 @@ services:
     volumes:
       - ./ada/actions:/ada/actions
       - ./ada/Makefile:/ada/Makefile
-    environment:
-      - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}
-    networks:
-      - adanetwork
     command: "make run-actions"
 
   mongo-telegram:
@@ -34,7 +33,3 @@ services:
       - /mongo_telegram:/data/db
     ports:
       - 27017:27017
-
-networks:
-  adanetwork:
-    driver: "bridge"
