@@ -10,8 +10,11 @@ class ActionSetRepositorie(Action):
 
     def run(self, dispatcher, tracker, domain):
         try:
-            repositorio = tracker.current_slot_values()['repositorio']
+            message = tracker.latest_message.get('text')
+            vector = message.split()
+            repositorio = vector[len(vector)-1]
             dispatcher.utter_message(
                 "O nome do seu repositorio é: {rep}.".format(rep=repositorio))
+            return [SlotSet('repositorio', repositorio)]
         except ValueError:
             dispatcher.utter_message(ValueError)
