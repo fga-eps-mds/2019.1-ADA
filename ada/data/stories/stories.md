@@ -79,6 +79,36 @@
 * creators
   - utter_creators
 
+## happy path
+* greet
+  - utter_greet
+* mood_unhappy
+  - utter_cheer_up
+  - utter_did_that_help
+* mood_deny
+  - utter_bye
+
+## say goodbye
+* bye
+  - utter_bye
+
+## intoduce_ada
+* intoduce_ada
+  - utter_intoduce_ada
+
+# more_info?
+* more_info?
+  - utter_more_info?
+* usr_happy
+  - utter_intoduce_ada
+  - action_who_is_ada
+
+# more_info?
+* more_info?
+  - utter_more_info?
+* mood_deny
+  - utter_bye
+
 ## action path
 * greet
   - utter_greet

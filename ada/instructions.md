@@ -2,10 +2,10 @@
 
 * Instale o ngrok utilizando as instruções do [link](https://ngrok.com/download).
 
-* No terminal, execute o ngrok na porta 5000:
+* No terminal, execute o ngrok na porta 5001:
 
 ```sh
-./ngrok http 5000
+./ngrok http 5001
 ```
 
 * Faça a exportação das seguintes variáveis de ambiente:
