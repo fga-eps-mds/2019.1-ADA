@@ -1,5 +1,7 @@
 # ADA
 
+[![pipeline status](https://gitlab.com/adabot/ada/badges/devel/pipeline.svg)](https://gitlab.com/adabot/ada/commits/devel) [![coverage report](https://gitlab.com/adabot/ada-gitlab/badges/devel/coverage.svg)](https://gitlab.com/adabot/ada-gitlab/commits/devel) [![Percentage of issues still open](http://isitmaintained.com/badge/open/fga-eps-mds/2019.1-ADA.svg)](http://isitmaintained.com/project/fga-eps-mds/2019.1-ADA "Percentage of issues still open") [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## Sobre o Projeto   
 
 <p align="justify"> &emsp;&emsp;
