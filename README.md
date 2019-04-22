@@ -45,10 +45,15 @@ Para executar a Ada utilizando o Telegram, siga os seguintes comandos:
 * Faça a exportação das seguintes variáveis de ambiente:
 
 ```sh
-- ACCESS_TOKEN
-- BOT_NAME
-- WEBHOOK_URL
+- export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
+- export BOT_NAME='BOT_NAME'
+- export WEBHOOK_URL='WEBHOOK_URL'
 ``` 
+
+Faça as instalações dos seguintes programas:
+
+* [docker](https://docs.docker.com/install/)
+* [docker-compose](https://docs.docker.com/compose/install/#install-compose)
 
 Usando o Docker
 
@@ -62,7 +67,7 @@ docker-compose -f docker-compose-dev.yml up --build
 
 Para executar a Ada localmente utilizando o Terminal, siga os comandos:
 
-* Execute o comando para criar a imagem do conteiner:
+* Execute o comando para criar a imagem do container:
 
 ```sh
 docker-compose -f docker-compose-dev.yml up --build
@@ -74,13 +79,12 @@ docker-compose -f docker-compose-dev.yml up --build
 docker exec -it container_id bash
 ```
 
-* Rode os comandos de treinamento:
+* Rode os comandos para o treinamento do bot:
 
 ```sh
 python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
 ```
-Após os comando é possível realizar diálogos com o bot e visualizar os logs do Rasa
-
+Após os comando é possível realizar diálogos com o bot e visualizar os logs do Rasa.
 
 ## Equipe
 
