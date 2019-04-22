@@ -18,15 +18,15 @@
 
 ### Guia de Contribuição
 
-Para contribuir com o projeto, temos um [Guia de Contribuição Inicial](https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/CONTRIBUTING.md).
+Para contribuir com o projeto, temos um [Guia de Contribuição Inicial](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/CONTRIBUTING.md).
 
 ### Políticas
 
-As políticas de _[branches](https://fga-eps-mds.github.io/2019.1-Grupo-3/#/docs/policies/branches)_, _[commits](https://fga-eps-mds.github.io/2019.1-Grupo-3/#/docs/policies/commits)_, _[pull requests](https://fga-eps-mds.github.io/2019.1-Grupo-3/#/docs/policies/pull_request)_ e _[issues](https://fga-eps-mds.github.io/2019.1-Grupo-3/#/docs/policies/issues)_ se encontram [aqui](https://fga-eps-mds.github.io/2019.1-Grupo-3/#/docs/policies/policies).
+As políticas de _[branches](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/branches)_, _[commits](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/commits)_, _[pull requests](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/pull_request)_ e _[issues](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/issues)_ se encontram [aqui](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/policies).
 
 ### Código de Conduta
 
-O código de conduta para contribuição está disponível [aqui](https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/CODE_OF_CONDUCT.md)
+O código de conduta para contribuição está disponível [aqui](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/CODE_OF_CONDUCT.md)
 
 ### Desenvolvimento
 
