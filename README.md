@@ -28,6 +28,60 @@ As políticas de _[branches](https://fga-eps-mds.github.io/2019.1-Grupo-3/#/docs
 
 O código de conduta para contribuição está disponível [aqui](https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/CODE_OF_CONDUCT.md)
 
+### Desenvolvimento
+
+#### Subindo o chatbot no mensageiro
+
+Para executar a Ada utilizando o Telegram, siga os seguintes comandos:
+
+* Instale o ngrok utilizando as instruções do [link](https://ngrok.com/download).
+
+* No terminal, execute o ngrok na porta 5001:
+
+```sh
+./ngrok http 5001
+```
+
+* Faça a exportação das seguintes variáveis de ambiente:
+
+```sh
+- ACCESS_TOKEN
+- BOT_NAME
+- WEBHOOK_URL
+``` 
+
+Usando o Docker
+
+* Execute o comando para inicializar o container em seu computador:
+
+```sh
+docker-compose -f docker-compose-dev.yml up --build
+```
+
+#### Subindo o chatbot no Terminal
+
+Para executar a Ada localmente utilizando o Terminal, siga os comandos:
+
+* Execute o comando para criar a imagem do conteiner:
+
+```sh
+docker-compose -f docker-compose-dev.yml up --build
+```
+
+* Execute o Docker:
+
+```sh
+docker exec -it container_id bash
+```
+
+* Rode os comandos de treinamento:
+
+```sh
+python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
+```
+Após os comando é possível realizar diálogos com o bot e visualizar os logs do Rasa
+
+
 ## Equipe
 
 | Nome | Papel | GitHub | Email |
