@@ -4,9 +4,9 @@ Thank you for taking the time to contribute! :tada:
 
 ## What should I know before I get started?
 
-Please make sure to read our [READ_ME](https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/README.md) in order to get to know more about our project, system requirements and how to build the system.
+Please make sure to read our [READ_ME](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/README.md) in order to get to know more about our project, system requirements and how to build the system.
 
-Make sure to read our [Code of conduct](https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/CODE_OF_CONDUCT.md) as well.
+Make sure to read our [Code of conduct](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/CODE_OF_CONDUCT.md) as well.
 
 ## How Can I Contribute?
 
@@ -40,6 +40,6 @@ When suggesting an enhancement, please provide as much information as possible:
 
 In order to make any contribution, please refer to our templates:
 
-* [Issue template](https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/.github/ISSUE_TEMPLATE/issue-template.md)
-* [Pull request template](https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/pull_request_template.md)
-* [Template for commits](https://github.com/fga-eps-mds/2019.1-Grupo-3/)
+* [Issue template](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/.github/ISSUE_TEMPLATE/issue-template.md)
+* [Pull request template](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/pull_request_template.md)
+* [Template for commits](https://github.com/fga-eps-mds/2019.1-ADA/)
