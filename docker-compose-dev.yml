@@ -14,6 +14,7 @@ services:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
+      - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}     
     depends_on:
       - actions
     volumes:
