@@ -1,9 +1,7 @@
 from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
 import requests
-import random
 import os
-import sys
+
 
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
@@ -30,11 +28,16 @@ class ActionGetPipeline(Action):
             if received_pipeline["status"] == "success":
                 status = "passou nos critérios de aceitação do seu Pipeline."
             else:
-                status = "não passou nos critérios de aceitação do seu Pipeline."
+                status = "não passou nos critérios de aceitação"
+                +  " do seu Pipeline."
 
             repositorio = tracker.current_slot_values()['repositorio']
-            text_message = 'O Pipeline mais recente no respositorio {rep} que você solicitou {status}'.format(
-                rep=repositorio, status=status)+'\n'+'Para visualizar o Pipeline no GitLab acesse o link {web_url}'.format(status=status, web_url=received_pipeline["web_url"])
+            text_message = 'O Pipeline mais recente no respositorio '
+            + '{rep} que você solicitou {status}'.format(
+                rep=repositorio, status=status)+'\n'+'Para visualizar o'
+            + 'Pipeline no GitLab acesse o link '
+            + '{web_url}'.format(status=status,
+                                 web_url=received_pipeline["web_url"])
 
             dispatcher.utter_message(text_message)
             return []
