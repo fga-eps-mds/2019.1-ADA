@@ -5,6 +5,7 @@ stages:
 
 variables:
   ADA_IMAGE: $DOCKER_USER/ada-bot
+  ADA_ACTIONS_IMAGE: $DOCKER_USER/ada-actions
 
 lint-flake8:
   image: ejplatform/python:alpine
@@ -12,7 +13,8 @@ lint-flake8:
   script:
     - flake8
 
-build ada-bot:
+
+build ada-bot-homolog:
   image: docker:latest
   stage: build
   services:
@@ -22,19 +24,97 @@ build ada-bot:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_IMAGE:homolog
   only:
-    - /devel/
+    - /118-Deploy/
+
+build ada-actions-homolog:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/ada.Dockerfile -t $ADA_ACTIONS_IMAGE:homolog .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $ADA_ACTIONS_IMAGE:homolog
+  only:
+    - /118-Deploy/
+
+build ada-bot-prod:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/ada.Dockerfile -t $ADA_IMAGE:prod .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $ADA_IMAGE:prod
+  only:
+    - /118-Deploy/
+
+build ada-actions-prod:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/ada.Dockerfile -t $ADA_ACTIONS_IMAGE:prod .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push $ADA_ACTIONS_IMAGE:prod
+  only:
+    - /118-Deploy/
 
 deploy ada-bot-homolog:
   image: cdrx/rancher-gitlab-deploy
   stage: deploy
   script:
     - "upgrade
-            --rancher-url $RANCHER_HOMOLOG_URL
-            --rancher-key $RANCHER_HOMOLOG_ACCESS_KEY
-            --rancher-secret $RANCHER_HOMOLOG_SECRET_KEY
+            --rancher-url $RANCHER_URL
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
             --environment $RANCHER_ENVIRONMENT
-            --stack $RANCHER_STACK
-            --service new-ada-bot"
+            --stack $RANCHER_HOMOLOG_STACK
+            --service ada-homolog"
   only:
-    - /devel/
+    - /118-Deploy/
+
+deploy ada-actions-homolog:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --rancher-url $RANCHER_URL
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_HOMOLOG_STACK
+            --service ada-actions-homolog"
+  only:
+    - /118-Deploy/
+
+deploy ada-bot-prod:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --rancher-url $RANCHER_URL
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_PROD_STACK
+            --service ada"
+  only:
+    - /118-Deploy/
+
+deploy ada-actions-prod:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy
+  script:
+    - "upgrade
+            --rancher-url $RANCHER_URL
+            --rancher-key $RANCHER_ACCESS_KEY
+            --rancher-secret $RANCHER_SECRET_KEY
+            --environment $RANCHER_ENVIRONMENT
+            --stack $RANCHER_PROD_STACK
+            --service ada-actions"
+  only:
+    - /118-Deploy/
 
