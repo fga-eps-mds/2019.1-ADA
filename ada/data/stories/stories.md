@@ -1,6 +1,10 @@
 ## path_start
 * start{"command": "start"}
   - utter_start
+* action_set_user
+  - action_set_user
+* action_set_repositorie
+  - action_set_repositorie
 
 ## path_help
 * help{"command": "help"}
@@ -79,8 +83,24 @@
 * creators
   - utter_creators
 
-## action path
+## path_action_get_pipeline
 * greet
   - utter_greet
-* action_test
-  - action_test
+* action_get_pipeline
+  - action_get_pipeline
+
+## path get_pipeline
+* action_get_pipeline
+  - action_get_pipeline
+
+## path set_user
+* action_set_user
+  - action_set_user
+
+## path set_repositorie
+* action_set_repositorie
+  - action_set_repositorie
+
+## path_action_get_report
+* action_get_report
+  - action_get_report
