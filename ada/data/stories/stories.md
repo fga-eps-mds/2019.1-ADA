@@ -1,6 +1,10 @@
 ## path_start
 * start{"command": "start"}
   - utter_start
+* action_set_user
+  - action_set_user
+* action_set_repositorie
+  - action_set_repositorie
 
 ## path_help
 * help{"command": "help"}
@@ -79,38 +83,20 @@
 * creators
   - utter_creators
 
-## happy path
+## path_action_get_pipeline
 * greet
   - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* mood_deny
-  - utter_bye
+* action_get_pipeline
+  - action_get_pipeline
 
-## say goodbye
-* bye
-  - utter_bye
+## path get_pipeline
+* action_get_pipeline
+  - action_get_pipeline
 
-## intoduce_ada
-* intoduce_ada
-  - utter_intoduce_ada
+## path set_user
+* action_set_user
+  - action_set_user
 
-# more_info?
-* more_info?
-  - utter_more_info?
-* usr_happy
-  - utter_intoduce_ada
-  - action_who_is_ada
-
-# more_info?
-* more_info?
-  - utter_more_info?
-* mood_deny
-  - utter_bye
-
-## action path
-* greet
-  - utter_greet
-* action_test
-  - action_test
+## path set_repositorie
+* action_set_repositorie
+  - action_set_repositorie

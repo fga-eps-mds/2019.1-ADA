@@ -5,9 +5,9 @@ RUN apt update && apt install -y git gcc make curl
 ADD ./docker/actions.requirements.txt /tmp/
 
 RUN pip install --upgrade pip && \
-    pip install -r /tmp/actions.requirements.txt
+  pip install -r /tmp/actions.requirements.txt
 
-ADD ./ada/actions/actions.py /ada/actions/actions.py
+ADD ./ada/actions/ /ada/actions/
 ADD ./ada/Makefile /ada/Makefile
 
 WORKDIR ada/
