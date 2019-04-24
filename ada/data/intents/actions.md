@@ -6,21 +6,21 @@
 - pipeline por favor
 
 ## intent:action_set_user
-- meu nome de usuário é @[sudjoao](usuario)
-- meu nome de usuário é @[algum](usuario)
-- meu usuário é @[gitlab-org](usuario)
-- meu usuário é @[ep1](usuario)
-- usuário é @[123xyz](usuario)
-- usuário é @[abc123xyz](usuario)
-- usuário: @[pedrinho_123](usuario)
-- usuário: @[teste](usuario)
-- usuário: @[qualquer](usuario)
-- @[nome](usuario)
-- @[alfabeto](usuario)
-- @[teste_123](usuario)
-- @[oculos.xyz](usuario)
-- @[CAIO](usuario)
-- @[Gui](usuario)
+- meu nome de usuário é [sudjoao](usuario)
+- meu nome de usuário é [algum](usuario)
+- meu usuário é [gitlab-org](usuario)
+- meu usuário é [ep1](usuario)
+- usuário é [123xyz](usuario)
+- usuário é [abc123xyz](usuario)
+- usuário: [pedrinho_123](usuario)
+- usuário: [teste](usuario)
+- usuário: [qualquer](usuario)
+- [nome](usuario)
+- [alfabeto](usuario)
+- [teste_123](usuario)
+- [oculos.xyz](usuario)
+- [CAIO](usuario)
+- [Gui](usuario)
 
 
 ## intent:action_set_repositorie
