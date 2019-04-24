@@ -28,25 +28,16 @@ class ActionSetUser(Action):
                     project_owner=project_owner)
             response = requests.get(
                 get_repository, headers=headers)
-            received_repository = response.json()
-            # dispatcher.utter_message(received_repository)
-            print(received_repository, file=sys.stderr)
-    
-            # dic = []
-            # for i, key in enumerate(received_repository):
-            #      dic.append({'title':received_repository[i]['repositories'], 'payload':'/repositorio'})
-            
-            # dispatcher.utter_button_message("Seus repositórios:", dic)
-            
-            buttons = [{"title": str(received_repository['repositories'][0]), "payload": "/repositorio"},
-                       {"title": str(received_repository['repositories'][1]), "payload": "/repositorio"},
-                       {"title": str(received_repository['repositories'][2]), "payload": "/repositorio"},
-                       {"title": str(received_repository['repositories'][3]), "payload": "/repositorio"},
-                       {"title": str(received_repository['repositories'][4]), "payload": "/repositorio"}]
-            dispatcher.utter_button_message(
-                "Seus repositórios:", buttons)
+            received_repositories = response.json()
 
-            return [SlotSet('usuario', username)]
+            buttons = []
+            for i, item in enumerate(received_repositories['repositories']):
+                buttons.append({"title": item, "payload": "repositorio"})
+            dispatcher.utter_button_message("\tEscolha o repositório que deseja gerenciar: ", buttons)
+
+            repositorio = tracker.get_slot("repositorio")
             
+            return [SlotSet('usuario', username), SlotSet('repositorio', repositorio)]
+
         except ValueError:
             dispatcher.utter_message(ValueError)
