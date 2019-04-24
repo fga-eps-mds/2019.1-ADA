@@ -2,6 +2,7 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 import os
 import requests
+import sys
 
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
@@ -29,14 +30,23 @@ class ActionSetUser(Action):
                 get_repository, headers=headers)
             received_repository = response.json()
             # dispatcher.utter_message(received_repository)
-
+            print(received_repository, file=sys.stderr)
     
-            dic=[]
-            for i, key in enumerate(received_repository):
-                 dic.append({'title':received_repository['repositories'], 'payload':'/repositorio'})
+            # dic = []
+            # for i, key in enumerate(received_repository):
+            #      dic.append({'title':received_repository[i]['repositories'], 'payload':'/repositorio'})
             
             # dispatcher.utter_button_message("Seus repositórios:", dic)
             
+            buttons = [{"title": str(received_repository['repositories'][0]), "payload": "/repositorio"},
+                       {"title": str(received_repository['repositories'][1]), "payload": "/repositorio"},
+                       {"title": str(received_repository['repositories'][2]), "payload": "/repositorio"},
+                       {"title": str(received_repository['repositories'][3]), "payload": "/repositorio"},
+                       {"title": str(received_repository['repositories'][4]), "payload": "/repositorio"}]
+            dispatcher.utter_button_message(
+                "Seus repositórios:", buttons)
+
             return [SlotSet('usuario', username)]
+            
         except ValueError:
             dispatcher.utter_message(ValueError)
