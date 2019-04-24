@@ -48,8 +48,6 @@ entities:
 
   - usuario
   - repositorio
-  - report
-
 
 slots:
   repositorio:
@@ -332,4 +330,4 @@ templates:
 
   utter_action_get_report:
   - text: |
-      Aguarde um momento, estou gerando o relatório!ß
+      Aguarde um momento, estou gerando o relatório!
