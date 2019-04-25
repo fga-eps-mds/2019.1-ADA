@@ -8,6 +8,8 @@ services:
       dockerfile: ./docker/ada.Dockerfile
     ports:
       - 5001:5001
+    volumes:
+      - ./ada:/ada
     networks:
       - adanetwork
     environment:
@@ -16,9 +18,7 @@ services:
       - WEBHOOK_URL=${WEBHOOK_URL}
     depends_on:
       - actions
-    volumes:
-      - ./ada:/ada
-      
+      - mongo-telegram
   actions:
     build:
       context: .
