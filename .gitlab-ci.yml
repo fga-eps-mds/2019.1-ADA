@@ -7,11 +7,20 @@ variables:
   ADA_IMAGE: $DOCKER_USER/ada-bot
   ADA_ACTIONS_IMAGE: $DOCKER_USER/ada-actions
 
+#############################################################
+########################## TEST #############################
+#############################################################
+
 lint-flake8:
   image: ejplatform/python:alpine
   stage: test
   script:
     - flake8
+
+
+#############################################################
+################## BUILD HOMOLOG ############################
+#############################################################
 
 
 build ada-bot-homolog:
@@ -24,7 +33,7 @@ build ada-bot-homolog:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_IMAGE:homolog
   only:
-    - /118-Deploy/
+    - /devel/
 
 build ada-actions-homolog:
   image: docker:latest
@@ -36,7 +45,11 @@ build ada-actions-homolog:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_ACTIONS_IMAGE:homolog
   only:
-    - /118-Deploy/
+    - /devel/
+
+#############################################################
+################## BUILD PROD ###############################
+#############################################################
 
 build ada-bot-prod:
   image: docker:latest
@@ -48,7 +61,7 @@ build ada-bot-prod:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_IMAGE:prod
   only:
-    - /118-Deploy/
+    - /master/
 
 build ada-actions-prod:
   image: docker:latest
@@ -60,7 +73,12 @@ build ada-actions-prod:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_ACTIONS_IMAGE:prod
   only:
-    - /118-Deploy/
+    - /master/
+  
+#############################################################
+################## DEPLOY HOMOLOG ###########################
+#############################################################
+
 
 deploy ada-bot-homolog:
   image: cdrx/rancher-gitlab-deploy
@@ -74,7 +92,7 @@ deploy ada-bot-homolog:
             --stack $RANCHER_HOMOLOG_STACK
             --service ada-homolog"
   only:
-    - /118-Deploy/
+    - /devel/
 
 deploy ada-actions-homolog:
   image: cdrx/rancher-gitlab-deploy
@@ -88,7 +106,11 @@ deploy ada-actions-homolog:
             --stack $RANCHER_HOMOLOG_STACK
             --service ada-actions-homolog"
   only:
-    - /118-Deploy/
+    - /devel/
+
+#############################################################
+################## DEPLOY PROD ##############################
+#############################################################
 
 deploy ada-bot-prod:
   image: cdrx/rancher-gitlab-deploy
@@ -102,7 +124,7 @@ deploy ada-bot-prod:
             --stack $RANCHER_PROD_STACK
             --service ada"
   only:
-    - /118-Deploy/
+    - /master/
 
 deploy ada-actions-prod:
   image: cdrx/rancher-gitlab-deploy
@@ -116,5 +138,5 @@ deploy ada-actions-prod:
             --stack $RANCHER_PROD_STACK
             --service ada-actions"
   only:
-    - /118-Deploy/
+    - /master/
 
