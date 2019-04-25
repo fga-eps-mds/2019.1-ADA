@@ -101,7 +101,7 @@
 * action_set_repositorie
   - action_set_repositorie
 
-## path_action_get_report
+## path get_report
 * action_get_report
   - utter_action_get_report
   - action_get_report

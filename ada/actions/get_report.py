@@ -21,10 +21,10 @@ class Report(Action):
                                             project_name=project_name), headers=headers)
             report_project = response.json()
             print(report_project, file=sys.stderr)
-            dispatcher.utter_message("Primeiramente, o nome do seu projeto se chama {project_name}\
+            dispatcher.utter_message("Primeiramente, o seu projeto se chama {project_name}\
                                      e se encontra disponível nesse site {web_url}".format(project_name=report_project[0]["project"]["name"], web_url=report_project[0]["project"]["web_url"]))
-            
-            text_message_2 = "Os membros desse projeto sáo os seguintes:\n"
+
+            text_message_2 = "Os membros desse projeto são os seguintes:\n"
             for item in report_project:
                 for value in item["members"]["name"]:
                     text_message_2 += "➡️ {members}\n".format(members=value)

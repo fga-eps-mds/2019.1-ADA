@@ -22,9 +22,9 @@ intents:
   - affirm
   - deny
 
-  - action_get_pipeline
-  - action_set_user
-  - action_set_repositorie
+  - get_pipeline
+  - set_user
+  - set_repositorie
   - build_stage
   - get_report
 
