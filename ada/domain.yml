@@ -24,6 +24,7 @@ intents:
   - who_is_ada
   - build_stage
   - action_test
+  - do_report
 
 entities:
   - command
@@ -42,6 +43,7 @@ entities:
   - creators
   - begin
   - help
+  - report
 
 actions:
   - utter_defalut
@@ -74,6 +76,8 @@ actions:
   - action_who_is_ada
   - utter_build_stage
   - action_build_stage
+  - utter_do_report
+  - action_do_report
 
 templates:
 
@@ -313,3 +317,9 @@ templates:
       Fui criada pelos meus pais, né?
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
+
+  utter_do_report:
+  - text: |
+      Aguarde um momento...
+
+      Estou buscando as informações do seu repositório.
