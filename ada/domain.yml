@@ -21,10 +21,12 @@ intents:
   - creators
   - affirm
   - deny
-  - who_is_ada
+
+  - action_get_pipeline
+  - action_set_user
+  - action_set_repositorie
   - build_stage
-  - action_test
-  - do_report
+  - get_report
 
 entities:
   - command
@@ -44,6 +46,15 @@ entities:
   - begin
   - help
   - report
+
+  - usuario
+  - repositorio
+
+slots:
+  repositorio:
+    type: text
+  usuario:
+    type: text
 
 actions:
   - utter_defalut
@@ -68,16 +79,14 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-  - utter_cheer_up
-  - utter_happy
-  - utter_did_that_help
-  - utter_usr_happy
-  - action_test
-  - action_who_is_ada
+
+  - action_get_pipeline
+  - action_set_user
+  - action_set_repositorie
   - utter_build_stage
   - action_build_stage
-  - utter_do_report
-  - action_do_report
+  - utter_get_report
+  - action_get_report
 
 templates:
 
@@ -99,6 +108,8 @@ templates:
       Sou responsável por auxiliar vocês, desenvolvedores, no controle dos seus repositórios do Git. Fui a primeira pessoa a criar um algoritmo computacional, e agora estou encarregada por auxiliar vocês para que um dia deixem suas marcas no mundo, assim como eu fiz.
 
       Caso queira saber mais, me peça ajuda.
+
+      Para começar me fala qual o seu nome do seu usuário no GitLab, mas não se esqueça de escrever usuário: na frente.
 
 
   utter_restart:
@@ -318,8 +329,6 @@ templates:
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
 
-  utter_do_report:
+  utter_get_report:
   - text: |
-      Aguarde um momento...
-
-      Estou buscando as informações do seu repositório.
+      Aguarde um momento, estou gerando o relatório.
