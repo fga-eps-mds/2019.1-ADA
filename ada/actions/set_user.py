@@ -3,7 +3,7 @@ from rasa_core_sdk.events import SlotSet
 import os
 import requests
 import sys
-
+from requests.exceptions import HTTPError
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
 
@@ -19,8 +19,6 @@ class ActionSetUser(Action):
             message = tracker.latest_message.get('text')
             message = message.split()
             username = message[len(message)-1]
-            dispatcher.utter_message(
-                "Seu nome de usuário é: {user}.".format(user=username))
 
             headers = {"Content-Type": "application/json"}
             project_owner = username
@@ -32,25 +30,30 @@ class ActionSetUser(Action):
             received_repositories = response.json()
 
             options = []
-
             for i, item in enumerate(received_repositories['repositories']):
                 options.append((item, item))
 
             repositories_buttons = self.build_buttons(options)
             lista = [repositories_buttons[x:x+2]
                      for x in range(0, len(repositories_buttons), 2)]
-            print(lista, file=sys.stderr)
             # dispatcher.utter_message(
             #     "Escolha o repositório que deseja gerenciar:")
+
+            dispatcher.utter_message(
+                "Seu nome de usuário é: {user}.".format(user=username))
             for item in lista:
-                dispatcher.utter_button_message("Escolha o repositório que deseja gerenciar:",
+                dispatcher.utter_button_message('Qual repositório você quer que eu fique responsavél?',
                                                 item,
                                                 button_type="custom")
 
             return [SlotSet('usuario', username)]
 
-        except ValueError:
-            dispatcher.utter_message(ValueError)
+        except KeyError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o nome de usuário {user} no banco de dados do gitlab.".format(user=username))
+        except IndexError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o nome de usuário {user} no banco de dados do gitlab.".format(user=username))
 
     def build_buttons(self, button_values):
         buttons = []
