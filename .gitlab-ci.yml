@@ -41,7 +41,7 @@ build ada-actions-homolog:
   services:
     - docker:dind
   script:
-    - docker build -f docker/ada.Dockerfile -t $ADA_ACTIONS_IMAGE:homolog .
+    - docker build -f docker/actions.Dockerfile -t $ADA_ACTIONS_IMAGE:homolog .
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_ACTIONS_IMAGE:homolog
   only:
@@ -69,7 +69,7 @@ build ada-actions-prod:
   services:
     - docker:dind
   script:
-    - docker build -f docker/ada.Dockerfile -t $ADA_ACTIONS_IMAGE:prod .
+    - docker build -f docker/actions.Dockerfile -t $ADA_ACTIONS_IMAGE:prod .
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_ACTIONS_IMAGE:prod
   only:
