@@ -1,0 +1,28 @@
+### Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### Flask ###
+instance/*
+!instance/.gitignore
+.webassets-cache
+
+### Flask.Python Stack ###
+__pycache__/
+
+### Mac OS ###
+# Geral
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# File with credentials
+.env
+export.sh
+
+# Bot training
+/ada/models/*
+/ada/rasa_core.log
