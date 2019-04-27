@@ -12,7 +12,7 @@ class ActionSetRepositorie(Action):
             vector = message.split()
             repositorio = vector[len(vector)-1]
             dispatcher.utter_message(
-                "O nome do seu repositorio é: {rep}.".format(rep=repositorio))
+                "Ok, vou ficar monitorando o repositório {rep}.".format(rep=repositorio))
             return [SlotSet('repositorio', repositorio)]
         except ValueError:
             dispatcher.utter_message(ValueError)
