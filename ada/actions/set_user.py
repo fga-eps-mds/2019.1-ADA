@@ -36,7 +36,7 @@ class ActionSetUser(Action):
                      for x in range(0, len(repositories_buttons), 2)]
 
             dispatcher.utter_message(
-                "Olá {user}, obrigado por confiar em mim para te ajudar nos seus trabalhos.".format(user=project_owner))
+                "Ok, {user}, já guardei seu usuário.".format(user=project_owner))
             for item in lista:
                 dispatcher.utter_button_message('Qual repositório você quer que eu fique responsavél?',
                                                 item,
@@ -46,10 +46,10 @@ class ActionSetUser(Action):
 
         except KeyError:
             dispatcher.utter_message(
-                "Não consegui encontrar o nome de usuário {user} no banco de dados do gitlab.".format(user=project_owner))
+                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
         except IndexError:
             dispatcher.utter_message(
-                "Não consegui encontrar o nome de usuário {user} no banco de dados do gitlab.".format(user=project_owner))
+                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
 
     def build_buttons(self, button_values):
         buttons = []
