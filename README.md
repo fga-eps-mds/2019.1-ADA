@@ -2,19 +2,10 @@
 
 [![pipeline status](https://gitlab.com/adabot/ada/badges/devel/pipeline.svg)](https://gitlab.com/adabot/ada/commits/devel) [![Percentage of issues still open](http://isitmaintained.com/badge/open/fga-eps-mds/2019.1-ADA.svg)](http://isitmaintained.com/project/fga-eps-mds/2019.1-ADA "Percentage of issues still open") [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Sobre o Projeto   
+## Sobre a Ada  
 
 <p align="justify"> &emsp;&emsp;
-  O projeto ADA tem como objetivo facilitar o gerenciamento de tarefas dentro de um projeto de desenvolvimento de software, sobretudo aquelas relacionadas ao papel de DevOps. A partir de um acesso rápido a informações através do bot no Telegram e possibilidade de realização de algumas tarefas através dele, diminui-se o esforço e tempo necessários para manter o projeto em organizado e em funcionamento.</p>
-
-### Requisitos de Alto Nível
-* Interação através de linguagem natural para uma melhor usabilidade;
-* Fluxos de conversas objetivos e práticos;
-* Gerenciamento de issues e pull requests;
-* Captura de informações sobre a release;
-* Captura de informações sobre integração contínua do repositório;
-* Captura de informações sobre deploy contínuo do repositório;
-* Gerenciamento do pipeline de produção.
+  A Ada é um chatbot com objetivo de facilitar a transformação full-stack e a integração entre equipes multidisciplinares em organizações envolvidas com desenvolvimento de software. Isso é obtido através de dois aspectos principais: comunicação fácil e em linguagem natural e monitoramento completo do pipeline de produção de softwares. Além de monitorar o pipeline, a Ada também permite a realização de uma série de atividades relacionadas ao gerenciamento da produção nas plataformas entregues. Sua versão básica inclui suporte para um pipeline GitHub, GitLab CI e Amazon e comunicação através do Telegram. </p>
 
 ## Contribuindo
 
