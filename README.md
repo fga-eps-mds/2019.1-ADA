@@ -32,61 +32,113 @@ O código de conduta para contribuição está disponível [aqui](https://github
 
 ### Desenvolvimento
 
-#### Subindo o chatbot no mensageiro
+#### Primeiros passos
 
-Para executar a Ada utilizando o Telegram, siga os seguintes comandos:
+#### Primeiros passos
+##### Instale o Docker
+Seguindo as instruções dos links a seguir, instale o docker conforme seu sistema operacional.
 
-* Instale o ngrok utilizando as instruções do [link](https://ngrok.com/download).
+* [docker](https://docs.docker.com/install/)
+* [docker-compose](https://docs.docker.com/compose/install/#install-compose) (já incluído na instalação do Docker Desktop para MacOS)
 
-* No terminal, execute o ngrok na porta 5001:
+#### Subir a Ada no Telegram
+Siga esses passos para executar a Ada utilizando o Telegram através de um bot criado por você.
+
+##### Crie um bot no Telegram
+Converse com o [@BotFather do Telegram](https://t.me/BotFather) e crie um bot de teste unicamente seu seguindo as instruções dele.
+
+
+##### Exporte as variáveis do seu bot
+Após escolher um nome para seu bot, o @BotFather lhe dará um token para utilizar para acessar a API do Telegram. Exporte ambos no terminal como a seguir. Substitua o TELEGRAM_ACESS_TOKEN pelo token lhe enviado pelo @BotFather e TELEGRAM_BOT_NAME pelo nome do seu bot.
+
+```sh
+- export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
+- export BOT_NAME='TELEGRAM_BOT_NAME'
+```
+
+##### Instale o ngrok
+Utilizando as instruções do [link](https://ngrok.com/download), faça a instalação do ngrok.
+
+##### Execute o ngrok
+Conforme a seguir, execute o ngrok na porta 5001.
 
 ```sh
 ./ngrok http 5001
 ```
 
-* Faça a exportação das seguintes variáveis de ambiente:
+##### Exporte a URL do Webhook e conecte ao Telegram
+
+Enquanto o ngrok estiver em execução, ele apresentará uma série de informações da sessão atual. Copie a primeira url do campo Forwarding, ela será similar à seguinte.
 
 ```sh
-- export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
-- export BOT_NAME='BOT_NAME'
-- export WEBHOOK_URL='WEBHOOK_URL'
-``` 
+https://0x00000x.ngrok.io
+```
 
-Faça as instalações dos seguintes programas:
+Em seguida, exporte-a como a seguir, substituindo-a em NGROK_WEBHOOK_URL.
 
-* [docker](https://docs.docker.com/install/)
-* [docker-compose](https://docs.docker.com/compose/install/#install-compose)
 
-Usando o Docker
 
-* Execute o comando para inicializar o container em seu computador:
+```sh
+- export WEBHOOK_URL='NGROK_WEBHOOK_URL'
+```
+
+::Lembre-se::: sempre que executar o ngrok essa url deve ser exportada.
+
+Depois, você deve configurar essa url na api do telegram. Isso deve ser feito visitando um link específico para seu bot. Ele é da maneira a seguir. Não se esqueça de substituir TELEGRAM_ACESS_TOKEN e NGROK_WEBHOOK_URL.
+
+```sh
+- http://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/setWebhook?url=https://NGROK_WEBHOOK_URL/webhooks/telegram/webhook
+```
+
+Para verifica que tudo funcionou corretamente:
+
+```sh
+- https://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/getWebhookInfo
+```
+
+##### Execute o Docker
+```sh
+docker-compose -f docker-compose-dev.yml up --build
+```
+
+##### Converse com o bot
+E está tudo pronto pra conversar com o bot no telegram!
+
+#### Subir a Ada no Terminal
+Siga esses passos para executar a Ada localmente utilizando o Terminal.
+
+##### Execute o comando a seguir para criar a imagem do container
 
 ```sh
 docker-compose -f docker-compose-dev.yml up --build
 ```
 
-#### Subindo o chatbot no Terminal
-
-Para executar a Ada localmente utilizando o Terminal, siga os comandos:
-
-* Execute o comando para criar a imagem do container:
+##### Execute o Docker
+Após criar a imagem do container, em um outro terminal, digite o seguinte comando para obter a id de seus contêineres.
 
 ```sh
-docker-compose -f docker-compose-dev.yml up --build
+docker ps
 ```
 
-* Execute o Docker:
+Copie o CONTAINER_ID  da imagem 20191-ada_ada e substitui no comando a seguir.
 
 ```sh
 docker exec -it container_id bash
 ```
 
-* Rode os comandos para o treinamento do bot:
+Após rodar esse comando, o container estará em execução. Algo como a seguir aparecerá no terminal.
+```sh
+root@00x00xx00000:/ada#
+```
+
+Dentro dele, rode o comando para treinar o bot.
 
 ```sh
 python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
 ```
-Após os comando é possível realizar diálogos com o bot e visualizar os logs do Rasa.
+
+Após executar esse comando, é possível conversar com o bot bem como visualizar os logs do Rasa.
+
 
 ## Equipe
 
