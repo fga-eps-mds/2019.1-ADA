@@ -4,10 +4,11 @@ import os
 import requests
 import sys
 from requests.exceptions import HTTPError
-import telegram
 import logging
-GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
-ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", "")
+import telegram
+
+GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
+ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 
 class ActionSetUser(Action):
     def name(self):
@@ -15,6 +16,7 @@ class ActionSetUser(Action):
 
     def run(self, dispatcher, tracker, domain):
         try:
+
             tracker_state = tracker.current_state()
             sender_id = tracker_state['sender_id']
 
@@ -29,33 +31,17 @@ class ActionSetUser(Action):
             response = requests.get(
                 get_repository, headers=headers)
             received_repositories = response.json()
-            options = []
-            for i, item in enumerate(received_repositories['repositories']):
-                options.append((item, item))
             
-            repo_names = [received_repositories['repositories'][i:i+2] for i in range(0, len(received_repositories['repositories']), 2)]
-            dispatcher.utter_message(
-                "Ok, {user}, já guardei seu usuário.".format(user=project_owner))
-            
+            buttons = []
+
+            for repositorio in received_repositories["repositories"]:
+                buttons.append(telegram.InlineKeyboardButton(text=repositorio, callback_data="meu repositorio é " + repositorio))
+            repo_names = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
             bot = telegram.Bot(token=ACCESS_TOKEN)
-            
-            repositories_buttons = self.build_buttons(options)
-            lista = [repositories_buttons[x:x+2]
-                     for x in range(0, len(repositories_buttons), 2)]
-                     
-            for item in lista:
-                dispatcher.utter_button_message('Qual repositório você quer que eu fique responsavél?',
-                                                item,
-                                                button_type="custom")
-
-            # reply_markup = telegram.InlineKeyboardMarkup(lista)
-            # bot.send_message(chat_id=sender_id,
-            #      text="Escolha o seu repositório",
-            #      reply_markup=reply_markup)
-
-            # reply_markup = {
-            #     "remove_keyboard": True
-            # }
+            reply_markup = telegram.InlineKeyboardMarkup(repo_names)
+            bot.send_message(chat_id=sender_id,
+                    text="Escolha o seu repositório",
+                    reply_markup=reply_markup)
 
             return [SlotSet('usuario', project_owner)]
 
