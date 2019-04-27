@@ -20,6 +20,7 @@ As ferramentas selecionadas para o auxílio de entrega contínua foram:
 
 ![gitflow](../assets/img/project/gitflow/gitflow.jpg)
 
+
 [Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/AtualizaGitFlow/docs/assets/img/project/gitflow/gitflow.jpg)
 
 ## 2. Workflow
