@@ -26,8 +26,8 @@ services:
     ports:
       - 5055:5055
     volumes:
-      - /adabot/actions:/ada/actions
-      - /adabot/Makefile:/ada/Makefile
+      - ./adabot/actions:/ada/actions
+      - ./adabot/Makefile:/ada/Makefile
     environment:
       - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}
     networks:
