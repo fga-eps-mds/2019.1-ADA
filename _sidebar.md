@@ -14,6 +14,7 @@
   - [Questionário](/docs/product/questionnaire.md)
   - [Rich picture](/docs/product/rich_picture.md)
   - [Termo de Abertura do Projeto](docs/product/tap.md)
+  - [Teste em Uso](docs/product/in_use_test.md)
 - [**Projeto**](#)
   - [Backlog](docs/project/backlog.md)
   - [Documento de Arquitetura](docs/project/architecture_doc.md)
