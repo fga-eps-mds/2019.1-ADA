@@ -15,7 +15,6 @@ class ActionGetPipeline(Action):
 
     def run(self, dispatcher, tracker, domain):
         try:
-            dispatcher.utter_message("Aqui está o pipeline mais recente")
 
             headers = {"Content-Type": "application/json"}
 
@@ -27,7 +26,7 @@ class ActionGetPipeline(Action):
             response = requests.get(
                 get_pipeline_url, headers=headers)
             received_pipeline = response.json()
-
+            dispatcher.utter_message("Aqui está o pipeline mais recente")
             if received_pipeline["status"] == "success":
                 status = "ele nos critérios de aceitação."
             else:

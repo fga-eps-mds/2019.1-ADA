@@ -25,7 +25,8 @@ class ActionSetUser(Action):
             message = tracker.latest_message.get('text')
             message = message.split()
             project_owner = message[len(message)-1]
-
+            dispatcher.utter_message(
+                "Vou procurar seu nome de usuário, já volto.")
             headers = {"Content-Type": "application/json"}
             get_repository = GITLAB_SERVICE_URL + \
                 "user/{project_owner}".format(
@@ -35,7 +36,8 @@ class ActionSetUser(Action):
             received_repositories = response.json()
 
             buttons = []
-
+            dispatcher.utter_message(
+                "Consegui encontrar o usuário {user} aqui.", user=project_owner)
             for repositorio in received_repositories["repositories"]:
                 buttons.append(telegram.InlineKeyboardButton(
                     text=repositorio, callback_data="meu repositorio é " + repositorio))
