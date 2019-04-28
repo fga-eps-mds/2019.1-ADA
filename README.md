@@ -43,8 +43,8 @@ Converse com o [@BotFather do Telegram](https://t.me/BotFather) e crie um bot de
 Após escolher um nome para seu bot, o @BotFather lhe dará um token para utilizar para acessar a API do Telegram. Exporte ambos no terminal como a seguir. Substitua o TELEGRAM_ACESS_TOKEN pelo token lhe enviado pelo @BotFather e TELEGRAM_BOT_NAME pelo nome do seu bot.
 
 ```sh
-- export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
-- export BOT_NAME='TELEGRAM_BOT_NAME'
+export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
+export BOT_NAME='TELEGRAM_BOT_NAME'
 ```
 
 ##### Instale o ngrok
@@ -70,7 +70,7 @@ Em seguida, exporte-a como a seguir, substituindo-a em NGROK_WEBHOOK_URL.
 
 
 ```sh
-- export WEBHOOK_URL='NGROK_WEBHOOK_URL'
+export WEBHOOK_URL='NGROK_WEBHOOK_URL'
 ```
 
 ::Lembre-se::: sempre que executar o ngrok essa url deve ser exportada.
@@ -78,18 +78,29 @@ Em seguida, exporte-a como a seguir, substituindo-a em NGROK_WEBHOOK_URL.
 Depois, você deve configurar essa url na api do telegram. Isso deve ser feito visitando um link específico para seu bot. Ele é da maneira a seguir. Não se esqueça de substituir TELEGRAM_ACESS_TOKEN e NGROK_WEBHOOK_URL.
 
 ```sh
-- http://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/setWebhook?url=https://NGROK_WEBHOOK_URL/webhooks/telegram/webhook
+http://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/setWebhook?url=https://NGROK_WEBHOOK_URL/webhooks/telegram/webhook
 ```
 
-Para verifica que tudo funcionou corretamente:
+Para verificar que tudo funcionou corretamente:
 
 ```sh
-- https://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/getWebhookInfo
+https://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/getWebhookInfo
 ```
 
 ##### Execute o Docker
 ```sh
 docker-compose -f docker-compose-dev.yml up --build
+```
+
+##### Exporte a variável de ambiente do GitLab
+Siga as instruções em [ADA-gitlab ReadMe](https://github.com/fga-eps-mds/2019.1-ADA-gitlab) e depois rode o comando para obter as ids dos contêineres.
+```sh
+docker ps
+```
+
+Exporte o nome da imagem referente ao ser serviço do GitLab, tal como:
+```sh
+export GITLAB_SERVICE_URL='http://20191-ada-gitlab_api_1:5000/'
 ```
 
 ##### Converse com o bot
