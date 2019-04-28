@@ -2,6 +2,9 @@ from rasa_core_sdk import Action
 import requests
 import os
 
+from urllib3.exceptions import NewConnectionError
+from requests.exceptions import HTTPError
+
 
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
@@ -56,9 +59,19 @@ class BuildStage(Action):
                                      .format(pipe_url=job_build[0]['web_url']))
 
             is_there_any_build = True
+        except HTTPError:
+            dispatcher.utter_message(
+                "Não estou conseguindo achar uma build no seu repositório, certifique-se que realmente existe uma.")
+        except NewConnectionError:
+            dispatcher.utter_message(
+                "Estou tendo problemas para me conectar com o gitlab.")
         except ValueError:
-            dispatcher.utter_message(ValueError)
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tente mais tarde.")
             if(not is_there_any_build):
-                default = "Não há build's em andamento, "
-                "mas continuo te informando."
+                default = "Não há build's em andamento, "\
+                    "mas continuo te informando."
                 dispatcher.utter_message(default)
+        except Exception:
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tente mais tarde.")
