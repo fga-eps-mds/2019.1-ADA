@@ -81,6 +81,7 @@ actions:
 
   - action_get_pipeline
   - action_set_user
+  - utter_set_user
   - action_set_repositorie
   - utter_build_stage
   - action_build_stage
@@ -106,7 +107,7 @@ templates:
 
       Caso queira saber mais, me peça ajuda.
 
-      Para começar me fala qual o seu nome do seu usuário no GitLab, mas não se esqueça de escrever usuário: na frente.
+      Agora, pra gente começar eu vou precisar do seu nome de usuário lá no GitLab. Olha, vou te dar um exemplo! Pro usuário @AdaLovelace eu escreveria "Meu usuário é AdaLovelace".
 
 
   utter_restart:
