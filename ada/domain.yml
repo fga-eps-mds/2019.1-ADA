@@ -81,6 +81,7 @@ actions:
 
   - action_get_pipeline
   - action_set_user
+  - utter_set_user
   - action_set_repositorie
   - utter_build_stage
   - action_build_stage
@@ -106,7 +107,7 @@ templates:
 
       Caso queira saber mais, me peça ajuda.
 
-      Para começar me fala qual o seu nome do seu usuário no GitLab, mas não se esqueça de escrever usuário: na frente.
+      Agora, pra gente começar eu vou precisar do seu nome de usuário lá no GitLab. Olha, vou te dar um exemplo! Pro usuário @AdaLovelace eu escreveria "Meu usuário é AdaLovelace".
 
 
   utter_restart:
@@ -213,7 +214,7 @@ templates:
 
   utter_who_is_ada:
   - text: |
-      Eu fui desenvolvida por um grupo de estudantes de Engenharia de Software da Universidade de Brasília, em 2019. Meu nome e personalidade foram escolhidos em  homenagem à Ada Lovelace, uma grande escritora e matemática do século XIX, filha do poeta Lord Byron. A ela é atribuído o título de primeira mulher programadora, uma vez que ela foi responsável por criar o primeiro algoritmo com a intenção de ser executado por uma máquina de computação, a máquina de Charles Babbage, além de ter reconhecido o enorme potencial desse tipo de máquina. Você pode entender mais sobre minha personalidade por  meio desse link: https://www.celebrities-galore.com/celebrities/ada-lovelace/home/ E por aqui você encontra mais sobre minha história e sobre meus trabalhos: https://pt.wikipedia.org/wiki/\Ada_Lovelace
+      Eu fui desenvolvida por um grupo de estudantes de Engenharia de Software da Universidade de Brasília, em 2019. Meu nome e personalidade foram escolhidos em  homenagem à Ada Lovelace, uma grande escritora e matemática do século XIX, filha do poeta Lord Byron. A ela é atribuído o título de primeira mulher programadora, uma vez que ela foi responsável por criar o primeiro algoritmo com a intenção de ser executado por uma máquina de computação, a máquina de Charles Babbage, além de ter reconhecido o enorme potencial desse tipo de máquina.
 
   utter_religion:
   - text: |
@@ -259,7 +260,7 @@ templates:
 
   utter_license:
   - text: |
-      Ahhh a minha licença é a GPL, se quiser saber mais, entre nesse site https://pt.wikipedia.org/wiki/GNU_General_Public_License!
+      Ahhh a minha licença é a GPL, se quiser saber mais, entre nesse site https://github.com/fga-eps-mds/2019.1-ADA/blob/master/LICENSE
 
   - text: |
       Sou um software livre licenciado com a GPL

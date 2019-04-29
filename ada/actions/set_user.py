@@ -2,14 +2,16 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 import os
 import requests
-import sys
-from requests.exceptions import HTTPError
 import logging
 import telegram
 import json
 
+from urllib3.exceptions import NewConnectionError
+from requests.exceptions import HTTPError
+
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
+
 
 class ActionSetUser(Action):
     def name(self):
@@ -23,7 +25,8 @@ class ActionSetUser(Action):
             message = tracker.latest_message.get('text')
             message = message.split()
             project_owner = message[len(message)-1]
-
+            dispatcher.utter_message(
+                "Vou procurar seu nome de usuário, já volto.")
             headers = {"Content-Type": "application/json"}
             
             repo_names = self.build_buttons(project_owner, headers)
@@ -34,14 +37,21 @@ class ActionSetUser(Action):
                     reply_markup=reply_markup)
             self.save_user_to_db(headers, project_owner, sender_id)
             return [SlotSet('usuario', project_owner)]
-
+        except HTTPError:
+            dispatcher.utter_message("O usuário não encontrado.")
         except KeyError:
             dispatcher.utter_message(
                 "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
         except IndexError:
             dispatcher.utter_message(
                 "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
-
+        except NewConnectionError:
+            dispatcher.utter_message("Erro de conexão com a api do gitlab")
+        except ValueError:
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tente mais tarde.")
+        except Exception:
+            dispatcher.utter_message("Oloquinho meu")
         
     def build_buttons(self, project_owner, headers):        
         get_repository = GITLAB_SERVICE_URL + \

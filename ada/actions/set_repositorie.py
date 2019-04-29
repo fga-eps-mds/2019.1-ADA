@@ -4,6 +4,8 @@ import requests
 import json
 import os
 import sys
+from urllib3.exceptions import NewConnectionError
+from requests.exceptions import HTTPError
 
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 
@@ -27,6 +29,19 @@ class ActionSetRepositorie(Action):
             return [SlotSet('repositorio', repo_name)]
         except ValueError:
             dispatcher.utter_message(ValueError)
+        except HTTPError:
+            dispatcher.utter_message("O usuário não encontrado.")
+        except KeyError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
+        except IndexError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
+        except NewConnectionError:
+            dispatcher.utter_message("Erro de conexão com a api do gitlab")
+        except Exception:
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tente mais tarde.")
 
     def get_project_id(self, headers, message):
         message_list = message.split('/')

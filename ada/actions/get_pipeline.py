@@ -2,6 +2,9 @@ from rasa_core_sdk import Action
 import requests
 import os
 
+from urllib3.exceptions import NewConnectionError
+from requests.exceptions import HTTPError
+
 
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
@@ -12,7 +15,6 @@ class ActionGetPipeline(Action):
 
     def run(self, dispatcher, tracker, domain):
         try:
-            dispatcher.utter_message("Aqui está o pipeline mais recente")
 
             headers = {"Content-Type": "application/json"}
 
@@ -24,24 +26,30 @@ class ActionGetPipeline(Action):
             response = requests.get(
                 get_pipeline_url, headers=headers)
             received_pipeline = response.json()
-
+            dispatcher.utter_message("Aqui está o pipeline mais recente")
             if received_pipeline["status"] == "success":
-                status = "passou nos critérios de aceitação do seu Pipeline."
+                status = "ele nos critérios de aceitação."
             else:
-                status = "não passou nos critérios de aceitação"
-                +  " do seu Pipeline."
+                status = "ele não passou nos critérios de aceitação."
 
-            repositorio = tracker.current_slot_values()['repositorio']
-            text_message = 'O Pipeline mais recente no respositorio '
-            + '{rep} que você solicitou {status}'.format(
-                rep=repositorio, status=status)+'\n'+'Para visualizar o'
-            + 'Pipeline no GitLab acesse o link '
-            + '{web_url}'.format(status=status,
-                                 web_url=received_pipeline["web_url"])
+            text_message = 'O Pipeline mais recente do '\
+                + 'seu repositório: {status}'.format(
+                    status=status)+'\n'+'Para visualizar o'\
+                + 'Pipeline no GitLab acesse o link '\
+                + '{web_url}'.format(status=status,
+                                     web_url=received_pipeline["web_url"])
 
             dispatcher.utter_message(text_message)
             return []
-
+        except HTTPError:
+            dispatcher.utter_message(
+                "Não consegui achar um pipeline no seu repositório, certifique-se que exite um.")
         except ValueError:
-
-            dispatcher.utter_message(ValueError)
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tente mais tarde.")
+        except NewConnectionError:
+            dispatcher.utter_message(
+                "Estou tendo problemas para me conectar com o gitlab.")
+        except Exception:
+            dispatcher.utter_message(
+                "Estou tendo problemas para me conectar com o gitlab.")
