@@ -1,4 +1,4 @@
-## intent:do_report
+## intent:get_report
 - me da o [relatorio](report) do meu repositorio
 - faz ai o [relatório](report) do repo
 - ada, gere o [relatorio](report)
