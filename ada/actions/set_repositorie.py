@@ -9,6 +9,7 @@ from requests.exceptions import HTTPError
 
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 
+
 class ActionSetRepositorie(Action):
     def name(self):
         return "action_set_repositorie"
@@ -17,31 +18,33 @@ class ActionSetRepositorie(Action):
         try:
             tracker_state = tracker.current_state()
             sender_id = tracker_state['sender_id']
-            message = tracker.latest_message.get('text')        
-            
+            message = tracker.latest_message.get('text')
+
             headers = {"Content-Type": "application/json"}
-            message_list = message.split('/')            
-            repo_name = message_list[-1]        
+            message_list = message.split('/')
+            repo_name = message_list[-1]
             self.save_repo_to_db(headers, repo_name, message, sender_id)
             dispatcher.utter_message(
                 "Ok, vou ficar monitorando o repositório {rep}.".format(rep=repo_name))
-            
+
             return [SlotSet('repositorio', repo_name)]
         except ValueError:
             dispatcher.utter_message(ValueError)
         except HTTPError:
-            dispatcher.utter_message("O usuário não encontrado.")
+            dispatcher.utter_message(
+                "Não consegui encontrar o seu repositório no GitLab, por favor verifique ele e me mande novamente.")
         except KeyError:
             dispatcher.utter_message(
-                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
+                "Não consegui encontrar o seu repositório no GitLab, por favor verifique ele e me manda novamente.")
         except IndexError:
             dispatcher.utter_message(
-                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
+                "Não consegui encontrar o seu repositório no GitLab, por favor verifique ele e me manda novamente.")
         except NewConnectionError:
-            dispatcher.utter_message("Erro de conexão com a api do gitlab")
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tenta me mandar essa mesagem de novo ou de uma forma diferente")
         except Exception:
             dispatcher.utter_message(
-                "Estou tendo alguns problemas, tente mais tarde.")
+                "Estou tendo alguns problemas, tenta me mandar essa mesagem de novo ou de uma forma diferente.")
 
     def get_project_id(self, headers, message):
         message_list = message.split('/')
