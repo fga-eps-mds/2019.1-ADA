@@ -16,6 +16,7 @@ services:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
+      - ACTIONS_URL=${ACTIONS_URL}
     depends_on:
       - actions
       - mongo-telegram

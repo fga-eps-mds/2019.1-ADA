@@ -15,14 +15,12 @@ class ActionGetPipeline(Action):
 
     def run(self, dispatcher, tracker, domain):
         try:
-
+            tracker_state = tracker.current_state()
+            sender_id = tracker_state['sender_id']
             headers = {"Content-Type": "application/json"}
 
-            project_owner = tracker.current_slot_values()['usuario']
-            project_name = tracker.current_slot_values()['repositorio']
             get_pipeline_url = GITLAB_SERVICE_URL + \
-                "pipeline".format(
-                    project_owner=project_owner, project_name=project_name)
+                "pipeline/{sender_id}".format(sender_id=sender_id)
             response = requests.get(
                 get_pipeline_url, headers=headers)
             received_pipeline = response.json()
@@ -33,9 +31,9 @@ class ActionGetPipeline(Action):
             else:
                 status = "não passou nos critérios de aceitação."
 
-            text_message = 'Encontrei, é a situação final dele foi ' \
-                + '{status}'.format(
-                    status=status)+'\n'+'Para visualizar o'\
+            text_message = 'Encontrei, e ele ' \
+                + '{status}.'.format(
+                    status=status)+'\n'+'Para visualizar '\
                 + 'mais informações sobre ele acesse o link '\
                 + '{web_url}'.format(status=status,
                                      web_url=received_pipeline["web_url"])
@@ -44,13 +42,13 @@ class ActionGetPipeline(Action):
             return []
         except HTTPError:
             dispatcher.utter_message(
-                "Não consegui achar um pipeline no seu repositório, tenta conferir se existe um e tente novamente.")
+                "Não consegui achar um pipeline no seu repositório, "
+                "tenta conferir se existe um e tente novamente.")
         except ValueError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
         except NewConnectionError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
-        except Exception:
-            dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
