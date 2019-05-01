@@ -101,3 +101,11 @@
 ## path set_repositorie
 * action_set_repositorie
   - action_set_repositorie
+
+## path_next_release
+* intended_for_next_release
+  - utter_intended_for_next_release
+
+## path_whats_pipeline
+* whats_pipeline
+  - utter_whats_pipeline

@@ -203,3 +203,25 @@
 - Qm é ada?
 - Me fala de vc, Ada
 - me fala de vc ada
+
+## intent:intended_for_next_release
+- criar issue
+- comentar issue
+- quero criar issue
+- comentar pull request
+- pull request
+- commit
+- me cadastra no github
+- cria issue pra mim
+- comenta a pull request pra mim
+- comenta a issue pra mim
+- quero comentar issue
+- quero comentar pull request
+- quero ser notificado sobre commits
+- quero ser notificado
+
+## intent:whats_pipeline
+ - O que é pipeline?
+ - Oq e pipeline?
+ - oq e pipeline
+ - oq é pipeline?
