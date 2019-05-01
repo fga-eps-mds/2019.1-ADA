@@ -2,10 +2,8 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 import os
 import requests
-import logging
 import telegram
 import json
-import sys
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 
@@ -28,36 +26,44 @@ class ActionSetUser(Action):
 
             bot = telegram.Bot(token=ACCESS_TOKEN)
             bot.send_message(chat_id=sender_id,
-                             text="Ok, {user}, anotei aqui, vou dar uma conferida pra ver se está tudo certo.".format(user=project_owner))
+                             text="Ok, {user}, anotei aqui, "
+                                  "vou dar uma conferida "
+                                  "pra ver se está tudo certo."
+                                  .format(user=project_owner))
             headers = {"Content-Type": "application/json"}
             repo_names = self.build_buttons(project_owner, headers)
             reply_markup = telegram.InlineKeyboardMarkup(repo_names)
             bot.send_message(chat_id=sender_id,
-                             text="Encontrei esses repositórios na sua conta. Qual você quer que eu monitore? Clica nele!",
+                             text="Encontrei esses repositórios na sua "
+                                  "conta. Qual você quer que eu "
+                                  "monitore? Clica nele!",
                              reply_markup=reply_markup)
             self.save_user_to_db(headers, project_owner, sender_id)
-            return [SlotSet('usuario', project_owner)]        
+            return [SlotSet('usuario', project_owner)]
         except KeyError:
             dispatcher.utter_message(
-                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me manda novamente.")
+                "Não consegui encontrar o seu usuário no GitLab, "
+                "por favor verifique ele e me manda novamente.")
         except IndexError:
             dispatcher.utter_message(
-                "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me manda novamente.")
+                "Não consegui encontrar o seu usuário no GitLab, "
+                "por favor verifique ele e me manda novamente.")
         except NewConnectionError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
         except ValueError:
-            dispatcher.utter_message("Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
+            dispatcher.utter_message(
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
         except HTTPError:
-            existent_user = "Eu vi aqui que você já cadastrou o usuário do GitLab. "\
-                            "Sinto muito, mas no momento não é possível "\
-                            "cadastrar um novo usuário do GitLab "\
-                            "ou alterá-lo."
+            existent_user = "Eu vi aqui que você já cadastrou o usuário "\
+                            "do GitLab. Sinto muito, mas no momento "\
+                            "não é possível cadastrar um novo usuário"\
+                            " do GitLab ou alterá-lo."
             dispatcher.utter_message(existent_user)
-        except Exception:
-            dispatcher.utter_message("Oloquinho meu")
-        
-    def build_buttons(self, project_owner, headers):        
+
+    def build_buttons(self, project_owner, headers):
         get_repository = GITLAB_SERVICE_URL + \
             "user/{project_owner}".format(
                 project_owner=project_owner)
@@ -70,7 +76,8 @@ class ActionSetUser(Action):
             project_name = repositorio.split('/')
             project_name = project_name[-1]
             buttons.append(telegram.InlineKeyboardButton(
-                text=project_name, callback_data="meu repositorio é " + repositorio))
+                text=project_name,
+                callback_data="meu repositorio é " + repositorio))
         repo_names = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
         return repo_names
 
