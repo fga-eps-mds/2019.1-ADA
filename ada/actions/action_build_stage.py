@@ -2,6 +2,9 @@ from rasa_core_sdk import Action
 import requests
 import os
 
+from urllib3.exceptions import NewConnectionError
+from requests.exceptions import HTTPError
+
 
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
@@ -13,15 +16,15 @@ class BuildStage(Action):
     def run(self, dispatcher, tracker, domain):
         is_there_any_build = False
         try:
+            tracker_state = tracker.current_state()
+            sender_id = tracker_state['sender_id']
+
             dispatcher.utter_message("Certo! Encontrei a build mais "
                                      "recente do seu repositório.")
-            headers = {'Content-Type': 'application/json'}
-            project_owner = "gitlab-org"
-            project_name = "gitaly"
+            headers = {'Content-Type': 'application/json'}            
             response = requests.get(GITLAB_SERVICE_URL +
-                                    "build/{project_owner}/{project_name}"
-                                    .format(project_owner=project_owner,
-                                            project_name=project_name),
+                                    "build/{sender_id}"
+                                    .format(sender_id=sender_id),
                                     headers=headers)
             job_build = response.json()
 
@@ -56,9 +59,16 @@ class BuildStage(Action):
                                      .format(pipe_url=job_build[0]['web_url']))
 
             is_there_any_build = True
+        except HTTPError:
+            dispatcher.utter_message(
+                "Não estou conseguindo achar uma build no seu repositório, certifique-se que realmente existe uma.")
+        except NewConnectionError:
+            dispatcher.utter_message(
+                "Estou tendo problemas para me conectar com o gitlab.")
         except ValueError:
-            dispatcher.utter_message(ValueError)
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tente mais tarde.")
             if(not is_there_any_build):
-                default = "Não há build's em andamento, "
-                "mas continuo te informando."
+                default = "Não há build's em andamento, "\
+                    "mas continuo te informando."
                 dispatcher.utter_message(default)

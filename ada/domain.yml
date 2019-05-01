@@ -81,6 +81,7 @@ actions:
 
   - action_get_pipeline
   - action_set_user
+  - utter_set_user
   - action_set_repositorie
   - utter_build_stage
   - action_build_stage
@@ -100,13 +101,9 @@ templates:
 
   utter_start:
   - text: |
-      Oláaaaa, sou a Ada!
+      Oláaaaa, sou a Ada! Sou responsável por ajudar você no monitoramento de produção com seus repositórios. Caso queira saber mais, me peça ajuda.
 
-      Sou responsável por auxiliar vocês, desenvolvedores, no controle dos seus repositórios do Git. Fui a primeira pessoa a criar um algoritmo computacional, e agora estou encarregada por auxiliar vocês para que um dia deixem suas marcas no mundo, assim como eu fiz.
-
-      Caso queira saber mais, me peça ajuda.
-
-      Para começar me fala qual o seu nome do seu usuário no GitLab, mas não se esqueça de escrever usuário: na frente.
+      Agora, pra gente começar eu vou precisar do seu nome de usuário lá do GitLab. Olha, vou te dar um exemplo! Pro usuário @AdaLovelace eu escreveria "Meu usuário é AdaLovelace".
 
 
   utter_restart:
@@ -117,14 +114,14 @@ templates:
       Ficou interessado, né? Bom, vamos lá.
 
       Vou te passar uma lista do que você pode me pedir
-          - Commit's;
-          - Issues;
-          - Pull Request's;
-          - Pipeline's e Build's dos seus projetos do GitLab.
+          - Commit's (Previsto para R2);
+          - Issues (Previsto para R2);
+          - Pull Request's (Previsto para R2);
+          - Resultado dos pipelines e andamendo das builds dos seus projetos do GitLab.
 
       Caso você se cadastre, vou notificá-lo sobre quaisquer alterações que ocorrerem nos seus repositórios!
 
-      Posso também criar e comentar em issues a partir do Telegram, basta você me pedir!
+      Posso também criar e comentar em issues a partir do Telegram, basta você me pedir! (Previsto para R2)
 
       Estou aqui para te ajudar, vamos começar? Hehehe 😁
 
@@ -213,7 +210,7 @@ templates:
 
   utter_who_is_ada:
   - text: |
-      Eu fui desenvolvida por um grupo de estudantes de Engenharia de Software da Universidade de Brasília, em 2019. Meu nome e personalidade foram escolhidos em  homenagem à Ada Lovelace, uma grande escritora e matemática do século XIX, filha do poeta Lord Byron. A ela é atribuído o título de primeira mulher programadora, uma vez que ela foi responsável por criar o primeiro algoritmo com a intenção de ser executado por uma máquina de computação, a máquina de Charles Babbage, além de ter reconhecido o enorme potencial desse tipo de máquina. Você pode entender mais sobre minha personalidade por  meio desse link: https://www.celebrities-galore.com/celebrities/ada-lovelace/home/ E por aqui você encontra mais sobre minha história e sobre meus trabalhos: https://pt.wikipedia.org/wiki/\Ada_Lovelace
+      Eu fui desenvolvida por um grupo de estudantes de Engenharia de Software da Universidade de Brasília, em 2019. Meu nome e personalidade foram escolhidos em  homenagem à Ada Lovelace, uma grande escritora e matemática do século XIX, filha do poeta Lord Byron. A ela é atribuído o título de primeira mulher programadora, uma vez que ela foi responsável por criar o primeiro algoritmo com a intenção de ser executado por uma máquina de computação, a máquina de Charles Babbage, além de ter reconhecido o enorme potencial desse tipo de máquina.
 
   utter_religion:
   - text: |
@@ -259,7 +256,7 @@ templates:
 
   utter_license:
   - text: |
-      Ahhh a minha licença é a GPL, se quiser saber mais, entre nesse site https://pt.wikipedia.org/wiki/GNU_General_Public_License!
+      Ahhh a minha licença é a GPL, se quiser saber mais, entre nesse site https://github.com/fga-eps-mds/2019.1-ADA/blob/master/LICENSE
 
   - text: |
       Sou um software livre licenciado com a GPL
