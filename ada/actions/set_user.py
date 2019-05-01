@@ -5,7 +5,7 @@ import requests
 import logging
 import telegram
 import json
-
+import sys
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 
@@ -28,17 +28,17 @@ class ActionSetUser(Action):
             dispatcher.utter_message(
                 "Vou procurar seu nome de usuário, já volto.")
             headers = {"Content-Type": "application/json"}
-            
             repo_names = self.build_buttons(project_owner, headers)
             bot = telegram.Bot(token=ACCESS_TOKEN)
             reply_markup = telegram.InlineKeyboardMarkup(repo_names)
-            bot.send_message(chat_id=sender_id,
-                    text="Escolha o seu repositório",
-                    reply_markup=reply_markup)
             self.save_user_to_db(headers, project_owner, sender_id)
-            return [SlotSet('usuario', project_owner)]
-        except HTTPError:
-            dispatcher.utter_message("O usuário não encontrado.")
+            message = bot.send_message(chat_id=sender_id,
+                                       text="Escolha o seu repositório",
+                                       reply_markup=reply_markup)
+
+
+            
+            return [SlotSet('usuario', project_owner)]        
         except KeyError:
             dispatcher.utter_message(
                 "Não consegui encontrar o seu usuário no GitLab, por favor verifique ele e me mande novamente.")
@@ -50,6 +50,12 @@ class ActionSetUser(Action):
         except ValueError:
             dispatcher.utter_message(
                 "Estou tendo alguns problemas, tente mais tarde.")
+        except HTTPError:
+            existent_user = "Eu vi aqui que você já cadastrou o usuário do GitLab. "\
+                            "Sinto muito, mas no momento não é possível "\
+                            "cadastrar um novo usuário do GitLab "\
+                            "ou alterá-lo."
+            dispatcher.utter_message(existent_user)
         except Exception:
             dispatcher.utter_message("Oloquinho meu")
         
@@ -81,3 +87,4 @@ class ActionSetUser(Action):
             "webhooks/user"
         db_json = json.dumps(db_json)
         post_request = requests.post(url=db_url, data=db_json, headers=headers)
+        post_request.raise_for_status()

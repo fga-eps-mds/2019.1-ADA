@@ -21,7 +21,7 @@ class ActionGetPipeline(Action):
             project_owner = tracker.current_slot_values()['usuario']
             project_name = tracker.current_slot_values()['repositorio']
             get_pipeline_url = GITLAB_SERVICE_URL + \
-                "pipeline/{project_owner}/{project_name}".format(
+                "pipeline".format(
                     project_owner=project_owner, project_name=project_name)
             response = requests.get(
                 get_pipeline_url, headers=headers)

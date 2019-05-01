@@ -31,6 +31,7 @@ services:
     environment:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}
+      - GITLAB_WEBHOOK_URL=${GITLAB_WEBHOOK_URL}
     networks:
       - adanetwork
     command: "make run-actions"
