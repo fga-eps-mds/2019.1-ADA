@@ -75,7 +75,7 @@ A estimativa será feita para um valor mensal para 10 horas de trabalho semanais
 | --- | --- | --- | --- |
 | Equipe de Desenvolvedor Júnior | 5 | R$ 2.351,00 | R$ 11.755,00 |
 | Equipe de Gerência de Projeto | 4 | R$ 7.351,00 | R$ 29.404,00 |
-| **Total** | **R$ 41,159,00** |
+**Total:**  **R$ 41,159,00** 
 
 ### 8.2 Custo de aquisição
 
