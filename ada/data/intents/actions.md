@@ -3,6 +3,10 @@
 - pipeline repositorio por favor
 - pipeline do meu projeto ada
 - me mostra o pipe
+- qual o resultado do pipeline
+- pode me mostrar o resultado do pipeline
+- qual foi a  situação final do pipeline
+- o pipeline deu certo
 - pipeline por favor
 
 ## intent:action_set_user

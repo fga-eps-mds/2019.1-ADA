@@ -12,6 +12,7 @@ GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")
 
+
 class ActionSetRepositorie(Action):
     def name(self):
         return "action_set_repositorie"
@@ -50,13 +51,19 @@ class ActionSetRepositorie(Action):
             existent_repo = "Eu vi aqui que você já tem um projeto cadastrado. "\
                             "Sinto muito, mas no momento não é possível "\
                             "cadastrar um projeto novo ou alterá-lo."
-            dispatcher.utter_message(existent_repo)
+            dispatcher.utter_message(existent_repo)            
+        except KeyError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o seu repositório no GitLab, por favor verifique ele e me manda novamente.")
+        except IndexError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o seu repositório no GitLab, por favor verifique ele e me manda novamente.")
         except NewConnectionError:
-            dispatcher.utter_message("Tive um erro ao buscar os dados no gitlab. "
-                                     "Tenta de novo mais tarde. Ok?")
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tenta me mandar essa mesagem de novo ou de uma forma diferente")
         except Exception:
-            dispatcher.utter_message("Estou tendo dificuldade pra encontrar os dados do repositório. "
-                                     "Tenta de novo mais tarde. Ok?")
+            dispatcher.utter_message(
+                "Estou tendo alguns problemas, tenta me mandar essa mesagem de novo ou de uma forma diferente.")
 
     def get_project_id(self, headers, message):
         message_list = message.split('/')

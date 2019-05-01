@@ -26,16 +26,17 @@ class ActionGetPipeline(Action):
             response = requests.get(
                 get_pipeline_url, headers=headers)
             received_pipeline = response.json()
-            dispatcher.utter_message("Aqui está o pipeline mais recente")
+            dispatcher.utter_message(
+                "Vou procurar o resultado do seu pipeline aqui, já volto.")
             if received_pipeline["status"] == "success":
-                status = "ele nos critérios de aceitação."
+                status = "passou nos critérios de aceitação."
             else:
-                status = "ele não passou nos critérios de aceitação."
+                status = "não passou nos critérios de aceitação."
 
-            text_message = 'O Pipeline mais recente do '\
-                + 'seu repositório: {status}'.format(
+            text_message = 'Encontrei, é a situação final dele foi ' \
+                + '{status}'.format(
                     status=status)+'\n'+'Para visualizar o'\
-                + 'Pipeline no GitLab acesse o link '\
+                + 'mais informações sobre ele acesse o link '\
                 + '{web_url}'.format(status=status,
                                      web_url=received_pipeline["web_url"])
 
@@ -43,13 +44,13 @@ class ActionGetPipeline(Action):
             return []
         except HTTPError:
             dispatcher.utter_message(
-                "Não consegui achar um pipeline no seu repositório, certifique-se que exite um.")
+                "Não consegui achar um pipeline no seu repositório, tenta conferir se existe um e tente novamente.")
         except ValueError:
             dispatcher.utter_message(
-                "Estou tendo alguns problemas, tente mais tarde.")
+                "Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
         except NewConnectionError:
             dispatcher.utter_message(
-                "Estou tendo problemas para me conectar com o gitlab.")
+                "Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
         except Exception:
             dispatcher.utter_message(
-                "Estou tendo problemas para me conectar com o gitlab.")
+                "Estou com problemas para me conectar, me manda mais uma mensagem pra ver se dessa vez dá certo.")
