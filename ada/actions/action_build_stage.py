@@ -16,15 +16,15 @@ class BuildStage(Action):
     def run(self, dispatcher, tracker, domain):
         is_there_any_build = False
         try:
+            tracker_state = tracker.current_state()
+            sender_id = tracker_state['sender_id']
+
             dispatcher.utter_message("Certo! Encontrei a build mais "
                                      "recente do seu repositório.")
-            headers = {'Content-Type': 'application/json'}
-            project_owner = "gitlab-org"
-            project_name = "gitaly"
+            headers = {'Content-Type': 'application/json'}            
             response = requests.get(GITLAB_SERVICE_URL +
-                                    "build/{project_owner}/{project_name}"
-                                    .format(project_owner=project_owner,
-                                            project_name=project_name),
+                                    "build/{sender_id}"
+                                    .format(sender_id=sender_id),
                                     headers=headers)
             job_build = response.json()
 
@@ -72,6 +72,3 @@ class BuildStage(Action):
                 default = "Não há build's em andamento, "\
                     "mas continuo te informando."
                 dispatcher.utter_message(default)
-        except Exception:
-            dispatcher.utter_message(
-                "Estou tendo alguns problemas, tente mais tarde.")

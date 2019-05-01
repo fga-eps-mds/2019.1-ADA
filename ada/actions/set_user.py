@@ -53,9 +53,7 @@ class ActionSetUser(Action):
                             "Sinto muito, mas no momento não é possível "\
                             "cadastrar um novo usuário do GitLab "\
                             "ou alterá-lo."
-            dispatcher.utter_message(existent_user)
-        except Exception:
-            dispatcher.utter_message("Oloquinho meu")
+            dispatcher.utter_message(existent_user)        
         
     def build_buttons(self, project_owner, headers):        
         get_repository = GITLAB_SERVICE_URL + \

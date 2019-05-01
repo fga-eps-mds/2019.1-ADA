@@ -26,14 +26,14 @@ class ActionSetRepositorie(Action):
             headers = {"Content-Type": "application/json"}
             message_list = message.split('/')            
             repo_name = message_list[-1]        
-            bot = telegram.Bot(token=ACCESS_TOKEN)
+            # bot = telegram.Bot(token=ACCESS_TOKEN)
             gitlab_webhook_url = self.save_repo_to_db(headers, repo_name, message, sender_id)
             selected_repo = "Ok, vou ficar monitorando o repositório {rep}.".format(rep=repo_name)
-            bot_message = bot.send_message(chat_id=sender_id,
-                             text=selected_repo)
-            bot.editMessageReplyMarkup(chat_id=sender_id,
-                                       message_id = bot_message.message_id - 2,
-                                       reply_markup=[])            
+            # bot_message = bot.send_message(chat_id=sender_id,
+            #                  text=selected_repo)
+            # bot.editMessageReplyMarkup(chat_id=sender_id,
+            #                            message_id = bot_message.message_id - 1,
+            #                            reply_markup=[])            
             set_webhook_msg = "Para receber notificações sobre resultados do pipeline "\
                               "adicione esse link {gitlab_url} "\
                               "nas configurações de integração do seu repositório, que ficam "\
@@ -41,6 +41,7 @@ class ActionSetRepositorie(Action):
                               "para eu enviar notificação sobre os seus pipelines".format\
                               (gitlab_url=gitlab_webhook_url["gitlab_webhook_url"],
                                webhook_url=gitlab_webhook_url["webhook_url"])
+            dispatcher.utter_message(selected_repo)
             dispatcher.utter_message(set_webhook_msg)
             
             return [SlotSet('repositorio', repo_name)]
@@ -61,9 +62,7 @@ class ActionSetRepositorie(Action):
         except NewConnectionError:
             dispatcher.utter_message(
                 "Estou tendo alguns problemas, tenta me mandar essa mesagem de novo ou de uma forma diferente")
-        except Exception:
-            dispatcher.utter_message(
-                "Estou tendo alguns problemas, tenta me mandar essa mesagem de novo ou de uma forma diferente.")
+
 
     def get_project_id(self, headers, message):
         message_list = message.split('/')
