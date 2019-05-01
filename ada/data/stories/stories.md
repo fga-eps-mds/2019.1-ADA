@@ -74,6 +74,7 @@
 ## path_how_are_you
 * how_are_you
   - utter_how_are_you
+  - utter_affirm
 
 ## path_sad
 * sad
