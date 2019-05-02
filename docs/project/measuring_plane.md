@@ -29,7 +29,7 @@ Para cada Sprint, os riscos podem cair de acordo com a mitigação e contenção
 
 ### 2.4. Work Capacity
 
-A métrica Work Capacity (capacidade de trabalho) é definida como a soma de todo o esforço relatado durante o Sprint. Em cada _daily meeting_ o Scrum Master é responsável por coletar a estimativa de esforço diário de cada membro na unidade de _pontos_. Ao final da Sprint, a Work Capacity total do time é comparada à soma total de pontos planejadas. Quando mais similares, significa que a estimativa foi bem feita e não houve esforço em excesso para concluir tarefas.
+A métrica Work Capacity (capacidade de trabalho) é definida como a soma de todo o esforço relatado durante o Sprint. Em cada _daily meeting_ o Scrum Master é responsável por coletar a estimativa de esforço diário de cada membro na unidade de _pontos_. Ao final da Sprint, a Work Capacity total do time é comparada à soma total de pontos concluídos. Quando mais similares, significa que a estimativa foi bem feita e não houve esforço em excesso para concluir tarefas.
 
 A Capacidade de Trabalho foi usada no início do projeto para definir o nosso _ponto_ e estimar melhor a pontuação de cada história de usuário e tarefas.
 
