@@ -13,14 +13,13 @@ class Report(Action):
     def run(self, dispatcher, tracker, domain):
         try:
             headers = {'Content-Type': 'application/json'}
-            project_owner = "gitlab-org"
-            project_name = "gitaly"
+            tracker_state = tracker.current_state()
+            chat_id = tracker_state["sender_id"]
             response = requests.get(GITLAB_SERVICE_URL +
-                                    "report/{project_owner}/{project_name}"
-                                    .format(project_owner=project_owner,
-                                            project_name=project_name), headers=headers)
+                                    "report/{chat_id}"
+                                    .format(chat_id=chat_id), headers=headers)
             report_project = response.json()
-            print(report_project, file=sys.stderr)
+            # print(report_project, file=sys.stderr)
             dispatcher.utter_message("Primeiramente, o seu projeto se chama {project_name}".format(project_name=report_project[0]["project"]["name"])\
                                      + "e se encontra disponível nesse site {web_url}".format(web_url=report_project[0]["project"]["web_url"]))
 
