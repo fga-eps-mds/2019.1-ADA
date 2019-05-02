@@ -5,7 +5,7 @@
 | 21/03/2019 | 0.1 | Criação do documento com template inicial | Ateldy Brasil |
 | 22/03/2019 | 1.0 | Construção dos tópicos 1, 2, 3, 4, 5, 6, 7, 9, 10, 11. | Ateldy Brasil e Vítor Gomes |
 | 22/03/2019 | 1.1 | Construção do tópico 8. Estimativa de Custo | Ateldy Brasil |
-| 29/03/2019 | 1.2 | Atualização segundo estratégia | Vítor Gomes |
+| 29/04/2019 | 1.2 | Atualização segundo estratégia | Vítor Gomes |
 
 ## 1. Introdução
 
