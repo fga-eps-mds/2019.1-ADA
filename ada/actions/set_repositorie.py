@@ -45,8 +45,13 @@ class ActionSetRepositorie(Action):
                               "notificação sobre os seus pipelines"\
                               .format(glab_webhook_url["gitlab_webhook_url"],
                                       glab_webhook_url["webhook_url"])
+            set_pipeline_msg = "Ou então, me peça resultados sobre os " \
+                               "seus pipelines ou relatórios informacionais "\
+                               "sobre seu repositório."
+
             dispatcher.utter_message(selected_repo)
             dispatcher.utter_message(set_webhook_msg)
+            dispatcher.utter_message(set_pipeline_msg)
 
             return [SlotSet('repositorio', repo_name)]
         except ValueError:
