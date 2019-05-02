@@ -13,7 +13,7 @@ GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")
 
 class ActionSetRepositorie(Action):
     def name(self):
-        return "action_set_repositorie"
+        return "action_set_repositorie" 
 
     def run(self, dispatcher, tracker, domain):
         try:
