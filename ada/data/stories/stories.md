@@ -83,16 +83,6 @@
 * creators
   - utter_creators
 
-## path_action_get_pipeline
-* greet
-  - utter_greet
-* action_get_pipeline
-  - action_get_pipeline
-
-## path get_pipeline
-* action_get_pipeline
-  - action_get_pipeline
-
 ## path set_user
 * action_set_user
   - action_set_user

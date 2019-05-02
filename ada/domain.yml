@@ -22,7 +22,6 @@ intents:
   - affirm
   - deny
   
-  - action_get_pipeline
   - action_set_user
   - action_set_repositorie
   - build_stage
@@ -78,8 +77,7 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-
-  - action_get_pipeline
+  
   - action_set_user
   - utter_set_user
   - action_set_repositorie
