@@ -27,7 +27,7 @@
 
  Dessa maneira, a Ada é proposta a fim de solucionar tais problemáticas, trazendo medidas que facilitam o gerenciamento da produção, garantindo a integração entre equipes multidisciplinares dentro de um produto de software conforme o contexto de TICs  em 2019.
 
-Portanto, a Ada, através do monitoramento completo de todo o pipeline de produção, conectando-se a plataformas de integração contínua, deploy contínuo, etc., tem o intuito de promover a transformação full-stack nas organizações, expandindo o conhecimento dos funcionários e abrindo uma oportunidade para que eles expandam sua área de atuação.
+Portanto, a Ada, através do monitoramento e outras atividades sobre todo o pipeline de produção, conectando-se a plataformas de integração contínua, deploy contínuo, etc., tem o intuito de promover a transformação full-stack nas organizações, expandindo o conhecimento dos funcionários e abrindo uma oportunidade para que eles expandam sua área de atuação.
 
 Por fim, a verificação de manutenção de serviço online e o acompanhamento de integração contínua, por exemplo, tornam-se mais práticos e fáceis através da Ada.
 

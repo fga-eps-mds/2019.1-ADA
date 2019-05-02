@@ -13,7 +13,7 @@
 | 29/03/2019 | 0.9 | Adição do tópico 4 - Visão de casos de uso; Complementação dos subtópicos 2.2 - Tecnologias. | Guilherme Mendes |
 | 29/03/2019 | 0.9.1 | Complementação do subtópico 3.2 - Restrições da arquitetura; Complementação do subtópico 2.2.6.. | Lucas Fellipe |
 | 29/03/2019 | 1.0 | Adição do subtópico 5.2 - Diagrama de Classes. | João Pedro José |
-
+| 29/04/2019 | 1.1 | Atualização escopo segundo estratégia. | Vítor Gomes |
 
 ## 1. Introdução
 
@@ -23,9 +23,9 @@
 
 ### 1.2 Escopo
 
-<p style="text-align:justify">&emsp;&emsp;ADA é um ChatOps cuja finalidade principal é controlar repositórios remotos de maneira automatizada e simples, auxiliando assim a integração de equipes de desenvolvedores de modo a otimizar o desenvolvimento de software. </p>
+<p style="text-align:justify">&emsp;&emsp;Ada é uma chatbot cuja finalidade principal é promover a integração entre equipes multidisciplinares e facilitar a transformação full-stack no contexto de organizações com projetos de desenvolvimento de software, a partir do controle sobre o pipeline completo da produção, de modo a otimizar o desenvolvimento de software. </p>
 
-<p style="text-align:justify">&emsp;&emsp;A partir disso, são apresentadas as estruturas necessárias para o funcionamento da ADA e a devida arquitetura desse software, nesse documento. Tem-se, primeiramente, uma representação arquitetônica geral da ADA, depois uma explicação sobre as metas e as restrições dessa arquitetura. Após isso, apresenta-se a visão de casos de uso e, em seguida, a visão lógica. </p>
+<p style="text-align:justify">&emsp;&emsp;A partir disso, são apresentadas as estruturas necessárias para o funcionamento da Ada e a devida arquitetura desse software, nesse documento. Tem-se, primeiramente, uma representação arquitetônica geral da Ada, depois uma explicação sobre as metas e as restrições dessa arquitetura. Após isso, apresenta-se a visão de casos de uso e, em seguida, a visão lógica. </p>
 
 ### 1.3 Referências
 
@@ -49,7 +49,7 @@
 
 ### 2.1 Diagrama de relações
 
-O software ADA funciona com base na seguinte representação arquitetural: 
+O software ADA funciona com base na seguinte representação arquitetural:
 
 ![arquitetura](../assets/img/project/architecture/Arquitetura_1.0.png)
 
