@@ -22,6 +22,7 @@
 | 26/03/2019 | 1.6    | Revisão do subtópico 1.4 (Referências)                                                                                            | Guilherme Mendes                                           |
 | 27/03/2019 | 1.7    | Complementação do subtópico 2.2 Descrição do problema                                                                             | Guilherme Mendes, Caio Fernandes                           |
 | 28/03/2019 | 2.0     | Revisão da formatação do documento de visão                     | Lucas Fellipe, Guilherme Mendes, João Vitor
+| 29/04/2019 | 2.1     | Atualização conforme estratégia               | Vítor Gomes |
 
 ## 1. Introdução
 
@@ -71,7 +72,7 @@
 
 ### 2.1 Oportunidade de negócios
 
-<p style="text-align:justify">&emsp;&emsp;Muitos desenvolvedores de <i>Software</i>, estudantes e profissionais da área de TI utilizam plataformas baseadas em Git para gerenciar seus serviços e aplicações. Essas plataformas são robustas e possuem diversas facilidades. Entretanto, é fácil perder-se em meio a tantos comentários, commits, versões do produto ou serviço, visto que tais plataformas são, por vezes, um pouco complicadas de se lidar.</p>
+<p style="text-align:justify">&emsp;&emsp;Muitos desenvolvedores de <i>Software</i>, estudantes e profissionais da área de TI bem como outros profissionais envolvidos na construção de produtos de software utilizam plataformas baseadas em Git para gerenciar seus serviços e aplicações. Essas plataformas são robustas e possuem diversas facilidades. Entretanto, é fácil perder-se em meio a tantos comentários, commits, versões do produto ou serviço, visto que tais plataformas são, por vezes, um pouco complicadas de se lidar.</p>
 
 <p style="text-align:justify">&emsp;&emsp;Nesse sentido, o ChatBot Ada impulsiona-se nos ambientes online para gerenciar serviços de forma automatizada, simples e rápida, por meio de chats interativos e não interativos na plataforma Telegram.</p>
 
@@ -79,7 +80,7 @@
 
 |           |      **5W2H**                                                                                                                                                                                            |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **O que?**        | ChatBot voltado para controle de repositórios remotos.                                                                                                                                           |
+| **O que?**        | ChatBot voltado para o gerenciamento da produção em repositórios remotos.                                                                                                                                           |
 | **Quem?**         | Estudantes de Engenharia de Software da Universidade de Brasília                                                                                                                                 |
 | **Onde?**         | Universidade de Brasília, FGA                                                                                                                                                                    |
 | **Quando?**       | No primeiro semestre de 2019.                                                                                                                                                                    |
@@ -93,20 +94,20 @@
 | **O problema de**                | Falta de uma ferramenta que automatize todo o pipeline de integração de software      juntamente com um gerenciador de repositório de software baseado em Git por meio de um ChatBot.                                                                        |
 | **Afeta**                     | Desenvolvedores.            |
 | **Cujo impacto é**        | Facilitar o desenvolvimento de software.                         |
-| **Uma boa solução seria**     | O uso prático do ChatBot, como uma ferramenta de comunicação em tempo real para facilitar o gerenciamento de repositórios Git, melhorando a rastreabilidade das modificações feitas nos projetos. |
+| **Uma boa solução seria**     | O uso prático do ChatBot, como uma ferramenta de comunicação em tempo real para facilitar o gerenciamento de repositórios Git e a integração de seus contribuintes, melhorando a rastreabilidade das modificações feitas nos projetos. |
 
 
 ### 2.3 Instrução de posição do produto
 
-<p style="text-align:justify">&emsp;&emsp;Ada é voltado para quaisquer profissionais e estudantes que utilizam plataformas baseadas em Git para gerenciar repositórios remotos e controle de versões, uma vez que há a necessidade de automatizar esses processos. O Ada é um ChatBot de controle e de gerenciamento de atividades cuja motivação é utilizar linguagem natural para melhorar processos produtivos. Diferente do GitHub bot, nosso produto possui mais funcionalidades, como criar novas <i>Issues</i> e colocar o serviço no ar.</p>
+<p style="text-align:justify">&emsp;&emsp;Ada é voltado para organizações envolvidas com o desenvolvimento de produtos de software para apoiar seu gerenciamento de produção em repositórios remotos, facilitando a integração entre diferentes equipes e promovendo a transformaçao fullstack. Ela também pode ser utilizada por quaisquer profissionais e estudantes que utilizam plataformas baseadas em Git para gerenciar repositórios remotos e controle de versões. A Ada é um ChatBot de controle e de gerenciamento da produção cuja motivação é utilizar linguagem natural para melhorar processos produtivos. Diferente do GitHub bot, nosso produto possui mais funcionalidades, como criar novas <i>Issues</i> e colocar o serviço no ar.</p>
 
 A seguir, tabela que explica o dito acima:
 
 |            |    Instrução de posição do produto    |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Para                | Quaisquer profissionais e estudantes que utilizem plataformas baseadas em Git para gerenciar repositórios remotos e controle de versoões.                                                                               |
-| Que                     | Têm a necessidade de automatizar esses processos.            |
-| Ada é        | Um ChatBot de controle e de gerenciamento de atividades.                         |
+| Para                | Organizações envolvidas com o desenvolvimento de produtos de software                                                                               |
+| Que                     | Têm a necessidade de automatizar seus processos e melhorar a integração entre suas equipes multidisciplinares            |
+| Ada é        | Um ChatBot de controle e de gerenciamento da produção                     |
 | Que     | Utiliza linguagem natural para melhorar processos produtivos. |
 | Diferente do             | GitHub bot.                                                                                                      |
 | Nosso produto | Atua em plataformas baseadas em Git e possui mais funcionalidades, como criar novas <i>Issues</i> e colocar o serviço no ar.
