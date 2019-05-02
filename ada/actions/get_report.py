@@ -27,31 +27,31 @@ class Report(Action):
             text_message = "As branches do seu repositório são as seguintes:\n"
             for item in report_project:
                 for value in item["branches"]["name"]:
-                    text_message += "➡️ {names}\n".format(names=value)
+                    text_message += "▪️ {names}\n".format(names=value)
             dispatcher.utter_message(text_message)
 
             dispatcher.utter_message("O último commit foi feito por {author_name} no dia {authored_date} com o título {title}.".format(author_name=report_project[0]["commits"]["last_commit"]["author_name"], authored_date=report_project[0]["commits"]["last_commit"]["authored_date"],title=report_project[0]["commits"]["last_commit"]["title"]))
 
             dispatcher.utter_message("O atual pipeline possui id {current_pipeline_id} e nome {current_pipeline_name}".format(current_pipeline_id=report_project[0]["pipelines"]["current_pipeline_id"], current_pipeline_name=report_project[0]["pipelines"]["current_pipeline_name"]))
 
-            dispatcher.utter_message("Sobre o projeto como um todo:\n➡️ Número total de pipelines: {total}\n".format(total=report_project[0]["pipelines"]["number_of_pipelines"]) \
-                                     + "➡️ {succes} obtiveram sucesso\n➡️ {fail} falharam\n".format(succes=report_project[0]["pipelines"]["succeded_pipelines"],
+            dispatcher.utter_message("Sobre o projeto como um todo:\n📌 Número total de pipelines: {total}\n".format(total=report_project[0]["pipelines"]["number_of_pipelines"]) \
+                                     + "☑️ {succes} obtiveram sucesso\n❗️ {fail} falharam\n".format(succes=report_project[0]["pipelines"]["succeded_pipelines"],
                                                                  fail=report_project[0]["pipelines"]["failed_pipelines"])\
-                                      + "➡️ A porcentagem de sucesso foi: {perc_suc}\n➡️ E a porcentagem de falhas ".format(perc_suc=report_project[0]["pipelines"]["percent_succeded"])\
+                                      + "☑️ A porcentagem de sucesso foi: {perc_suc}\n❗️ E a porcentagem de falhas ".format(perc_suc=report_project[0]["pipelines"]["percent_succeded"])\
                                       + "foi: {perc_fail}\n".format(perc_fail=100-report_project[0]["pipelines"]["percent_succeded"]))
-            
-            
+
+
             last_7 = report_project[0]["pipelines"]["recents_pipelines"]["last_7_days"]
             last_30 = report_project[0]["pipelines"]["recents_pipelines"]["last_30_days"]
-            dispatcher.utter_message("Sobre os últimos 7 dias:\n➡️ Número total de pipelines: {total}\n".format(total=last_7["number_of_pipelines"]) \
-                                     + "➡️ {succes} obtiveram sucesso\n➡️ {fail} falharam\n".format(succes=last_7["succeded_pipelines"],
+            dispatcher.utter_message("Sobre os últimos 7 dias:\n⚒ Número total de pipelines: {total}\n".format(total=last_7["number_of_pipelines"]) \
+                                     + "☑️ {succes} obtiveram sucesso\n❗️ {fail} falharam\n".format(succes=last_7["succeded_pipelines"],
                                                                  fail=last_7["failed_pipelines"])\
-                                      + "➡️ A porcentagem de sucesso foi: {perc_suc}\n➡️ E a porcentagem de falhas ".format(  perc_suc=last_7["percent_succeded"])\
+                                      + "☑️ A porcentagem de sucesso foi: {perc_suc}\n❗️ E a porcentagem de falhas ".format(  perc_suc=last_7["percent_succeded"])\
                                       + "foi: {perc_fail}\n".format(perc_fail=last_7["percent_failed"]))
-            dispatcher.utter_message("Sobre os últimos 30 dias:\n➡️ Número total de pipelines: {total}\n".format(total=last_30["number_of_pipelines"]) \
-                                     + "➡️ {succes} obtiveram sucesso\n➡️ {fail} falharam\n".format(succes=last_30["succeded_pipelines"],
+            dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ Número total de pipelines: {total}\n".format(total=last_30["number_of_pipelines"]) \
+                                     + "☑️ {succes} obtiveram sucesso\n❗️ {fail} falharam\n".format(succes=last_30["succeded_pipelines"],
                                                                  fail=last_30["failed_pipelines"])\
-                                      + "➡️ A porcentagem de sucesso foi: {perc_suc}\n➡️ E a porcentagem de falhas ".format(  perc_suc=last_30["percent_succeded"])\
+                                      + "☑️ A porcentagem de sucesso foi: {perc_suc}\n❗️ E a porcentagem de falhas ".format(  perc_suc=last_30["percent_succeded"])\
                                       + "foi: {perc_fail}\n".format(perc_fail=last_30["percent_failed"]))
 
             dispatcher.utter_message("Agora, vou te mostrar a duração dos seus pipelines, trazendo o tempo total, a média, o maior tempo e o menor tempo.")
