@@ -21,12 +21,12 @@ intents:
   - creators
   - affirm
   - deny
-
-  - get_pipeline
-  - set_user
-  - set_repositorie
+  
+  - action_get_pipeline
+  - action_set_user
+  - action_set_repositorie
   - build_stage
-  - get_report
+  - action_get_report
 
 entities:
   - command
@@ -45,10 +45,10 @@ entities:
   - creators
   - begin
   - help
-  - report
 
   - usuario
   - repositorio
+
 
 slots:
   repositorio:
@@ -86,7 +86,6 @@ actions:
   - action_set_repositorie
   - utter_build_stage
   - action_build_stage
-  - utter_get_report
   - action_get_report
 
 templates:
@@ -96,7 +95,7 @@ templates:
       Não entendi o que você falou, pode repetir, por favor?
 
       Se estiver com alguma dúvida, é só me pedir ajuda.
-
+  
   - text: |
       O que você quis dizer? Me explica melhor, por favor.
 
@@ -134,20 +133,20 @@ templates:
 
   utter_greet:
   - text: "Olá. Posso ajudar?"
-
+  
   - text: |
       Olá, tudo bem? Como você já deve saber, sou a Ada! 💜
-
+      
       Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
   uteer_build_stage:
   - text: "Aguarde um momento. \n
            Vou verificar..."
-
+  
   utter_how_are_you:
   - text: |
       Estou ótima, obrigada! E você??
-
+  
   - text: |
       Obrigada por perguntar, estou muito bem! 😊
 
@@ -168,7 +167,7 @@ templates:
       Tchauuuuu, migo(a). 😘
 
       Caso você tenha se cadastrado, eu irei notificá-lo sobre qualquer alteração no seu repositório.
-
+  
   - text: |
       Gooood bye! Volte sempre! 😘
 
@@ -183,8 +182,8 @@ templates:
   - text: |
       Ahhh que isso, né! Muito obrigada 🤩
 
-      Sou reconhecida hoje por causa de vocês!
-
+      Sou reconhecida hoje por causa de vocês! 
+      
   - text: |
       Obrigadaaaaaa, mas você que é incrível! 😍
 
@@ -240,7 +239,7 @@ templates:
 
   - text: |
       Sou a melhor pessoa da computação que existe, você não acha?
-
+      
   utter_name_complete:
   - text: |
       Meu nome completo é Ada August King, Condessa de Lovelace
@@ -248,7 +247,7 @@ templates:
   - text: |
       Como assim você não sabe meu nome?
 
-      É Ada Lovelace, rapaz!
+      É Ada Lovelace, rapaz! 
 
   utter_joke:
   - text: |
@@ -268,11 +267,11 @@ templates:
 
   utter_good_night:
   - text: |
-      Boa noiteeee, se cuida!
+      Boa noiteeee, se cuida! 
 
   - text: |
       Tenha uma ótima noite!
-
+  
   - text: |
       Fica bem e se cuida, até amanhã!
 
@@ -284,7 +283,7 @@ templates:
       O dia está lindo, né? 😍
 
       Uma ótima tarde!
-
+  
   utter_good_morning:
   - text: |
       Bom diaaaa!!!
@@ -292,13 +291,13 @@ templates:
   - text: |
       O dia está maravilhoso, né?
 
-      Tenha um ótimo dia hoje, espero que você faça tudo que você planejou!
-
+      Tenha um ótimo dia hoje, espero que você faça tudo que você planejou! 
+  
   - text: |
       É tão bom acordar e olhar esse céu maravilhoso, né?
 
       Um bom dia para você!
-
+  
   utter_sad:
   - text: |
       Não fica triste, a sua vida é muito importante!
@@ -314,18 +313,14 @@ templates:
       Não fica triste, por favor!
 
       Vai tomar um ar, pensa na vida e pensa em como você é importante para a sua família e para os seus amigos!
-
+  
   utter_creators:
   - text: |
-      Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas!
-
+      Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas! 
+      
       Esse time maravilhoso de MDS e EPS da UnB-FGA 😍
 
   - text: |
       Fui criada pelos meus pais, né?
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
-
-  utter_get_report:
-  - text: |
-      Aguarde um momento, estou gerando o relatório.

@@ -3,6 +3,8 @@ import json
 import requests
 import os
 import sys
+from urllib3.exceptions import NewConnectionError
+from requests.exceptions import HTTPError
 
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
@@ -21,7 +23,7 @@ class Report(Action):
             report_project = response.json()
             # print(report_project, file=sys.stderr)
             dispatcher.utter_message("Primeiramente, o seu projeto se chama {project_name}".format(project_name=report_project[0]["project"]["name"])\
-                                     + "e se encontra disponível nesse site {web_url}".format(web_url=report_project[0]["project"]["web_url"]))
+                                     + " e se encontra disponível nesse site {web_url}".format(web_url=report_project[0]["project"]["web_url"]))
 
             text_message = "As branches do seu repositório são as seguintes:\n"
             for item in report_project:
@@ -52,8 +54,16 @@ class Report(Action):
                                                                  fail=last_30["failed_pipelines"])\
                                       + "☑️ A porcentagem de sucesso foi: {perc_suc}\n❗️ E a porcentagem de falhas ".format(  perc_suc=last_30["percent_succeded"])\
                                       + "foi: {perc_fail}\n".format(perc_fail=last_30["percent_failed"]))
-
-            dispatcher.utter_message("Agora, vou te mostrar a duração dos seus pipelines, trazendo o tempo total, a média, o maior tempo e o menor tempo.")
-            dispatcher.utter_message("O tempo total ficou acumulado em {total} segundos. A média de tempo dos pipelines ficou igual a {average} segundos, tendo um tempo máximo de {higher} segundos e um tempo mínimo de {lower} segundos.".format(total=report_project[0]["pipelines_times"]["total"], average=report_project[0]["pipelines_times"]["average"], higher=report_project[0]["pipelines_times"]["higher"], lower=report_project[0]["pipelines_times"]["lower"]))
+            return []
+        except HTTPError:
+            dispatcher.utter_message(
+                "Não estou conseguindo ter acesso a seus dados, tem certeza que seus dados estão certos?")
         except ValueError:
-            dispatcher.utter_message(ValueError)
+            dispatcher.utter_message(
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
+        except NewConnectionError:
+            dispatcher.utter_message(
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
+
