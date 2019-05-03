@@ -9,7 +9,7 @@
   - [Estrátegia do Oceano Azul](/docs/product/blue_ocean_strategy.md)
   - [Estrutura Analítica do Projeto](docs/product/eap.md)  
   - [Identidade visual](docs/product/visual_identity.md)
-  - [Personalidade do bot](docs/product/bot_personality.md)
+  - [Personalidade da Ada](docs/product/bot_personality.md)
   - [Políticas](docs/policies/policies.md)
   - [Questionário](/docs/product/questionnaire.md)
   - [Rich picture](/docs/product/rich_picture.md)

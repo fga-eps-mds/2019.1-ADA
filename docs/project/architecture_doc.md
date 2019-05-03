@@ -13,19 +13,19 @@
 | 29/03/2019 | 0.9 | Adição do tópico 4 - Visão de casos de uso; Complementação dos subtópicos 2.2 - Tecnologias. | Guilherme Mendes |
 | 29/03/2019 | 0.9.1 | Complementação do subtópico 3.2 - Restrições da arquitetura; Complementação do subtópico 2.2.6.. | Lucas Fellipe |
 | 29/03/2019 | 1.0 | Adição do subtópico 5.2 - Diagrama de Classes. | João Pedro José |
-
+| 29/04/2019 | 1.1 | Atualização escopo segundo estratégia. | Vítor Gomes |
 
 ## 1. Introdução
 
 ### 1.1 Finalidade
 
-<p style="text-align:justify">&emsp;&emsp;Esse documento de arquitetura têm como função apresentar uma visão sobre a arquitetura utilizada pelo software ADA e mostrar como são feitas as conexões entre os elementos utilizados para que o ChatOps funcione. A comunicação dele com o Telegram e com repositórios Git, além de outros elementos utilizados para o bom funcionamento do software, como containers e banco de dados, são alguns destes elementos. </p>
+<p style="text-align:justify">&emsp;&emsp;Esse documento de arquitetura tem como função apresentar uma visão sobre a arquitetura utilizada pelo software ADA e mostrar como são feitas as conexões entre os elementos utilizados para que o ChatOps funcione. A comunicação dele com o Telegram e com repositórios Git, além de outros elementos utilizados para o bom funcionamento do software, como containers e banco de dados, são alguns destes elementos. </p>
 
 ### 1.2 Escopo
 
-<p style="text-align:justify">&emsp;&emsp;ADA é um ChatOps cuja finalidade principal é controlar repositórios remotos de maneira automatizada e simples, auxiliando assim a integração de equipes de desenvolvedores de modo a otimizar o desenvolvimento de software. </p>
+<p style="text-align:justify">&emsp;&emsp;Ada é uma chatbot cuja finalidade principal é promover a integração entre equipes multidisciplinares e facilitar a transformação full-stack no contexto de organizações com projetos de desenvolvimento de software, a partir do controle sobre o pipeline completo da produção, de modo a otimizar o desenvolvimento de software. </p>
 
-<p style="text-align:justify">&emsp;&emsp;A partir disso, são apresentadas as estruturas necessárias para o funcionamento da ADA e a devida arquitetura desse software, nesse documento. Tem-se, primeiramente, uma representação arquitetônica geral da ADA, depois uma explicação sobre as metas e as restrições dessa arquitetura. Após isso, apresenta-se a visão de casos de uso e, em seguida, a visão lógica. </p>
+<p style="text-align:justify">&emsp;&emsp;A partir disso, são apresentadas as estruturas necessárias para o funcionamento da Ada e a devida arquitetura desse software, nesse documento. Tem-se, primeiramente, uma representação arquitetônica geral da Ada, depois uma explicação sobre as metas e as restrições dessa arquitetura. Após isso, apresenta-se a visão de casos de uso e, em seguida, a visão lógica. </p>
 
 ### 1.3 Referências
 
@@ -49,7 +49,7 @@
 
 ### 2.1 Diagrama de relações
 
-O software ADA funciona com base na seguinte representação arquitetural: 
+O software ADA funciona com base na seguinte representação arquitetural:
 
 ![arquitetura](../assets/img/project/architecture/Arquitetura_nova.png)
 
@@ -90,6 +90,7 @@ Para mais informação consulte o modelo de negócios:
 
 [Modelo de Negócios](/docs/product/canvas.md)
 
+
 ### 2.2 Representação dos Microserviços
 
 #### 2.2.1 ADA
@@ -111,7 +112,7 @@ O microsserviço Conexão com GitLab é responsável por monitorar e gerenciar p
 
 #### GitHub API
 
-<p style="text-align:justify">&emsp;&emsp;Rest API disponibilizada pelo GitHub para que utilizemos seus recursos. Assim, o papel da GitHub API é dar suporte à ADA, providenciando as informações que o Software requerer de forma rápida, dessa forma garantindo a automatização e o gerenciamento das tarefas relacionadas ao desenvolvimento de um software. </p>
+<p style="text-align:justify">&emsp;&emsp;A Rest API é disponibilizada pelo GitHub para que utilizemos seus recursos. Assim, o papel da GitHub API é dar suporte à ADA, providenciando as informações que o Software requerer de forma rápida. Dessa forma, é garantida a automatização e o gerenciamento das tarefas relacionadas ao desenvolvimento de um software. </p>
 
 #### GitLab CI
 
@@ -182,16 +183,16 @@ As restrições de arquitetura são:
 
 ![pacote_ada](../assets/img/project/architecture/pack_diagram/Pacote-ada.jpg)
 
-Imagem 01 - Diagrama de pacotes do Microsserviço do Bot ADA.
+Imagem 02 - Diagrama de pacotes do Microsserviço do Bot ADA.
 
 ![pacote_github](../assets/img/project/architecture/pack_diagram/Pacote-ada-github.jpg)
 
-Imagem 02 - Diagrama de pacotes do Microsserviço Conexão com o GitHub.
+Imagem 03 - Diagrama de pacotes do Microsserviço Conexão com o GitHub.
 
 ![pacote_ada_gitlab](../assets/img/project/architecture/pack_diagram/Pacote-ada-gitlab.jpg)
 
-Imagem 03 - Diagrama de pacotes do Microsserviço Conexão com o GitLab.
+Imagem 04 - Diagrama de pacotes do Microsserviço Conexão com o GitLab.
 
 ![pacote_ada_geral](../assets/img/project/architecture/pack_diagram/Pacote-ada-geral.jpg)
 
-Imagem 04 - Diagrama de pacotes geral dos Microsserviços .
+Imagem 05 - Diagrama de pacotes geral dos Microsserviços .

@@ -24,9 +24,9 @@ Por problemas em relação a organização, a sprint 0 ocorreu, mas não teve um
 ![](../../assets/img/sprints/sprint0/burndown_sprint0.png)
 
 ## Velocity
-O velocity original é de 23 pontos.
+O velocity é de 23 pontos.
 
-![](../../assets/img/sprints/sprint0/velocity_sprint0.jpg)
+![](../../assets/img/sprints/sprint0/velocity_sprint0.png)
 
 ## Quadro de Conhecimento
 

@@ -11,7 +11,7 @@ Este documento tem como objetivo deixar explícito como o software ADA deve ser 
 
 ## 2. Como deve ser feito
 
-A linguagem utilizada neste projeto é o Python com o framework Flask. Como uma boa prática de programação todos os métodos, marcadores, variáveis , classes, constantes, exceções, coleções, nomenclatura, sintaxe e os comentários devem seguir o idioma padrão da linguagem, neste caso o inglês.
+A linguagem utilizada neste projeto é o Python com o _framework_ Flask. Como uma boa prática de programação todos os métodos, marcadores, variáveis , classes, constantes, exceções, coleções, nomenclatura, sintaxe e os comentários devem seguir o idioma padrão da linguagem, neste caso o inglês.
 
 
 ## 3. Indentação e Espaçamento
@@ -216,6 +216,7 @@ another comment line
 </ul>
 
 #### 8.4 Os nomes de pacotes e módulos devem ser curtos, todos com letras minúsculas. Os sublinhados podem ser usados no nome do módulo se melhorar a legibilidade.
+
 #### 8.5 Os nomes das funções devem ser minúsculas, com palavras separadas por sublinhados, conforme necessário, para melhorar a legibilidade.
 
 

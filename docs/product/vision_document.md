@@ -22,27 +22,28 @@
 | 26/03/2019 | 1.6    | Revisão do subtópico 1.4 (Referências)                                                                                            | Guilherme Mendes                                           |
 | 27/03/2019 | 1.7    | Complementação do subtópico 2.2 Descrição do problema                                                                             | Guilherme Mendes, Caio Fernandes                           |
 | 28/03/2019 | 2.0     | Revisão da formatação do documento de visão                     | Lucas Fellipe, Guilherme Mendes, João Vitor
+| 29/04/2019 | 2.1     | Atualização conforme estratégia               | Vítor Gomes |
 
 ## 1. Introdução
 
 ### 1.1 Propósito
 
-<p style="text-align:justify">&emsp;&emsp;A finalidade desse documento é informar ao leitor a respeito do ChatOps Ada. Para isso, serão apresentados diversos aspectos relacionados a esse <i>software</i> de forma a expressar claramente a visão dele.</p>
+<p style="text-align:justify">&emsp;&emsp;A finalidade desse documento é informar ao leitor a respeito da ChatBot Ada. Para isso, serão apresentados diversos aspectos relacionados a esse <i>software</i> de forma a expressar claramente a visão dele.</p>
 
 ### 1.2 Escopo
 
-<p style="text-align:justify">&emsp;&emsp;O ChatOps Ada é um <i>Software</i> gerenciador de serviços que apoia-se em plataformas de controle de versionamento de <i>software</i> baseada em Git. Ele é simples e fácil de usar. Ada atua em qualquer chat (conversa) no Telegram e por meio dele é possível fazer ações imperativas e receptivas, como, por exemplo, criar novas <i>Issues</i> e receber notificações de diversos tipos.</p>
+<p style="text-align:justify">&emsp;&emsp;A ChatBot Ada é um <i>Software</i> que faz o gerenciamento da produção apoiando-se em plataformas de controle de versionamento de <i>software</i> baseada em Git e de Deploy. Ela é simples e fácil de usar, atuando em um chat (conversa) no Telegram e por meio dela é possível fazer ações imperativas e receptivas, como, por exemplo, criar novas <i>Issues</i> e receber notificações de diversos tipos.</p>
 
-<p style="text-align:justify">&emsp;&emsp;Ada é mais que um gerenciador de serviços, ele é um facilitador e é uma ferramenta auxiliadora no processo de desenvolvimento de tarefas relacionadas ao ambiente de desenvolvimento baseado em Git. O ChatOps Ada é dotado de múltiplas ferramentas, que estão apresentadas adiante neste documento. Alguns exemplos são : notificar <i>Issues</i>; informar versões do serviço; colocar o serviço de volta ao ar; notificar integrações contínuas etc.</p>
+<p style="text-align:justify">&emsp;&emsp;Ada é tanto um gerenciador da produção quanto uma ferramenta facilitadora e auxiliadora no processo de desenvolvimento de tarefas, relacionadas ao ambiente de desenvolvimento baseado em Git. O ChatBot Ada é dotado de múltiplas ferramentas, que estão apresentadas adiante neste documento. Alguns exemplos são: notificar <i>Issues</i>; informar versões do serviço; colocar o serviço de volta ao ar; notificar integrações contínuas.</p>
 
-<p style="text-align:justify">&emsp;&emsp;Ada foi desenvolvido por 9 estudantes de Engenharia de Software da Universidade de Brasília em um período aproximado de 4 meses e é voltado a desenvolvedores, principalmente, mas não somente.</p>
+<p style="text-align:justify">&emsp;&emsp;Ada foi desenvolvida por 9 estudantes de Engenharia de Software da Universidade de Brasília em um período aproximado de 4 meses e é voltado a desenvolvedores, principalmente, mas não somente.</p>
 
 ### 1.3 Definições, acrônimos e abreviações
 
 | **Sigla** | **Definição**                                                                                            |
 | --------- | -------------------------------------------------------------------------------------------------------- |
-| Ada    | O nome do ChatOps                                                                                        |
-| ChatOps   | <i>Software</i> que conduz uma conversa de forma a automatizar/integrar processos e serviços                  |
+| Ada    | O nome da ChatBot                                                                                        |
+| ChatBot   | <i>Software</i> que conduz uma conversa de forma a automatizar processos e serviços                  |
 | EPS       | Equipe de Engenharia de Produto de <i>Software</i>                                                            |
 | FGA       | Faculdade do Gama                                                                                        |
 | Git       | Sistema de controle de versões                                                                           |
@@ -63,50 +64,50 @@
 
 ### 1.5 Visão Geral
 
-<p style="text-align:justify">&emsp;&emsp;Esse é um documento informativo sobre o ChatOps Ada que está organizado no formato de tópicos e subtópicos sequenciais numerados. A ordem desses tópicos começa em 1 e termina em 9, sendo eles : introdução; posicionamento; descrições dos envolvidos e dos usuários; visão geral do produto; recursos do produto; restrições; faixas de qualidade; precedência e prioridade; outros requisitos do produto.</p>
+<p style="text-align:justify">&emsp;&emsp;Esse é um documento informativo sobre o ChatBot Ada que está organizado no formato de tópicos e subtópicos sequenciais numerados. A ordem desses tópicos começa em 1 e termina em 9, sendo eles: introdução; posicionamento; descrições dos envolvidos e dos usuários; visão geral do produto; recursos do produto; restrições; faixas de qualidade; precedência e prioridade; outros requisitos do produto.</p>
 
-<p style="text-align:justify">&emsp;&emsp;O documento de visão têm por objetivo representar de forma explicativa todas as informações sobre o projeto, para que os membros e os interessados do projeto sejam capazes de entender melhor do que se trata e ter noção de todas as funcionalidades, as restrições, os fatores de qualidade entre outros que serão descritos subsequentemente.</p>
+<p style="text-align:justify">&emsp;&emsp;O documento de visão têm por objetivo representar de forma explicativa todas as informações sobre o projeto, para que os membros e os interessados do projeto sejam capazes de entender melhor do que se trata e ter noção de todas as funcionalidades, as restrições, os fatores de qualidade, entre outros, que serão descritos subsequentemente.</p>
 
 ## 2. Posicionamento
 
 ### 2.1 Oportunidade de negócios
 
-<p style="text-align:justify">&emsp;&emsp;Muitos desenvolvedores de <i>Software</i>, estudantes e profissionais da área de TI utilizam plataformas baseadas em Git para gerenciar seus serviços e aplicações. Essas plataformas são robustas e possuem diversas facilidades. Entretanto, é fácil perder-se em meio a tantos comentários, commits, versões do produto ou serviço, visto que tais plataformas são, por vezes, um pouco complicadas de se lidar.</p>
+<p style="text-align:justify">&emsp;&emsp;Muitos desenvolvedores de <i>Software</i>, estudantes e profissionais da área de TI bem como outros profissionais envolvidos na construção de produtos de software utilizam plataformas baseadas em Git para gerenciar seus serviços e aplicações. Essas plataformas são robustas e possuem diversas facilidades. Entretanto, é fácil perder-se em meio a tantos comentários, commits, versões do produto ou serviço, visto que tais plataformas são, por vezes, um pouco complicadas de se lidar.</p>
 
-<p style="text-align:justify">&emsp;&emsp;Nesse sentido, o ChatOps Ada impulsiona-se nos ambientes online para gerenciar serviços de forma automatizada, simples e rápida, por meio de chats interativos e não interativos na plataforma Telegram.</p>
+<p style="text-align:justify">&emsp;&emsp;Nesse sentido, o ChatBot Ada impulsiona-se nos ambientes online para gerenciar serviços de forma automatizada, simples e rápida, por meio de chats interativos e não interativos na plataforma Telegram.</p>
 
 ### 2.2 Descrição do problema
 
 |           |      **5W2H**                                                                                                                                                                                            |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **O que?**        | ChatOps voltado para controle de repositórios remotos.                                                                                                                                           |
+| **O que?**        | ChatBot voltado para o gerenciamento da produção em repositórios remotos.                                                                                                                                           |
 | **Quem?**         | Estudantes de Engenharia de Software da Universidade de Brasília                                                                                                                                 |
 | **Onde?**         | Universidade de Brasília, FGA                                                                                                                                                                    |
 | **Quando?**       | No primeiro semestre de 2019.                                                                                                                                                                    |
 | **Por quê?**      | Para melhorar a integração de times de desenvolvedores com a ferramenta Git, automatizando processos e trazendo informações de maneira a facilitar e a otimizar o desenvolvimento do <i>Software</i>. |
-| **Como?**         | Por meio do desenvolvimento de um ChatOps que utiliza processamento de linguagem natural para controlar ambientes de gerenciamento de <i>Software</i> baseados em git.                                |
+| **Como?**         | Por meio do desenvolvimento de um ChatBot que utiliza processamento de linguagem natural para controlar ambientes de gerenciamento de <i>Software</i> baseados em git.                                |
 | **Quanto custa?** | ~ R\$ 300.000,00.                                                                                                                                                                                |
 
 
 |           |  Informações do Produto   |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| **O problema de**                | Falta de uma ferramenta que automatize todo o pipeline de integração de software      juntamente com um gerenciador de repositório de software baseado em Git por meio de um ChatOps.                                                                        |
+| **O problema de**                | Falta de uma ferramenta que automatize todo o pipeline de integração de software      juntamente com um gerenciador de repositório de software baseado em Git por meio de um ChatBot.                                                                        |
 | **Afeta**                     | Desenvolvedores.            |
 | **Cujo impacto é**        | Facilitar o desenvolvimento de software.                         |
-| **Uma boa solução seria**     | O uso prático do ChatOps, como uma ferramenta de comunicação em tempo real para facilitar o gerenciamento de repositórios Git, melhorando a rastreabilidade das modificações feitas nos projetos. |
+| **Uma boa solução seria**     | O uso prático do ChatBot, como uma ferramenta de comunicação em tempo real para facilitar o gerenciamento de repositórios Git e a integração de seus contribuintes, melhorando a rastreabilidade das modificações feitas nos projetos. |
 
 
 ### 2.3 Instrução de posição do produto
 
-<p style="text-align:justify">&emsp;&emsp;Ada é voltado para quaisquer profissionais e estudantes que utilizam plataformas baseadas em Git para gerenciar repositórios remotos e controle de versões, uma vez que há a necessidade de automatizar esses processos. O Ada é um ChatOps de controle e de gerenciamento de atividades cuja motivação é utilizar linguagem natural para melhorar processos produtivos. Diferente do GitHub bot, nosso produto possui mais funcionalidades, como criar novas <i>Issues</i> e colocar o serviço no ar.</p>
+<p style="text-align:justify">&emsp;&emsp;Ada é voltado para organizações envolvidas com o desenvolvimento de produtos de software para apoiar seu gerenciamento de produção em repositórios remotos, facilitando a integração entre diferentes equipes e promovendo a transformaçao fullstack. Ela também pode ser utilizada por quaisquer profissionais e estudantes que utilizam plataformas baseadas em Git para gerenciar repositórios remotos e controle de versões. A Ada é um ChatBot de controle e de gerenciamento da produção cuja motivação é utilizar linguagem natural para melhorar processos produtivos. Diferente do GitHub bot, nosso produto possui mais funcionalidades, como criar novas <i>Issues</i> e colocar o serviço no ar.</p>
 
 A seguir, tabela que explica o dito acima:
 
 |            |    Instrução de posição do produto    |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Para                | Quaisquer profissionais e estudantes que utilizem plataformas baseadas em Git para gerenciar repositórios remotos e controle de versoões.                                                                               |
-| Que                     | Têm a necessidade de automatizar esses processos.            |
-| Ada é        | Um ChatOps de controle e de gerenciamento de atividades.                         |
+| Para                | Organizações envolvidas com o desenvolvimento de produtos de software                                                                               |
+| Que                     | Têm a necessidade de automatizar seus processos e melhorar a integração entre suas equipes multidisciplinares            |
+| Ada é        | Um ChatBot de controle e de gerenciamento da produção                     |
 | Que     | Utiliza linguagem natural para melhorar processos produtivos. |
 | Diferente do             | GitHub bot.                                                                                                      |
 | Nosso produto | Atua em plataformas baseadas em Git e possui mais funcionalidades, como criar novas <i>Issues</i> e colocar o serviço no ar.
@@ -130,7 +131,7 @@ A seguir, tabela que explica o dito acima:
 
 ### 3.3 Ambiente dos Usuários
 
-Os usuários poderão realizar a interação com o ChatOps Ada a partir do Telegram e de plataformas baseadas em Git, sempre que quiserem realizar commits, <i>Pull Requests</i>, criar <i>Issues</i>, comentar em <i>Issues</i>, voltar para <i>Releases</i> mais estáveis, entre outras funcionalidades.
+Os usuários poderão realizar a interação com o ChatBot Ada a partir do Telegram e de plataformas baseadas em Git, sempre que quiserem criar <i>Issues</i>, comentar em <i>Issues</i>, voltar para <i>Releases</i> mais estáveis, entre outras funcionalidades.
 
 ### 3.4 Perfis do Envolvidos
 
@@ -161,9 +162,9 @@ Os usuários poderão realizar a interação com o ChatOps Ada a partir do Teleg
 | Representantes           | Bruna Nayara Moreira Lima, Carla Silva Rocha Aguiar                                                                                                                                         |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Descrição                | Professoras da Universidade de Brasília, no Campus Faculdade Gama(FGA-UnB), professoras de Métodos de Desenvolvimento de <i>Software</i> e Engenharia de Produto de <i>Software</i>, respectivamente. |
-| Tipo                     | Orientadoras e avaliadoras que darão auxílio no desenvolvimento do ChatOps Ada.                                                                                                          |
+| Tipo                     | Orientadoras e avaliadoras que darão auxílio no desenvolvimento do ChatBot Ada.                                                                                                          |
 | Responsabilidades        | Avaliar a equipe de MDS e EPS e ajudá-los em eventuais dúvidas.                                                                                                                             |
-| Critérios de Sucesso     | Testemunhar o sucesso da equipe de Desenvolvimento e ver o ChatOps funcionando perfeitamente.                                                                                               |
+| Critérios de Sucesso     | Testemunhar o sucesso da equipe de Desenvolvimento e ver o ChatBot funcionando perfeitamente.                                                                                               |
 | Envolvimento             | Médio.                                                                                                                                                                                      |
 | Comentários ou Problemas | --                                                                                                                                                                                          |
 
@@ -194,13 +195,13 @@ Os usuários poderão realizar a interação com o ChatOps Ada a partir do Teleg
 
 ### 4.1 Perspectiva do produto
 
-<p style="text-align:justify">&emsp;&emsp;O produto, inicialmente, tem como objetivo fazer a gerência de serviços em uma plataforma de hospedagem de código-fonte. O produto tem como propósito facilitar a organização de tarefas em projetos. O nosso produto é baseado no ChatOps (ChatBots + DevOps), que é a prática do desenvolvimento e operação orientado por conversas. Esse sistema, visa, principalmente, viabilizar a relação entre usuário e máquina, fazendo com que as equipes possam automatizar tarefas e colaborar, trabalhando melhor, mais barato e mais rápido. Existem ferramentas, atualmente, para a realização do ChatOps, tais como, <i>Integram</i>, <i>GitHub Bot</i>, entre outros. O <i>Integram</i> é um ChatOps que visa ajudar equipes de operação e desenvolvimento a obterem resultados mais rápidos a partir da integração com o Telegram. O nosso produto possui diversas funcionalidades e se destaca em relação a outros produtos, como o <i>Integram</i>, pois, além de integrar conversas, notificar os usuários, ele realizará ações imperativas, como, realizar <i>commits</i>, realizar <i><i>Pull Requests</i></i>, realizar a criação de <i><i>Issues</i></i> e realizar o controle da versão mais estável da <i>Releases</i></p>
+<p style="text-align:justify">&emsp;&emsp;O produto, inicialmente, tem como objetivo facilitar a gerência de produção. O produto tem como propósito facilitar a transformação em fullstack e integrar uma equipe multidisciplinar. O nosso produto é baseado em um ChatBot, uma prática de automação orientada por conversas. Esse sistema visa, principalmente, viabilizar a relação entre usuário e máquina, fazendo com que as equipes possam automatizar tarefas e colaborar, trabalhando melhor e mais rápido. Existem ferramentas similares, conhecidas como ChatOps, que facilitam a interação com a estrutura de desenvolvimento, tais como, <i>Integram</i>, <i>GitHub Bot</i>, entre outros. O <i>Integram</i> é um ChatOps que visa ajudar equipes de operação e desenvolvimento a obterem resultados mais rápidos a partir da integração com o Telegram. O nosso produto possui diversas funcionalidades e se destaca em relação a outros produtos, como o <i>Integram</i>, pois, além de integrar conversas e notificar os usuários, ele realizará ações imperativas, realizar a criação de <i><i>Issues</i></i> e realizar o controle da versão mais estável do sistema.
 
 ![chatops](../assets/img/project/vision_document/chatops.png)
 
 ### 4.2 Funções do produto
 
-<p style="text-align:justify">&emsp;&emsp;O ChatOps Ada visa fazer o gerenciamento de serviços. Ele pode ser utilizado na plataforma de mensagens instantâneas Telegram e possui diversas funções, como receber notificações (<i>commits</i>, <i><i>Pull Requests</i></i>, comentários em <i><i>Issues</i></i>, etc...) além de poder criar novas <i>Issues</i> e fazer com que o usuário volte para a versão mais estável da <i>Releases</i></p>
+<p style="text-align:justify">&emsp;&emsp;A ChatBot Ada visa fazer o gerenciamento de produção. Ela pode ser utilizada na plataforma de mensagens instantâneas Telegram e possui diversas funções, como receber notificações do resultado do <i>Pipeline</i> além de poder criar novas <i>Issues</i> e fazer com que o usuário volte para a versão mais estável da <i>Releases</i></p>
 
 ### 4.3 Suposições e dependências
 
@@ -214,29 +215,29 @@ Vide documento Termo de Abertura.
 
 ### 4.5.1 Licenciamento
 
-<p style="text-align:justify">&emsp;&emsp; O ChatOps Ada é desenvolvido sob a licença <a href="https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/LICENSE">GPL 3.0.</a></p>
+<p style="text-align:justify">&emsp;&emsp; O ChatBot Ada é desenvolvido sob a licença <a href="https://github.com/fga-eps-mds/2019.1-Grupo-3/blob/master/LICENSE">GPL 3.0.</a></p>
 
 #### 4.5.2 Instalação
 
-Ainda não foi feito um tutorial de instalação.
+Vide README.
 
 ## 5. Recursos do Produto
 
 ### 5.1 Acesso a repositório de ferramentas Git
 
-<p style="text-align:justify">&emsp;&emsp;O usuário poderá conectar seu repositório do Git a partir do ChatOps Ada.<p>
+<p style="text-align:justify">&emsp;&emsp;O usuário poderá conectar seu repositório do Git a partir da ChatBot Ada.<p>
 
-### 5.2 Envio de notificações sobre mudanças no repositório
+### 5.2 Envio de notificações sobre o resultado do pipeline do repositório
 
-<p style="text-align:justify">&emsp;&emsp;Caso haja alguma mudança dentro do repositório, como novas <i>Issues</i>, novos commits, novos <i>Pull Requests</i>, serão enviados alertas aos usuários através do chat do telegram. Além disso, o <i>Software</i> avisará quando o serviço estiver fora do ar.</p>
+<p style="text-align:justify">&emsp;&emsp; Serão enviados alertas aos usuários sobre a pipeline através do chat do telegram. Além disso, o <i>Software</i> avisará quando o serviço estiver fora do ar.</p>
 
 ### 5.3 Interação com o usuário por meio do Telegram
 
-<p style="text-align:justify">&emsp;&emsp;O usuário poderá mandar mensagens para o bot em linguagem natural(português coloquial) e a resposta recebida será interativa.</p>
+<p style="text-align:justify">&emsp;&emsp;O usuário poderá mandar mensagens para o bot em linguagem natural (português coloquial) e a resposta recebida será interativa.</p>
 
 ### 5.4 Informações instantâneas
 
-<p style="text-align:justify">&emsp;&emsp;Caso o usuário faça a requisição, o bot enviará informações específicas, tais como: versão da <i>Releases</i> commits; <i>Issues</i>, entre outros.</p>
+<p style="text-align:justify">&emsp;&emsp;Caso o usuário faça a requisição, o bot enviará informações específicas, tais como: <i>Issues</i> atribuídas a mim, responsáveis por uma determinada <i>issue</i> e o resultado da pipeline do meu repositório.</p>s
 
 ### 5.4 Criação de novas <i>Issues</i>
 
@@ -246,14 +247,16 @@ Ainda não foi feito um tutorial de instalação.
 
 <p style="text-align:justify">&emsp;&emsp;Se o serviço da versão atual estiver indisponível ou com falhas, o usuário poderá fazer o pedido e o bot fará com que o serviço volte para a versão anterior.</p>
 
+
+
 ## 6. Restrições
 
 - Uso do Telegram;
 - Acesso à Internet;
-- Acesso a conta de alguma ferramentagerenciadora de repositório de software baseado em git;
+- Acesso a conta de alguma ferramenta gerenciadora de repositório de software baseado em git;
 - Controle de apenas 1 repositório por chat;
-- O ChatOps deverá estar em funcionamento até o dia 25/06/2019;
-- Compreender significamente o português;
+- O ChatBot deverá estar em funcionamento até o dia 25/06/2019;
+- Compreender significativamente o português;
 
 ## 7. Outros Requisitos do Produto
 
@@ -263,4 +266,4 @@ Ainda não foi feito um tutorial de instalação.
 
 ### 7.2 Requisitos de Desempenho
 
-<p style="text-align:justify">&emsp;&emsp;O sistema será dimensionado para suprir a necessidade de uma aplicação acessível à grande maioria dos aparelhos. Basta o dispositivo ter acesso à aplicação Telegram. Sendo assim, o desempenho do aparelho será um fator de mínima importância para o acesso, porém de alta relevância para a obtenção de um melhor desempenho do ChatOps.</p>
+<p style="text-align:justify">&emsp;&emsp;O sistema será dimensionado para suprir a necessidade de uma aplicação acessível à grande maioria dos aparelhos. Basta o dispositivo ter acesso à aplicação Telegram. Sendo assim, o desempenho do aparelho será um fator de mínima importância para o acesso, porém de alta relevância para a obtenção de um melhor desempenho do ChatBot.</p>

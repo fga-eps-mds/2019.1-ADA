@@ -33,7 +33,7 @@ Por ser uma sprint focada em documentação, decidimos fazer em conjunto, forman
 | [Elaborar Escopo do projeto (EPS)](https://github.com/fga-eps-mds/2019.1-Grupo-3/issues/25) | 5 |
 | [Criar página no GitHub Pages (EPS)](https://github.com/fga-eps-mds/2019.1-Grupo-3/issues/26) | 5 |
 | [Elaborar Plano de Comunicação (EPS)](https://github.com/fga-eps-mds/2019.1-Grupo-3/issues/27) | 3 |
-| Elaborar Termo de Abertura do Projeto (EPS) #30 | 8 |
+| [Elaborar Termo de Abertura do Projeto (EPS)](https://github.com/fga-eps-mds/2019.1-Grupo-3/issues/30) | 8 |
 __Total:__ 78
 
 ## Papéis
