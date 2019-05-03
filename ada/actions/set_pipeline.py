@@ -10,9 +10,9 @@ from requests.exceptions import HTTPError
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
 
-class BuildStage(Action):
+class ActionSetPipeline(Action):
     def name(self):
-        return "action_build_stage"
+        return "action_set_pipeline"
 
     def run(self, dispatcher, tracker, domain):
         is_there_any_build = False

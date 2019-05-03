@@ -28,7 +28,11 @@ class ActionSetRepositorie(Action):
             glab_webhook_url = self.save_repo_to_db(headers, repo_name,
                                                     message, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
-                            "o repositório {rep}.".format(rep=repo_name)
+                            "o repositório {rep}. "\
+                            "Agora, você pode me pedir "\
+                            "informações sobre seus pipelines ou "\
+                            "relatórios informacionais "\
+                            "do seu repositório.".format(rep=repo_name)
             # bot_message = bot.send_message(chat_id=sender_id,
             #                  text=selected_repo)
             # bot.editMessageReplyMarkup(chat_id=sender_id,
@@ -45,13 +49,9 @@ class ActionSetRepositorie(Action):
                               "notificação sobre os seus pipelines"\
                               .format(glab_webhook_url["gitlab_webhook_url"],
                                       glab_webhook_url["webhook_url"])
-            set_pipeline_msg = "Ou então, me peça resultados sobre os " \
-                               "seus pipelines ou relatórios informacionais "\
-                               "sobre seu repositório."
 
             dispatcher.utter_message(selected_repo)
             dispatcher.utter_message(set_webhook_msg)
-            dispatcher.utter_message(set_pipeline_msg)
 
             return [SlotSet('repositorio', repo_name)]
         except ValueError:
