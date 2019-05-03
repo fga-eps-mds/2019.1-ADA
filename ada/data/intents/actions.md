@@ -90,3 +90,16 @@
 - [caio.c12](repositorio)
 - [SUD](repositorio)
 - [gui.a.](repositorio)
+
+## intent:action_get_report
+- me manda o relatório do projeto
+- relatório, por favor
+- ada, me manda o relatório
+- me mostra o relatório
+- cadê o relatório
+- me mostra o relatorio, ada
+- Ada, me mostra o relatório
+- relatório, por favor
+- me mostra o relatório, ada
+- me mostra o relatorio, ada
+- relatório

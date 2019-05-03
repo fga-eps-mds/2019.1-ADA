@@ -92,6 +92,11 @@
 * action_set_repositorie
   - action_set_repositorie
 
+## path_action_get_report
+* action_get_report
+  - utter_start_report
+  - action_get_report
+
 ## set_pipeline
 * set_pipeline
   - utter_set_pipeline

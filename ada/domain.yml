@@ -25,6 +25,7 @@ intents:
   - whats_pipeline
   - action_set_user
   - action_set_repositorie
+  - action_get_report
   - set_pipeline
 
 entities:
@@ -82,9 +83,10 @@ actions:
   - action_set_user
   - utter_set_user
   - action_set_repositorie
+  - action_get_report
   - utter_set_pipeline
   - action_set_pipeline
-
+  - utter_start_report
 templates:
 
   utter_default:
@@ -331,3 +333,8 @@ templates:
   utter_whats_pipeline:
   - text: | 
       Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy. 
+  
+  utter_start_report:
+  - text: |
+      Aguarde um momento, vou gerar o relatório para você.
+    

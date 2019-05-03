@@ -7,6 +7,7 @@ from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 import telegram
 
+
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")
@@ -29,7 +30,11 @@ class ActionSetRepositorie(Action):
             glab_webhook_url = self.save_repo_to_db(headers, repo_name,
                                                     message, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
-                            "o repositório {rep}.".format(rep=repo_name)
+                            "o repositório {rep}. "\
+                            "Agora, você pode me pedir "\
+                            "informações sobre seus pipelines ou "\
+                            "relatórios informacionais "\
+                            "do seu repositório.".format(rep=repo_name)
             bot_message = bot.send_message(chat_id=sender_id,
                                            text=selected_repo)
             bot.editMessageReplyMarkup(chat_id=sender_id,
