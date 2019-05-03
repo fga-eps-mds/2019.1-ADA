@@ -74,6 +74,7 @@
 ## path_how_are_you
 * how_are_you
   - utter_how_are_you
+  - utter_affirm
 
 ## path_sad
 * sad
@@ -83,16 +84,6 @@
 * creators
   - utter_creators
 
-## path_action_get_pipeline
-* greet
-  - utter_greet
-* action_get_pipeline
-  - action_get_pipeline
-
-## path get_pipeline
-* action_get_pipeline
-  - action_get_pipeline
-
 ## path set_user
 * action_set_user
   - action_set_user
@@ -100,6 +91,20 @@
 ## path set_repositorie
 * action_set_repositorie
   - action_set_repositorie
+  
 ## path_action_get_report
 * action_get_report
   - action_get_report
+
+## set_pipeline
+* set_pipeline
+  - utter_set_pipeline
+  - action_set_pipeline
+  
+## path_next_release
+* intended_for_next_release
+  - utter_intended_for_next_release
+
+## path_whats_pipeline
+* whats_pipeline
+  - utter_whats_pipeline

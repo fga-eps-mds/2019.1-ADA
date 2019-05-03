@@ -21,12 +21,12 @@ intents:
   - creators
   - affirm
   - deny
-  
-  - action_get_pipeline
+  - intended_for_next_release
+  - whats_pipeline
   - action_set_user
   - action_set_repositorie
-  - build_stage
   - action_get_report
+  - set_pipeline
 
 entities:
   - command
@@ -45,10 +45,8 @@ entities:
   - creators
   - begin
   - help
-
   - usuario
   - repositorio
-
 
 slots:
   repositorio:
@@ -59,6 +57,7 @@ slots:
 actions:
   - utter_defalut
   - utter_start
+  - utter_affirm
   - utter_help
   - utter_begin
   - utter_greet
@@ -79,14 +78,14 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-
-  - action_get_pipeline
+  - utter_intended_for_next_release
+  - utter_whats_pipeline
   - action_set_user
   - utter_set_user
   - action_set_repositorie
-  - utter_build_stage
-  - action_build_stage
   - action_get_report
+  - utter_set_pipeline
+  - action_set_pipeline
 
 templates:
 
@@ -107,7 +106,6 @@ templates:
 
       Agora, pra gente começar eu vou precisar do seu nome de usuário lá do GitLab. Olha, vou te dar um exemplo! Pro usuário @AdaLovelace eu escreveria "Meu usuário é AdaLovelace".
 
-
   utter_restart:
   - text: |
 
@@ -116,32 +114,35 @@ templates:
       Ficou interessado, né? Bom, vamos lá.
 
       Vou te passar uma lista do que você pode me pedir
-          - Commit's (Previsto para R2);
-          - Issues (Previsto para R2);
-          - Pull Request's (Previsto para R2);
-          - Resultado dos pipelines e andamendo das builds dos seus projetos do GitLab.
+          - Resultado dos pipelines; 
+          - Andamendo das builds dos seus projetos do GitLab;
+          - Relatório sobre seu projeto do GitLab;
+          - Commit's (Previsto para a R2);
+          - Criar e comentar Issues (Previsto para a R2);
+          - Comentar Pull Request's (Previsto para a R2);
 
-      Caso você se cadastre, vou notificá-lo sobre quaisquer alterações que ocorrerem nos seus repositórios!
+      Caso você se cadastre, vou te notificar sobre qualquer alteração que ocorrer no seu repositório!
 
-      Posso também criar e comentar em issues a partir do Telegram, basta você me pedir! (Previsto para R2)
-
-      Estou aqui para te ajudar, vamos começar? Hehehe 😁
+      Basta você me pedir.
 
   utter_begin:
   - text: |
       Então vamos lá, me pergunte o que você quer saber sobre seus repositórios ou converse comigo, sei de muitas coisas!
 
   utter_greet:
-  - text: "Olá. Posso ajudar?"
+  - text: |
+      Olá! Como posso ajudar?
+
+      Caso esteja com alguma dúvida, me peça ajuda que eu te trago as informações! 😆
   
   - text: |
-      Olá, tudo bem? Como você já deve saber, sou a Ada! 💜
+      Olá, tudo bem? Como você já deve saber, sou a Ada!
       
       Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
-  uteer_build_stage:
-  - text: "Aguarde um momento. \n
-           Vou verificar..."
+  uteer_set_pipeline:
+  - text: |
+      Aguarde um momento, vou verificar.
   
   utter_how_are_you:
   - text: |
@@ -185,7 +186,7 @@ templates:
       Sou reconhecida hoje por causa de vocês! 
       
   - text: |
-      Obrigadaaaaaa, mas você que é incrível! 😍
+      Obrigada, mas você que é incrível! 😍
 
   - text: |
       Muito obrigada, estou aqui para te ajudar
@@ -196,11 +197,11 @@ templates:
       Para com isso, assim eu fico envergonhada 🙈
 
   - text: |
-      Obrigadaaaa, sou assim por causa de vocês!
+      Obrigada, sou assim por causa de vocês!
 
   utter_thanks:
   - text: |
-      De nadaaa, qualquer coisa que precisar é só chamar!
+      De nada, qualquer coisa que precisar é só chamar!
 
   - text: |
       Ahhh, que isso, estou aqui para te ajudar mesmo!
@@ -324,3 +325,11 @@ templates:
       Fui criada pelos meus pais, né?
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
+
+  utter_intended_for_next_release:
+  - text: |
+      Desculpe, ainda não consigo fazer isso, mas até o final de junho aprenderei isso e conseguirei te ajudar.
+  
+  utter_whats_pipeline:
+  - text: | 
+      Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy. 
