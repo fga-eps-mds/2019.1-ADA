@@ -57,7 +57,7 @@ class ActionSetRepositorie(Action):
                               "um pipeline terminar. Mas "\
                               "eu consigo fazer muito mais que isso! "\
                               "Eu consigo: se você me "\
-                              "pedir pra mandar o último pipeline, "
+                              "pedir pra mandar o último pipeline, "\
                               "também posso trazer o resultado, "\
                               "ou você também pode pedir um "\
                               "relatório sobre seu repositório."
