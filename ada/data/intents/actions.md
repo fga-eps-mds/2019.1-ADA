@@ -1,4 +1,4 @@
-## intent:build_stage
+## intent:set_pipeline
 - me mostra o pipeline do repositorio por favor
 - pipeline repositorio por favor
 - pipeline do meu projeto ada
@@ -43,6 +43,12 @@
 - quais as builds
 - me mostra a build mais recente
 - me mostra o resultado do pipeline
+- resultado da pipeline
+- resultados das pipelines
+- resultados das builds
+- saber pipeline
+- Ada, me mostra o resultado do pipeline
+
 
 ## intent:action_set_user
 - meu nome de usuário é [sudjoao](usuario)
