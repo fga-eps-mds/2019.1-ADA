@@ -33,7 +33,7 @@ build ada-bot-homolog:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_IMAGE:homolog
   only:
-    - /devel/
+    - /DadosDeFormaNatural/
 
 build ada-actions-homolog:
   image: docker:latest
@@ -45,7 +45,7 @@ build ada-actions-homolog:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $ADA_ACTIONS_IMAGE:homolog
   only:
-    - /devel/
+    - /DadosDeFormaNatural/
 
 #############################################################
 ################## BUILD PROD ###############################
@@ -92,7 +92,7 @@ deploy ada-bot-homolog:
             --stack $RANCHER_HOMOLOG_STACK
             --service ada-homolog"
   only:
-    - /devel/
+    - /DadosDeFormaNatural/
 
 deploy ada-actions-homolog:
   image: cdrx/rancher-gitlab-deploy
@@ -106,7 +106,7 @@ deploy ada-actions-homolog:
             --stack $RANCHER_HOMOLOG_STACK
             --service ada-actions-homolog"
   only:
-    - /devel/
+    - /DadosDeFormaNatural/
 
 #############################################################
 ################## DEPLOY PROD ##############################
