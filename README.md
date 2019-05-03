@@ -1,20 +1,11 @@
-# ADA
+![Ada_logo_horizontal](https://user-images.githubusercontent.com/22121504/56839465-006c8200-6859-11e9-8feb-ad76c573b844.png)
 
 [![pipeline status](https://gitlab.com/adabot/ada/badges/master/pipeline.svg)](https://gitlab.com/adabot/ada/commits/master) [![Percentage of issues still open](http://isitmaintained.com/badge/open/fga-eps-mds/2019.1-ADA.svg)](http://isitmaintained.com/project/fga-eps-mds/2019.1-ADA "Percentage of issues still open") [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Sobre o Projeto   
+## Sobre a Ada  
 
 <p align="justify"> &emsp;&emsp;
-  O projeto ADA tem como objetivo facilitar o gerenciamento de tarefas dentro de um projeto de desenvolvimento de software, sobretudo aquelas relacionadas ao papel de DevOps. A partir de um acesso rápido a informações através do bot no Telegram e possibilidade de realização de algumas tarefas através dele, diminui-se o esforço e tempo necessários para manter o projeto em organizado e em funcionamento.</p>
-
-### Requisitos de Alto Nível
-* Interação através de linguagem natural para uma melhor usabilidade;
-* Fluxos de conversas objetivos e práticos;
-* Gerenciamento de issues e pull requests;
-* Captura de informações sobre a release;
-* Captura de informações sobre integração contínua do repositório;
-* Captura de informações sobre deploy contínuo do repositório;
-* Gerenciamento do pipeline de produção.
+  A Ada é um chatbot com objetivo de facilitar a transformação full-stack e a integração entre equipes multidisciplinares em organizações envolvidas com desenvolvimento de software. Esse objetivo é concretizado por meio  de dois aspectos principais: comunicação fácil e em linguagem natural e monitoramento completo do pipeline de produção de softwares. Além de monitorar o pipeline, a Ada também permite a realização de uma série de atividades relacionadas ao gerenciamento da produção nas plataformas entregues. A Ada, em sua versão básica, inclui suporte para um pipeline GitHub, GitLab CI e Amazon. Além disso, nessa versão a comunicação entre a Ada e o usuário ocorre através do Telegram. </p>
 
 ## Contribuindo
 
@@ -32,61 +23,124 @@ O código de conduta para contribuição está disponível [aqui](https://github
 
 ### Desenvolvimento
 
-#### Subindo o chatbot no mensageiro
+#### Primeiros passos
 
-Para executar a Ada utilizando o Telegram, siga os seguintes comandos:
+#### Primeiros passos
+##### Instale o Docker
+Seguindo as instruções dos links a seguir, instale o docker conforme seu sistema operacional.
 
-* Instale o ngrok utilizando as instruções do [link](https://ngrok.com/download).
+* [docker](https://docs.docker.com/install/)
+* [docker-compose](https://docs.docker.com/compose/install/#install-compose) (já incluído na instalação do Docker Desktop para MacOS)
 
-* No terminal, execute o ngrok na porta 5001:
+#### Subir a Ada no Telegram
+Siga esses passos para executar a Ada utilizando o Telegram através de um bot criado por você.
+
+##### Crie um bot no Telegram
+Converse com o [@BotFather do Telegram](https://t.me/BotFather) e crie um bot de teste unicamente seu seguindo as instruções dele.
+
+
+##### Exporte as variáveis do seu bot
+Após escolher um nome para seu bot, o @BotFather lhe dará um token para utilizar para acessar a API do Telegram. Exporte ambos no terminal como a seguir. Substitua o TELEGRAM_ACESS_TOKEN pelo token lhe enviado pelo @BotFather e TELEGRAM_BOT_NAME pelo nome do seu bot.
+
+```sh
+export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
+export BOT_NAME='TELEGRAM_BOT_NAME'
+```
+
+##### Instale o ngrok
+Utilizando as instruções do [link](https://ngrok.com/download), faça a instalação do ngrok.
+
+##### Execute o ngrok
+Conforme a seguir, execute o ngrok na porta 5001.
 
 ```sh
 ./ngrok http 5001
 ```
 
-* Faça a exportação das seguintes variáveis de ambiente:
+##### Exporte a URL do Webhook e conecte ao Telegram
+
+Enquanto o ngrok estiver em execução, ele apresentará uma série de informações da sessão atual. Copie a primeira url do campo Forwarding, ela será similar à seguinte.
 
 ```sh
-- export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
-- export BOT_NAME='BOT_NAME'
-- export WEBHOOK_URL='WEBHOOK_URL'
-``` 
+https://0x00000x.ngrok.io
+```
 
-Faça as instalações dos seguintes programas:
+Em seguida, exporte-a como a seguir, substituindo-a em NGROK_WEBHOOK_URL.
 
-* [docker](https://docs.docker.com/install/)
-* [docker-compose](https://docs.docker.com/compose/install/#install-compose)
 
-Usando o Docker
 
-* Execute o comando para inicializar o container em seu computador:
+```sh
+export WEBHOOK_URL='NGROK_WEBHOOK_URL'
+```
+
+::Lembre-se::: sempre que executar o ngrok essa url deve ser exportada.
+
+Depois, você deve configurar essa url na api do telegram. Isso deve ser feito visitando um link específico para seu bot. Ele é da maneira a seguir. Não se esqueça de substituir TELEGRAM_ACESS_TOKEN e NGROK_WEBHOOK_URL.
+
+```sh
+http://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/setWebhook?url=https://NGROK_WEBHOOK_URL/webhooks/telegram/webhook
+```
+
+Para verificar que tudo funcionou corretamente:
+
+```sh
+https://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/getWebhookInfo
+```
+
+##### Execute o Docker
+```sh
+docker-compose -f docker-compose-dev.yml up --build
+```
+
+##### Exporte a variável de ambiente do GitLab
+Siga as instruções em [ADA-gitlab ReadMe](https://github.com/fga-eps-mds/2019.1-ADA-gitlab) e depois rode o comando para obter as ids dos contêineres.
+```sh
+docker ps
+```
+
+Exporte o nome da imagem referente ao ser serviço do GitLab, tal como:
+```sh
+export GITLAB_SERVICE_URL='http://20191-ada-gitlab_api_1:5000/'
+```
+
+##### Converse com o bot
+E está tudo pronto pra conversar com o bot no telegram!
+
+#### Subir a Ada no Terminal
+Siga esses passos para executar a Ada localmente utilizando o Terminal.
+
+##### Execute o comando a seguir para criar a imagem do container
 
 ```sh
 docker-compose -f docker-compose-dev.yml up --build
 ```
 
-#### Subindo o chatbot no Terminal
-
-Para executar a Ada localmente utilizando o Terminal, siga os comandos:
-
-* Execute o comando para criar a imagem do container:
+##### Execute o Docker
+Após criar a imagem do container, em um outro terminal, digite o seguinte comando para obter a id de seus contêineres.
 
 ```sh
-docker-compose -f docker-compose-dev.yml up --build
+docker ps
 ```
 
-* Execute o Docker:
+Copie o CONTAINER_ID  da imagem 20191-ada_ada e substitui no comando a seguir.
 
 ```sh
 docker exec -it container_id bash
 ```
 
-* Rode os comandos para o treinamento do bot:
+Após rodar esse comando, o container estará em execução. Algo como a seguir aparecerá no terminal.
+```sh
+root@00x00xx00000:/ada#
+```
+
+Dentro dele, rode o comando para treinar o bot.
 
 ```sh
 python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
 ```
-Após os comando é possível realizar diálogos com o bot e visualizar os logs do Rasa.
+
+Após executar esse comando, é possível conversar com o bot bem como visualizar os logs do Rasa.
+
 
 ## Equipe
 
