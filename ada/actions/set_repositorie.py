@@ -55,10 +55,17 @@ class ActionSetRepositorie(Action):
                          .format(glab_webhook_url["gitlab_webhook_url"])
             explanation_msg = "Vou mandar uma imagem pra "\
                               "ficar mais fácil de entender, ok?"
+            instruction_msg = "Ah, mas atenção: isso aqui é só se você quiser "\
+            "receber notificações toda vez que um pipeline terminar. Mas eu "\
+            "consigo fazer muito mais que isso! Eu consigo: se você me pedir "\
+            "pra mandar o último pipeline, também posso trazer o resultado, ou "\
+            "você também pode pedir um relatório sobre seu repositório."\
+
             dispatcher.utter_message(set_webhook_msg)
             dispatcher.utter_message(gitlab_msg)
             dispatcher.utter_message(explanation_msg)
             dispatcher.utter_message("https://imgur.com/fxjQ6XP.jpg")
+            dispatcher.utter_message(instruction_msg)
 
             return [SlotSet('repositorio', repo_name)]
         except ValueError:
