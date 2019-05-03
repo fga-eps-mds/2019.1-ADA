@@ -8,8 +8,12 @@
 
 ## Modelo de Negócios v1.0
 
-![canvas v1.0](../assets/img/product/canvas/canvas_v1.png)
-[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/assets/img/product/canvas/canvas_v1.png)
+![canvas v1.0](../assets/img/product/canvas/canvas_v1_1.png)
+[Clique aqui para visualizar a imagem em um maior tamanho](https://raw.githubusercontent.com/fga-eps-mds/2019.1-ADA/gh-pages/docs/assets/img/product/canvas/canvas_v1_1.png)
+
+
+>Nota: Na versão básica da Ada, o usuário necessariamente deverá utilizar as tecnologias atendidas nessa versão. São elas: Github para versionamento de código, GitLab CI para a integração continua e Amazon para o deploy continuo.
+
 
 ## Modelo de Negócios v0.1
 
