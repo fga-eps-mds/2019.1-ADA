@@ -69,7 +69,14 @@ class ActionSetPipeline(Action):
                                      "no GitLab, acesse o link {web_url}"
                                      .format
                                      (web_url=job_build[0]['pipeline_url']))
-
+        except KeyError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o seu pipeline no GitLab, "
+                "por favor verifique se existe um e me manda novamente.")
+        except IndexError:
+            dispatcher.utter_message(
+                "Não consegui encontrar o seu pipeline no GitLab, "
+                "por favor verifique se existe um e me manda novamente.")
         except HTTPError:
             dispatcher.utter_message(
                 "Não consegui achar um pipeline no seu repositório, "
