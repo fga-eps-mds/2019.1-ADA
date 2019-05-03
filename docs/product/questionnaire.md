@@ -10,7 +10,7 @@
 
 ![comunicação](../assets/img/product/questionnaire/communication.png)
 
->Esse tópico tem como objetivo sabermos onde a Ada terá contato com o usuário, como pode ser percebido, a ferramenta de comunicação mais utilizada é o Whats'app. Porém, como o Whats'app não disponibiliza a Api, o grupo optou por utilizar a segunda opção o Telegram. Dessa forma, a Ada gerenciará a aplicação do a partir do Telegram.
+>Esse tópico tem como objetivo sabermos onde a Ada terá contato com o usuário, como pode ser percebido, a ferramenta de comunicação mais utilizada é o WhatsApp. Porém, como o WhatsApp não disponibiliza a Api, o grupo optou por utilizar a segunda opção o Telegram. Dessa forma, a Ada gerenciará a aplicação do a partir do Telegram.
 
 ## 2. Plataforma de hospedagem de códigos
 
@@ -28,4 +28,4 @@
 
 ![deploy](../assets/img/product/questionnaire/deploy.png)
 
->Para esse tópico escolhemos a Amazon como ferramneta de deploy, apesar do Heroku ter ficado como preferência. Isso ocorreu pois grande parte do público, que respondeu o questionário são estudantes, e o Heroku é mais usado para fins didáticos. Já a Amazon é utilizada por grandes empressas.
+>Para esse tópico escolhemos a Amazon como ferramneta de deploy, apesar do Heroku ter ficado como preferência. Isso ocorreu pois grande parte do público, que respondeu o questionário são estudantes, e o Heroku é mais usado para fins didáticos. Já a Amazon é utilizada por grandes empresas.

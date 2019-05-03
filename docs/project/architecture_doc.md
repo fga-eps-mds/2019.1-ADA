@@ -13,19 +13,19 @@
 | 29/03/2019 | 0.9 | Adição do tópico 4 - Visão de casos de uso; Complementação dos subtópicos 2.2 - Tecnologias. | Guilherme Mendes |
 | 29/03/2019 | 0.9.1 | Complementação do subtópico 3.2 - Restrições da arquitetura; Complementação do subtópico 2.2.6.. | Lucas Fellipe |
 | 29/03/2019 | 1.0 | Adição do subtópico 5.2 - Diagrama de Classes. | João Pedro José |
-
+| 29/04/2019 | 1.1 | Atualização escopo segundo estratégia. | Vítor Gomes |
 
 ## 1. Introdução
 
 ### 1.1 Finalidade
 
-<p style="text-align:justify">&emsp;&emsp;Esse documento de arquitetura têm como função apresentar uma visão sobre a arquitetura utilizada pelo software ADA e mostrar como são feitas as conexões entre os elementos utilizados para que o ChatOps funcione. A comunicação dele com o Telegram e com repositórios Git, além de outros elementos utilizados para o bom funcionamento do software, como containers e banco de dados, são alguns destes elementos. </p>
+<p style="text-align:justify">&emsp;&emsp;Esse documento de arquitetura tem como função apresentar uma visão sobre a arquitetura utilizada pelo software ADA e mostrar como são feitas as conexões entre os elementos utilizados para que o ChatOps funcione. A comunicação dele com o Telegram e com repositórios Git, além de outros elementos utilizados para o bom funcionamento do software, como containers e banco de dados, são alguns destes elementos. </p>
 
 ### 1.2 Escopo
 
-<p style="text-align:justify">&emsp;&emsp;ADA é um ChatOps cuja finalidade principal é controlar repositórios remotos de maneira automatizada e simples, auxiliando assim a integração de equipes de desenvolvedores de modo a otimizar o desenvolvimento de software. </p>
+<p style="text-align:justify">&emsp;&emsp;Ada é uma chatbot cuja finalidade principal é promover a integração entre equipes multidisciplinares e facilitar a transformação full-stack no contexto de organizações com projetos de desenvolvimento de software, a partir do controle sobre o pipeline completo da produção, de modo a otimizar o desenvolvimento de software. </p>
 
-<p style="text-align:justify">&emsp;&emsp;A partir disso, são apresentadas as estruturas necessárias para o funcionamento da ADA e a devida arquitetura desse software, nesse documento. Tem-se, primeiramente, uma representação arquitetônica geral da ADA, depois uma explicação sobre as metas e as restrições dessa arquitetura. Após isso, apresenta-se a visão de casos de uso e, em seguida, a visão lógica. </p>
+<p style="text-align:justify">&emsp;&emsp;A partir disso, são apresentadas as estruturas necessárias para o funcionamento da Ada e a devida arquitetura desse software, nesse documento. Tem-se, primeiramente, uma representação arquitetônica geral da Ada, depois uma explicação sobre as metas e as restrições dessa arquitetura. Após isso, apresenta-se a visão de casos de uso e, em seguida, a visão lógica. </p>
 
 ### 1.3 Referências
 
@@ -49,11 +49,11 @@
 
 ### 2.1 Diagrama de relações
 
-O software ADA funciona com base na seguinte representação arquitetural: 
+O software ADA funciona com base na seguinte representação arquitetural:
 
 ![arquitetura](../assets/img/project/architecture/Arquitetura_1.0.png)
 
-<p style="text-align:justify">&emsp;&emsp;No centro do diagrama acima encontra-se a ADA. Ela é responsável por, via Rasa, interpretar diferentes mensagens e gerar respostas, as quais são passadas ao usuário via Telegram, assim estabelecendo uma comunicação ativa, rápida, simples e eficiente. A arquitetura utilizada será o m </p>
+<p style="text-align:justify">&emsp;&emsp;No centro do diagrama acima, encontra-se a ADA. Ela é responsável por, via Rasa, interpretar diferentes mensagens e gerar respostas, as quais são passadas ao usuário via Telegram, assim estabelecendo uma comunicação ativa, rápida, simples e eficiente. </p>
 
 ### 2.2 Representação dos Microserviços
 
@@ -63,7 +63,7 @@ O software ADA funciona com base na seguinte representação arquitetural:
 
 #### GitHub API
 
-<p style="text-align:justify">&emsp;&emsp;Rest API disponibilizada pelo GitHub para que utilizemos seus recursos. Assim, o papel da GitHub API é dar suporte à ADA, providenciando as informações que o Software requerer de forma rápida, dessa forma garantindo a automatização e o gerenciamento das tarefas relacionadas ao desenvolvimento de um software. </p>
+<p style="text-align:justify">&emsp;&emsp;A Rest API é disponibilizada pelo GitHub para que utilizemos seus recursos. Assim, o papel da GitHub API é dar suporte à ADA, providenciando as informações que o Software requerer de forma rápida. Dessa forma, é garantida a automatização e o gerenciamento das tarefas relacionadas ao desenvolvimento de um software. </p>
 
 #### GitLab CI
 
@@ -95,7 +95,7 @@ O software ADA funciona com base na seguinte representação arquitetural:
 
 <p style="text-align:justify">&emsp;&emsp;Essa arquitetura será utilizada para a construção da API, que vai ser um dos pontos principais do nosso projeto. Através das APIs, os aplicativos podem se comunicar uns com os outros sem conhecimento ou intervenção dos usuários. Elas funcionam através da comunicação de diversos códigos, definindo comportamentos específicos de determinado objeto em uma interface. </p>
 
-#### Microserviços
+#### Microsserviços
 
 <p style="text-align:justify">&emsp;&emsp;O estilo de arquitetura de microsserviços é uma abordagem que desenvolve um aplicativo único como uma suíte de pequenos serviços, cada um executando seu próprio processo e se comunicando através de mecanismos leves, muitas vezes em uma API com recursos HTTP. </p>
 
@@ -119,5 +119,5 @@ As restrições de arquitetura são:
 - Possuir o aplicativo Telegram;
 - Acesso a conta de alguma ferramenta gerenciadora de repositório de software baseada em git;
 - Controle de apenas 1 repositório por chat;
-- Compreender significamente o português.
+- Compreender significativamente o português.
 - Utilização de um banco de dados chamado MongoDB;

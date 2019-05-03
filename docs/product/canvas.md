@@ -2,7 +2,7 @@
 
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
-| 27/03/2019 | 0.1 | Cronstrução da versão inicial | Ateldy Brasil, Bruno Oliveira, João Vitor Ramos, Vítor Gomes |
+| 27/03/2019 | 0.1 | Construção da versão inicial | Ateldy Brasil, Bruno Oliveira, João Vitor Ramos, Vítor Gomes |
 | 28/03/2019 | 1.0 | Construção de versão após feedback | Vítor Gomes |
 | 29/03/2019 | 1.1 | Adição de link para imagem de maior tamanho | João Vitor |
 

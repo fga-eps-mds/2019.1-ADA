@@ -5,14 +5,15 @@
 | 21/03/2019 | 0.1 | Criação do documento com template inicial | Ateldy Brasil |
 | 22/03/2019 | 1.0 | Construção dos tópicos 1, 2, 3, 4, 5, 6, 7, 9, 10, 11. | Ateldy Brasil e Vítor Gomes |
 | 22/03/2019 | 1.1 | Construção do tópico 8. Estimativa de Custo | Ateldy Brasil |
+| 29/04/2019 | 1.2 | Atualização segundo estratégia | Vítor Gomes |
 
 ## 1. Introdução
 
- Este documento tem o objetivo de formalizar o projeto ADA, permitindo que os recursos alocados pelos gerentes de projeto sejam aplicados. As informações presentes neste documento proporcionam uma visão inicial e de alto nível de objetivos, requisitos, riscos e custos para a viabilização do projeto.
+ Este documento tem o objetivo de formalizar o produto Ada, permitindo que os recursos alocados pelos gerentes de projeto sejam aplicados. As informações presentes neste documento proporcionam uma visão inicial e de alto nível de objetivos, requisitos, riscos e custos para a viabilização do projeto.
 
 ## 2. Descrição
 
- A ADA é uma ferramenta para o auxílio de gerenciamento de tarefas para DevOps em projetos de desenvolvimento de software. Inicialmente, será um bot aplicado na plataforma Telegram que realiza uma série de atividades de gerenciamento de repositórios.
+ A Ada é uma ferramenta para o gerenciamento da produção de softwares, principalmente no contexto de organizações. Em sua versão básica, é um bot aplicado na plataforma Telegram que realiza uma série de atividades relacionadas ao gerenciamento da produção e de repositórios.
 
 ## 3. Propósito e Justificativa
 
@@ -22,22 +23,25 @@
 
  Dados constantes sobre a atividade dentro de um projeto são necessários para manter tudo em funcionamento e tarefas organizadas, contudo, assim como afirmam Downey e Sutterland (2013), o próprio ato de coleta de dados pode desacelerar um time. Portanto, nota-se uma oportunidade de mercado e uma necessidade organizacional neste aspecto.
 
- Dessa maneira, o projeto é proposto a fim de solucionar tais problemáticas, trazendo medidas que facilitam o gerenciamento de tarefas dentro de um projeto conforme o contexto de TICs  em 2019.
+ Além disso, dentro dos projetos, é comum encontrar dificuldades no alinhamento de profissionais de diferentes áreas, tais como desenvolvimento back-end, front-end, design da aplicação, design de interação, gerência, entre outros. Garantir que a comunicação entre os profissionais desses campos seja eficaz é um desafio a ser ultrapassado.
 
-Portanto, o ChatOps tem o intuito de facilitar as práticas relacionadas a, sobretudo, o papel de DevOps. Assim, a verificação de manutenção de serviço online e a criação e o acompanhamento de issues, por exemplo, tornam-se mais práticos através de um bot no Telegram.
+ Dessa maneira, a Ada é proposta a fim de solucionar tais problemáticas, trazendo medidas que facilitam o gerenciamento da produção, garantindo a integração entre equipes multidisciplinares dentro de um produto de software conforme o contexto de TICs  em 2019.
+
+Portanto, a Ada, através do monitoramento e outras atividades sobre todo o pipeline de produção, conectando-se a plataformas de integração contínua, deploy contínuo, etc., tem o intuito de promover a transformação full-stack nas organizações, expandindo o conhecimento dos funcionários e abrindo uma oportunidade para que eles expandam sua área de atuação.
+
+Por fim, a verificação de manutenção de serviço online e o acompanhamento de integração contínua, por exemplo, tornam-se mais práticos e fáceis através da Ada.
 
 ## 4. Objetivos
 
- O projeto tem como objetivo facilitar o gerenciamento de tarefas dentro de um projeto de desenvolvimento de software, sobretudo aquelas relacionadas ao papel de DevOps. A partir de um acesso rápido a informações através do bot no Telegram e possibilidade de realização de algumas tarefas através dele, diminui-se o esforço e tempo necessários para manter o projeto em organizado e em funcionamento.
+ A Ada tem como objetivo facilitar e promover a integração entre equipes multidisciplinares e a transformação full-stack no contexto de organizações com projetos de desenvolvimento de software. A partir de um acesso rápido a informações através do bot no Telegram e possibilidade de realização de algumas tarefas através dele, diminui-se o esforço e tempo necessários para manter o projeto em organizado, alinhado e em funcionamento.
 
- Para verificar o alcance dos objetivos, pode-se medir a melhoria no tempo de resposta a acontecimentos como quebra de integração contínua e no tempo para recolocação do serviço no ar. Além disso, pode-se medir a satisfação do usuário do sistema através de modelos amplamente utilizados na indústria como D&amp;M (DeLone &amp; McLean, 2003) ou TAM (Davis, 1989).
+ Para verificar o alcance dos objetivos, pode-se medir a melhoria no tempo de resposta a acontecimentos como quebra de integração contínua e no tempo para recolocação do serviço no ar, ou medir o tempo de ação entre o requerimento de uma atividade e sua realização entre equipes de áreas diferentes. Além disso, pode-se medir a satisfação do usuário da Ada através de modelos amplamente utilizados na indústria como D&amp;M (DeLone &amp; McLean, 2003) ou TAM (Davis, 1989).
 
 ## 5. Requisitos de Alto Nível
 
 - Interação através de linguagem natural para uma melhor usabilidade;
 - Fluxos de conversas objetivos e práticos;
-- Gerenciamento de issues e pull requests
-- Captura de informações sobre a release
+- Gerenciamento de issues
 - Captura de informações sobre integração contínua do repositório
 - Captura de informações sobre deploy contínuo do repositório
 - Gerenciamento do pipeline de produção
@@ -75,7 +79,7 @@ A estimativa será feita para um valor mensal para 10 horas de trabalho semanais
 | --- | --- | --- | --- |
 | Equipe de Desenvolvedor Júnior | 5 | R$ 2.351,00 | R$ 11.755,00 |
 | Equipe de Gerência de Projeto | 4 | R$ 7.351,00 | R$ 29.404,00 |
-| **Total** | **R$ 41,159,00** |
+**Total:**  **R$ 41,159,00**
 
 ### 8.2 Custo de aquisição
 
@@ -139,12 +143,16 @@ Observações:
 
 * Gerentes de Projetos de Software;
 
-* Desenvolvedores de software.
+* Desenvolvedores de software;
+
+* Designers; e,
+
+* Quaisquer outros profissionais envolvidos na produção de um produto de software.
 
 ### 9.3 Clientes
 
   * Organizações que possuem desenvolvimento de software como uma de suas atividades.\*
-  
+
   \* Para o início do projeto, as professoras Carla Silva Rocha Aguiar e Bruna Nayara Moreira Lima agiram como clientes por serem experientes na área em questão e, dessa forma, auxiliar no processo de elicitação de requisitos.
 
 ## 10. Requisitos para Aprovação

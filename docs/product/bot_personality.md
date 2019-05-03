@@ -1,4 +1,4 @@
-# Personalidade da Bot
+# Personalidade da Ada
 
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
@@ -10,7 +10,7 @@
 | 29/03/2019 | 1.0 | Construção do tópico 1.5 - Descrição da Personalidade e Revisão do Documento| João Pedro Guedes e Lucas Fellipe |
 
 
-## 1. Personalidade da Ada
+## 1. Personalidade da chatbot Ada
 
 
 ### 1.1 Ferramentas utilizadas para a escolha da personalidade
