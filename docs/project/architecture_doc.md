@@ -51,12 +51,60 @@
 
 O software ADA funciona com base na seguinte representação arquitetural: 
 
-![arquitetura](../assets/img/project/architecture/Arquitetura_1.0.png)
+![arquitetura](../assets/img/project/architecture/Arquitetura_nova.png)
 
-<p style="text-align:justify">&emsp;&emsp;No centro do diagrama acima encontra-se a ADA. Ela é responsável por, via Rasa, interpretar diferentes mensagens e gerar respostas, as quais são passadas ao usuário via Telegram, assim estabelecendo uma comunicação ativa, rápida, simples e eficiente. A arquitetura utilizada será o m </p>
+Imagem 1 - Representação Arquitetural
+
+<p style="text-align:justify">&emsp;&emsp; O projeto é modelado em arquitetura de microsserviços, que visa implementar pequenos serviços independetes e modularizados. Cada serviço tem uma funcionalidade única e está hospedado em seu próprio repositório, o que deixa ainda mais acentuada a utilização do microsserviço. Além disso, cada serviço possuí seu próprio ambiente de padronização, integração contínua e tecnologias. Os serviços utilizados no projeto são totalizados em 3, sendo eles: </p>
+
+* Ada
+* ADA - Conexão com GitHub
+* ADA - Conexão com GitLab
+
+<p style="text-align:justify">&emsp;&emsp; Nota-se que a Conexão com a Amazon não é um microsserviço, pois é necessario apenas uma requisição para a API externa da Amazon, para pegar dados do deploy da aplicação do usuário.</p> 
+
+<p style="text-align:justify">&emsp;&emsp; No centro do diagrama acima encontra-se a ADA. Ela é responsável por, via Rasa, interpretar diferentes mensagens e gerar respostas, as quais são passadas ao usuário via Telegram, assim estabelecendo uma comunicação ativa, rápida, simples e eficiente. O Rasa é dividido em duas partes de extrema importante o Rasa Nlu e o Rasa Core. O Rasa Nlu é responsável pelo processamento de linguagem natural, já o Rasa Core encarregado do machine learning, no qual é possível treinar as conversar do bot.</p> 
+
+Encontra-se a escolha do pipeline do Nlu para o projeto:
+
+* [Nlu](/docs/project/machine_learning_pipeline.md) 
+
+<p style="text-align:justify">&emsp;&emsp; Como dito anteriormente, os serviços possuem funcionalidades específicas. No qual cada serviço possuí sua própria API interna, mas além delas ainda é necessário utilizar API's externas, sendo elas:</p>
+
+<b> Serviços internos: </b>
+
+* Ada;
+* Conexão com Github;
+* Conexão com Gitlab;
+
+<b> Serviços externos: </b>
+
+* API do Telegram;
+* API do Github;
+* API do Gitlab;
+* API da Amazon;
+
+<p style="text-align:justify">&emsp;&emsp; É importante ressaltar que os usuários que utilizarão a Ada deverão ter necessariamente as tecnologias que definimos previamente, Github, Gitlab e Amazon. Como plano básico, previsto no modelo de negócios.</p>
+
+Para mais informação consulte o modelo de negócios:
+
+[Modelo de Negócios](/docs/product/canvas.md)
 
 ### 2.2 Representação dos Microserviços
 
+#### 2.2.1 ADA
+
+A ADA é o serviço responsável pela comunicação entre o usuário e o chatbot, através do Rasa. Ele reconhece as intenções que usuário deseja, as trata e retorna com uma resposta adequada para o mesmo. É aqui o onde as "conversas" são treinadas pelo Rasa e para que possa compreender e responder o interessado de uma forma mais natural.
+
+#### 2.2.2 ADA - Conexão com GitHub
+
+O microsserviço da conexão com Github é responsável por monitorar e gerenciar issues, commits e pull requests que são informações a respeito do versionamento e gerenciamento do projeto do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Github através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é possivel também fazer agendamentos de relatórios usando o Cronjob, que é um script no qual está sempre rodando, ele executa tarefas de forma automatica em determinados intervalos, na ADA ele será responsável por enviar os relatórios agendados pelo usuário.
+
+#### 2.2.3 ADA - Conexão com GitLab
+
+O microsserviço Conexão com GitLab é responsável por monitorar e gerenciar pipelines, jobs e builds que são informações a respeito da integração contínua do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Gitlab através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é possivel também fazer agendamentos de relatórios usando o Cronjob, como visto anteriormente no tópico acima. Ainda é possível visualizar a modelagem feita no banco de dados desse microsserviço, logo abaixo.
+
+![arquitetura](../assets/img/project/architecture/data_modeling/ModelagemdeDados.jpg)
 
 
 ### 2.3 Tecnologias
@@ -95,11 +143,17 @@ O software ADA funciona com base na seguinte representação arquitetural:
 
 <p style="text-align:justify">&emsp;&emsp;Essa arquitetura será utilizada para a construção da API, que vai ser um dos pontos principais do nosso projeto. Através das APIs, os aplicativos podem se comunicar uns com os outros sem conhecimento ou intervenção dos usuários. Elas funcionam através da comunicação de diversos códigos, definindo comportamentos específicos de determinado objeto em uma interface. </p>
 
-#### Microserviços
+#### Microsserviços
 
 <p style="text-align:justify">&emsp;&emsp;O estilo de arquitetura de microsserviços é uma abordagem que desenvolve um aplicativo único como uma suíte de pequenos serviços, cada um executando seu próprio processo e se comunicando através de mecanismos leves, muitas vezes em uma API com recursos HTTP. </p>
 
 <p style="text-align:justify">&emsp;&emsp;No projeto ADA, essa arquitetura é utilizada com o intuito de modularizar todo o software, fazendo com que cada elemento da funcionalidade funcione em serviços diferentes, isso faz com que tanto o deploy como a manutenção do bot sejam mais fáceis e eficientes. </p>
+
+#### MongoDB
+
+<p style="text-align:justify">&emsp;&emsp; A tecnologia MongoDB é um banco de dados open-source orientado a documentos. Classificado como NoSQL, a tecnologia utiliza documentos com padrão JSON.</p>
+
+<p style="text-align:justify">&emsp;&emsp; Esta tecnologia se comunicará com o projeto de maneira que receberá os dados fornecidos pelas conversas e interações realizadas no ChatBot e as armazenará em um banco de dados, para posteriormente serem usadas na criação de relatórios da utilização do ChatBot.</p>
 
 ## 3. Metas e restrições da arquitetura
 
@@ -121,3 +175,23 @@ As restrições de arquitetura são:
 - Controle de apenas 1 repositório por chat;
 - Compreender significamente o português.
 - Utilização de um banco de dados chamado MongoDB;
+
+## 4 Visão Lógica
+
+### 4.1 Diagrama de Pacotes
+
+![pacote_ada](../assets/img/project/architecture/pack_diagram/Pacote-ada.jpg)
+
+Imagem 01 - Diagrama de pacotes do Microsserviço do Bot ADA.
+
+![pacote_github](../assets/img/project/architecture/pack_diagram/Pacote-ada-github.jpg)
+
+Imagem 02 - Diagrama de pacotes do Microsserviço Conexão com o GitHub.
+
+![pacote_ada_gitlab](../assets/img/project/architecture/pack_diagram/Pacote-ada-gitlab.jpg)
+
+Imagem 03 - Diagrama de pacotes do Microsserviço Conexão com o GitLab.
+
+![pacote_ada_geral](../assets/img/project/architecture/pack_diagram/Pacote-ada-geral.jpg)
+
+Imagem 04 - Diagrama de pacotes geral dos Microsserviços .
