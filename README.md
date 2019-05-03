@@ -24,11 +24,7 @@ Entre em contato conosco em adabotteam@gmail.com para conversar com nosso time e
   [Repositório](https://github.com/fga-eps-mds/2019.1-ADA) e [Guia de Contribuição](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/CONTRIBUTING.md).
   As políticas de [_branches_](/docs/policies/branches.md), [_commits_](/docs/policies/commits.md), [_pull requests_](/docs/policies/pull_request.md) e [_issues_](/docs/policies/issues.md) se encontram [aqui](/docs/policies/policies.md).
     </div>
-    <div class="col-sm" style="margin-top:78px">
-    <center>
-      ![](docs/assets/gifs/prototipo_ada.gif)
-    </center>
-    </div>
+  
   </div>
 <div>
 
