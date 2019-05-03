@@ -1,8 +1,6 @@
 from rasa_core_sdk import Action
 import requests
 import os
-import sys
-
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 
@@ -15,7 +13,6 @@ class ActionSetPipeline(Action):
         return "action_set_pipeline"
 
     def run(self, dispatcher, tracker, domain):
-        is_there_any_build = False
         try:
             tracker_state = tracker.current_state()
             sender_id = tracker_state['sender_id']
@@ -70,9 +67,9 @@ class ActionSetPipeline(Action):
 
             dispatcher.utter_message("Para visualizar seu Pipeline "
                                      "no GitLab, acesse o link {web_url}"
-                                     .format(web_url=job_build[0]['pipeline_url']))
+                                     .format
+                                     (web_url=job_build[0]['pipeline_url']))
 
-            is_there_any_build = True
         except HTTPError:
             dispatcher.utter_message(
                 "Não consegui achar um pipeline no seu repositório, "
