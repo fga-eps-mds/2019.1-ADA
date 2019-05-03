@@ -5,6 +5,8 @@ import json
 import os
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
+import telegram
+
 
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
@@ -13,7 +15,7 @@ GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")
 
 class ActionSetRepositorie(Action):
     def name(self):
-        return "action_set_repositorie" 
+        return "action_set_repositorie"
 
     def run(self, dispatcher, tracker, domain):
         try:
@@ -24,29 +26,35 @@ class ActionSetRepositorie(Action):
             headers = {"Content-Type": "application/json"}
             message_list = message.split('/')
             repo_name = message_list[-1]
-            # bot = telegram.Bot(token=ACCESS_TOKEN)
+            bot = telegram.Bot(token=ACCESS_TOKEN)
             glab_webhook_url = self.save_repo_to_db(headers, repo_name,
                                                     message, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
                             "o repositório {rep}.".format(rep=repo_name)
-            # bot_message = bot.send_message(chat_id=sender_id,
-            #                  text=selected_repo)
-            # bot.editMessageReplyMarkup(chat_id=sender_id,
-            #                            message_id =
-            #                            bot_message.message_id - 1,
-            #                            reply_markup=[])
+            bot_message = bot.send_message(chat_id=sender_id,
+                                           text=selected_repo)
+            bot.editMessageReplyMarkup(chat_id=sender_id,
+                                       message_id=bot_message.message_id - 1,
+                                       reply_markup=[])
             set_webhook_msg = "Para receber notificações sobre "\
-                              "resultados do pipeline "\
-                              "adicione esse link {} "\
-                              "nas configurações de integração do "\
-                              "seu repositório, que ficam aqui "\
-                              "{}. Após selecione a opção "\
-                              "de pipeline events para eu enviar "\
-                              "notificação sobre os seus pipelines"\
-                              .format(glab_webhook_url["gitlab_webhook_url"],
-                                      glab_webhook_url["webhook_url"])
-            dispatcher.utter_message(selected_repo)
+                              "resultados do pipeline, "\
+                              "entra nesse link aqui {}, "\
+                              "por favor!".format(
+                                glab_webhook_url["webhook_url"])
+            gitlab_msg = "Depois copia esse link {} e cola no campo URL "\
+                         "dessa página que eu te mandei. Agora, você "\
+                         "tem que selecionar a opção Pipeline Events "\
+                         "e clicar em Add Webhook. "\
+                         "Prontinho, feito isso eu vou conseguir "\
+                         "te mandar notificações "\
+                         "sempre que um pipeline seu acontecer! 😊"\
+                         .format(glab_webhook_url["gitlab_webhook_url"])
+            explanation_msg = "Vou mandar uma imagem pra "\
+                              "ficar mais fácil de entender, ok?"
             dispatcher.utter_message(set_webhook_msg)
+            dispatcher.utter_message(gitlab_msg)
+            dispatcher.utter_message(explanation_msg)
+            dispatcher.utter_message("https://imgur.com/fxjQ6XP.jpg")
 
             return [SlotSet('repositorio', repo_name)]
         except ValueError:

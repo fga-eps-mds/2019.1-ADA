@@ -1,12 +1,10 @@
 from rasa_core_sdk import Action
-import json
 import requests
 import os
-import sys
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
-
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
+
 
 class Report(Action):
     def name(self):
@@ -22,42 +20,96 @@ class Report(Action):
                                     .format(chat_id=chat_id), headers=headers)
             report_project = response.json()
             # print(report_project, file=sys.stderr)
-            dispatcher.utter_message("Primeiramente, o seu projeto se chama {project_name}".format(project_name=report_project[0]["project"]["name"])\
-                                     + " e se encontra disponível nesse site {web_url}".format(web_url=report_project[0]["project"]["web_url"]))
+            project = report_project[0]["project"]
+            dispatcher.utter_message("Primeiramente, o seu projeto "
+                                     "se chama {project_name}"
+                                     " e se encontra disponível "
+                                     "nesse site {web_url}"
+                                     .format(project_name=project["name"],
+                                             web_url=project["web_url"]))
 
             text_message = "As branches do seu repositório são as seguintes:\n"
             for item in report_project:
                 for value in item["branches"]["name"]:
                     text_message += "▪️ {names}\n".format(names=value)
             dispatcher.utter_message(text_message)
+            commits = report_project[0]["commits"]["last_commit"]
+            dispatcher.utter_message("O último commit foi feito por"
+                                     "{author_name}"
+                                     "no dia {author_date} com o título"
+                                     "{title}.".format(
+                                         author_name=commits["author_name"],
+                                         author_date=commits["authored_date"],
+                                         title=commits["title"]))
 
-            dispatcher.utter_message("O último commit foi feito por {author_name} no dia {authored_date} com o título {title}.".format(author_name=report_project[0]["commits"]["last_commit"]["author_name"], authored_date=report_project[0]["commits"]["last_commit"]["authored_date"],title=report_project[0]["commits"]["last_commit"]["title"]))
+            pipeline = report_project[0]["pipelines"]
+            dispatcher.utter_message("O atual pipeline possui id "
+                                     "{pipeline_id}"
+                                     "e nome {pipeline_name}"
+                                     .format(
+                                             pipeline_id=(
+                                              pipeline["current_pipeline_id"]),
+                                             pipeline_name=(
+                                              pipeline["current_pipeline_name"]
+                                              )))
 
-            dispatcher.utter_message("O atual pipeline possui id {current_pipeline_id} e nome {current_pipeline_name}".format(current_pipeline_id=report_project[0]["pipelines"]["current_pipeline_id"], current_pipeline_name=report_project[0]["pipelines"]["current_pipeline_name"]))
+            dispatcher.utter_message("Sobre o projeto como um todo:\n📌 "
+                                     "Número total de pipelines: {total}\n"
+                                     "☑️ {success} obtiveram sucesso\n"
+                                     "❗️ {fail} falharam\n"
+                                     "☑️ A porcentagem de sucesso foi:"
+                                     "{perc_suc}\n❗️ E a porcentagem de falhas"
+                                     "foi: {perc_fail}\n".format(
+                                            total=(
+                                             pipeline["number_of_pipelines"]),
+                                            success=(
+                                             pipeline["succeded_pipelines"]),
+                                            fail=pipeline["failed_pipelines"],
+                                            perc_suc=(
+                                             pipeline["percent_succeded"]),
+                                            perc_fail=100-(
+                                                pipeline["percent_succeded"])))
 
-            dispatcher.utter_message("Sobre o projeto como um todo:\n📌 Número total de pipelines: {total}\n".format(total=report_project[0]["pipelines"]["number_of_pipelines"]) \
-                                     + "☑️ {succes} obtiveram sucesso\n❗️ {fail} falharam\n".format(succes=report_project[0]["pipelines"]["succeded_pipelines"],
-                                                                 fail=report_project[0]["pipelines"]["failed_pipelines"])\
-                                      + "☑️ A porcentagem de sucesso foi: {perc_suc}\n❗️ E a porcentagem de falhas ".format(perc_suc=report_project[0]["pipelines"]["percent_succeded"])\
-                                      + "foi: {perc_fail}\n".format(perc_fail=100-report_project[0]["pipelines"]["percent_succeded"]))
+            last_7 = pipeline["recents_pipelines"]["last_7_days"]
+            last_30 = pipeline["recents_pipelines"]["last_30_days"]
+            dispatcher.utter_message("Sobre os últimos 7 dias:\n⚒ "
+                                     "Número total de pipelines: {total}\n"
+                                     "☑️ {success} obtiveram sucesso\n"
+                                     "❗️ {fail} falharam\n"
+                                     "☑️ A porcentagem de sucesso foi:"
+                                     "{perc_suc}\n❗️ E a porcentagem de falhas"
+                                     "foi: {perc_fail}\n".format(
+                                            total=(
+                                             last_7["number_of_pipelines"]),
+                                            success=(
+                                             last_7["succeded_pipelines"]),
+                                            fail=last_7["failed_pipelines"],
+                                            perc_suc=(
+                                             last_7["percent_succeded"]),
+                                            perc_fail=100-(
+                                                last_7["percent_succeded"])))
 
-
-            last_7 = report_project[0]["pipelines"]["recents_pipelines"]["last_7_days"]
-            last_30 = report_project[0]["pipelines"]["recents_pipelines"]["last_30_days"]
-            dispatcher.utter_message("Sobre os últimos 7 dias:\n⚒ Número total de pipelines: {total}\n".format(total=last_7["number_of_pipelines"]) \
-                                     + "☑️ {succes} obtiveram sucesso\n❗️ {fail} falharam\n".format(succes=last_7["succeded_pipelines"],
-                                                                 fail=last_7["failed_pipelines"])\
-                                      + "☑️ A porcentagem de sucesso foi: {perc_suc}\n❗️ E a porcentagem de falhas ".format(  perc_suc=last_7["percent_succeded"])\
-                                      + "foi: {perc_fail}\n".format(perc_fail=last_7["percent_failed"]))
-            dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ Número total de pipelines: {total}\n".format(total=last_30["number_of_pipelines"]) \
-                                     + "☑️ {succes} obtiveram sucesso\n❗️ {fail} falharam\n".format(succes=last_30["succeded_pipelines"],
-                                                                 fail=last_30["failed_pipelines"])\
-                                      + "☑️ A porcentagem de sucesso foi: {perc_suc}\n❗️ E a porcentagem de falhas ".format(  perc_suc=last_30["percent_succeded"])\
-                                      + "foi: {perc_fail}\n".format(perc_fail=last_30["percent_failed"]))
+            dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ "
+                                     "Número total de pipelines: {total}\n"
+                                     "☑️ {success} obtiveram sucesso\n"
+                                     "❗️ {fail} falharam\n"
+                                     "☑️ A porcentagem de sucesso foi:"
+                                     "{perc_suc}\n❗️ E a porcentagem de falhas"
+                                     "foi: {perc_fail}\n".format(
+                                            total=(
+                                             last_30["number_of_pipelines"]),
+                                            success=(
+                                             last_30["succeded_pipelines"]),
+                                            fail=last_30["failed_pipelines"],
+                                            perc_suc=(
+                                             last_30["percent_succeded"]),
+                                            perc_fail=100-(
+                                                last_30["percent_succeded"])))
             return []
         except HTTPError:
             dispatcher.utter_message(
-                "Não estou conseguindo ter acesso a seus dados, tem certeza que seus dados estão certos?")
+                "Não estou conseguindo ter acesso a seus dados, tem certeza"
+                "que seus dados estão certos?")
         except ValueError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
@@ -66,4 +118,3 @@ class Report(Action):
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
                 "mais uma mensagem pra ver se dessa vez dá certo.")
-
