@@ -1,2 +1,2 @@
 action_endpoint:
-  url: ${ACTIONS_URL}
+  url: http://actions:5055/webhook

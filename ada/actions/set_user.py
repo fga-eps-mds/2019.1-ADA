@@ -33,12 +33,12 @@ class ActionSetUser(Action):
             headers = {"Content-Type": "application/json"}
             repo_names = self.build_buttons(project_owner, headers)
             reply_markup = telegram.InlineKeyboardMarkup(repo_names)
+            self.save_user_to_db(headers, project_owner, sender_id)
             bot.send_message(chat_id=sender_id,
                              text="Encontrei esses repositórios na sua "
                                   "conta. Qual você quer que eu "
                                   "monitore? Clica nele!",
                              reply_markup=reply_markup)
-            self.save_user_to_db(headers, project_owner, sender_id)
             return [SlotSet('usuario', project_owner)]
         except KeyError:
             dispatcher.utter_message(

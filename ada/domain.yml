@@ -22,7 +22,7 @@ intents:
   - affirm
   - deny
   - intended_for_next_release
-  - utter_whats_pipeline
+  - whats_pipeline
   - action_set_user
   - action_set_repositorie
   - set_pipeline
