@@ -41,7 +41,6 @@
 - [iae](oi)
 - fala ai
 - fala aí
-- de boa
 - [ADA](oi)
 - [ada](oi)
 - [Ada](oi)
@@ -68,20 +67,26 @@
 - oi miga
 
 ## intent:how_are_you
-- tudo [bem](ok)?
-- Tudo [bem](ok)?
-- vc esta [bem](ok)?
-- [como vc esta](ok)?
-- tudo [ok](ok)?
-- voce ta [bem](ok)?
+- [td bem ?](how)
+- tudo [bem?](ok)
+- Tudo [bem ?](ok)
+- vc [esta bem ?](ok)
+- [como vc esta ?](ok)
+- tudo [ok ?](ok)
+- voce ta [bem](how)?
 - você está [bem](ok)?
-- [Como você está](ok)?
-- [como vc tá](ok)?
+- [Como você está ?](ok)
+- [como vc tá](how)?
 - [tá tudo certo](ok)?
 - você tá [bem](ok)?
 - Você está [bem](ok)?
 - está [bem](ok), ada?
-- Ada, você está [bem](ok)?
+- [Ada, você está bem ?](ok)
+- como vc ta ada ?
+- como você está ?
+- [tudo bem](how) com tu ?
+- vc vai bem ?
+- [eai ada de boa](how) ?
 
 ## intent:greet_reply
 - [estou bem](good)
@@ -98,6 +103,13 @@
 - [estou muito bem](good)
 - tô ok
 - sim
+- to de boa
+- to bem
+- tranquilo como grilo
+- suave na nave
+- de boa na lagoa
+- to bem massa
+- so nao estou melhor que você !
 
 ## intent:goodbye
 - tchau
@@ -133,6 +145,8 @@
 - Ok
 - Okay
 - beleza
+- blz
+- bele bele
 - tranquilo
 - top
 - topper
@@ -145,11 +159,16 @@
 - sim, ada
 - sim adinha
 - sim ada
-- de boa
 - sim sim
 - Sim Sim
 - Claro
 - óbvio
+- pode, ada
+- uhuuumm
+- uhum
+- ahaaammm
+- yes
+- sim, vamos lá
 
 ## intent:deny
 - não
@@ -189,6 +208,8 @@
 - obrigado
 - brigado
 - brigada
+- nossa, valeu mesmo !
+- brigado pela ajuda, Ada
 
 ## intent:who_is_ada
 - quem e ada
@@ -225,3 +246,6 @@
  - Oq e pipeline?
  - oq e pipeline
  - oq é pipeline?
+ - pipeline é o que ?
+ - o que significa pipeline ?
+ - qual o significado de: pipeline ?
