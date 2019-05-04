@@ -20,7 +20,7 @@
 
 ## path_greet_reply
 * greet_reply
-  - utter_greet_reply
+  - utter_greet
 
 ## path_goodbye
 * goodbye
@@ -74,7 +74,14 @@
 ## path_how_are_you
 * how_are_you
   - utter_how_are_you
-  - utter_affirm
+
+## path_user_affirms_something
+* affirm
+   - utter_affirm  
+
+## path_marry_or_date
+* marry_or_date
+   - utter_marry_or_date
 
 ## path_sad
 * sad
@@ -101,7 +108,7 @@
 * set_pipeline
   - utter_set_pipeline
   - action_set_pipeline
-  
+
 ## path_next_release
 * intended_for_next_release
   - utter_intended_for_next_release
