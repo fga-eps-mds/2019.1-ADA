@@ -149,3 +149,25 @@
 - aceita me namorar ?
 - me aceita como seu namorado ?
 - me aceita de namorada ?
+
+## intent:adas_architecture
+- qual a sua arquitetura ?
+- me fala [sua arquitetura atual ?](adas_architecture)
+- [sua arquitetura](adas_architecture)
+- quais as tecnologias que você usa ?
+- que tecnologias a Ada usa ?
+- vc trabalha com quais tecnologias ?
+- como funciona sua arquitetura ?
+- sua arquitetura é grande ?
+- como vc foi arquitetada ?
+- como que vc funciona ?
+- sua arquitetura é dificil ?
+- sua arquitetura é complicada ?
+- me mostra sua arquitetura
+- mostra ae as tecnologia que tu usa
+- vc usa git ?
+- voce trabalha com github ?
+- [suas tecnologias](adas_architecture)
+- suas tecnologias são quais ?
+- [arquitetura da Ada](adas_architecture)
+- [tecnologias da ADA](adas_architecture)
