@@ -20,7 +20,7 @@
 
 ## path_greet_reply
 * greet_reply
-  - utter_greet
+  - utter_greet_reply
 
 ## path_goodbye
 * goodbye
@@ -116,3 +116,7 @@
 ## path_whats_pipeline
 * whats_pipeline
   - utter_whats_pipeline
+
+## path_adas_architecture
+* adas_architecture
+  - utter_adas_architecture
