@@ -51,6 +51,7 @@ entities:
   - repositorio
   - marry_or_date
   - adas_architecture
+  - affirm
 
 slots:
   repositorio:
@@ -383,4 +384,4 @@ templates:
       o Rasa, para me ajudar a te entender certinho; a API do GitHub, para controlar suas atividades relacionadas
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto !
-      Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.  
+      Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.

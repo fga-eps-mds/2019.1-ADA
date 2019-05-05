@@ -133,42 +133,49 @@
 - beijos
 
 ## intent:affirm
-- sim
+- [sim](affirm)
 - Sim
-- positivo
+- [positivo](affirm)
 - Positivo
 - quero sim
-- claro
+- [claro](affirm)
 - claro que sim
-- ok
+- [ok](affirm)
 - okay
 - Ok
 - Okay
-- beleza
+- [beleza](affirm)
 - blz
-- bele bele
+- [bele](affirm) bele
 - tranquilo
 - top
 - topper
-- Sim, com certeza
+- Sim, [com certeza](affirm)
 - Sim, amiga
 - Sim, miga
 - Sim miga
 - sim miga
-- sim, amiga
+- [sim, amiga](affirm)
 - sim, ada
 - sim adinha
 - sim ada
 - sim sim
 - Sim Sim
-- Claro
+- [Claro](affirm)
 - óbvio
 - pode, ada
-- uhuuumm
+- [uhuuumm](affirm)
 - uhum
-- ahaaammm
+- [ahaaammm](affirm)
 - yes
 - sim, vamos lá
+- [prontinho](affirm) !
+- pronto.
+- feito
+- done
+- acertei haha
+- já fiz isso
+- [afirmativo](affirm)
 
 ## intent:deny
 - não
