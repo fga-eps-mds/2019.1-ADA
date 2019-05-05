@@ -28,6 +28,7 @@ intents:
   - action_get_report
   - set_pipeline
   - marry_or_date
+  - adas_architecture
 
 entities:
   - command
@@ -49,6 +50,7 @@ entities:
   - usuario
   - repositorio
   - marry_or_date
+  - adas_architecture
 
 slots:
   repositorio:
@@ -90,6 +92,7 @@ actions:
   - action_set_pipeline
   - utter_start_report
   - utter_marry_or_date
+  - utter_adas_architecture
 templates:
 
   utter_default:
@@ -369,3 +372,15 @@ templates:
   - text: |
       Hummm ... é melhor pensarmos melhor sobre isso.
       Talvez não seja prudente namorarmos.
+  utter_adas_architecture:
+  - text: |
+      Nossa, deixa eu te explicar porque é um pouco complicado rsrsrs
+
+      Eu sou muito inteligente e objetiva, primeiramente, e é por isso que eu sei onde buscar as informações
+      para passar para você.
+
+      Com relação ao que eu faço para vc, eu uso 6 tecnologias para me ajudar: o Telegram, para falar com vc;
+      o Rasa, para me ajudar a te entender certinho; a API do GitHub, para controlar suas atividades relacionadas
+      a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
+      e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto !
+      Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.  
