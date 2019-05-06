@@ -14,6 +14,17 @@
 - me [ajuda](help), por favor
 - ei, me [ajuda](help)
 - ada, me [ajuda](help)
+- o que [você faz ?](help)
+- quais são [as coisas que voce faz](help) ?
+- que que vc faz ?
+- [o que vc consegue fazer](help)
+- [cosegue fazer o q ?](help)
+- tu consegue [fzr o q](help)
+- como vc pode me ajudar ?
+- vc [me ajuda como ?](help)  
+- como podes me ajudar ?
+- vc [me ajuda ?](help)
+- [me ajuda por favor ?](help)
 
 ## intent:begin
 - [vamos](begin)
