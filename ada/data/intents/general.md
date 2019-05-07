@@ -25,15 +25,38 @@
 - como podes me ajudar ?
 - vc [me ajuda ?](help)
 - [me ajuda por favor ?](help)
+- quais [os seus serviços](help) ?
+- me fala seus [servicos](help)
+- quero saber sobre seus serviços
+- o que vc consegue fazer ?
+- qual [servico](help) vc tem ?
+- os seus servicos sao quais ?
+- vc tem muitos serviços ?
+- vc pode me ajudar ?
+- ayuda
+- [socorro](help) ada
+- to entendendo nada
+- nao entendi [o que vc faz](help)
+- nao to te entendendo, Ada
 
 ## intent:begin
 - [vamos](begin)
-- sim
+- começa
 - [vamos](begin) lá
-- vamos
+- vamos comecar
 - ok
-- podemos começar
+- podemos [começar](begin)
 - vamos, ada
+- bora bora
+- br [br](begin)
+- go [go](begin)
+- vamo nessa Ada
+- bora [bora](begin)
+- bora aeeee
+- bora aiiii
+- vamos logo
+- [commom](begin) ada
+- [lets go](begin)
 
 ## intent:greet
 - oi
