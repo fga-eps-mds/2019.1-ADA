@@ -132,6 +132,19 @@ templates:
 
       Basta você me pedir.
 
+  - text: |
+      Eu vou te ajudar a gerenciar a pipeline da produção do seu serviço/software.
+
+      Vc pode falar comigo sobre vários aspectos...como :
+        - Criar e comentar Issues (Previsto para a R2);
+        - Relatório sobre seu projeto do GitLab;
+        - Commit's (Previsto para a R2);
+        - Andamendo das builds dos seus projetos do GitLab;
+        - Comentar Pull Request's (Previsto para a R2);
+        - Resultado dos pipelines;
+
+      O que vc precisar saber, é só me perguntar ❤️
+
   utter_begin:
   - text: |
       Então vamos lá, me pergunte o que você quer saber sobre seus repositórios ou converse comigo, sei de muitas coisas!
