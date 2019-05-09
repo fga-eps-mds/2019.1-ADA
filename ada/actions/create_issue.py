@@ -8,6 +8,7 @@ from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 import sys
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
+GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
 
 
 class ActionCreateIssue(Action):
@@ -24,8 +25,11 @@ class ActionCreateIssue(Action):
             message = message.split(": ")
             issue_body = message[1]      
             title = tracker.get_slot("issue_name")
-            dic = {"title": title, "body": issue_body}
-
+            data = {"title": title, "body": issue_body}
+            url = GITHUB_SERVICE_URL + "api/new_issue/apitest"
+            response = requests.post(url=url, data=json.dumps(data),
+                                     headers=headers)
+            print(response, file=sys.stderr)
         except ValueError:
             print("Deu erro", file=sys.stderr)
         else:
