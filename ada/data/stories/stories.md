@@ -109,3 +109,12 @@
 ## path_whats_pipeline
 * whats_pipeline
   - utter_whats_pipeline
+
+## path_create_issue
+* start_create_issue
+   - utter_start_issue
+* issue_name
+  - utter_issue_name
+  - action_issue_name
+* create_issue
+  - action_create_issue

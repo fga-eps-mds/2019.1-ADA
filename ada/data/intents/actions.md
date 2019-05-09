@@ -73,8 +73,6 @@
 
 
 ## intent:action_set_repositorie
-- o nome do repositório [gitlab-runner](repositorio)
-- o nome do repositório [quests](repositorio)
 - meu repositório é [abcde12345](repositorio)
 - meu repositório é [owner/repo](repositorio)
 - meu repositório é [adabot/ada](repositorio)
@@ -82,14 +80,7 @@
 - meu repositório é [gitlab-org/gitlab-runner](repositorio)
 - meu repositório é [terrakok/gitlab-client](repositorio)
 - meu repositório é [gitlab-org/gitaly](repositorio)
-- repositorio é [trabalho1](repositorio)
-- repositório: [2019.1-MDS](repositorio)
-- [esseaqui](repositorio)
-- [abc123](repositorio)
-- [vitor_123](repositorio)
-- [caio.c12](repositorio)
-- [SUD](repositorio)
-- [gui.a.](repositorio)
+
 
 ## intent:action_get_report
 - me manda o relatório do projeto
@@ -103,3 +94,22 @@
 - me mostra o relatório, ada
 - me mostra o relatorio, ada
 - relatório
+
+## intent:start_create_issue
+- quero criar uma nova issue
+- cria uma nova issue
+- pode criar uma issue nova
+- cria uma issue
+- tem como criar uma issue pra mim
+
+## intent:issue_name
+- titulo: [abc](issue_name)
+- titulo: [2019a](issue_name)
+- titulo: [US26-Ada](issue_name)
+- titulo: [Eu como Usuário](issue_name)
+- título: [#135 ABC](issue_name)
+
+## intent:create_issue
+ - descrição: [Quero criar um banco capaz de guardar informações](issue_body)
+ - descrição: [Task: 1, 2, 3](issue_body)
+ - descrição: [Criterios de aceitação](issue_body)

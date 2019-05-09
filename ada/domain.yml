@@ -27,6 +27,10 @@ intents:
   - action_set_repositorie
   - action_get_report
   - set_pipeline
+  - start_create_issue
+  - create_issue
+  - issue_name
+  - issue_body
 
 entities:
   - command
@@ -47,13 +51,20 @@ entities:
   - help
   - usuario
   - repositorio
+  - issue_name
+  - issue_body
+
 
 slots:
   repositorio:
     type: text
   usuario:
     type: text
-
+  issue_name:
+    type: text
+  issue_body:
+    type: text
+  
 actions:
   - utter_defalut
   - utter_start
@@ -87,6 +98,11 @@ actions:
   - utter_set_pipeline
   - action_set_pipeline
   - utter_start_report
+  
+  - utter_start_issue
+  - action_issue_name
+  - utter_issue_name
+  - action_create_issue
 templates:
 
   utter_default:
@@ -206,7 +222,7 @@ templates:
   - text: |
       Ahhh, que isso, estou aqui para te ajudar mesmo!
 
-      Foi um prazer te ajudar, qualquer coisa é só mandar um oizinho!
+      Foi um prazer te ajuda, qualquer coisa é só mandar um oizinho!
 
   - text: |
       Eu que agradeço, sem você eu não seria nada. Conta comigo para qualquer coisa!
@@ -337,4 +353,11 @@ templates:
   utter_start_report:
   - text: |
       Aguarde um momento, vou gerar o relatório para você.
-    
+  
+  utter_start_issue:
+  - text: |
+      Para criar uma nova Issue preciso que primeiro me mande qual o titulo da Issue que você vai criar, tente fazer algo nesse estilo: "Título: O Título É Esse" 
+  
+  utter_issue_name:
+  - text: |
+      Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo do tipo: "Descrição: Essa é a descrição"
