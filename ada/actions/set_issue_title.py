@@ -1,11 +1,6 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 import os
-import requests
-import telegram
-import json
-from urllib3.exceptions import NewConnectionError
-from requests.exceptions import HTTPError
 import sys
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
