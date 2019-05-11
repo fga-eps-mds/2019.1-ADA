@@ -15,18 +15,24 @@ class ActionCreateIssue(Action):
     def run(self, dispatcher, tracker, domain):
         try:
             headers = {'Content-Type': 'application/json'}
-            # tracker_state = tracker.current_state()
-            # chat_id = tracker_state["sender_id"]
+            tracker_state = tracker.current_state()
+            chat_id = tracker_state["sender_id"]
 
             message = tracker.latest_message.get('text')
             message = message.split(": ")
             issue_body = message[1]
             title = tracker.get_slot("issue_name")
             data = {"title": title, "body": issue_body}
-            url = GITHUB_SERVICE_URL + "api/new_issue/apitest"
+            url = GITHUB_SERVICE_URL + "api/new_issue/{chat_id}".format(
+                    chat_id=chat_id)
             response = requests.post(url=url, data=json.dumps(data),
                                      headers=headers)
-            print(response, file=sys.stderr)
+            received_repositories = response.json()
+            dispatcher.utter_message("Criei sua issue aqui, para acessar"
+                                     " clique nesse link: {link}".format(
+                                         link=str(
+                                             received_repositories['html_url'])
+                                     ))
         except ValueError:
             print("Deu erro", file=sys.stderr)
         else:

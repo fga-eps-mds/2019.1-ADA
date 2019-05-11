@@ -356,8 +356,8 @@ templates:
   
   utter_start_issue:
   - text: |
-      Para criar uma nova Issue preciso que primeiro me mande qual o titulo da Issue que você vai criar, tente fazer algo nesse estilo: "Título: O Título É Esse" 
+      Vamos lá, para criar uma nova Issue preciso que primeiro me mande qual o titulo da Issue que você vai criar, tente fazer algo nesse estilo: "Título: O Título É Esse" 
   
   utter_issue_name:
   - text: |
-      Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo do tipo: "Descrição: Essa é a descrição"
+      Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo como: "Descrição: Essa é a descrição"
