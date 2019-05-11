@@ -1,15 +1,15 @@
 # Planejamento Sprint 6
 
-Nessa sprint foi agregada uma US da sprint anterior como dívida, além de adicinar quatro issues a mais. Durante essa sprint será feita Release 1, portanto, foram planejadas menos tarefas para permitir que o time se prepare a apresentação. 
+Nessa sprint foi agregada uma US da sprint anterior como dívida, além de adicionar quatro issues a mais. Durante essa sprint será feita Release 1, portanto, foram planejadas menos tarefas para permitir que o time se prepare a apresentação. 
 
 As tarefas dessa sprint são relacionadas ao relatório informativo do repositório, criação de issue via ADA, mapeamento do fluxo de conversa e teste em uso.
 
 ## Tamanho da Sprint
 
 * **Início**: 26/04/2019
-* **Término**:03/05/2019
+* **Término**:06/05/2019
 
-* **Duração**: Sete dias
+* **Duração**: 10 dias
 
 ## Responsáveis e Pareamentos
 
