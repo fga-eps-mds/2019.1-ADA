@@ -48,4 +48,6 @@
         - [Resultado Sprint 5](/docs/sprints/sprint5/resultados_sprint5.md)  
     - [**Sprint 6**](#)
         - [Planejamento Sprint 6](/docs/sprints/sprint6/planejamento_sprint6.md)
-        - [Resultado Sprint 6](/docs/sprints/sprint6/resultados_sprint6.md) 
+        - [Resultado Sprint 6](/docs/sprints/sprint6/resultados_sprint6.md)
+    - [**Sprint 7**](#)
+        - [Planejamento Sprint 7](/docs/sprints/sprint7/planejamento_sprint7.md) 
