@@ -103,13 +103,15 @@
 - tem como criar uma issue pra mim
 
 ## intent:issue_name
-- titulo: [abc](issue_name)
-- titulo: [2019a](issue_name)
+- Titulo: [abc](issue_name)
+- Título: [2019a](issue_name)
 - titulo: [US26-Ada](issue_name)
 - titulo: [Eu como Usuário](issue_name)
 - título: [#135 ABC](issue_name)
 
 ## intent:create_issue
- - descrição: [Quero criar um banco capaz de guardar informações](issue_body)
+ - Descrição: [Quero criar um banco capaz de guardar informações](issue_body)
  - descrição: [Task: 1, 2, 3](issue_body)
  - descrição: [Criterios de aceitação](issue_body)
+ - descricao: [Criterios de aceitação](issue_body)
+ - descriçao: [Criterios de aceitação](issue_body)

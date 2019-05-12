@@ -3,7 +3,8 @@ from rasa_core_sdk.events import SlotSet
 import os
 import requests
 import json
-import sys
+from urllib3.exceptions import NewConnectionError
+from requests.exceptions import HTTPError
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
 
@@ -19,8 +20,7 @@ class ActionCreateIssue(Action):
             chat_id = tracker_state["sender_id"]
 
             message = tracker.latest_message.get('text')
-            message = message.split(": ")
-            issue_body = message[1]
+            issue_body = message[10:]
             title = tracker.get_slot("issue_name")
             data = {"title": title, "body": issue_body}
             url = GITHUB_SERVICE_URL + "api/new_issue/{chat_id}".format(
@@ -33,7 +33,17 @@ class ActionCreateIssue(Action):
                                          link=str(
                                              received_repositories['html_url'])
                                      ))
+        except HTTPError:
+            dispatcher.utter_message(
+                "Não consegui achar um pipeline no seu repositório, "
+                "tenta conferir se existe um e tente novamente.")
         except ValueError:
-            print("Deu erro", file=sys.stderr)
+            dispatcher.utter_message(
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
+        except NewConnectionError:
+            dispatcher.utter_message(
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
         else:
             return [SlotSet('issue_body', issue_body)]

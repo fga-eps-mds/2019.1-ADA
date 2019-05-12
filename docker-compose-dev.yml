@@ -20,7 +20,6 @@ services:
     depends_on:
       - actions
       - mongo-telegram
-    command: sh -c "python run-telegram.py"
   actions:
     build:
       context: .
@@ -32,8 +31,8 @@ services:
       - ./adabot/Makefile:/ada/Makefile
     environment:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
-      - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}
       - GITHUB_SERVICE_URL=${GITHUB_SERVICE_URL}
+      - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}
       - GITLAB_WEBHOOK_URL=${GITLAB_WEBHOOK_URL}
     networks:
       - adanetwork
