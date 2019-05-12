@@ -1,4 +1,4 @@
-# Resultados Sprint xx
+# Resultados Sprint 6
 
 Nessa sprint foi agregada uma US da sprint anterior como dívida, além de adicionar mais quatro issues. Durante essa sprint será feita Release 1.
 
