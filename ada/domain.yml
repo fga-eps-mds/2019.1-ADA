@@ -404,4 +404,7 @@ templates:
 
   utter_rerun_pipeline:
   - text: |
-      Ok... espera um pouco para eu ver quais pipelines não obtiveram sucesso no seu projeto
+      Ok... espera um pouco para eu ver quais pipelines existem no seu projeto
+
+  - text: |
+      Beleza ! Só aguarda um pouco, preciso checar as pipelines do seu projeto
