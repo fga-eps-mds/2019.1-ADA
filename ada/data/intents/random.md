@@ -104,6 +104,20 @@
 - estou bem [mal](sad)
 - [depressão](sad)
 - [depressao](sad)
+- to nao
+- [não estou bem](not_good)
+- to muito [bem nao](not_good)
+- [me sinto mal](not_good)
+- [ninguém me completa](not_good)
+- [tô mal](not_good)
+- [estou ruim](not_good)
+- nao estou me sentindo bem
+- tenho dor de cabeça
+- to com dor de barriga
+- meu coração doi
+- [quero morrer](not_good)
+- [sou um lixo](not_good)
+- nao to que nem vc
 
 ## intent:creators
 - quem são os seus [criadores](creators)?
@@ -121,3 +135,42 @@
 - quem sao os seus [criadores](creators)?
 - quem sao os seus [criadores](creators)
 - voce foi feito por quem?
+<<<<<<< HEAD
+=======
+
+## intent:marry_or_date
+- quero [te namorar](marry_or_date)
+- [namora comigo](marry_or_date)
+- [me namora](marry_or_date)
+- [quero vc](marry_or_date) só para mim
+- [casa comigo](marry_or_date), ada
+- [vamos namorar ?](marry_or_date)
+- [vamos nos casar](marry_or_date) ?
+- [casaria cmg ?](marry_or_date)
+- namora comigo ?
+- aceita me namorar ?
+- me aceita como seu namorado ?
+- me aceita de namorada ?
+
+## intent:adas_architecture
+- qual a sua arquitetura ?
+- me fala [sua arquitetura atual ?](adas_architecture)
+- [sua arquitetura](adas_architecture)
+- quais as tecnologias que você usa ?
+- que tecnologias a Ada usa ?
+- vc trabalha com quais tecnologias ?
+- como funciona sua arquitetura ?
+- sua arquitetura é grande ?
+- como vc foi arquitetada ?
+- como que vc funciona ?
+- sua arquitetura é dificil ?
+- sua arquitetura é complicada ?
+- me mostra sua arquitetura
+- mostra ae as tecnologia que tu usa
+- vc usa git ?
+- voce trabalha com github ?
+- [suas tecnologias](adas_architecture)
+- suas tecnologias são quais ?
+- [arquitetura da Ada](adas_architecture)
+- [tecnologias da ADA](adas_architecture)
+>>>>>>> devel
