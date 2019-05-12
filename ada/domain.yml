@@ -29,6 +29,7 @@ intents:
   - set_pipeline
   - marry_or_date
   - adas_architecture
+  - rerun_pipeline
 
 entities:
   - command
@@ -52,6 +53,7 @@ entities:
   - marry_or_date
   - adas_architecture
   - affirm
+  - rerun_pipeline
 
 slots:
   repositorio:
@@ -94,6 +96,7 @@ actions:
   - utter_start_report
   - utter_marry_or_date
   - utter_adas_architecture
+  - utter_rerun_pipeline
 templates:
 
   utter_default:
@@ -398,3 +401,7 @@ templates:
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto !
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
+
+  utter_rerun_pipeline:
+  - text: |
+      Ok... espera um pouco para eu ver quais pipelines não obtiveram sucesso no seu projeto
