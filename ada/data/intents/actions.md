@@ -103,3 +103,6 @@
 - me mostra o relatório, ada
 - me mostra o relatorio, ada
 - relatório
+
+## intent:action_start
+- [/start](command)

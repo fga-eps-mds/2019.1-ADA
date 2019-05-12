@@ -53,10 +53,11 @@ slots:
     type: text
   usuario:
     type: text
+  payload:
+    type: text
 
 actions:
   - utter_defalut
-  - utter_start
   - utter_affirm
   - utter_help
   - utter_begin
@@ -87,6 +88,7 @@ actions:
   - utter_set_pipeline
   - action_set_pipeline
   - utter_start_report
+  - action_start
 templates:
 
   utter_default:
@@ -99,12 +101,6 @@ templates:
       O que você quis dizer? Me explica melhor, por favor.
 
       Se estiver com alguma dúvida, é só me pedir ajuda.
-
-  utter_start:
-  - text: |
-      Oláaaaa, sou a Ada! Sou responsável por ajudar você no monitoramento de produção com seus repositórios. Caso queira saber mais, me peça ajuda.
-
-      Agora, pra gente começar eu vou precisar do seu nome de usuário lá do GitLab. Olha, vou te dar um exemplo! Pro usuário @AdaLovelace eu escreveria "Meu usuário é AdaLovelace".
 
   utter_restart:
   - text: |

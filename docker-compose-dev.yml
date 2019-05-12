@@ -16,7 +16,6 @@ services:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
-      - ACTIONS_URL=${ACTIONS_URL}
     depends_on:
       - actions
       - mongo-telegram
@@ -33,6 +32,7 @@ services:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}
       - GITLAB_WEBHOOK_URL=${GITLAB_WEBHOOK_URL}
+      - GITHUB_SIGNUP_URL=${GITHUB_SIGNUP_URL}
     networks:
       - adanetwork
     command: "make run-actions"

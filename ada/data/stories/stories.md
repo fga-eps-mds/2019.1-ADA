@@ -1,6 +1,6 @@
 ## path_start
 * start{"command": "start"}
-  - utter_start
+  - action_start
 * action_set_user
   - action_set_user
 * action_set_repositorie
