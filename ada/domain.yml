@@ -28,7 +28,7 @@ intents:
   - action_get_report
   - set_pipeline
   - action_start
-  - action_new_integration
+  - action_set_repository_github
 
 entities:
   - command
@@ -49,7 +49,7 @@ entities:
   - help
   - usuario
   - repositorio
-  - user_repository
+  - repository_github
 
 slots:
   repositorio:
@@ -58,8 +58,9 @@ slots:
     type: text
   payload:
     type: text
-  user_repository:
-      type: text
+  repository_github:
+    type: text
+
 actions:
   - utter_defalut
   - utter_affirm
@@ -93,7 +94,7 @@ actions:
   - action_set_pipeline
   - utter_start_report
   - action_start
-  - action_new_integration
+  - action_set_repository_github
 
 templates:
 

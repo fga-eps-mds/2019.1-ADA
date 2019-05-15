@@ -107,11 +107,9 @@
 ## intent:action_start
 - [/start](command)
 
-## intent:action_new_integration
-- meu repositório do github é [caiov](user_repository)
-- meu repositorio do github e [lucasfcm9](user_repository)
-- meu repositorio do github é [12345xy](user_repository)
-- repositorio [123456xy](user_repository)
-- repositorio é [trabalho1](user_repository)
-- meu repositorio e [gitlab](user_repository)
-- o nome do repositorio [gitlaborg](user_repository)
+## intent:action_set_repository_github
+- meu repositorio do github é [gitlab_user](repository_github)
+- meu repositório do github é [gitlab-runner](repository_github)
+- o nome do repositório do github é [adabot](repository_github)
+- meu repositorio do github e [lucasfcm9](repository_github)
+- meu repositório do github é [caiovf13](repository_github)

@@ -1,16 +1,8 @@
 ## path_start
 * start{"command": "start"}
   - action_start
-* action_new_integration
-  - action_new_integration
-* action_set_user
-  - action_set_user
-* action_set_repositorie
-  - action_set_repositorie
-
-## path_new_integration
-* action_new_integration
-  - action_new_integration
+* action_set_repository_github
+  - action_set_repository_github
 
 ## path_help
 * help{"command": "help"}
