@@ -38,7 +38,7 @@
 - builds recentes
 - quais são as builds
 - diga-me as builds
-- as builds, me mostra ai 
+- as builds, me mostra ai
 - git build
 - quais as builds
 - me mostra a build mais recente
@@ -106,3 +106,12 @@
 
 ## intent:action_start
 - [/start](command)
+
+## intent:action_new_integration
+- meu repositório do github é [caiov](user_repository)
+- meu repositorio do github e [lucasfcm9](user_repository)
+- meu repositorio do github é [12345xy](user_repository)
+- repositorio [123456xy](user_repository)
+- repositorio é [trabalho1](user_repository)
+- meu repositorio e [gitlab](user_repository)
+- o nome do repositorio [gitlaborg](user_repository)

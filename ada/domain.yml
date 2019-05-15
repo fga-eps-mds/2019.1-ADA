@@ -27,6 +27,8 @@ intents:
   - action_set_repositorie
   - action_get_report
   - set_pipeline
+  - action_start
+  - action_new_integration
 
 entities:
   - command
@@ -47,6 +49,7 @@ entities:
   - help
   - usuario
   - repositorio
+  - user_repository
 
 slots:
   repositorio:
@@ -55,7 +58,8 @@ slots:
     type: text
   payload:
     type: text
-
+  user_repository:
+      type: text
 actions:
   - utter_defalut
   - utter_affirm
@@ -89,6 +93,8 @@ actions:
   - action_set_pipeline
   - utter_start_report
   - action_start
+  - action_new_integration
+
 templates:
 
   utter_default:
@@ -96,7 +102,7 @@ templates:
       Não entendi o que você falou, pode repetir, por favor?
 
       Se estiver com alguma dúvida, é só me pedir ajuda.
-  
+
   - text: |
       O que você quis dizer? Me explica melhor, por favor.
 
@@ -110,7 +116,7 @@ templates:
       Ficou interessado, né? Bom, vamos lá.
 
       Vou te passar uma lista do que você pode me pedir
-          - Resultado dos pipelines; 
+          - Resultado dos pipelines;
           - Andamendo das builds dos seus projetos do GitLab;
           - Relatório sobre seu projeto do GitLab;
           - Commit's (Previsto para a R2);
@@ -130,20 +136,20 @@ templates:
       Olá! Como posso ajudar?
 
       Caso esteja com alguma dúvida, me peça ajuda que eu te trago as informações! 😆
-  
+
   - text: |
       Olá, tudo bem? Como você já deve saber, sou a Ada!
-      
+
       Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
   uteer_set_pipeline:
   - text: |
       Aguarde um momento, vou verificar.
-  
+
   utter_how_are_you:
   - text: |
       Estou ótima, obrigada! E você??
-  
+
   - text: |
       Obrigada por perguntar, estou muito bem! 😊
 
@@ -164,7 +170,7 @@ templates:
       Tchauuuuu, migo(a). 😘
 
       Caso você tenha se cadastrado, eu irei notificá-lo sobre qualquer alteração no seu repositório.
-  
+
   - text: |
       Gooood bye! Volte sempre! 😘
 
@@ -179,8 +185,8 @@ templates:
   - text: |
       Ahhh que isso, né! Muito obrigada 🤩
 
-      Sou reconhecida hoje por causa de vocês! 
-      
+      Sou reconhecida hoje por causa de vocês!
+
   - text: |
       Obrigada, mas você que é incrível! 😍
 
@@ -236,7 +242,7 @@ templates:
 
   - text: |
       Sou a melhor pessoa da computação que existe, você não acha?
-      
+
   utter_name_complete:
   - text: |
       Meu nome completo é Ada August King, Condessa de Lovelace
@@ -244,7 +250,7 @@ templates:
   - text: |
       Como assim você não sabe meu nome?
 
-      É Ada Lovelace, rapaz! 
+      É Ada Lovelace, rapaz!
 
   utter_joke:
   - text: |
@@ -264,11 +270,11 @@ templates:
 
   utter_good_night:
   - text: |
-      Boa noiteeee, se cuida! 
+      Boa noiteeee, se cuida!
 
   - text: |
       Tenha uma ótima noite!
-  
+
   - text: |
       Fica bem e se cuida, até amanhã!
 
@@ -280,7 +286,7 @@ templates:
       O dia está lindo, né? 😍
 
       Uma ótima tarde!
-  
+
   utter_good_morning:
   - text: |
       Bom diaaaa!!!
@@ -288,13 +294,13 @@ templates:
   - text: |
       O dia está maravilhoso, né?
 
-      Tenha um ótimo dia hoje, espero que você faça tudo que você planejou! 
-  
+      Tenha um ótimo dia hoje, espero que você faça tudo que você planejou!
+
   - text: |
       É tão bom acordar e olhar esse céu maravilhoso, né?
 
       Um bom dia para você!
-  
+
   utter_sad:
   - text: |
       Não fica triste, a sua vida é muito importante!
@@ -310,11 +316,11 @@ templates:
       Não fica triste, por favor!
 
       Vai tomar um ar, pensa na vida e pensa em como você é importante para a sua família e para os seus amigos!
-  
+
   utter_creators:
   - text: |
-      Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas! 
-      
+      Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas!
+
       Esse time maravilhoso de MDS e EPS da UnB-FGA 😍
 
   - text: |
@@ -325,12 +331,11 @@ templates:
   utter_intended_for_next_release:
   - text: |
       Desculpe, ainda não consigo fazer isso, mas até o final de junho aprenderei isso e conseguirei te ajudar.
-  
+
   utter_whats_pipeline:
-  - text: | 
-      Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy. 
-  
+  - text: |
+      Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy.
+
   utter_start_report:
   - text: |
       Aguarde um momento, vou gerar o relatório para você.
-    
