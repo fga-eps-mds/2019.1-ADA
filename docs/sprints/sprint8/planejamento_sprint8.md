@@ -27,10 +27,9 @@ Sprint focada em histórias de dívida da sprint passada, relacionadas à cadast
 | [US08 - Eu, como usuário, desejo que a Ada reinicie uma build/pipeline do meu projeto no GitLab CI, caso ela tenha falhado.](https://github.com/fga-eps-mds/2019.1-ADA/issues/194) | 13 |
 | [Melhora no mapeamento de fluxo de conversas](https://github.com/fga-eps-mds/2019.1-ADA/issues/195) | 3 |
 | [US14 - Eu, como usuário, desejo ser notificado quando a Ada demorar a recuperar informações para saber o status da minha requisição.](https://github.com/fga-eps-mds/2019.1-ADA/issues/196) | 8 |
-| [Cronjob para agendamento de tarefas](https://github.com/fga-eps-mds/2019.1-ADA/issues/199) | 8 |
 | [Analisar planejamento e avaliar redução do escopo](https://github.com/fga-eps-mds/2019.1-ADA/issues/200) | 3 |
 
-__Total de pontos planejados:__ 35
+__Total de pontos planejados:__ 27
 
 ## Dívida
 
@@ -44,7 +43,7 @@ __Total de pontos de dívida:__ 27
 
 ***
 
-<div style="text-align: center"> Total de pontos da <i>sprint</i>: 62 </div> <br>
+<div style="text-align: center"> Total de pontos da <i>sprint</i>: 54 </div> <br>
 
 > [_Sprint_ _Backlog_](https://github.com/fga-eps-mds/2019.1-ADA/milestone/9)  
 
