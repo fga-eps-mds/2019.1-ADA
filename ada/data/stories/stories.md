@@ -123,5 +123,4 @@
 
 ## path_rerun_pipeline
 * rerun_pipeline
-  - utter_rerun_pipeline
   - action_rerun_pipeline

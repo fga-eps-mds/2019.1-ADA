@@ -105,17 +105,4 @@
 - relatório
 
 ## intent:rerun_pipeline
-- quero [reiniciar](rerun_pipeline) minha pipeline
-- reinicia minha pipeline , por favor
-- ada reinicia a build
-- [reiniciar build](rerun_pipeline)
-- [reiniciar pipelines](rerun_pipeline)
-- reinicia a pipeline ai
-- faz a [pipeline rodar de novo](rerun_pipeline) ae
-- [roda a build](rerun_pipeline) por favor de novo
-- dá um restart lá na minha pipeline
-- [restart](rerun_pipeline) build
-- [restart pipeline](rerun_pipeline)
-- rerun builds
-- [rerun](rerun_pipeline) pipelines
-- refaz a pipeline ai pra mim ADA
+- quero reiniciar a pipeline
