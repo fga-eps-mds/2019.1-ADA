@@ -108,6 +108,7 @@
 - [/start](command)
 
 ## intent:action_set_repository_github
+- meu repositório do github é [uri-online-judge](repository_github)
 - meu repositorio do github é [gitlab_user](repository_github)
 - meu repositório do github é [gitlab-runner](repository_github)
 - o nome do repositório do github é [adabot](repository_github)
