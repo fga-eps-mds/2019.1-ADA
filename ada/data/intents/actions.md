@@ -50,7 +50,7 @@
 - Ada, me mostra o resultado do pipeline
 
 ## intent:action_set_repository_gitlab
-- o nome do repositório do gitlab é[gitlab-runner](repository_gitlab)
+- o nome do repositório do gitlab é [gitlab-runner](repository_gitlab)
 - o nome do repositório do gitlab é [quests](repository_gitlab)
 - meu repositório do gitlab é [abcde12345](repository_gitlab)
 - meu repositório do gitlab é [owner/repo](repository_gitlab)

@@ -34,9 +34,6 @@ class SetRepositoryGitLab(Action):
                                 rep=repo_name)
             bot_message = bot.send_message(chat_id=sender_id,
                                            text=selected_repo)
-            # bot.editMessageReplyMarkup(chat_id=sender_id,
-            #                            message_id=bot_message.message_id - 1,
-            #                            reply_markup=[])
             set_webhook_msg = "Para receber notificações sobre "\
                               "resultados do pipeline, "\
                               "entra nesse link aqui {}, "\

@@ -34,6 +34,8 @@ services:
       - GITHUB_SERVICE_URL=${GITHUB_SERVICE_URL}
       - GITLAB_WEBHOOK_URL=${GITLAB_WEBHOOK_URL}
       - GITHUB_SIGNUP_URL=${GITHUB_SIGNUP_URL}
+      - CLIENT_ID_GITHUB=${CLIENT_ID_GITHUB}
+      - CLIENT_ID_GITLAB=${CLIENT_ID_GITLAB}
     networks:
       - adanetwork
     command: "make run-actions"

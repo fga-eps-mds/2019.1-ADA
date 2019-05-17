@@ -34,7 +34,6 @@ entities:
   - oi
   - ok
   - religion
-  - how
   - good
   - name
   - joke
@@ -51,8 +50,6 @@ entities:
 
 slots:
   repository_gitlab:
-    type: text
-  payload:
     type: text
   repository_github:
     type: text
