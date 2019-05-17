@@ -15,25 +15,25 @@ class RerunPipeline(Action):
             headers = {'Content-Type': 'application/json'}
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
-            # TODO -> pegar a mensagem do user referente ao botao pressionado
+            # pegar a mensagem do user referente ao botao pressionado
             message = tracker.latest_message.get("text")
             splitted_message = message.split()
             pipeline_id = splitted_message[-1]
-            # TODO HERE -> fazer a outra requisicao com o id da pipeline
-            # para reinicia-la
+            # fazer a outra requisicao com o id da pipeline para reinicia-la
             response = requests.get(GITLAB_SERVICE_URL +
                                "rerun_pipeline/{chat_id}/{pipeline_id}"
                                .format(chat_id=chat_id, pipeline_id=
                                 pipeline_id), headers=headers)
-
+            # mensagem de sucesso
             dispatcher.utter_message("Top! Pipeline reiniciada 👌")
+            # tratamento de erros
         except HTTPError:
             dispatcher.utter_message(
                 "Ai que pena... não consegui reiniciar a pipeline que você\
                  me pediu 😔")
             dispatcher.utter_message(
                 "Tenta clicar novamente ai nesse botão. Se não der certo, \
-                 entra no GitLab e reinicia você mesmo...")
+                 sugiro entrar no GitLab e tenta reiniciar você mesmo...")
         except ValueError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
