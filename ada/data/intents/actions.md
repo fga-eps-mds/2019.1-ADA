@@ -49,47 +49,24 @@
 - saber pipeline
 - Ada, me mostra o resultado do pipeline
 
-
-## intent:action_set_user
-- meu nome de usuário é [sudjoao](usuario)
-- meu nome de usuário é [algum](usuario)
-- meu usuário é [gitlab-org](usuario)
-- meu usuário é [ep1](usuario)
-- meu usuario e [ep2](usuario)
-- usuário é [123xyz](usuario)
-- usuario: [123xpr](usuario)
-- usuário é [abc123xyz](usuario)
-- usuário: [pedrinho_123](usuario)
-- meu usuário e [125psl](usuario)
-- meu usuario é [sowoe](usuario)
-- usuário: [teste](usuario)
-- usuário: [qualquer](usuario)
-- [nome](usuario)
-- [alfabeto](usuario)
-- [teste_123](usuario)
-- [oculos.xyz](usuario)
-- [CAIO](usuario)
-- [Gui](usuario)
-
-
-## intent:action_set_repositorie
-- o nome do repositório [gitlab-runner](repositorio)
-- o nome do repositório [quests](repositorio)
-- meu repositório é [abcde12345](repositorio)
-- meu repositório é [owner/repo](repositorio)
-- meu repositório é [adabot/ada](repositorio)
-- meu repositório é [adabot/ada-gitlab](repositorio)
-- meu repositório é [gitlab-org/gitlab-runner](repositorio)
-- meu repositório é [terrakok/gitlab-client](repositorio)
-- meu repositório é [gitlab-org/gitaly](repositorio)
-- repositorio é [trabalho1](repositorio)
-- repositório: [2019.1-MDS](repositorio)
-- [esseaqui](repositorio)
-- [abc123](repositorio)
-- [vitor_123](repositorio)
-- [caio.c12](repositorio)
-- [SUD](repositorio)
-- [gui.a.](repositorio)
+## intent:action_set_repository_gitlab
+- o nome do repositório do gitlab é[gitlab-runner](repository_gitlab)
+- o nome do repositório do gitlab é [quests](repository_gitlab)
+- meu repositório do gitlab é [abcde12345](repository_gitlab)
+- meu repositório do gitlab é [owner/repo](repository_gitlab)
+- meu repositório do gitlab é [adabot/ada](repository_gitlab)
+- meu repositório do gitlab é [adabot/ada-gitlab](repository_gitlab)
+- meu repositório do gitlab é [gitlab-org/gitlab-runner](repository_gitlab)
+- meu repositório do gitlab é [terrakok/gitlab-client](repository_gitlab)
+- meu repositório do gitlab é [gitlab-org/gitaly](repository_gitlab)
+- repositorio é [trabalho1](repository_gitlab)
+- repositório: [2019.1-MDS](repository_gitlab)
+- [esseaqui](repository_gitlab)
+- [abc123](repository_gitlab)
+- [vitor_123](repository_gitlab)
+- [caio.c12](repository_gitlab)
+- [SUD](repository_gitlab)
+- [gui.a.](repository_gitlab)
 
 ## intent:action_get_report
 - me manda o relatório do projeto

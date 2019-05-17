@@ -4,6 +4,20 @@
 * action_set_repository_github
   - action_set_repository_github
 
+## path_start
+* start{"command": "start"}
+  - action_start
+* action_set_repository_gitlab
+  - action_set_repository_gitlab
+
+## path_start
+* start{"command": "start"}
+  - action_start
+* action_set_repository_github
+  - action_set_repository_github
+* action_set_repository_gitlab
+  - action_set_repository_gitlab
+
 ## path_help
 * help{"command": "help"}
   - utter_help
@@ -81,14 +95,6 @@
 ## path_creators
 * creators
   - utter_creators
-
-## path set_user
-* action_set_user
-  - action_set_user
-
-## path set_repositorie
-* action_set_repositorie
-  - action_set_repositorie
 
 ## path_action_get_report
 * action_get_report
