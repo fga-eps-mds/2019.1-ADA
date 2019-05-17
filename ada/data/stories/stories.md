@@ -67,6 +67,10 @@
 * good_afternoon
   - utter_good_afternoon
 
+## path_user_deny_something
+* deny
+  - utter_deny
+
 ## path_good_morning
 * good_morning
   - utter_good_morning
