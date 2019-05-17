@@ -15,7 +15,7 @@
   - [Rich picture](/docs/product/rich_picture.md)
   - [Termo de Abertura do Projeto](docs/product/tap.md)
   - [Teste em Uso](docs/product/in_use_test.md)
-  - [Mapeamento de Conversa entre usuário e Ada](docs/product/conversation_mapping.md)
+  - [Mapeamento do Fluxo de Conversa](docs/product/conversation_mapping.md)
 - [**Projeto**](#)
   - [Backlog](docs/project/backlog.md)
   - [Documento de Arquitetura](docs/project/architecture_doc.md)
