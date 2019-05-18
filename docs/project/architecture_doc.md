@@ -99,7 +99,11 @@ A ADA é o serviço responsável pela comunicação entre o usuário e o chatbot
 
 #### 2.2.2 ADA - Conexão com GitHub
 
-O microsserviço da conexão com Github é responsável por monitorar e gerenciar issues, commits e pull requests que são informações a respeito do versionamento e gerenciamento do projeto do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Github através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é possivel também fazer agendamentos de relatórios usando o Cronjob, que é um script no qual está sempre rodando, ele executa tarefas de forma automatica em determinados intervalos, na ADA ele será responsável por enviar os relatórios agendados pelo usuário.
+O microsserviço da conexão com Github é responsável por monitorar e gerenciar issues, commits e pull requests que são informações a respeito do versionamento e gerenciamento do projeto do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Github através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é possivel também fazer agendamentos de relatórios usando o Cronjob, que é um script no qual está sempre rodando, ele executa tarefas de forma automatica em determinados intervalos, na ADA ele será responsável por enviar os relatórios agendados pelo usuário. Ainda é possível visualizar a modelagem feita no banco de dados desse microsserviço, logo abaixo.
+
+![arquitetura](../assets/img/project/architecture/data_modeling/ModelagemdeDados2.png)
+
+Imagem 02 - Diagrama de modelagem do microsserviço do GitHub.
 
 #### 2.2.3 ADA - Conexão com GitLab
 
@@ -107,6 +111,7 @@ O microsserviço Conexão com GitLab é responsável por monitorar e gerenciar p
 
 ![arquitetura](../assets/img/project/architecture/data_modeling/ModelagemdeDados.jpg)
 
+Imagem 03 - Diagrama de modelagem do microsserviço do Gitlab.
 
 ### 2.3 Tecnologias
 
@@ -130,7 +135,11 @@ O microsserviço Conexão com GitLab é responsável por monitorar e gerenciar p
 
 <p style="text-align:justify">&emsp;&emsp;Rasa Stack é um conjunto de ferramentas de machine learning (aprendizado de máquina) voltado para desenvolvedores criarem chatbots e assistentes contextuais baseados em mensagens de voz e de texto. Essa tecnologia é open source (código livre) e utiliza processamento de linguagem natural para criar diálogos que vão além de simples perguntas.</p>
 
-<p style="text-align:justify">&emsp;&emsp;Dessa forma, o Rasa atua de forma a processar as mensagens enviadas pelo(s) usuário(s) e comunicar essas informações aos algoritmos da ADA. Assim, nosso software sustenta as devidas providências para atender ao(s) pedido(s) do(s) usuário(s). Esse processo é uma via de mão dupla: primeiro, a informação é passada do Rasa para a ADA; depois, a resposta é enviada da ADA para o Rasa, e assim, atinge-se o usuário na plataforma Telegram.</p>
+<p style="text-align:justify">&emsp;&emsp;Dessa forma, o Rasa atua de forma a processar as mensagens enviadas pelo(s) usuário(s) e comunicar essas informações aos algoritmos da ADA. Assim, nosso software sustenta as devidas providências para atender ao(s) pedido(s) do(s) usuário(s). Esse processo é uma via de mão dupla: primeiro, a informação é passada do Rasa para a ADA; depois, a resposta é enviada da ADA para o Rasa, e assim, atinge-se o usuário na plataforma Telegram. Segue abaixo o diagrama de funcionamento do rasa no projeto.</p>
+
+![arquitetura](../assets/img/project/architecture/Rasa_arquitetura.png)
+
+Imagem 04 - Diagrama de funcionamento do Rasa.
 
 #### Telegram API
 
@@ -181,18 +190,20 @@ As restrições de arquitetura são:
 
 ### 4.1 Diagrama de Pacotes
 
+    Os diagramas de pacotes mostram a interação entre as relações das pastas e seus arquivos.
+
 ![pacote_ada](../assets/img/project/architecture/pack_diagram/Pacote-ada.jpg)
 
-Imagem 02 - Diagrama de pacotes do Microsserviço do Bot ADA.
+Imagem 05 - Diagrama de pacotes do Microsserviço do Bot ADA.
 
 ![pacote_github](../assets/img/project/architecture/pack_diagram/Pacote-ada-github.jpg)
 
-Imagem 03 - Diagrama de pacotes do Microsserviço Conexão com o GitHub.
+Imagem 06 - Diagrama de pacotes do Microsserviço Conexão com o GitHub.
 
 ![pacote_ada_gitlab](../assets/img/project/architecture/pack_diagram/Pacote-ada-gitlab.jpg)
 
-Imagem 04 - Diagrama de pacotes do Microsserviço Conexão com o GitLab.
+Imagem 07 - Diagrama de pacotes do Microsserviço Conexão com o GitLab.
 
 ![pacote_ada_geral](../assets/img/project/architecture/pack_diagram/Pacote-ada-geral.jpg)
 
-Imagem 05 - Diagrama de pacotes geral dos Microsserviços .
+Imagem 08 - Diagrama de pacotes geral dos Microsserviços .
