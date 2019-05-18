@@ -72,7 +72,8 @@ class ActionSetPipeline(Action):
                 dispatcher.utter_message("Para visualizar seu Pipeline "
                                          "no GitLab, acesse o link {web_url}"
                                          .format
-                                         (web_url=job_build[0]['pipeline_url']))
+                                         (web_url=job_build[0]
+                                          ['pipeline_url']))
         except KeyError:
             dispatcher.utter_message(
                 "Não consegui encontrar o seu pipeline no GitLab, "
