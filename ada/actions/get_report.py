@@ -6,6 +6,7 @@ from requests.exceptions import HTTPError
 import telegram
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
+SECS = 10.0
 
 
 class Report(Action):
@@ -20,7 +21,7 @@ class Report(Action):
             try:
                 response = requests.get(GITLAB_SERVICE_URL +
                                         "report/{chat_id}"
-                                        .format(chat_id=chat_id), timeout=10.0,
+                                        .format(chat_id=chat_id), timeout=SECS,
                                         headers=headers)
             except requests.exceptions.Timeout:
                 text = "Desculpa, não consegui fazer o que você me pediu! 😕"
@@ -85,10 +86,10 @@ class Report(Action):
                                          "Número total de pipelines: {total}\n"
                                          "☑️ {success} obtiveram sucesso\n"
                                          "❗️ {fail} falharam\n"
-                                         "☑️ A porcentagem de sucesso foi:"
-                                         "{perc_suc}\n❗️ E a porcentagem "
+                                         "☑️ A porcentagem de sucesso foi: "
+                                         "{perc_suc}%\n❗️ E a porcentagem "
                                          "de falhas"
-                                         "foi: {perc_fail}\n".format(
+                                         "foi: {perc_fail}%\n".format(
                                             total=(
                                              last_7["number_of_pipelines"]),
                                             success=(
@@ -104,9 +105,9 @@ class Report(Action):
                                          "☑️ {success} obtiveram sucesso\n"
                                          "❗️ {fail} falharam\n"
                                          "☑️ A porcentagem de sucesso foi:"
-                                         "{perc_suc}\n❗️ E a porcentagem "
+                                         "{perc_suc}%\n❗️ E a porcentagem "
                                          "de falhas"
-                                         "foi: {perc_fail}\n".format(
+                                         "foi: {perc_fail}%\n".format(
                                             total=(
                                              last_30["number_of_pipelines"]),
                                             success=(

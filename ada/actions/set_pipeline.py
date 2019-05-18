@@ -6,6 +6,7 @@ from requests.exceptions import HTTPError
 import telegram
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
+SECS = 10.0
 
 
 class ActionSetPipeline(Action):
@@ -21,7 +22,7 @@ class ActionSetPipeline(Action):
                 response = requests.get(GITLAB_SERVICE_URL +
                                         "build/{sender_id}"
                                         .format(sender_id=sender_id),
-                                        timeout=10.0,
+                                        timeout=SECS,
                                         headers=headers)
             except requests.exceptions.Timeout:
                 text = "Desculpa, não consegui fazer o que você me pediu! 😕"
@@ -39,7 +40,7 @@ class ActionSetPipeline(Action):
                     status = "ainda está em andamento"
 
                 text_message_2 = "Encontrei seu pipeline mais " \
-                    "recente, e ele" + "{status}.".format(status=status)
+                    "recente, e ele " + "{status}.".format(status=status)
 
                 dispatcher.utter_message(text_message_2)
 
