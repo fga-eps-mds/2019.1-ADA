@@ -21,11 +21,13 @@ class RerunPipeline(Action):
             pipeline_id = splitted_message[-1]
             # fazer a outra requisicao com o id da pipeline para reinicia-la
             response = requests.get(GITLAB_SERVICE_URL +
-                               "rerun_pipeline/{chat_id}/{pipeline_id}"
-                               .format(chat_id=chat_id, pipeline_id=
-                                pipeline_id), headers=headers)
+                                    "rerun_pipeline/{chat_id}/{pipeline_id}"
+                                    .format(chat_id=chat_id,
+                                            pipeline_id=pipeline_id),
+                                    headers=headers)
             # mensagem de sucesso
-            dispatcher.utter_message("Top! Pipeline reiniciada 👌")
+            response.raise_for_status()
+            dispatcher.utter_message("Tudo certo, reiniciei sua pipeline!")
             # tratamento de erros
         except HTTPError:
             dispatcher.utter_message(

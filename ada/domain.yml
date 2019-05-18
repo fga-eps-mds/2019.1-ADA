@@ -96,7 +96,6 @@ actions:
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
-  - utter_deny
 templates:
 
   utter_default:
@@ -379,10 +378,6 @@ templates:
       Fico contente.
   - text:
       Certo ! Muito bom.
-
-  utter_deny:
-  - text: |
-    Okay...
 
   utter_marry_or_date:
   - text: |
