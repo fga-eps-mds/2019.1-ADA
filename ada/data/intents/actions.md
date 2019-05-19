@@ -106,3 +106,9 @@
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
+
+## intent:stable_deploy
+- Ada, quero que você encontre a versão estável mais recente do meu projeto e a reinicie
+- ada, quero que você encontre a última versão estável do meu software e faça o deploy dela  
+- parece que meu projeto falhou. Faz o deploy da última versao pra mim ?
+- 

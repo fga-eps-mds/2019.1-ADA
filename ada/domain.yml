@@ -30,6 +30,7 @@ intents:
   - marry_or_date
   - adas_architecture
   - rerun_pipeline
+  - stable_deploy
 
 entities:
   - command
@@ -96,6 +97,8 @@ actions:
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
+  - utter_stable_deploy
+  - action_stable_deploy
 templates:
 
   utter_default:
@@ -400,3 +403,14 @@ templates:
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto !
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
+
+  utter_stable_deploy:
+  - text: |
+      Beleza, já vou fazer isso
+
+      Aguarda um pouquinho :)
+
+  - text: |
+      Farei esse deploy agora! 💙
+
+      Espera um pouquinho que eu já volto...

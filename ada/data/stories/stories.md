@@ -124,3 +124,8 @@
 ## path_rerun_pipeline
 * rerun_pipeline
   - action_rerun_pipeline
+
+## path_stable_deploy
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
