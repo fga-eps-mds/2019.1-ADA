@@ -29,6 +29,7 @@ intents:
   - set_pipeline
   - marry_or_date
   - adas_architecture
+  - rerun_pipeline
 
 entities:
   - command
@@ -94,6 +95,7 @@ actions:
   - utter_start_report
   - utter_marry_or_date
   - utter_adas_architecture
+  - action_rerun_pipeline
 templates:
 
   utter_default:

@@ -38,7 +38,7 @@
 - builds recentes
 - quais são as builds
 - diga-me as builds
-- as builds, me mostra ai 
+- as builds, me mostra ai
 - git build
 - quais as builds
 - me mostra a build mais recente
@@ -103,3 +103,6 @@
 - me mostra o relatório, ada
 - me mostra o relatorio, ada
 - relatório
+
+## intent:rerun_pipeline
+- quero reiniciar a pipeline
