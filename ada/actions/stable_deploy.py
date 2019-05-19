@@ -17,8 +17,8 @@ class StableDeploy(Action):
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
             response = requests.get(GITLAB_SERVICE_URL +
-                               "stable_deploy/{chat_id}"
-                               .format(chat_id=chat_id), headers=headers)
+                                    "stable_deploy/{chat_id}"
+                                    .format(chat_id=chat_id), headers=headers)
             response.raise_for_status()
         # informar ao usuário : caso de falha / tratamento de erros
         except HTTPError:
