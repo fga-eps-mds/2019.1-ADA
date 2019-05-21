@@ -5,7 +5,6 @@ import requests
 import json
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
-GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
 
 

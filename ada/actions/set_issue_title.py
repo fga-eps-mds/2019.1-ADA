@@ -1,8 +1,6 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
-import os
 from urllib3.exceptions import NewConnectionError
-GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 
 
 class ActionIssueName(Action):

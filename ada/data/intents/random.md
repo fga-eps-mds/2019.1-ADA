@@ -18,16 +18,16 @@
 - [religião](religion)
 
 ## intent:who_am_i
-- [como você é?](how)
-- [como vc é?](how)
-- [me manda uma foto sua](how)
-- [vc é magra ou gorda?](how)
-- [vc é bonita?](how)
-- [vc é feia?](how)
-- [me diz suas caracteristicas](how)
-- [me fala como é o seu rosto](how)
-- [vc é alta ou baixa?](how)
-- [me manda uma foto sua, por favor](how)
+- como você é?
+- como vc é?
+- me manda uma foto sua
+- vc é magra ou gorda?
+- vc é bonita?
+- vc é feia?
+- me diz suas caracteristicas
+- me fala como é o seu rosto
+- vc é alta ou baixa?
+- me manda uma foto sua, por favor
 
 ## intent:name_complete
 - Qual o seu nome?

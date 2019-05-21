@@ -23,14 +23,16 @@ intents:
   - deny
   - intended_for_next_release
   - whats_pipeline
-  - action_set_user
-  - action_set_repositorie
+
+  ##Actions
+  - action_start
   - action_get_report
   - set_pipeline
+  - action_set_repository_github
+  - action_set_repository_gitlab
   - start_create_issue
   - create_issue
   - issue_name
-  - issue_body
   - marry_or_date
   - adas_architecture
 
@@ -39,7 +41,6 @@ entities:
   - oi
   - ok
   - religion
-  - how
   - good
   - name
   - joke
@@ -51,27 +52,28 @@ entities:
   - creators
   - begin
   - help
-  - usuario
-  - repositorio
-  - issue_name
-  - issue_body
   - marry_or_date
   - adas_architecture
   - affirm
 
+  ## SlotsSets(Entities)
+  - repository_gitlab
+  - repository_github
+  - issue_name
+  - issue_body
+
 slots:
-  repositorio:
+  repository_gitlab:
     type: text
-  usuario:
+  repository_github:
     type: text
   issue_name:
     type: text
   issue_body:
     type: text
-  
+
 actions:
   - utter_defalut
-  - utter_start
   - utter_affirm
   - utter_help
   - utter_begin
@@ -95,19 +97,20 @@ actions:
   - utter_creators
   - utter_intended_for_next_release
   - utter_whats_pipeline
-  - action_set_user
-  - utter_set_user
-  - action_set_repositorie
-  - action_get_report
-  - utter_set_pipeline
-  - action_set_pipeline
+
   - utter_start_report
+  - action_get_report
+  - action_set_pipeline
+  - action_start
+  - action_set_repository_github
+  - action_set_repository_gitlab
   - utter_start_issue
   - action_issue_name
   - utter_issue_name
   - action_create_issue
   - utter_marry_or_date
   - utter_adas_architecture
+
 
 templates:
   utter_default:
@@ -120,12 +123,6 @@ templates:
       O que você quis dizer? Me explica melhor, por favor.
 
       Se estiver com alguma dúvida, é só me pedir ajuda.
-
-  utter_start:
-  - text: |
-      Oláaaaa, sou a Ada! Sou responsável por ajudar você no monitoramento de produção com seus repositórios. Caso queira saber mais, me peça ajuda.
-
-      Agora, pra gente começar eu vou precisar do seu nome de usuário lá do GitLab. Olha, vou te dar um exemplo! Pro usuário @AdaLovelace eu escreveria "Meu usuário é AdaLovelace".
 
   utter_restart:
   - text: |
@@ -282,7 +279,7 @@ templates:
   - text: |
       Como assim você não sabe meu nome?
 
-      É Ada Lovelace, ué !
+      É Ada Lovelace, rapaz!
 
   utter_joke:
   - text: |
@@ -349,13 +346,6 @@ templates:
 
       Vai tomar um ar, pensa na vida e pensa em como você é importante para a sua família e para os seus amigos!
 
-  - text: |
-     Espero que você fique bem.
-  - text: |
-     Vai dar tudo certo, relaxa !
-  - text: |
-     Fica assim não! Estou aqui por você.
-
   utter_creators:
   - text: |
       Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas!
@@ -378,45 +368,52 @@ templates:
   utter_start_report:
   - text: |
       Aguarde um momento, vou gerar o relatório para você.
-  
+
   utter_start_issue:
   - text: |
-      Vamos lá, para criar uma nova Issue preciso que primeiro me mande qual o titulo da Issue que você vai criar, tente fazer algo nesse estilo: "Título: O Título É Esse" 
-  
+      Vamos lá, para criar uma nova ISSUE preciso que primeiro me mande qual o título da issue que você vai criar, por exemplo, tente fazer algo nesse estilo: "Título: O Título É Esse"
+
   utter_issue_name:
   - text: |
       Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo como: "Descrição: Essa é a descrição"
 
   utter_affirm:
   - text: |
-      Okay !
+      Okay!
+
   - text:
-      Que bom !
+      Que bom!
+
   - text:
-      Que legal !
+      Que legal!
+
   - text:
       Fico contente.
+
   - text:
       Certo ! Muito bom.
 
   utter_marry_or_date:
   - text: |
       Fico lisonjeada, mas isso não é possível.
+
   - text: |
-      Mas nós nem nos conhecemos direito ! rsrsrs
+      Mas nós nem nos conhecemos direito!
       Acho melhor não, mas não fica triste.
+
   - text: |
-      Hummm ... é melhor pensarmos melhor sobre isso.
+      Hummm... é melhor pensarmos melhor sobre isso.
       Talvez não seja prudente namorarmos.
+
   utter_adas_architecture:
   - text: |
-      Nossa, deixa eu te explicar porque é um pouco complicado rsrsrs
+      Nossa, deixa eu te explicar porque é um pouco complicado!
 
       Eu sou muito inteligente e objetiva, primeiramente, e é por isso que eu sei onde buscar as informações
       para passar para você.
 
-      Com relação ao que eu faço para vc, eu uso 6 tecnologias para me ajudar: o Telegram, para falar com vc;
+      Com relação ao que eu faço para você, eu uso 6 tecnologias para me ajudar: o Telegram, para falar com você;
       o Rasa, para me ajudar a te entender certinho; a API do GitHub, para controlar suas atividades relacionadas
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
-      e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto !
+      e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.

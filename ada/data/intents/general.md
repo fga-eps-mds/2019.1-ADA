@@ -1,7 +1,3 @@
-## intent:start
-- [start](command)
-- [/start](command)
-
 ## intent:help
 - [help](command)
 - [/help](command)
@@ -280,6 +276,6 @@
  - Oq e pipeline?
  - oq e pipeline
  - oq é pipeline?
- - pipeline é o que ?
- - o que significa pipeline ?
- - qual o significado de: pipeline ?
+ - pipeline é o que?
+ - o que significa pipeline?
+ - qual o significado de: pipeline?
