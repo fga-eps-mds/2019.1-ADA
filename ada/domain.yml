@@ -98,6 +98,8 @@ actions:
   - utter_adas_architecture
   - action_rerun_pipeline
   - utter_stable_deploy
+  - utter_stable_deploy_dont_try_again
+  - utter_stable_deploy_happy
   - action_stable_deploy
 templates:
 
@@ -414,3 +416,13 @@ templates:
       Farei esse deploy agora! 💙
 
       Espera um pouquinho que eu já volto...
+
+  utter_stable_deploy_dont_try_again:
+  - text: |
+      Ah tudo bem, então. Se quiser podemos tentar novamente mais tarde
+
+      Só me lembra de fazer isso :)
+
+  utter_stable_deploy_happy:
+  - text: |
+      Imagina ! Conte comigo sempre ❤️

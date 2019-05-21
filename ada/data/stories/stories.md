@@ -129,3 +129,25 @@
 * stable_deploy
   - utter_stable_deploy
   - action_stable_deploy
+
+## path_stable_deploy_dont_try_again
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* deny OR sad
+  - utter_stable_deploy_dont_try_again
+
+## path_stable_deploy_try_again
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* affirm OR begin
+  - utter_stable_deploy
+  - action_stable_deploy
+
+## path_stable_deploy_happy
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* thanks
+  - utter_stable_deploy_happy

@@ -26,8 +26,7 @@ class StableDeploy(Action):
                 "Ai que pena... não consegui fazer o deploy da versão\
                  estável mais recente do seu projeto 😔")
             dispatcher.utter_message(
-                "Podemos tentar novamente mais tarde... pode ser ?\
-                 Só me lembra de fazer isso :)")
+                "Você quer que eu tente novamente agora ?")
         except ValueError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "

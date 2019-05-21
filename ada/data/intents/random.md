@@ -104,7 +104,6 @@
 - estou bem [mal](sad)
 - [depressão](sad)
 - [depressao](sad)
-- to nao
 - [não estou bem](not_good)
 - to muito [bem nao](not_good)
 - [me sinto mal](not_good)
