@@ -28,14 +28,22 @@ intents:
   - action_get_report
   - set_pipeline
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e641d253e588b906b51290535bb719f18e5ae174
   - start_create_issue
   - create_issue
   - issue_name
   - issue_body
+<<<<<<< HEAD
 =======
   - marry_or_date
   - adas_architecture
 >>>>>>> devel
+=======
+  - marry_or_date
+  - adas_architecture
+>>>>>>> e641d253e588b906b51290535bb719f18e5ae174
 
 entities:
   - command
@@ -57,6 +65,7 @@ entities:
   - usuario
   - repositorio
 <<<<<<< HEAD
+<<<<<<< HEAD
   - issue_name
   - issue_body
 
@@ -65,6 +74,13 @@ entities:
   - adas_architecture
   - affirm
 >>>>>>> devel
+=======
+  - issue_name
+  - issue_body
+  - marry_or_date
+  - adas_architecture
+  - affirm
+>>>>>>> e641d253e588b906b51290535bb719f18e5ae174
 
 slots:
   repositorio:
@@ -109,18 +125,15 @@ actions:
   - utter_set_pipeline
   - action_set_pipeline
   - utter_start_report
-<<<<<<< HEAD
-  
   - utter_start_issue
   - action_issue_name
   - utter_issue_name
   - action_create_issue
-=======
   - utter_marry_or_date
   - utter_adas_architecture
->>>>>>> devel
-templates:
 
+
+templates:
   utter_default:
   - text: |
       Não entendi o que você falou, pode repetir, por favor?
@@ -389,7 +402,6 @@ templates:
   utter_start_report:
   - text: |
       Aguarde um momento, vou gerar o relatório para você.
-<<<<<<< HEAD
   
   utter_start_issue:
   - text: |
@@ -398,7 +410,6 @@ templates:
   utter_issue_name:
   - text: |
       Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo como: "Descrição: Essa é a descrição"
-=======
 
   utter_affirm:
   - text: |
@@ -433,4 +444,3 @@ templates:
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto !
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
->>>>>>> devel

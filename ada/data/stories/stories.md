@@ -117,7 +117,7 @@
 * whats_pipeline
   - utter_whats_pipeline
 
-<<<<<<< HEAD
+
 ## path_create_issue
 * start_create_issue
    - utter_start_issue
@@ -126,8 +126,6 @@
   - action_issue_name
 * create_issue
   - action_create_issue
-=======
 ## path_adas_architecture
 * adas_architecture
   - utter_adas_architecture
->>>>>>> devel
