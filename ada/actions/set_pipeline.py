@@ -4,6 +4,7 @@ import os
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 import telegram
+
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 SECS = 10.0
