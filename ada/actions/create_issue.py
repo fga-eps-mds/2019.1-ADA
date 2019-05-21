@@ -4,9 +4,9 @@ import os
 import requests
 import json
 import sys
-GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
-GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
+import telegram
 
+GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
 
 class ActionCreateIssue(Action):
     def name(self):
@@ -30,10 +30,9 @@ class ActionCreateIssue(Action):
             received_repositories = response.json()
             dispatcher.utter_message("Criei sua issue aqui, para acessar"
                                      " clique nesse link: {link}".format(
-                                         link=str(
-                                             received_repositories['html_url'])
-                                     ))
+                                         link=str(received_repositories['html_url'])))
         except ValueError:
-            print("Deu erro", file=sys.stderr)
+            dispatcher.utter_message("Desculpe, não consegui criar sua Issue," \
+                                     "tente novamente!")
         else:
             return [SlotSet('issue_body', issue_body)]

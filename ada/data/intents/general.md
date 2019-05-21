@@ -277,18 +277,6 @@
  - Oq e pipeline?
  - oq e pipeline
  - oq é pipeline?
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- - pipeline é o que ?
- - o que significa pipeline ?
- - qual o significado de: pipeline ?
->>>>>>> devel
-=======
- - pipeline é o que ?
- - o que significa pipeline ?
- - qual o significado de: pipeline ?
->>>>>>> e641d253e588b906b51290535bb719f18e5ae174
->>>>>>> US16-CriarIssue
+ - pipeline é o que?
+ - o que significa pipeline?
+ - qual o significado de: pipeline?

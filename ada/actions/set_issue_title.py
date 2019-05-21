@@ -2,8 +2,7 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 import os
 import sys
-GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
-
+import telegram
 
 class ActionIssueName(Action):
     def name(self):
@@ -15,9 +14,8 @@ class ActionIssueName(Action):
             message = message.split(": ")
             issue_name = message[1]
             print("O titulo da Issue é: {issue_name}\n"
-                  .format(issue_name=issue_name),
-                  file=sys.stderr)
+                  .format(issue_name=issue_name))
         except ValueError:
-            print("Deu erro", file=sys.stderr)
+            dispatcher.utter_message("Desculpe, mas não consegui criar a Issue!")
         else:
             return [SlotSet('issue_name', issue_name)]

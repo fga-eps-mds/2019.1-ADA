@@ -18,6 +18,15 @@
 * action_set_repository_gitlab
   - action_set_repository_gitlab
 
+## path_create_issue
+* start_create_issue
+  - utter_start_issue
+* issue_name
+  - utter_issue_name
+  - action_issue_name
+* create_issue
+  - action_create_issue
+
 ## path_help
 * help{"command": "help"}
   - utter_help
@@ -89,11 +98,11 @@
 
 ## path_user_affirms_something
 * affirm
-   - utter_affirm  
+  - utter_affirm  
 
 ## path_marry_or_date
 * marry_or_date
-   - utter_marry_or_date
+  - utter_marry_or_date
 
 ## path_sad
 * sad
@@ -110,7 +119,6 @@
 
 ## set_pipeline
 * set_pipeline
-  - utter_set_pipeline
   - action_set_pipeline
 
 ## path_next_release
@@ -121,15 +129,6 @@
 * whats_pipeline
   - utter_whats_pipeline
 
-
-## path_create_issue
-* start_create_issue
-   - utter_start_issue
-* issue_name
-  - utter_issue_name
-  - action_issue_name
-* create_issue
-  - action_create_issue
 ## path_adas_architecture
 * adas_architecture
   - utter_adas_architecture

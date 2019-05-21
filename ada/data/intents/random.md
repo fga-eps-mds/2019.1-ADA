@@ -135,11 +135,6 @@
 - quem sao os seus [criadores](creators)?
 - quem sao os seus [criadores](creators)
 - voce foi feito por quem?
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e641d253e588b906b51290535bb719f18e5ae174
 
 ## intent:marry_or_date
 - quero [te namorar](marry_or_date)
@@ -176,7 +171,3 @@
 - suas tecnologias são quais ?
 - [arquitetura da Ada](adas_architecture)
 - [tecnologias da ADA](adas_architecture)
-<<<<<<< HEAD
->>>>>>> devel
-=======
->>>>>>> e641d253e588b906b51290535bb719f18e5ae174

@@ -23,16 +23,16 @@ intents:
   - deny
   - intended_for_next_release
   - whats_pipeline
+
+  ##Actions
+  - action_start
   - action_get_report
   - set_pipeline
-
-  - action_start
   - action_set_repository_github
   - action_set_repository_gitlab
   - start_create_issue
   - create_issue
   - issue_name
-  - issue_body
   - marry_or_date
   - adas_architecture
 
@@ -52,13 +52,15 @@ entities:
   - creators
   - begin
   - help
+  - marry_or_date
+  - adas_architecture
+  - affirm
+
+  ## SlotsSets(Entities)
   - repository_gitlab
   - repository_github
   - issue_name
   - issue_body
-  - marry_or_date
-  - adas_architecture
-  - affirm
 
 slots:
   repository_gitlab:
@@ -69,7 +71,7 @@ slots:
     type: text
   issue_body:
     type: text
-  
+
 actions:
   - utter_defalut
   - utter_affirm
@@ -95,10 +97,10 @@ actions:
   - utter_creators
   - utter_intended_for_next_release
   - utter_whats_pipeline
-  - action_get_report
-  - utter_set_pipeline
-  - action_set_pipeline
+
   - utter_start_report
+  - action_get_report
+  - action_set_pipeline
   - action_start
   - action_set_repository_github
   - action_set_repository_gitlab
@@ -366,45 +368,52 @@ templates:
   utter_start_report:
   - text: |
       Aguarde um momento, vou gerar o relatório para você.
-  
+
   utter_start_issue:
   - text: |
-      Vamos lá, para criar uma nova Issue preciso que primeiro me mande qual o titulo da Issue que você vai criar, tente fazer algo nesse estilo: "Título: O Título É Esse" 
-  
+      Vamos lá, para criar uma nova ISSUE preciso que primeiro me mande qual o título da issue que você vai criar, por exemplo, tente fazer algo nesse estilo: "Título: O Título É Esse"
+
   utter_issue_name:
   - text: |
       Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo como: "Descrição: Essa é a descrição"
 
   utter_affirm:
   - text: |
-      Okay !
+      Okay!
+
   - text:
-      Que bom !
+      Que bom!
+
   - text:
-      Que legal !
+      Que legal!
+
   - text:
       Fico contente.
+
   - text:
       Certo ! Muito bom.
 
   utter_marry_or_date:
   - text: |
       Fico lisonjeada, mas isso não é possível.
+
   - text: |
-      Mas nós nem nos conhecemos direito ! rsrsrs
+      Mas nós nem nos conhecemos direito!
       Acho melhor não, mas não fica triste.
+
   - text: |
-      Hummm ... é melhor pensarmos melhor sobre isso.
+      Hummm... é melhor pensarmos melhor sobre isso.
       Talvez não seja prudente namorarmos.
+
   utter_adas_architecture:
   - text: |
-      Nossa, deixa eu te explicar porque é um pouco complicado rsrsrs
+      Nossa, deixa eu te explicar porque é um pouco complicado!
 
       Eu sou muito inteligente e objetiva, primeiramente, e é por isso que eu sei onde buscar as informações
       para passar para você.
 
-      Com relação ao que eu faço para vc, eu uso 6 tecnologias para me ajudar: o Telegram, para falar com vc;
+      Com relação ao que eu faço para você, eu uso 6 tecnologias para me ajudar: o Telegram, para falar com você;
       o Rasa, para me ajudar a te entender certinho; a API do GitHub, para controlar suas atividades relacionadas
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
-      e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto !
+      e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
