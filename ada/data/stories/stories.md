@@ -86,7 +86,14 @@
 ## path_how_are_you
 * how_are_you
   - utter_how_are_you
-  - utter_affirm
+
+## path_user_affirms_something
+* affirm
+   - utter_affirm  
+
+## path_marry_or_date
+* marry_or_date
+   - utter_marry_or_date
 
 ## path_sad
 * sad
@@ -113,3 +120,16 @@
 ## path_whats_pipeline
 * whats_pipeline
   - utter_whats_pipeline
+
+
+## path_create_issue
+* start_create_issue
+   - utter_start_issue
+* issue_name
+  - utter_issue_name
+  - action_issue_name
+* create_issue
+  - action_create_issue
+## path_adas_architecture
+* adas_architecture
+  - utter_adas_architecture

@@ -19,6 +19,7 @@ services:
     depends_on:
       - actions
       - mongo-telegram
+    command: sh -c "python run-telegram.py"
   actions:
     build:
       context: .
