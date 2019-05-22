@@ -39,7 +39,6 @@ intents:
 entities:
   - command
   - oi
-  - ok
   - religion
   - good
   - name
@@ -52,8 +51,6 @@ entities:
   - creators
   - begin
   - help
-  - marry_or_date
-  - adas_architecture
   - affirm
 
   ## SlotsSets(Entities)
@@ -146,7 +143,7 @@ templates:
   - text: |
       Eu vou te ajudar a gerenciar a pipeline da produção do seu serviço/software.
 
-      Vc pode falar comigo sobre vários aspectos...como :
+      Você pode falar comigo sobre vários aspectos, tais como:
         - Criar e comentar Issues (Previsto para a R2);
         - Relatório sobre seu projeto do GitLab;
         - Commit's (Previsto para a R2);
@@ -154,7 +151,7 @@ templates:
         - Comentar Pull Request's (Previsto para a R2);
         - Resultado dos pipelines;
 
-      O que vc precisar saber, é só me perguntar ❤️
+      O que você precisar saber, é só me perguntar ❤️
 
   utter_begin:
   - text: |

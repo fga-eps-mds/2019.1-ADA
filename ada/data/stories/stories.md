@@ -26,6 +26,7 @@
   - action_issue_name
 * create_issue
   - action_create_issue
+  - utter_restart
 
 ## path_help
 * help{"command": "help"}

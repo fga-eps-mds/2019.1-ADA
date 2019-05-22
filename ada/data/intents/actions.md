@@ -30,10 +30,10 @@
 - a build tá começando?
 - a build parou?
 - quantas builds tem
-- quantas builds eu tenho ?
-- em qual job a build se encontra ?
+- quantas builds eu tenho?
+- em qual job a build se encontra?
 - qual o job da build atual
-- tem job em andamento ?
+- tem job em andamento?
 - qual a job atual
 - quantas builds eu tenho?
 - minhas builds
@@ -112,9 +112,8 @@
 - título: [#135 ABC](issue_name)
 
 ## intent:create_issue
- - Descrição: [Quero criar um banco capaz de guardar informações](issue_body)
- - descrição: [Task: 1, 2, 3](issue_body)
- - descrição: [Criterios de aceitação](issue_body)
- - descricao: [Criterios de aceitação](issue_body)
- - descriçao: [Criterios de aceitação](issue_body)
- - Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
+- Descrição: [Quero criar um banco capaz de guardar informações](issue_body)
+- descrição: [teste](issue_body)
+- descrição: [Criterios de aceitação](issue_body)
+- Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
+- descricao: [1 salvar dados](issue_body)
