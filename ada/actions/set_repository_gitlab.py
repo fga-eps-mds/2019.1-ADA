@@ -12,9 +12,9 @@ ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")
 
 
-class ActionSetRepositorie(Action):
+class SetRepositoryGitLab(Action):
     def name(self):
-        return "action_set_repositorie"
+        return "action_set_repository_gitlab"
 
     def run(self, dispatcher, tracker, domain):
         try:
@@ -31,11 +31,8 @@ class ActionSetRepositorie(Action):
             selected_repo = "Ok, vou ficar monitorando "\
                             "o repositório {rep}.".format(
                                 rep=repo_name)
-            bot_message = bot.send_message(chat_id=sender_id,
-                                           text=selected_repo)
-            bot.editMessageReplyMarkup(chat_id=sender_id,
-                                       message_id=bot_message.message_id - 1,
-                                       reply_markup=[])
+            bot.send_message(chat_id=sender_id,
+                             text=selected_repo)
             set_webhook_msg = "Para receber notificações sobre "\
                               "resultados do pipeline, "\
                               "entra nesse link aqui {}, "\
@@ -67,7 +64,7 @@ class ActionSetRepositorie(Action):
             dispatcher.utter_message("https://imgur.com/fxjQ6XP.jpg")
             dispatcher.utter_message(instruction_msg)
 
-            return [SlotSet('repositorio', repo_name)]
+            return [SlotSet('repository_gitlab', repo_name)]
         except ValueError:
             dispatcher.utter_message("Estou tendo dificuldade pra encontrar "
                                      "os dados do repositório. "
