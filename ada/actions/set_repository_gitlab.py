@@ -7,7 +7,6 @@ from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 import telegram
 
-
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")

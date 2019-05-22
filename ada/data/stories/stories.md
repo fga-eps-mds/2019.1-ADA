@@ -133,3 +133,7 @@
 ## path_adas_architecture
 * adas_architecture
   - utter_adas_architecture
+
+## path_rerun_pipeline
+* rerun_pipeline
+  - action_rerun_pipeline

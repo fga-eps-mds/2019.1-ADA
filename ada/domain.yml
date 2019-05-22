@@ -35,6 +35,7 @@ intents:
   - issue_name
   - marry_or_date
   - adas_architecture
+  - rerun_pipeline
 
 entities:
   - command
@@ -107,6 +108,7 @@ actions:
   - action_create_issue
   - utter_marry_or_date
   - utter_adas_architecture
+  - action_rerun_pipeline
 
 
 templates:

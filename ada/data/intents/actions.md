@@ -117,3 +117,6 @@
 - descrição: [Criterios de aceitação](issue_body)
 - Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
 - descricao: [1 salvar dados](issue_body)
+
+## intent:rerun_pipeline
+- quero reiniciar a pipeline
