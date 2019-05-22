@@ -3,7 +3,6 @@ from rasa_core_sdk.events import SlotSet
 import os
 import requests
 import json
-import sys
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 
@@ -32,8 +31,8 @@ class ActionCreateIssue(Action):
             received_repositories = response.json()
             dispatcher.utter_message("Criei sua issue aqui, para acessar"
                                      " clique nesse link: {link}".format(
-                                         link=str(
-                                             received_repositories['html_url'])))
+                                      link=str(
+                                        received_repositories['html_url'])))
         except HTTPError:
             dispatcher.utter_message(
                 "Não consegui criar a issue, tente novamente")

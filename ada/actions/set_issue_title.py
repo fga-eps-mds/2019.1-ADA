@@ -1,5 +1,4 @@
 from rasa_core_sdk import Action
-import sys
 from rasa_core_sdk.events import SlotSet
 from urllib3.exceptions import NewConnectionError
 
@@ -14,7 +13,8 @@ class ActionIssueName(Action):
             message = message.split(": ")
             issue_name = message[1]
 
-            print("O titulo da Issue é: {issue_name}\n".format(issue_name=issue_name))
+            print("O titulo da Issue é: {issue_name}\n".format
+                  (issue_name=issue_name))
         except ValueError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
