@@ -7,15 +7,14 @@ from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 import telegram
 
-
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")
 
 
-class ActionSetRepositorie(Action):
+class SetRepositoryGitLab(Action):
     def name(self):
-        return "action_set_repositorie"
+        return "action_set_repository_gitlab"
 
     def run(self, dispatcher, tracker, domain):
         try:
@@ -30,16 +29,10 @@ class ActionSetRepositorie(Action):
             glab_webhook_url = self.save_repo_to_db(headers, repo_name,
                                                     message, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
-                            "o repositório {rep}. "\
-                            "Agora, você pode me pedir "\
-                            "informações sobre seus pipelines ou "\
-                            "relatórios informacionais "\
-                            "do seu repositório.".format(rep=repo_name)
-            bot_message = bot.send_message(chat_id=sender_id,
-                                           text=selected_repo)
-            bot.editMessageReplyMarkup(chat_id=sender_id,
-                                       message_id=bot_message.message_id - 1,
-                                       reply_markup=[])
+                            "o repositório {rep}.".format(
+                                rep=repo_name)
+            bot.send_message(chat_id=sender_id,
+                             text=selected_repo)
             set_webhook_msg = "Para receber notificações sobre "\
                               "resultados do pipeline, "\
                               "entra nesse link aqui {}, "\
@@ -55,12 +48,23 @@ class ActionSetRepositorie(Action):
                          .format(glab_webhook_url["gitlab_webhook_url"])
             explanation_msg = "Vou mandar uma imagem pra "\
                               "ficar mais fácil de entender, ok?"
+            instruction_msg = "Ah, mas atenção: isso aqui é só se você "\
+                              "quiser receber notificações toda vez que "\
+                              "um pipeline terminar. Mas "\
+                              "eu consigo fazer muito mais que isso! "\
+                              "Eu consigo: se você me "\
+                              "pedir pra mandar o último pipeline, "\
+                              "também posso trazer o resultado, "\
+                              "ou você também pode pedir um "\
+                              "relatório sobre seu repositório."
+
             dispatcher.utter_message(set_webhook_msg)
             dispatcher.utter_message(gitlab_msg)
             dispatcher.utter_message(explanation_msg)
             dispatcher.utter_message("https://imgur.com/fxjQ6XP.jpg")
+            dispatcher.utter_message(instruction_msg)
 
-            return [SlotSet('repositorio', repo_name)]
+            return [SlotSet('repository_gitlab', repo_name)]
         except ValueError:
             dispatcher.utter_message("Estou tendo dificuldade pra encontrar "
                                      "os dados do repositório. "
