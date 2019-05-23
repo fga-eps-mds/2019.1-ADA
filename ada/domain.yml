@@ -36,6 +36,7 @@ intents:
   - marry_or_date
   - adas_architecture
   - rerun_pipeline
+  - action_get_report_github
 
 entities:
   - command
@@ -109,6 +110,7 @@ actions:
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
+  - action_get_report_github
 
 
 templates:

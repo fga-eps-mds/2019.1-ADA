@@ -120,3 +120,10 @@
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
+
+## intent:action_get_report_github
+- me manda o relatório do github, ada
+- me manda o relatorio do github
+- me manda o relatório do github
+- me mostra o relatório do github, ada
+- Ada, me mostra o relatório do github
