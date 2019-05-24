@@ -1,32 +1,10 @@
 ## path_start
 * start{"command": "start"}
-  - action_start
-* action_set_repository_github
-  - action_set_repository_github
-
-## path_start
-* start{"command": "start"}
-  - action_start
-* action_set_repository_gitlab
-  - action_set_repository_gitlab
-
-## path_start
-* start{"command": "start"}
-  - action_start
-* action_set_repository_github
-  - action_set_repository_github
-* action_set_repository_gitlab
-  - action_set_repository_gitlab
-
-## path_create_issue
-* start_create_issue
-  - utter_start_issue
-* issue_name
-  - utter_issue_name
-  - action_issue_name
-* create_issue
-  - action_create_issue
-  - utter_restart
+  - utter_start
+* action_set_user
+  - action_set_user
+* action_set_repositorie
+  - action_set_repositorie
 
 ## path_help
 * help{"command": "help"}
@@ -96,14 +74,7 @@
 ## path_how_are_you
 * how_are_you
   - utter_how_are_you
-
-## path_user_affirms_something
-* affirm
-  - utter_affirm  
-
-## path_marry_or_date
-* marry_or_date
-  - utter_marry_or_date
+  - utter_affirm
 
 ## path_sad
 * sad
@@ -113,6 +84,14 @@
 * creators
   - utter_creators
 
+## path set_user
+* action_set_user
+  - action_set_user
+
+## path set_repositorie
+* action_set_repositorie
+  - action_set_repositorie
+
 ## path_action_get_report
 * action_get_report
   - utter_start_report
@@ -120,8 +99,9 @@
 
 ## set_pipeline
 * set_pipeline
+  - utter_set_pipeline
   - action_set_pipeline
-
+  
 ## path_next_release
 * intended_for_next_release
   - utter_intended_for_next_release
@@ -129,11 +109,3 @@
 ## path_whats_pipeline
 * whats_pipeline
   - utter_whats_pipeline
-
-## path_adas_architecture
-* adas_architecture
-  - utter_adas_architecture
-
-## path_rerun_pipeline
-* rerun_pipeline
-  - action_rerun_pipeline
