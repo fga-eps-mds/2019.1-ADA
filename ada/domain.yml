@@ -23,24 +23,17 @@ intents:
   - deny
   - intended_for_next_release
   - whats_pipeline
-
-  ##Actions
-  - action_start
+  - action_set_user
+  - action_set_repositorie
   - action_get_report
   - set_pipeline
-  - action_set_repository_github
-  - action_set_repository_gitlab
-  - start_create_issue
-  - create_issue
-  - issue_name
-  - marry_or_date
-  - adas_architecture
-  - rerun_pipeline
 
 entities:
   - command
   - oi
+  - ok
   - religion
+  - how
   - good
   - name
   - joke
@@ -52,26 +45,18 @@ entities:
   - creators
   - begin
   - help
-  - affirm
-
-  ## SlotsSets(Entities)
-  - repository_gitlab
-  - repository_github
-  - issue_name
-  - issue_body
+  - usuario
+  - repositorio
 
 slots:
-  repository_gitlab:
+  repositorio:
     type: text
-  repository_github:
-    type: text
-  issue_name:
-    type: text
-  issue_body:
+  usuario:
     type: text
 
 actions:
   - utter_defalut
+  - utter_start
   - utter_affirm
   - utter_help
   - utter_begin
@@ -95,33 +80,31 @@ actions:
   - utter_creators
   - utter_intended_for_next_release
   - utter_whats_pipeline
-
-  - utter_start_report
+  - action_set_user
+  - utter_set_user
+  - action_set_repositorie
   - action_get_report
+  - utter_set_pipeline
   - action_set_pipeline
-  - action_start
-  - action_set_repository_github
-  - action_set_repository_gitlab
-  - utter_start_issue
-  - action_issue_name
-  - utter_issue_name
-  - action_create_issue
-  - utter_marry_or_date
-  - utter_adas_architecture
-  - action_rerun_pipeline
-
-
+  - utter_start_report
 templates:
+
   utter_default:
   - text: |
       Não entendi o que você falou, pode repetir, por favor?
 
       Se estiver com alguma dúvida, é só me pedir ajuda.
-
+  
   - text: |
       O que você quis dizer? Me explica melhor, por favor.
 
       Se estiver com alguma dúvida, é só me pedir ajuda.
+
+  utter_start:
+  - text: |
+      Oláaaaa, sou a Ada! Sou responsável por ajudar você no monitoramento de produção com seus repositórios. Caso queira saber mais, me peça ajuda.
+
+      Agora, pra gente começar eu vou precisar do seu nome de usuário lá do GitLab. Olha, vou te dar um exemplo! Pro usuário @AdaLovelace eu escreveria "Meu usuário é AdaLovelace".
 
   utter_restart:
   - text: |
@@ -131,7 +114,7 @@ templates:
       Ficou interessado, né? Bom, vamos lá.
 
       Vou te passar uma lista do que você pode me pedir
-          - Resultado dos pipelines;
+          - Resultado dos pipelines; 
           - Andamendo das builds dos seus projetos do GitLab;
           - Relatório sobre seu projeto do GitLab;
           - Commit's (Previsto para a R2);
@@ -142,19 +125,6 @@ templates:
 
       Basta você me pedir.
 
-  - text: |
-      Eu vou te ajudar a gerenciar a pipeline da produção do seu serviço/software.
-
-      Você pode falar comigo sobre vários aspectos, tais como:
-        - Criar e comentar Issues (Previsto para a R2);
-        - Relatório sobre seu projeto do GitLab;
-        - Commit's (Previsto para a R2);
-        - Andamendo das builds dos seus projetos do GitLab;
-        - Comentar Pull Request's (Previsto para a R2);
-        - Resultado dos pipelines;
-
-      O que você precisar saber, é só me perguntar ❤️
-
   utter_begin:
   - text: |
       Então vamos lá, me pergunte o que você quer saber sobre seus repositórios ou converse comigo, sei de muitas coisas!
@@ -164,20 +134,20 @@ templates:
       Olá! Como posso ajudar?
 
       Caso esteja com alguma dúvida, me peça ajuda que eu te trago as informações! 😆
-
+  
   - text: |
       Olá, tudo bem? Como você já deve saber, sou a Ada!
-
+      
       Sou responsável por várias coisas no seu repositório, caso você queira saber mais, me peça ajuda que te respondo rapidinho! 😊
 
   uteer_set_pipeline:
   - text: |
       Aguarde um momento, vou verificar.
-
+  
   utter_how_are_you:
   - text: |
       Estou ótima, obrigada! E você??
-
+  
   - text: |
       Obrigada por perguntar, estou muito bem! 😊
 
@@ -198,7 +168,7 @@ templates:
       Tchauuuuu, migo(a). 😘
 
       Caso você tenha se cadastrado, eu irei notificá-lo sobre qualquer alteração no seu repositório.
-
+  
   - text: |
       Gooood bye! Volte sempre! 😘
 
@@ -213,8 +183,8 @@ templates:
   - text: |
       Ahhh que isso, né! Muito obrigada 🤩
 
-      Sou reconhecida hoje por causa de vocês!
-
+      Sou reconhecida hoje por causa de vocês! 
+      
   - text: |
       Obrigada, mas você que é incrível! 😍
 
@@ -236,14 +206,14 @@ templates:
   - text: |
       Ahhh, que isso, estou aqui para te ajudar mesmo!
 
-      Foi um prazer te ajuda, qualquer coisa é só mandar um oizinho!
+      Foi um prazer te ajudar, qualquer coisa é só mandar um oizinho!
 
   - text: |
       Eu que agradeço, sem você eu não seria nada. Conta comigo para qualquer coisa!
 
   utter_who_is_ada:
   - text: |
-      Eu fui desenvolvida por um grupo de estudantes de Engenharia de Software da Universidade de Brasília 🇧🇷, em 2019. Meu nome e personalidade foram escolhidos em  homenagem à Ada Lovelace, uma grande escritora e matemática do século XIX, filha do poeta Lord Byron. A ela é atribuído o título de primeira mulher programadora, uma vez que ela foi responsável por criar o primeiro algoritmo com a intenção de ser executado por uma máquina de computação, a máquina de Charles Babbage, além de ter reconhecido o enorme potencial desse tipo de máquina.
+      Eu fui desenvolvida por um grupo de estudantes de Engenharia de Software da Universidade de Brasília, em 2019. Meu nome e personalidade foram escolhidos em  homenagem à Ada Lovelace, uma grande escritora e matemática do século XIX, filha do poeta Lord Byron. A ela é atribuído o título de primeira mulher programadora, uma vez que ela foi responsável por criar o primeiro algoritmo com a intenção de ser executado por uma máquina de computação, a máquina de Charles Babbage, além de ter reconhecido o enorme potencial desse tipo de máquina.
 
   utter_religion:
   - text: |
@@ -270,7 +240,7 @@ templates:
 
   - text: |
       Sou a melhor pessoa da computação que existe, você não acha?
-
+      
   utter_name_complete:
   - text: |
       Meu nome completo é Ada August King, Condessa de Lovelace
@@ -278,7 +248,7 @@ templates:
   - text: |
       Como assim você não sabe meu nome?
 
-      É Ada Lovelace, rapaz!
+      É Ada Lovelace, rapaz! 
 
   utter_joke:
   - text: |
@@ -298,11 +268,11 @@ templates:
 
   utter_good_night:
   - text: |
-      Boa noiteeee, se cuida!
+      Boa noiteeee, se cuida! 
 
   - text: |
       Tenha uma ótima noite!
-
+  
   - text: |
       Fica bem e se cuida, até amanhã!
 
@@ -314,7 +284,7 @@ templates:
       O dia está lindo, né? 😍
 
       Uma ótima tarde!
-
+  
   utter_good_morning:
   - text: |
       Bom diaaaa!!!
@@ -322,13 +292,13 @@ templates:
   - text: |
       O dia está maravilhoso, né?
 
-      Tenha um ótimo dia hoje, espero que você faça tudo que você planejou!
-
+      Tenha um ótimo dia hoje, espero que você faça tudo que você planejou! 
+  
   - text: |
       É tão bom acordar e olhar esse céu maravilhoso, né?
 
       Um bom dia para você!
-
+  
   utter_sad:
   - text: |
       Não fica triste, a sua vida é muito importante!
@@ -344,11 +314,11 @@ templates:
       Não fica triste, por favor!
 
       Vai tomar um ar, pensa na vida e pensa em como você é importante para a sua família e para os seus amigos!
-
+  
   utter_creators:
   - text: |
-      Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas!
-
+      Ahh eu fui criada pelo Caio, João Vitor, Jhonson, Guilherme, Vitor, Ateldy, Erick, Bruno e Lucas! 
+      
       Esse time maravilhoso de MDS e EPS da UnB-FGA 😍
 
   - text: |
@@ -359,60 +329,12 @@ templates:
   utter_intended_for_next_release:
   - text: |
       Desculpe, ainda não consigo fazer isso, mas até o final de junho aprenderei isso e conseguirei te ajudar.
-
+  
   utter_whats_pipeline:
-  - text: |
-      Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy.
-
+  - text: | 
+      Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy. 
+  
   utter_start_report:
   - text: |
       Aguarde um momento, vou gerar o relatório para você.
-
-  utter_start_issue:
-  - text: |
-      Vamos lá, para criar uma nova ISSUE preciso que primeiro me mande qual o título da issue que você vai criar, por exemplo, tente fazer algo nesse estilo: "Título: O Título É Esse"
-
-  utter_issue_name:
-  - text: |
-      Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo como: "Descrição: Essa é a descrição"
-
-  utter_affirm:
-  - text: |
-      Okay!
-
-  - text:
-      Que bom!
-
-  - text:
-      Que legal!
-
-  - text:
-      Fico contente.
-
-  - text:
-      Certo ! Muito bom.
-
-  utter_marry_or_date:
-  - text: |
-      Fico lisonjeada, mas isso não é possível.
-
-  - text: |
-      Mas nós nem nos conhecemos direito!
-      Acho melhor não, mas não fica triste.
-
-  - text: |
-      Hummm... é melhor pensarmos melhor sobre isso.
-      Talvez não seja prudente namorarmos.
-
-  utter_adas_architecture:
-  - text: |
-      Nossa, deixa eu te explicar porque é um pouco complicado!
-
-      Eu sou muito inteligente e objetiva, primeiramente, e é por isso que eu sei onde buscar as informações
-      para passar para você.
-
-      Com relação ao que eu faço para você, eu uso 6 tecnologias para me ajudar: o Telegram, para falar com você;
-      o Rasa, para me ajudar a te entender certinho; a API do GitHub, para controlar suas atividades relacionadas
-      a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
-      e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
-      Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
+    
