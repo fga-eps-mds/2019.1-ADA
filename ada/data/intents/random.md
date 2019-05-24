@@ -18,16 +18,16 @@
 - [religião](religion)
 
 ## intent:who_am_i
-- [como você é?](how)
-- [como vc é?](how)
-- [me manda uma foto sua](how)
-- [vc é magra ou gorda?](how)
-- [vc é bonita?](how)
-- [vc é feia?](how)
-- [me diz suas caracteristicas](how)
-- [me fala como é o seu rosto](how)
-- [vc é alta ou baixa?](how)
-- [me manda uma foto sua, por favor](how)
+- como você é?
+- como vc é?
+- me manda uma foto sua
+- vc é magra ou gorda?
+- vc é bonita?
+- vc é feia?
+- me diz suas caracteristicas
+- me fala como é o seu rosto
+- vc é alta ou baixa?
+- me manda uma foto sua, por favor
 
 ## intent:name_complete
 - Qual o seu nome?
@@ -136,37 +136,37 @@
 - voce foi feito por quem?
 
 ## intent:marry_or_date
-- quero [te namorar](marry_or_date)
-- [namora comigo](marry_or_date)
-- [me namora](marry_or_date)
-- [quero vc](marry_or_date) só para mim
-- [casa comigo](marry_or_date), ada
-- [vamos namorar ?](marry_or_date)
-- [vamos nos casar](marry_or_date) ?
-- [casaria cmg ?](marry_or_date)
-- namora comigo ?
-- aceita me namorar ?
-- me aceita como seu namorado ?
-- me aceita de namorada ?
+- quero te namorar
+- namora comigo
+- me namora
+- quero vc só para mim
+- casa comigo, ada
+- vamos namorar?
+- vamos nos casar?
+- casaria cmg?
+- namora comigo?
+- aceita me namorar?
+- me aceita como seu namorado?
+- me aceita de namorada?
 
 ## intent:adas_architecture
-- qual a sua arquitetura ?
-- me fala [sua arquitetura atual ?](adas_architecture)
-- [sua arquitetura](adas_architecture)
-- quais as tecnologias que você usa ?
-- que tecnologias a Ada usa ?
-- vc trabalha com quais tecnologias ?
-- como funciona sua arquitetura ?
-- sua arquitetura é grande ?
-- como vc foi arquitetada ?
-- como que vc funciona ?
-- sua arquitetura é dificil ?
-- sua arquitetura é complicada ?
+- qual a sua arquitetura?
+- me fala sua arquitetura atual?
+- sua arquitetura
+- quais as tecnologias que você usa?
+- que tecnologias a Ada usa?
+- vc trabalha com quais tecnologias?
+- como funciona sua arquitetura?
+- sua arquitetura é grande?
+- como vc foi arquitetada?
+- como que vc funciona?
+- sua arquitetura é dificil?
+- sua arquitetura é complicada?
 - me mostra sua arquitetura
 - mostra ae as tecnologia que tu usa
-- vc usa git ?
-- voce trabalha com github ?
-- [suas tecnologias](adas_architecture)
-- suas tecnologias são quais ?
-- [arquitetura da Ada](adas_architecture)
-- [tecnologias da ADA](adas_architecture)
+- vc usa git?
+- voce trabalha com github?
+- suas tecnologias
+- suas tecnologias são quais?
+- arquitetura da Ada
+- tecnologias da ADA

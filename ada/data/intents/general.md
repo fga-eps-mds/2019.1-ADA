@@ -1,7 +1,3 @@
-## intent:start
-- [start](command)
-- [/start](command)
-
 ## intent:help
 - [help](command)
 - [/help](command)
@@ -14,25 +10,25 @@
 - me [ajuda](help), por favor
 - ei, me [ajuda](help)
 - ada, me [ajuda](help)
-- o que [você faz ?](help)
-- quais são [as coisas que voce faz](help) ?
-- que que vc faz ?
+- o que você faz
+- quais são [as coisas que voce faz](help)?
+- que que vc faz?
 - [o que vc consegue fazer](help)
-- [cosegue fazer o q ?](help)
-- tu consegue [fzr o q](help)
-- como vc pode me ajudar ?
-- vc [me ajuda como ?](help)  
-- como podes me ajudar ?
-- vc [me ajuda ?](help)
-- [me ajuda por favor ?](help)
-- quais [os seus serviços](help) ?
+- consegue fazer o q?
+- tu consegue fzr o q?
+- como vc pode me ajudar?
+- vc me ajuda como?
+- como podes me ajudar?
+- vc me ajuda?
+- me ajuda por favor?
+- quais [os seus serviços](help)?
 - me fala seus [servicos](help)
 - quero saber sobre seus serviços
-- o que vc consegue fazer ?
-- qual [servico](help) vc tem ?
-- os seus servicos sao quais ?
-- vc tem muitos serviços ?
-- vc pode me ajudar ?
+- o que vc consegue fazer?
+- qual [servico](help) vc tem?
+- os seus servicos sao quais?
+- vc tem muitos serviços?
+- vc pode me ajudar?
 - ayuda
 - [socorro](help) ada
 - to entendendo nada
@@ -101,26 +97,26 @@
 - oi miga
 
 ## intent:how_are_you
-- [td bem ?](how)
-- tudo [bem?](ok)
-- Tudo [bem ?](ok)
-- vc [esta bem ?](ok)
-- [como vc esta ?](ok)
-- tudo [ok ?](ok)
-- voce ta [bem](how)?
-- você está [bem](ok)?
-- [Como você está ?](ok)
-- [como vc tá](how)?
-- [tá tudo certo](ok)?
-- você tá [bem](ok)?
-- Você está [bem](ok)?
-- está [bem](ok), ada?
-- [Ada, você está bem ?](ok)
-- como vc ta ada ?
-- como você está ?
-- [tudo bem](how) com tu ?
-- vc vai bem ?
-- [eai ada de boa](how) ?
+- td bem?
+- tudo bem?
+- Tudo bem?
+- vc esta bem?
+- como vc esta?
+- tudo ok?
+- voce ta bem?
+- você está bem?
+- Como você está ?
+- como vc tá?
+- tá tudo certo?
+- você tá bem?
+- Você está bem?
+- está bem, ada?
+- Ada, você está bem?
+- como vc ta ada?
+- como você está?
+- tudo bem com tu?
+- vc vai bem?
+- eai ada de boa?
 
 ## intent:greet_reply
 - [estou bem](good)
@@ -143,7 +139,7 @@
 - suave na nave
 - de boa na lagoa
 - to bem massa
-- so nao estou melhor que você !
+- so nao estou melhor que você!
 
 ## intent:goodbye
 - tchau
@@ -250,7 +246,7 @@
 - obrigado
 - brigado
 - brigada
-- nossa, valeu mesmo !
+- nossa, valeu mesmo!
 - brigado pela ajuda, Ada
 
 ## intent:who_is_ada
@@ -268,17 +264,10 @@
 - me fala de vc ada
 
 ## intent:intended_for_next_release
-- criar issue
-- comentar issue
-- quero criar issue
 - comentar pull request
 - pull request
 - commit
-- me cadastra no github
-- cria issue pra mim
 - comenta a pull request pra mim
-- comenta a issue pra mim
-- quero comentar issue
 - quero comentar pull request
 - quero ser notificado sobre commits
 - quero ser notificado
@@ -288,6 +277,6 @@
  - Oq e pipeline?
  - oq e pipeline
  - oq é pipeline?
- - pipeline é o que ?
- - o que significa pipeline ?
- - qual o significado de: pipeline ?
+ - pipeline é o que?
+ - o que significa pipeline?
+ - qual o significado de: pipeline?
