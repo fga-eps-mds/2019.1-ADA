@@ -4,7 +4,7 @@ import os
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 import telegram
-import sys
+
 
 GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
@@ -54,7 +54,7 @@ class ReportGitHub(Action):
 
                 size_branches = "Você possui um total "\
                                 "de {size} "\
-                                "branches!".format(
+                                "branches!✅".format(
                                             size=len(branches["branches"]))
                 branches_names = "As branches são as seguintes:\n"
 
@@ -65,38 +65,63 @@ class ReportGitHub(Action):
                 dispatcher.utter_message(size_branches)
                 dispatcher.utter_message(branches_names)
 
-                branches_date_text = "Os últimos commit's foram "\
-                                     "feitos nas branches e nas "\
-                                     "datas abaixo:\n"
+                branches_date_text = "E essa é a quantidade de dias "\
+                                     "desde que foram feitos commit's "\
+                                     "nelas:\n"
                 for item in branches_date["branches"]:
-                    date_json = item["date"]
-                    date = date_json[:10]
-                    print(date, file=sys.stderr)
-                    branches_date_text += "{branch_name} ➡️ {date}\n".format(
-                                          branch_name=item["name"], date=date)
+                    branches_date_text += "⏱{branch_name}: {date}"\
+                                          " dia(s).\n".format(
+                                           branch_name=item["name"],
+                                           date=item["last_commit_days"])
                 dispatcher.utter_message(branches_date_text)
 
-                pull_request_text = "🛠 Pull requests:\n"
-                for item in pull_request["pull_request"]:
-                    pull_request_text += "➡️ Título: {title},"\
-                                         "URL: {url}\n".format(
-                                                       title=item["title"],
-                                                       url=item["url"])
-                dispatcher.utter_message(pull_request_text)
+                if not pull_request["pull_request"]:
+                    dispatcher.utter_message(
+                        "📌Não existe nenhum Pull Request aberto "
+                        "no seu repositório.")
+                else:
+                    pull_request_len = len(pull_request["pull_request"])
+                    if(pull_request_len > 5):
+                        pull_request["pull_request"] = (
+                            pull_request["pull_request"][:5])
+                    pull_request_size = len(pull_request["pull_request"])
+                    pull_request_text = "🛠 Pull requests:\n"
+                    pull_request_text += "Existem {pull_request_size} pull's "\
+                                         "requests abertos no seu repositório"\
+                                         ".\n".format(
+                                          pull_request_size=pull_request_len)
+                    pull_request_text += "Estes são os últimos "\
+                                         "{pull_request_size} pull request's:"\
+                                         "\n".format(
+                                          pull_request_size=pull_request_size)
 
-                date_release_json = release["release"][0]["created_at"]
-                date_release = date_release_json[:10]
+                    for item in pull_request["pull_request"]:
+                        pull_request_text += "📌 Título: {title}\n"\
+                                            "📌URL: {url}\n".format(
+                                                        title=item["title"],
+                                                        url=item["url"])
+                    dispatcher.utter_message(pull_request_text)
 
-                release_text = "🛠 Última release:\n"\
-                               "Nome: {name}\n"\
-                               "Body: {body}\n"\
-                               "Criada dia: {date}\n"\
-                               "URL: {url}".format(
-                                name=release["release"][0]["name"],
-                                body=release["release"][0]["body"],
-                                date=date_release, url=release
-                                ["release"][0]["url"])
-                dispatcher.utter_message(release_text)
+                if not release["release"]:
+                    dispatcher.utter_message(
+                        "Não existe nenhuma Release criada"
+                        " no seu repositório.❗")
+                else:
+                    date_release_json = release["release"][0]["created_at"]
+                    date_release = date_release_json[:10]
+                    day = date_release[8:10]
+                    month = date_release[5:7]
+                    year = date_release[0:4]
+                    release_text = "🛠 Última release:\n"\
+                                   "📌Nome: {name}\n"\
+                                   "📌Descrição: {body}\n"\
+                                   "📌Criada dia: {day}/{month}/{year}\n"\
+                                   "📌URL: {url}".format(
+                                        name=release["release"][0]["name"],
+                                        body=release["release"][0]["body"],
+                                        day=day, month=month, year=year,
+                                        url=release["release"][0]["url"])
+                    dispatcher.utter_message(release_text)
         except HTTPError:
             dispatcher.utter_message(
                 "Não estou conseguindo ter acesso a seus dados, tem certeza"
