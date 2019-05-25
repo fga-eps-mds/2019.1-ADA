@@ -55,19 +55,19 @@ class Report(Action):
                                               )))
 
             message_report_todo = self.message_report(pipeline)
-            dispatcher.utter_message("Sobre o projeto como um todo:\n📌 " + 
-                                    message_report_todo)
+            dispatcher.utter_message("Sobre o projeto como um todo:\n📌 " +
+                                     message_report_todo)
 
             last_7 = pipeline["recents_pipelines"]["last_7_days"]
             last_30 = pipeline["recents_pipelines"]["last_30_days"]
 
             message_report_7 = self.message_report(last_7)
-            dispatcher.utter_message("Sobre os últimos 7 dias:\n⚒ " + 
-                                    message_report_7)
-                                    
+            dispatcher.utter_message("Sobre os últimos 7 dias:\n⚒ " +
+                                     message_report_7)
+
             message_report_30 = self.message_report(last_30)
-            dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ " + 
-                                    message_report_30)
+            dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ " +
+                                     message_report_30)
             return []
         except HTTPError:
             dispatcher.utter_message(
