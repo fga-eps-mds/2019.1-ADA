@@ -137,3 +137,8 @@
 ## path_rerun_pipeline
 * rerun_pipeline
   - action_rerun_pipeline
+
+## path_report_github
+* action_get_report_github
+  - utter_start_report
+  - action_get_report_github
