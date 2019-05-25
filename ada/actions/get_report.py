@@ -15,6 +15,7 @@ class Report(Action):
             headers = {'Content-Type': 'application/json'}
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
+
             response = requests.get(GITLAB_SERVICE_URL +
                                     "report/{chat_id}"
                                     .format(chat_id=chat_id), headers=headers)
@@ -53,58 +54,20 @@ class Report(Action):
                                               pipeline["current_pipeline_name"]
                                               )))
 
-            dispatcher.utter_message("Sobre o projeto como um todo:\n📌 "
-                                     "Número total de pipelines: {total}\n"
-                                     "☑️ {success} obtiveram sucesso\n"
-                                     "❗️ {fail} falharam\n"
-                                     "☑️ A porcentagem de sucesso foi:"
-                                     "{perc_suc}\n❗️ E a porcentagem de falhas"
-                                     "foi: {perc_fail}\n".format(
-                                            total=(
-                                             pipeline["number_of_pipelines"]),
-                                            success=(
-                                             pipeline["succeded_pipelines"]),
-                                            fail=pipeline["failed_pipelines"],
-                                            perc_suc=(
-                                             pipeline["percent_succeded"]),
-                                            perc_fail=100-(
-                                                pipeline["percent_succeded"])))
+            message_report_todo = self.message_report(pipeline)
+            dispatcher.utter_message("Sobre o projeto como um todo:\n📌 " + 
+                                    message_report_todo)
 
             last_7 = pipeline["recents_pipelines"]["last_7_days"]
             last_30 = pipeline["recents_pipelines"]["last_30_days"]
-            dispatcher.utter_message("Sobre os últimos 7 dias:\n⚒ "
-                                     "Número total de pipelines: {total}\n"
-                                     "☑️ {success} obtiveram sucesso\n"
-                                     "❗️ {fail} falharam\n"
-                                     "☑️ A porcentagem de sucesso foi:"
-                                     "{perc_suc}\n❗️ E a porcentagem de falhas"
-                                     "foi: {perc_fail}\n".format(
-                                            total=(
-                                             last_7["number_of_pipelines"]),
-                                            success=(
-                                             last_7["succeded_pipelines"]),
-                                            fail=last_7["failed_pipelines"],
-                                            perc_suc=(
-                                             last_7["percent_succeded"]),
-                                            perc_fail=100-(
-                                                last_7["percent_succeded"])))
 
-            dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ "
-                                     "Número total de pipelines: {total}\n"
-                                     "☑️ {success} obtiveram sucesso\n"
-                                     "❗️ {fail} falharam\n"
-                                     "☑️ A porcentagem de sucesso foi:"
-                                     "{perc_suc}\n❗️ E a porcentagem de falhas"
-                                     "foi: {perc_fail}\n".format(
-                                            total=(
-                                             last_30["number_of_pipelines"]),
-                                            success=(
-                                             last_30["succeded_pipelines"]),
-                                            fail=last_30["failed_pipelines"],
-                                            perc_suc=(
-                                             last_30["percent_succeded"]),
-                                            perc_fail=100-(
-                                                last_30["percent_succeded"])))
+            message_report_7 = self.message_report(last_7)
+            dispatcher.utter_message("Sobre os últimos 7 dias:\n⚒ " + 
+                                    message_report_7)
+                                    
+            message_report_30 = self.message_report(last_30)
+            dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ " + 
+                                    message_report_30)
             return []
         except HTTPError:
             dispatcher.utter_message(
@@ -118,3 +81,21 @@ class Report(Action):
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
                 "mais uma mensagem pra ver se dessa vez dá certo.")
+
+    def message_report(self, pipeline):
+        return ("Número total de pipelines: {total}\n"
+                "☑️ {success} obtiveram sucesso\n"
+                "❗️ {fail} falharam\n"
+                "☑️ A porcentagem de sucesso foi:"
+                "{perc_suc}\n❗️ E a porcentagem de falhas"
+                "foi: {perc_fail}\n".format(
+                    total=(
+                        pipeline["number_of_pipelines"]),
+                    success=(
+                        pipeline["succeded_pipelines"]),
+                    fail=(
+                        pipeline["failed_pipelines"]),
+                    perc_suc=(
+                        pipeline["percent_succeded"]),
+                    perc_fail=100-(
+                        pipeline["percent_succeded"])))
