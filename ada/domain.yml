@@ -37,6 +37,7 @@ intents:
   - adas_architecture
   - rerun_pipeline
   - stable_deploy
+  - action_get_report_github
 
 entities:
   - command
@@ -114,7 +115,7 @@ actions:
   - utter_stable_deploy_dont_try_again
   - utter_stable_deploy_happy
   - action_stable_deploy
-templates:
+  - action_get_report_github
 
 
 templates:

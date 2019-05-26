@@ -135,3 +135,9 @@
 - faz o deploy para mim ?
 - poe a pipeline mais recente que tenha sucesso para rodar de novo
 - põe a pipeline mais recente em deploy por favor ?
+## intent:action_get_report_github
+- me manda o relatório do github, ada
+- me manda o relatorio do github
+- me manda o relatório do github
+- me mostra o relatório do github, ada
+- Ada, me mostra o relatório do github

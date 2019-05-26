@@ -164,3 +164,8 @@
   - action_stable_deploy
 * thanks
   - utter_stable_deploy_happy
+  
+## path_report_github
+* action_get_report_github
+  - utter_start_report
+  - action_get_report_github
