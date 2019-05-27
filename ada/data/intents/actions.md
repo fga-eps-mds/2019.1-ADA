@@ -127,3 +127,17 @@
 - me manda o relatório do github
 - me mostra o relatório do github, ada
 - Ada, me mostra o relatório do github
+
+##intent:find_project_collaborators:
+- quem são os colaboradores do meu projeto ?
+- quem está colaborando pro meu projeto ?
+- com quem eu trabalho no projeto
+- me fala quem mais trabalha no mesmo projeto que eu
+- Ada, quem, além de mim, está no mesmo projeto que eu
+- com quem estou trabalhando ?
+- quem mais tabalho comigo no projeto ?
+- quem contribui pro meu projeto ?
+- Quem está no mesmo projeto que eu ?
+- diz ai os colaboradores do meu projeto
+- sou só eu, ou tem mais gente trabalhando no meu projeto ?
+- Sou so eu, ou tem mais gente trabalhando no mesmo projeto que eu

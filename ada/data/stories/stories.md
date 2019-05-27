@@ -142,3 +142,8 @@
 * action_get_report_github
   - utter_start_report
   - action_get_report_github
+
+## path_find_project_collaborators_basic
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators

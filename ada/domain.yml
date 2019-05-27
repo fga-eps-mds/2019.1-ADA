@@ -37,6 +37,7 @@ intents:
   - adas_architecture
   - rerun_pipeline
   - action_get_report_github
+  - find_project_collaborators
 
 entities:
   - command
@@ -111,6 +112,8 @@ actions:
   - utter_adas_architecture
   - action_rerun_pipeline
   - action_get_report_github
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
 
 
 templates:
@@ -418,3 +421,13 @@ templates:
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
+
+  utter_find_project_collaborators:
+  - text: |
+    #TODO
+
+  - text: |
+    #TODO
+
+  - text: |
+    #TODO
