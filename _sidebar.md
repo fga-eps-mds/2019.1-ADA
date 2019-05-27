@@ -57,4 +57,5 @@
         - [Planejamento Sprint 8](/docs/sprints/sprint8/planejamento_sprint8.md)
         - [Resultado Sprint 8](/docs/sprints/sprint8/resultados_sprint8.md)
     - [**Sprint 9**](#)
-        - [Planejamento Sprint 9](/docs/sprints/sprint9/planejamento_sprint9.md) 
+        - [Planejamento Sprint 9](/docs/sprints/sprint9/planejamento_sprint9.md)
+        - [Resultado Sprint 9](/docs/sprints/sprint9/resultados_sprint9.md)  
