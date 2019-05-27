@@ -74,9 +74,19 @@ A descrição de cada risco se encontra [aqui](https://fga-eps-mds.github.io/201
 
 A equipe de EPS elaborou um quadro de conhecimento com tecnologias consideradas essenciais para o desenvolvimento. Com ele é possível ter um overview das capacidades da equipe de desenvolvimento e gerência. 
 
-![](../../assets/img/sprints/sprint9/quadro_de_conhecimentos_sprint9.png)
+![Quadro de Conhecimento](../../assets/img/sprints/sprint9/quadro_de_conhecimentos_sprint9.png)
 
 A escala vai de 0 a 3, onde 0 é nenhum conhecimento e 3 é alto conhecimento.
+
+## Cobertura de Testes
+
+### Repositório ADA GitHub
+
+![Repositório ADA GitHub](../../assets/img/sprints/sprint9/cobertura_de_testes_github.png)
+
+### Repositório ADA GitLab
+
+![Repositório ADA GitLab](../../assets/img/sprints/sprint9/cobertura_de_testes_gitlab.png)
 
 ## Avaliação do Scrum Master
 
