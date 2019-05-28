@@ -141,3 +141,5 @@
 - diz ai os colaboradores do meu projeto
 - sou só eu, ou tem mais gente trabalhando no meu projeto ?
 - Sou so eu, ou tem mais gente trabalhando no mesmo projeto que eu
+- encontra quem mais ta no projeto comigo
+- me diz quem ta trabalhando comigo

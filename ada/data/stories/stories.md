@@ -147,3 +147,24 @@
 * find_project_collaborators
   - utter_find_project_collaborators
   - action_find_project_collaborators
+
+## path_find_project_collaborators_sad
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+* deny OR sad
+  - utter_find_project_collaborators_sad
+
+## path_find_project_collaborators_happy
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+* affirm OR begin
+  - utter_find_project_collaborators_happy
+
+## path_find_project_collaborators_thanks
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+* thanks
+  - utter_find_project_collaborators_thanks

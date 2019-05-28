@@ -114,7 +114,9 @@ actions:
   - action_get_report_github
   - utter_find_project_collaborators
   - action_find_project_collaborators
-
+  - utter_find_project_collaborators_sad
+  - utter_find_project_collaborators_happy
+  - utter_find_project_collaborators_thanks
 
 templates:
   utter_default:
@@ -424,10 +426,35 @@ templates:
 
   utter_find_project_collaborators:
   - text: |
-    #TODO
+    É pra já !
 
   - text: |
-    #TODO
+    👍
+
+    Só um minutinho...
 
   - text: |
-    #TODO
+    Claro, deixa eu checar 💻
+
+    Já volto.
+
+  utter_find_project_collaborators_sad:
+  - text: |
+    Tudo bem... te entendo
+
+    Mas relaxa que no final tudo dá certo. E estou aqui para te ajudar!
+
+  - text: |
+    Ah... ok...
+
+    Lembre-se que dará tudo certo e que estou aqui para te ajudar!
+
+  utter_find_project_collaborators_happy:
+  - text: |
+    Legal ! Te aguardo, então! Obrigada 💜
+
+  utter_find_project_collaborators_thanks:
+  - text: |
+    De nada 💜
+
+    Estou aqui para o que vc precisar.
