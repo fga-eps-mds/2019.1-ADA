@@ -35,6 +35,7 @@ services:
       - GITHUB_SIGNUP_URL=${GITHUB_SIGNUP_URL}
       - CLIENT_ID_GITHUB=${CLIENT_ID_GITHUB}
       - CLIENT_ID_GITLAB=${CLIENT_ID_GITLAB}
+      - GITLAB_SIGNUP_URL=${GITLAB_SIGNUP_URL}
     networks:
       - adanetwork
     command: "make run-actions"

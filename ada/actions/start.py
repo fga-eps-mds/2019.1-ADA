@@ -1,5 +1,7 @@
 from rasa_core_sdk import Action
 import os
+
+GITLAB_SIGNUP_URL = os.environ.get("GITLAB_SIGNUP_URL", "")
 GITHUB_SIGNUP_URL = os.environ.get("GITHUB_SIGNUP_URL", "")
 CLIENT_ID_GITHUB = os.environ.get("CLIENT_ID_GITHUB", "")
 CLIENT_ID_GITLAB = os.environ.get("CLIENT_ID_GITLAB", "")
@@ -14,6 +16,7 @@ class ActionStart(Action):
             tracker_state = tracker.current_state()
             sender_id = tracker_state['sender_id']
             github_signup_url = GITHUB_SIGNUP_URL + str(sender_id)
+            gitlab_signup_url = GITLAB_SIGNUP_URL
 
             url = "https://github.com/login/oauth/authorize?"\
                   "client_id={client_id}"\
@@ -23,9 +26,9 @@ class ActionStart(Action):
 
             url_2 = "https://gitlab.com/oauth/authorize?"\
                     "client_id={client_id}&redirect_uri="\
-                    "http://localhost:5000/user/gitlab/authorize"\
-                    "&response_type=code&state={chat_id}".format(
-                     chat_id=sender_id, client_id=CLIENT_ID_GITLAB)
+                    "{url}&response_type=code&state={chat_id}".format(
+                     url=gitlab_signup_url, chat_id=sender_id,
+                     client_id=CLIENT_ID_GITLAB)
 
             message_github = "Oláaaaa, sou a Ada! Sou responsável "\
                              "por ajudar você no monitoramento de "\
