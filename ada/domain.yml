@@ -27,6 +27,16 @@ intents:
   - action_set_repositorie
   - action_get_report
   - set_pipeline
+  - action_set_repository_github
+  - action_set_repository_gitlab
+  - start_create_issue
+  - create_issue
+  - issue_name
+  - marry_or_date
+  - adas_architecture
+  - rerun_pipeline
+  - action_get_report_github
+
 
 entities:
   - command
@@ -87,6 +97,19 @@ actions:
   - utter_set_pipeline
   - action_set_pipeline
   - utter_start_report
+  - action_start
+  - action_set_repository_github
+  - action_set_repository_gitlab
+  - utter_start_issue
+  - action_issue_name
+  - utter_issue_name
+  - action_create_issue
+  - utter_marry_or_date
+  - utter_adas_architecture
+  - action_rerun_pipeline
+  - action_get_report_github
+
+
 templates:
 
   utter_default:

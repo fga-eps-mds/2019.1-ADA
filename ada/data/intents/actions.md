@@ -103,3 +103,40 @@
 - me mostra o relatório, ada
 - me mostra o relatorio, ada
 - relatório
+
+## intent:start_create_issue
+- quero criar uma nova issue
+- cria uma nova issue
+- pode criar uma issue nova
+- cria uma issue
+- tem como criar uma issue pra mim
+- Cria uma issue para mim, Ada
+
+## intent:issue_name
+- Titulo: [abc](issue_name)
+- Título: [2019a](issue_name)
+- titulo: [abc](issue_name)
+- titulo: [2019a](issue_name)
+- Título: [122345](issue_name)
+- Titulo: [HEHEHEHE](issue_name)
+- titulo: [US26-Ada](issue_name)
+- titulo: [Eu como Usuário](issue_name)
+- título: [#135 ABC](issue_name)
+
+## intent:create_issue
+- Descrição: [Quero criar um banco capaz de guardar informações](issue_body)
+- descrição: [teste](issue_body)
+- descrição: [Criterios de aceitação](issue_body)
+- Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
+- descricao: [1 salvar dados](issue_body)
+
+## intent:rerun_pipeline
+- quero reiniciar a pipeline
+
+## intent:action_get_report_github
+- me manda o relatório do github, ada
+- me manda o relatorio do github
+- me manda o relatório do github
+- me mostra o relatório do github, ada
+- Ada, me mostra o relatório do github
+

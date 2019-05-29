@@ -87,7 +87,7 @@ class Report(Action):
                 "☑️ {success} obtiveram sucesso\n"
                 "❗️ {fail} falharam\n"
                 "☑️ A porcentagem de sucesso foi:"
-                "{perc_suc}\n❗️ E a porcentagem de falhas"
+                "{perc_suc}\n❗️ E a porcentagem de falhas "
                 "foi: {perc_fail}\n".format(
                     total=(
                         pipeline["number_of_pipelines"]),
