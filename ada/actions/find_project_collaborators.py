@@ -3,7 +3,7 @@ import requests
 import os
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
-import telegram
+import json
 
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
@@ -19,18 +19,18 @@ class FindProjectCollaborators(Action):
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
             # tentar fazer a requisicao
-            response = requests.get(GITHUB_SERVICE_URL + "api/" +
-                                    "find_collaborators/{chat_id}".format(
-                                    chat_id=chat_id), headers=headers)
+            url = (GITHUB_SERVICE_URL + "api/find_collaborators/{chat_id}"\
+                   .format(chat_id=chat_id))
+            response = requests.get(url, headers=headers)
             response.raise_for_status()
 
         except HTTPError:
             dispatcher.utter_message(
                 "Ai que pena... não consegui encontrar os contribuidores do"
-                 " seu projeto 😔")
+                " seu projeto 😔")
             dispatcher.utter_message(
                 "Vamos tentar de novo daqui a pouco, pode ser ? É só você me"
-                 " lembrar !")
+                " lembrar !")
         except ValueError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
@@ -41,25 +41,25 @@ class FindProjectCollaborators(Action):
                 "mais uma mensagem pra ver se dessa vez dá certo.")
 
         else:
-            project_collaborators = json.loads(response) # converte o json em
-            if len(project_collaborators) > 2:           # lista
+            project_collaborators = json.loads(response)  # converte o json em
+            if len(project_collaborators) > 2:            # lista
                 dispatcher.utter_message("Hmmm parece que você não está "
-                                          "trabalhando sozinho :)")
+                                         "trabalhando sozinho :)")
                 dispatcher.utter_message("Esses são seus colegas de trabalho:")
                 for item in project_collaborators:
                     dispatcher.utter_message(item)
 
             elif len(project_collaborators) == 2:
                 dispatcher.utter_message("Só há 2 pessoas trabalhando no seu"
-                                          " projeto:")
+                                         " projeto:")
                 dispatcher.utter_message("São elas " + project_collaborators[0]
-                                          + "e " + project_collaborators[1])
+                                         + "e " + project_collaborators[1])
 
             elif len(project_collaborators) == 1:
                 dispatcher.utter_message("A princípio só " +
-                                          project_collaborators[0] + "trabalha"
-                                          " no seu projeto...")
+                                         project_collaborators[0] + "trabalha"
+                                         " no seu projeto...")
 
-            else: # ninguém trabalha no projeto
+            else:  # ninguém trabalha no projeto
                 dispatcher.utter_message("Que pena...ninguém está contribuindo"
-                                          " para o seu projeto :(")
+                                         " para o seu projeto :(")
