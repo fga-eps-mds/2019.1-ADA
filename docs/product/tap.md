@@ -6,6 +6,8 @@
 | 22/03/2019 | 1.0 | Construção dos tópicos 1, 2, 3, 4, 5, 6, 7, 9, 10, 11. | Ateldy Brasil e Vítor Gomes |
 | 22/03/2019 | 1.1 | Construção do tópico 8. Estimativa de Custo | Ateldy Brasil |
 | 29/04/2019 | 1.2 | Atualização segundo estratégia | Vítor Gomes |
+| 27/05/2019 | 1.3 | Atualização da Estimativa de Custo | Ateldy Brasil |
+
 
 ## 1. Introdução
 
@@ -75,53 +77,50 @@ Dessa maneira, o cronograma do projeto é formulado e adaptado segundo cada um d
 
 A estimativa será feita para um valor mensal para 10 horas de trabalho semanais.
 
-| **Função** | **Quantidade** | **Salário** | **Valor Mensal Total** |
-| --- | --- | --- | --- |
-| Equipe de Desenvolvedor Júnior | 5 | R$ 2.351,00 | R$ 11.755,00 |
-| Equipe de Gerência de Projeto | 4 | R$ 7.351,00 | R$ 29.404,00 |
-**Total:**  **R$ 41,159,00**
+| **Função** | **Quantidade** | **Salário** | **Valor Mensal Total** | **Valor Total no Projeto**
+| --- | --- | --- | --- | --- |
+| Equipe de Desenvolvedor Júnior | 5 | R$ 2.821,20 | R$ 14.106,00 | R$ 56.424,00 |
+| Equipe de Desenvolvedor Senior | 4 | R$ 7.500,00 | R$ 30.000,00 | R$ 120.000,00 |
+| Equipe de Desenvolvimento de Apoio | 3 | R$ 2.821,20 |	R$ 8.463,60 |	R$ 33.854,40 |
+| Equipe Sênior de Apoio | 2	| R$ 6.250,00	| R$ 12.500,00	| R$ 50.000,00 |
+| **Total:** |  |  |  | **R$ 260.278,40** |
 
 ### 8.2 Custo de aquisição
 
-| **Equipamento/Serviço** | **Quantidade** | **Motivo** | **Valor Unitário** | **Valor Mensal Total** |
-| --- | --- | --- | --- | --- |
-| Notebook | 9 | Desenvolvimento e gerência | R$ 2.939,00 \* | R$ 26.451,00 |
-| Transporte Público | 36 passagens diárias (até 4 por pessoa) | Deslocamento para o local de trabalho | R$ 20,00/dia (por pessoa)\*\* | R$ 3.600,00\*\*\* |
-| Espaço para Trabalho - Coworking | 5 dias/semanas | Local para desenvolvimento e pareamento | R$ 250,00/mês \*\*\*\* | R$ 2.250,00 |
+| **Equipamento/Serviço** | **Quantidade** | **Motivo** | **Valor Unitário** | **Valor Mensal Total** | **Valor Total no Projeto** |
+| --- | --- | --- | --- | --- | --- |
+| Notebook | 9 | Desenvolvimento e gerência | R$ 2.939,00 \* | - | R$ 26.451,00 |
+| Espaço para Trabalho - Coworking | 1 | Local para desenvolvimento e pareamento | R$ 250,00/mês \*\* | R$ 250,00 | R$ 1.000,00 |
+| **Total:** |  |  |  |  |**R$ 27.451,00** |
 
 **Observações:**
 
 \*Preço base no modelo Dell Inspiron 15 3000.
 
-\*\*Considerando passagens por R$ 5,00 (Preço máximo no Distrito Federal).
-
-\*\*\*Considerando uma média de 20 dias úteis por mês
-
-\*\*\*\*Preço de um Coworking localizado em Águas Claras, com energia, luz e internet incluídas.
+\*\*Preço de um Coworking localizado em Águas Claras, com energia, luz e internet incluídas.
 
 ### 8.3 Ferramentas
 
-| **Ferramenta** | **Custo** |
-| --- | --- |
-| GitHub | R$ 0,00 |
-| Google Drive | R$ 0,00 |
-| Telegram | R$ 0,00 |
-| Draw.io | R$ 0,00 |
-| Adobe Illustrator | R$ 90,00/mês |
+| **Ferramenta** | **Custo** | **Valor Total no Projeto** |
+| --- | --- | --- |
+| GitHub | R$ 0,00 | R$ 0,00 |
+| Google Drive | R$ 0,00 | R$ 0,00 |
+| Telegram | R$ 0,00 | R$ 0,00 |
+| Draw.io | R$ 0,00 | R$ 0,00 |
+| Adobe Illustrator | R$ 90,00/mês | R$ 360,00 |
 
 ### 8.4 Custo Total Estimado
 
 | **Recurso** | **Valor** |
 | --- | --- |
-| Custo de Pessoal | R$ 41,159,00 (mensal) |
-| Custo de Serviços | R$ 5.850,00 (mensal) |
-| Notebooks | R$ 26.451,00 |
-| Ferramentas | R$ 90,00 (mensal) |
-| **Total (Valor para 4 meses\* + 20% de riscos + 20% de lucro )** | **R$ 300.785,80** |
+| Custo de Pessoal | R$ 260.278,40 |
+| Custo de aquisição | R$ 27.451,00 |
+| Ferramentas | R$ 360,00 |
+| **Total**\* | **R$ 288.089,40** |
 
 Observações:
 
-\*Tempo da disciplina
+\*Tempo da disciplina: 4 meses.
 
 ## 9. Equipe e Partes Interessadas
 
