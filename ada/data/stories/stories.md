@@ -3,20 +3,24 @@
   - action_start
 * action_set_repository_github
   - action_set_repository_github
-
-## path_start
-* start{"command": "start"}
-  - action_start
 * action_set_repository_gitlab
   - action_set_repository_gitlab
+  - utter_get_url_domain
+* affirm
+  - utter_ask_url_domain
+* get_url_domain
+  - action_get_url_domain
 
-## path_start
+## path_start_deny
 * start{"command": "start"}
   - action_start
 * action_set_repository_github
   - action_set_repository_github
 * action_set_repository_gitlab
   - action_set_repository_gitlab
+  - utter_get_url_domain
+* deny
+  - utter_deny_msg_url_domain
 
 ## path_create_issue
 * start_create_issue
@@ -142,3 +146,9 @@
 * action_get_report_github
   - utter_start_report
   - action_get_report_github
+
+## path_get_domain
+* action_get_domain
+  - utter_ask_url_domain
+* get_url_domain
+  - action_get_url_domain

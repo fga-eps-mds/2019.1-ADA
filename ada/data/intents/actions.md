@@ -127,3 +127,26 @@
 - me manda o relatório do github
 - me mostra o relatório do github, ada
 - Ada, me mostra o relatório do github
+
+## intent:get_url_domain
+- [https://fga-eps-mds.github.io/2019.1-ADA](url_name)
+- [http://fga-eps-mds.github.io/2019.1-ADA](url_name)
+- [https://fga-eps-mds.github.io/](url_name)
+- [https://123.com.br](url_name)
+- [www.example.com](url_name)
+- [www.example.com/example](url_name)
+- [www.example.com/example/1234](url_name)
+- [https://123.com](url_name)
+
+## intent:action_get_domain
+- cadastra meu dominio
+- cadastra meu domínio
+- fica de olha na minha url
+- fica de olho no meu site
+- fica de olho no meu dominio
+- fica de olho no meu domínio
+- fica de olho no meu deploy
+- monitora ai meu site
+- monitora ai meu dominio
+- monitora ai meu domínio
+- monitora ai meu deploy

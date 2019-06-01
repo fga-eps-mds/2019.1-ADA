@@ -23,6 +23,7 @@ intents:
   - deny
   - intended_for_next_release
   - whats_pipeline
+  - get_url_domain
 
   ##Actions
   - action_start
@@ -37,6 +38,7 @@ intents:
   - adas_architecture
   - rerun_pipeline
   - action_get_report_github
+  - action_get_domain
 
 entities:
   - command
@@ -60,6 +62,7 @@ entities:
   - repository_github
   - issue_name
   - issue_body
+  - url_name
 
 slots:
   repository_gitlab:
@@ -69,6 +72,8 @@ slots:
   issue_name:
     type: text
   issue_body:
+    type: text
+  url_name:
     type: text
 
 actions:
@@ -96,6 +101,9 @@ actions:
   - utter_creators
   - utter_intended_for_next_release
   - utter_whats_pipeline
+  - utter_get_url_domain
+  - utter_ask_url_domain
+  - utter_deny_msg_url_domain
 
   - utter_start_report
   - action_get_report
@@ -111,6 +119,8 @@ actions:
   - utter_adas_architecture
   - action_rerun_pipeline
   - action_get_report_github
+  - action_get_url_domain
+  - action_get_domain
 
 
 templates:
@@ -418,3 +428,16 @@ templates:
       a código; a API do GitLab CI, na qual eu vejo as informações sobre a integração contínua do seu serviço;
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
+
+
+  utter_get_url_domain:
+  - text: |
+        Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
+
+  utter_ask_url_domain:
+  - text: |
+        Me envia a url(domínio) da sua aplicação.
+
+  utter_deny_msg_url_domain:
+  - text: |
+        Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
