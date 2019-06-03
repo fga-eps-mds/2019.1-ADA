@@ -61,3 +61,4 @@
         - [Resultado Sprint 9](/docs/sprints/sprint9/resultados_sprint9.md)
     - [**Sprint 10**](#)
         - [Planejamento Sprint 10](/docs/sprints/sprint10/planejamento_sprint10.md)  
+        - [Resultado Sprint 10](/docs/sprints/sprint10/resultados_sprint10.md)
