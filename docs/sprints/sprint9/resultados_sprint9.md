@@ -16,7 +16,9 @@ Essa Sprint foi focada na melhoria de código, com três tarefas relacionadas à
 | [Criar EVM](https://github.com/fga-eps-mds/2019.1-ADA/issues/215) | 8 | Concluída |
 
 __Pontos Planejados:__ 49
+
 __Pontos de Dívida:__ 0
+
 __Total:__  49 
 
 > __Pontos Total Concluídos:__ 31
@@ -62,7 +64,7 @@ O velocity é de 44,5 pontos.
 
 [![S6](../../assets/img/sprints/sprint9/burndown_de_riscos_sprint9.png "Clique para ver em detalhes")](https://docs.google.com/spreadsheets/d/1G8-T3FLlQzlU4nXsHyqAN90bHexrcHYGM2LAcBi4Ph0/edit#gid=0) 
 
-__Total de pontos de riscos:__ 233*
+__Total de pontos de riscos:__ 257*
 
 Este burndown de riscos possui uma escala de 0 a 25 para cada risco acontecer, de acordo com a tabela de avaliação presente no [Plano de Gerenciamento de Riscos](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/project/risk_management_plan?id=_53-avalia%c3%a7%c3%a3o-dos-riscos).
 
