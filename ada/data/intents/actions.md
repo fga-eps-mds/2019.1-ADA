@@ -127,3 +127,20 @@
 - me manda o relatório do github
 - me mostra o relatório do github, ada
 - Ada, me mostra o relatório do github
+
+## intent:action_get_issues_of_contributor
+- Quero saber quais são as issues do [caiovferas](contributor_name) 
+- Quero saber quais sao as issues de [guilhermemender](contributor_name) 
+- Quero saber quais sao as issues de [Gudimender](contributor_name)
+- Quais são as issues do [João_vvdsad](contributor_name)
+- Quais são as issues do [ana](contributor_name)
+- Quais são as issues do [CARLOS](contributor_name)
+- Quais são as issues do [mariop](contributor_name)
+- Quais são as issues do [jose](contributor_name) 
+- Quais são as issues do [caio](contributor_name)
+- Quais são as issues do [CARLA](contributor_name) 
+- Quais são as issues do [igor](contributor_name)
+- Quais são as issues do [erick](contributor_name) 
+- quais são as issues de [Vitor](contributor_name)
+- me fala as issues do [Fulano](contributor_name)
+
