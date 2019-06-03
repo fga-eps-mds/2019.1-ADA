@@ -87,15 +87,16 @@ class SetRepositoryGitLab(Action):
                 "Estou tendo alguns problemas, tenta me mandar essa "
                 "mensagem de novo ou de uma forma diferente")
 
-    def get_project_id(self, headers, message):
+    def get_project_id(self, headers, message, sender_id):
         message_list = message.split('/')
         project_owner = message_list[0]
         project_owner = project_owner.split(' ')
         project_owner = project_owner[-1]
         project_name = message_list[-1]
         get_user_repo = GITLAB_SERVICE_URL + \
-            "user/repo/{project_owner}/"\
+            "user/repo/{chat_id}/{project_owner}/"\
             "{project_name}".format(
+                chat_id=sender_id,
                 project_owner=project_owner,
                 project_name=project_name)
         project_response = requests.get(
@@ -103,19 +104,22 @@ class SetRepositoryGitLab(Action):
         project_id = project_response.json()
         return project_id["project_id"]
 
-    def get_user_id(self, message, headers):
+    def get_user_id(self, message, headers, sender_id):
         message_list = message.split('/')
         project_owner = message_list[0]
         project_owner = project_owner.split(' ')
         project_owner = project_owner[-1]
-        user_url = GITLAB_SERVICE_URL + "user/id/{}".format(project_owner)
+        user_url = GITLAB_SERVICE_URL + "user/id/{chat_id}/"\
+                                        "{project_owner}"\
+                                        .format(chat_id=sender_id,
+                                                project_owner=project_owner)
         user_response = requests.get(url=user_url, headers=headers)
         user_json = user_response.json()
         user_id = user_json["user_id"]
         return str(user_id)
 
     def save_repo_to_db(self, headers, project_name, message, sender_id):
-        project_id = self.get_project_id(headers, message)
+        project_id = self.get_project_id(headers, message, sender_id)
         db_json = {"project_name": project_name, "chat_id": sender_id,
                    "project_id": str(project_id)}
         db_url = GITLAB_SERVICE_URL + \
@@ -123,7 +127,7 @@ class SetRepositoryGitLab(Action):
         db_json = json.dumps(db_json)
         response = requests.post(url=db_url, data=db_json, headers=headers)
         response.raise_for_status()
-        user_id = self.get_user_id(message, headers)
+        user_id = self.get_user_id(message, headers, sender_id)
 
         message_list = message.split('/')
         project_owner = message_list[0]
