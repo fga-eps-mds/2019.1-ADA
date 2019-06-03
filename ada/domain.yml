@@ -23,6 +23,7 @@ intents:
   - deny
   - intended_for_next_release
   - whats_pipeline
+  - contributor_issues
 
   ##Actions
   - action_start
@@ -37,6 +38,7 @@ intents:
   - adas_architecture
   - rerun_pipeline
   - action_get_report_github
+  - action_get_issues_of_contributor
 
 entities:
   - command
@@ -69,6 +71,8 @@ slots:
   issue_name:
     type: text
   issue_body:
+    type: text
+  contributor_name:
     type: text
 
 actions:
@@ -111,6 +115,7 @@ actions:
   - utter_adas_architecture
   - action_rerun_pipeline
   - action_get_report_github
+  - action_get_issues_of_contributor
 
 
 templates:
