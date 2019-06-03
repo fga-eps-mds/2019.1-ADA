@@ -142,3 +142,7 @@
 * action_get_report_github
   - utter_start_report
   - action_get_report_github
+
+## path_contributor_issues
+* action_get_issues_of_contributor
+  - action_get_issues_of_contributor
