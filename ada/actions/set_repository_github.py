@@ -20,10 +20,13 @@ class SetRepositoryGitHub(Action):
             tracker_state = tracker.current_state()
             sender_id = tracker_state['sender_id']
             message = tracker.latest_message.get('text')
-
             message_list = message.split()
-            repo_name = message_list[-1]
+            repo_fullname = message_list[-1]
+            project_owner = repo_fullname.split("/")[0]
+            repo_name = repo_fullname.split("/")[-1]
 
+            self.set_webhook(headers, project_owner,
+                             repo_name, sender_id)
             self.save_repo_to_db(headers, message, repo_name, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
                             "o repositório {rep}.".format(
@@ -60,4 +63,16 @@ class SetRepositoryGitHub(Action):
             "user/repo"
         db_json = json.dumps(db_json)
         response = requests.post(url=db_url, data=db_json, headers=headers)
+        response.raise_for_status()
+
+    def set_webhook(self, headers, project_owner, repo_name, sender_id):
+        post_json = {
+            "chat_id": sender_id,
+            "owner": project_owner,
+            "repo": repo_name
+        }
+        set_webhook_url = GITHUB_SERVICE_URL + "webhook"
+        response = requests.post(url=set_webhook_url,
+                                 data=json.dumps(post_json),
+                                 headers=headers)
         response.raise_for_status()
