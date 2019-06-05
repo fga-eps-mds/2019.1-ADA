@@ -2,11 +2,10 @@ from rasa_core_sdk import Action
 import requests
 import os
 import json
-from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
-import telegram
 
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
+
 
 class UrlDeploy(Action):
     def name(self):
@@ -18,13 +17,16 @@ class UrlDeploy(Action):
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
             message = tracker.latest_message.get("text")
-            user_domain= {"domain":message}
-            user_domain=json.dumps(user_domain)
-            response = requests.post(GITLAB_SERVICE_URL + "user/domain/{chat_id}"
-                                                        .format(chat_id=chat_id),
-                                                        data=user_domain,
-                                                        headers=headers)
-            dispatcher.utter_message("Tudo certo! Ficarei monitorando para você, caso aconteça algo eu irei te avisar.")
+            user_domain = {"domain": message}
+            user_domain = json.dumps(user_domain)
+            requests.post(GITLAB_SERVICE_URL + "user/domain/{chat_id}"
+                          .format(chat_id=chat_id),
+                          data=user_domain,
+                          headers=headers)
+
+            dispatcher.utter_message("Tudo certo! Ficarei monitorando para"
+                                     " você, caso aconteça algo"
+                                     " eu irei te avisar.")
 
         except ValueError:
             dispatcher.utter_message("Estou tendo dificuldade pra encontrar "
