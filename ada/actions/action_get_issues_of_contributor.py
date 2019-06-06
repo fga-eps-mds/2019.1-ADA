@@ -54,7 +54,7 @@ class ActionGetContributorIssues(Action):
 
         except HTTPError:
             dispatcher.utter_message(
-                "Não consegui criar a issue, tente novamente")
+                "Não consegui encontrar as issues, tente novamente")
         except NewConnectionError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
