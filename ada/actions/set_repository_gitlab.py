@@ -26,44 +26,13 @@ class SetRepositoryGitLab(Action):
             message_list = message.split('/')
             repo_name = message_list[-1]
             bot = telegram.Bot(token=ACCESS_TOKEN)
-            glab_webhook_url = self.save_repo_to_db(headers, repo_name,
-                                                    message, sender_id)
+            self.save_repo_to_db(headers, repo_name,
+                                 message, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
                             "o repositório {rep}.".format(
                                 rep=repo_name)
             bot.send_message(chat_id=sender_id,
                              text=selected_repo)
-            set_webhook_msg = "Para receber notificações sobre "\
-                              "resultados do pipeline, "\
-                              "entra nesse link aqui {}, "\
-                              "por favor!".format(
-                                glab_webhook_url["webhook_url"])
-            gitlab_msg = "Depois copia esse link {} e cola no campo URL "\
-                         "dessa página que eu te mandei. Agora, você "\
-                         "tem que selecionar a opção Pipeline Events "\
-                         "e clicar em Add Webhook. "\
-                         "Prontinho, feito isso eu vou conseguir "\
-                         "te mandar notificações "\
-                         "sempre que um pipeline seu acontecer! 😊"\
-                         .format(glab_webhook_url["gitlab_webhook_url"])
-            explanation_msg = "Vou mandar uma imagem pra "\
-                              "ficar mais fácil de entender, ok?"
-            instruction_msg = "Ah, mas atenção: isso aqui é só se você "\
-                              "quiser receber notificações toda vez que "\
-                              "um pipeline terminar. Mas "\
-                              "eu consigo fazer muito mais que isso! "\
-                              "Eu consigo: se você me "\
-                              "pedir pra mandar o último pipeline, "\
-                              "também posso trazer o resultado, "\
-                              "ou você também pode pedir um "\
-                              "relatório sobre seu repositório."
-
-            dispatcher.utter_message(set_webhook_msg)
-            dispatcher.utter_message(gitlab_msg)
-            dispatcher.utter_message(explanation_msg)
-            dispatcher.utter_message("https://imgur.com/fxjQ6XP.jpg")
-            dispatcher.utter_message(instruction_msg)
-
             return [SlotSet('repository_gitlab', repo_name)]
         except ValueError:
             dispatcher.utter_message("Estou tendo dificuldade pra encontrar "
@@ -104,40 +73,24 @@ class SetRepositoryGitLab(Action):
         project_id = project_response.json()
         return project_id["project_id"]
 
-    def get_user_id(self, message, headers, sender_id):
-        message_list = message.split('/')
-        project_owner = message_list[0]
-        project_owner = project_owner.split(' ')
-        project_owner = project_owner[-1]
-        user_url = GITLAB_SERVICE_URL + "user/id/{chat_id}/"\
-                                        "{project_owner}"\
-                                        .format(chat_id=sender_id,
-                                                project_owner=project_owner)
-        user_response = requests.get(url=user_url, headers=headers)
-        user_json = user_response.json()
-        user_id = user_json["user_id"]
-        return str(user_id)
-
     def save_repo_to_db(self, headers, project_name, message, sender_id):
         project_id = self.get_project_id(headers, message, sender_id)
         db_json = {"project_name": project_name, "chat_id": sender_id,
                    "project_id": str(project_id)}
         db_url = GITLAB_SERVICE_URL + \
-            "webhooks/repo"
+            "webhooks/repo"\
+            .format(sender_id=sender_id)
         db_json = json.dumps(db_json)
         response = requests.post(url=db_url, data=db_json, headers=headers)
         response.raise_for_status()
-        user_id = self.get_user_id(message, headers, sender_id)
-
-        message_list = message.split('/')
-        project_owner = message_list[0]
-        project_owner = project_owner.split(' ')
-        project_owner = project_owner[-1]
-        project_name = message_list[-1]
-        gitlab_webhook_url = GITLAB_WEBHOOK_URL + str(user_id) + '/'\
-                                                + str(project_id)
-        set_webhook_url = 'https://gitlab.com/' + project_owner + '/'\
-                                                + project_name\
-                                                + '/settings/integrations'
-        return {"gitlab_webhook_url": gitlab_webhook_url,
-                "webhook_url": set_webhook_url}
+        set_webhook_url = GITLAB_SERVICE_URL + \
+            "webhook"
+        webhook_json = {
+            "project_id": str(project_id),
+            "chat_id": sender_id
+        }
+        webhook_json = json.dumps(webhook_json)
+        response = requests.post(url=set_webhook_url,
+                                 data=webhook_json,
+                                 headers=headers)
+        response.raise_for_status()
