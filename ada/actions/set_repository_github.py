@@ -5,7 +5,6 @@ import requests
 import json
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
-import sys
 
 GITHUB_SERVICE_URL = os.environ.get("GITHUB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
@@ -25,15 +24,12 @@ class SetRepositoryGitHub(Action):
             repo_fullname = message_list[-1]
             project_owner = repo_fullname.split("/")[0]
             repo_name = repo_fullname.split("/")[-1]
-            print(project_owner, file=sys.stderr)
-            print(repo_name, file=sys.stderr)
-
             self.save_repo_to_db(headers, message, repo_name, sender_id)
+            self.set_webhook(headers, project_owner,
+                             repo_name, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
                             "o repositório {rep}.".format(
                                 rep=repo_name)
-            self.set_webhook(headers, project_owner,
-                             repo_name, sender_id)
             dispatcher.utter_message(selected_repo)
             return [SlotSet('repository_github', repo_name)]
         except KeyError:
@@ -74,7 +70,6 @@ class SetRepositoryGitHub(Action):
             "repo": repo_name
         }
         set_webhook_url = GITHUB_SERVICE_URL + "webhook"
-        print(set_webhook_url, file=sys.stderr)
         response = requests.post(url=set_webhook_url,
                                  data=json.dumps(post_json),
                                  headers=headers)

@@ -1,6 +1,5 @@
 ## intent:action_start
 - [/start](command)
-
 ## intent:set_pipeline
 - me mostra o pipeline do repositorio por favor
 - pipeline repositorio por favor

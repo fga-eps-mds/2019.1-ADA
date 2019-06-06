@@ -1,20 +1,12 @@
 ## path_start
 * start{"command": "start"}
   - action_start
+
+## path_set_repository_github
 * action_set_repository_github
   - action_set_repository_github
 
-## path_start
-* start{"command": "start"}
-  - action_start
-* action_set_repository_gitlab
-  - action_set_repository_gitlab
-
-## path_start
-* start{"command": "start"}
-  - action_start
-* action_set_repository_github
-  - action_set_repository_github
+## path_set_repository_gitlab
 * action_set_repository_gitlab
   - action_set_repository_gitlab
 
@@ -26,7 +18,6 @@
   - action_issue_name
 * create_issue
   - action_create_issue
-  - utter_restart
 
 ## path_help
 * help{"command": "help"}
