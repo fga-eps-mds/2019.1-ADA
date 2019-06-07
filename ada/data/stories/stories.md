@@ -19,6 +19,12 @@
 * create_issue
   - action_create_issue
 
+## path_comment_issue
+* start_comment_issue
+  - utter_start_issue
+* comment_issue
+  - action_comment_issue
+
 ## path_help
 * help{"command": "help"}
   - utter_help

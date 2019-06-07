@@ -117,6 +117,13 @@
 - Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
 - descricao: [1 salvar dados](issue_body)
 
+## intent:comment_issue
+- Comentar #[1](issue_number) : [Quero criar um banco capaz de guardar informações](comment_body)
+- Comentar #[23](issue_number) : [Criterios de aceitação](comment_body)
+- Comentar #[456](issue_number) : [teste](comment_body)
+- Comentar #[7891](issue_number) : [Tasks 1, 2, 3, 4, 5](comment_body)
+- Comentar #[12345](issue_number) : [1 salvar dados](comment_body)
+
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
 
