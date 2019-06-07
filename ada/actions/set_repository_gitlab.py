@@ -9,7 +9,6 @@ import telegram
 
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
-GITLAB_WEBHOOK_URL = os.environ.get("GITLAB_WEBHOOK_URL", "")
 
 
 class SetRepositoryGitLab(Action):
