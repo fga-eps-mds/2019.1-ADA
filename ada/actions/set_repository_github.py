@@ -24,15 +24,13 @@ class SetRepositoryGitHub(Action):
             repo_fullname = message_list[-1]
             project_owner = repo_fullname.split("/")[0]
             repo_name = repo_fullname.split("/")[-1]
-
+            self.save_repo_to_db(headers, message, repo_name, sender_id)
             self.set_webhook(headers, project_owner,
                              repo_name, sender_id)
-            self.save_repo_to_db(headers, message, repo_name, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
                             "o repositório {rep}.".format(
                                 rep=repo_name)
             dispatcher.utter_message(selected_repo)
-
             return [SlotSet('repository_github', repo_name)]
         except KeyError:
             dispatcher.utter_message(
@@ -60,7 +58,7 @@ class SetRepositoryGitHub(Action):
     def save_repo_to_db(self, headers, message, repo_name, sender_id):
         db_json = {"repository_name": repo_name, "chat_id": sender_id}
         db_url = GITHUB_SERVICE_URL + \
-            "user/repo"
+            "user/repo/{sender_id}".format(sender_id=sender_id)
         db_json = json.dumps(db_json)
         response = requests.post(url=db_url, data=db_json, headers=headers)
         response.raise_for_status()
