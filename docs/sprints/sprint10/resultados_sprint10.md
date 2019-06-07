@@ -127,7 +127,9 @@ A escala vai de 0 a 3, onde 0 é nenhum conhecimento e 3 é alto conhecimento.
 ## Avaliação do Scrum Master
 
 O time de desenvolvimento apresentou certa desmotivação devido ao reta final do período acadêmico. Além disso, foi alegado que histórias de refatoração não estimulavam o time à trabalhar no projeto.
+
 A falta de testes fez com que algumas histórias se tornassem dívidas, como a [US34](https://github.com/fga-eps-mds/2019.1-ADA/issues/234) e a [Refatoração repositório Ada Github](https://github.com/fga-eps-mds/2019.1-ada/issues/211). O arquiteto também mostrou dificuldades na finalização de tarefas como a [US35](https://github.com/fga-eps-mds/2019.1-ADA/issues/232) e a [Cronjob para verificar o deploy](https://github.com/fga-eps-mds/2019.1-ADA/issues/231), mas houveram avanços.
+
 Após a finalização da história de [Criar webhook GitHub](https://github.com/fga-eps-mds/2019.1-ADA/issues/218) pelo DevOps, foi possível adicionar mais 5 histórias de usuário relacionadas à notificações: [US25](https://github.com/fga-eps-mds/2019.1-ADA/issues/243), [US33](https://github.com/fga-eps-mds/2019.1-ADA/issues/246), [US36](https://github.com/fga-eps-mds/2019.1-ADA/issues/247), [US37](https://github.com/fga-eps-mds/2019.1-ADA/issues/244) e [US38](https://github.com/fga-eps-mds/2019.1-ADA/issues/245). Todas as histórias adicionadas foram concluídas.
 
 _\* Riscos relacionados à __tecnologia usada apresentar problemas__, __falta de comunicação da equipe__ e __problemas de saúde de algum membro__ foram diminuídos. As tecnologias usadas mostram estabilidade e o time maturidade em usá-las. Além disso, o grupo já consegue manter uma constância no uso dos meios de comunicação._
