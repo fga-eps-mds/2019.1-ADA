@@ -6,7 +6,7 @@ from requests.exceptions import HTTPError
 import telegram
 GITLAB_SERVICE_URL = os.getenv("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
-SECS = 10.0
+SECS = 15.0
 
 
 class Report(Action):
@@ -19,17 +19,41 @@ class Report(Action):
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
             try:
-                response = requests.get(GITLAB_SERVICE_URL +
-                                        "report/{chat_id}"
+                response_branches = requests.get(
+                                        GITLAB_SERVICE_URL +
+                                        "report/branches/{chat_id}"
                                         .format(chat_id=chat_id), timeout=SECS,
                                         headers=headers)
+                response_commits = requests.get(
+                                        GITLAB_SERVICE_URL +
+                                        "report/commits/{chat_id}"
+                                        .format(chat_id=chat_id), timeout=SECS,
+                                        headers=headers)
+                response_pipelines = requests.get(
+                                        GITLAB_SERVICE_URL +
+                                        "report/pipelines/{chat_id}"
+                                        .format(chat_id=chat_id), timeout=SECS,
+                                        headers=headers)
+                response_project = requests.get(
+                                        GITLAB_SERVICE_URL +
+                                        "report/project/{chat_id}"
+                                        .format(chat_id=chat_id), timeout=SECS,
+                                        headers=headers)
+
             except requests.exceptions.Timeout:
                 text = "Desculpa, não consegui fazer o que você me pediu! 😕"
                 bot = telegram.Bot(token=ACCESS_TOKEN)
                 bot = bot.send_message(chat_id=chat_id, text=text)
             else:
-                report_project = response.json()
-                project = report_project[0]["project"]
+                branches = response_branches.json()
+                branches = branches["branches"]
+                commits = response_commits.json()
+                commits = commits["commits"]
+                pipeline = response_pipelines.json()
+                pipeline = pipeline["pipeline"]
+                project = response_project.json()
+                project = project["project"]
+
                 dispatcher.utter_message("Primeiramente, o seu projeto "
                                          "se chama {project_name}"
                                          " e se encontra disponível "
@@ -38,11 +62,10 @@ class Report(Action):
                                                  web_url=project["web_url"]))
                 text_message = "As branches do seu repositório "\
                                "são as seguintes:\n"
-                for item in report_project:
-                    for value in item["branches"]["name"]:
-                        text_message += "▪️ {names}\n".format(names=value)
+                for item in branches:
+                    text_message += "▪️ {names}\n".format(names=item["name"])
                 dispatcher.utter_message(text_message)
-                commits = report_project[0]["commits"]["last_commit"]
+                commits = commits["last_commit"]
                 dispatcher.utter_message("O último commit foi feito por"
                                          "{author_name}"
                                          "no dia {author_date} com o título"
@@ -51,7 +74,6 @@ class Report(Action):
                                           author_date=commits["authored_date"],
                                           title=commits["title"]))
 
-                pipeline = report_project[0]["pipelines"]
                 dispatcher.utter_message("O atual pipeline possui id "
                                          "{pipeline_id}"
                                          "e nome {pipeline_name}"

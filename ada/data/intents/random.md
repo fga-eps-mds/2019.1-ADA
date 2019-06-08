@@ -117,6 +117,11 @@
 - [quero morrer](not_good)
 - [sou um lixo](not_good)
 - nao to que nem vc
+- ai que pena
+- poxa vida, Ada
+- ahhh nao creio
+- putz grilo, caramba
+- neeeiiimmmm
 
 ## intent:creators
 - quem são os seus [criadores](creators)?

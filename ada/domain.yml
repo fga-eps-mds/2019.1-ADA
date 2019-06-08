@@ -36,7 +36,12 @@ intents:
   - marry_or_date
   - adas_architecture
   - rerun_pipeline
+<<<<<<< HEAD
   - stable_deploy
+=======
+  - action_get_report_github
+  - find_project_collaborators
+>>>>>>> devel
 
 entities:
   - command
@@ -110,12 +115,21 @@ actions:
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
+<<<<<<< HEAD
   - utter_stable_deploy
   - utter_stable_deploy_dont_try_again
   - utter_stable_deploy_happy
   - action_stable_deploy
 templates:
 
+=======
+  - action_get_report_github
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+  - utter_find_project_collaborators_sad
+  - utter_find_project_collaborators_happy
+  - utter_find_project_collaborators_thanks
+>>>>>>> devel
 
 templates:
   utter_default:
@@ -423,6 +437,7 @@ templates:
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
 
+
   utter_stable_deploy:
   - text: |
       Beleza, já vou fazer isso
@@ -443,3 +458,33 @@ templates:
   utter_stable_deploy_happy:
   - text: |
       Imagina ! Conte comigo sempre ❤️
+
+  utter_find_project_collaborators:
+  - text: |
+      É pra já !
+
+  - text: |
+      Claro, deixa eu checar 💻
+
+      Já volto.
+
+  utter_find_project_collaborators_sad:
+  - text: |
+      Tudo bem... te entendo
+
+      Mas relaxa que no final tudo dá certo. E estou aqui para te ajudar!
+
+  - text: |
+      Ah... ok...
+
+      Lembre-se que dará tudo certo e que estou aqui para te ajudar!
+
+  utter_find_project_collaborators_happy:
+  - text: |
+      Legal ! Te aguardo, então! Obrigada 💜
+
+  utter_find_project_collaborators_thanks:
+  - text: |
+      De nada 💜
+
+      Estou aqui para o que vc precisar.
