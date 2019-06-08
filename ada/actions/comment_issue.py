@@ -20,6 +20,7 @@ class ActionCommentIssue(Action):
             headers = {'Content-Type': 'application/json'}
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
+
             message = tracker.latest_message.get('text')
             splited_message = message.split(": ")
             issue_body = splited_message[-1]
@@ -30,23 +31,19 @@ class ActionCommentIssue(Action):
                 chat_id=chat_id)
             response = requests.post(url=url, data=json.dumps(data),
                                         headers=headers)
-            received_repositories = response.json()
-            dispatcher.utter_message("Criei sua issue aqui, para acessar"
-                                     " clique nesse link: {link}".format(
-                                         link=str(received_repositories['html_url'])))
-                                
-            text_message = "Certo! Comentei sua issue!"
-            dispatcher.utter_message(text_message)
+            response.raise_for_status()
         except HTTPError:
             dispatcher.utter_message(
-                "Não consegui criar a issue, tente novamente")
+                "Não consegui comentar a issue, tente novamente")
         except ValueError:
             dispatcher.utter_message(
-                "Estou com problemas para criar a issue, manda "
-                "mais uma vez pra ver se dessa vez dá certo.")
+                "Estou com problemas para me conectar, me manda "
+                "mais uma mensagem pra ver se dessa vez dá certo.")
         except NewConnectionError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
                 "mais uma mensagem pra ver se dessa vez dá certo.")
         else:
+            text_message = "Certo! Comentei sua issue!"
+            dispatcher.utter_message(text_message)
             return [SlotSet('issue_body', issue_body)]
