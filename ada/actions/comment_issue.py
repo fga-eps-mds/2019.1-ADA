@@ -5,8 +5,6 @@ import requests
 import json
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
-import sys
-import telegram
 
 GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
 
@@ -23,14 +21,14 @@ class ActionCommentIssue(Action):
 
             message = tracker.latest_message.get('text')
             splited_message = message.split(": ")
-            issue_body = splited_message[-1]
+            comment_body = splited_message[-1]
             splited_message = splited_message[0].split('#')
             issue_number = splited_message[-1]
-            data = {"body": issue_body, "issue_number": issue_number}
+            data = {"body": comment_body, "issue_number": issue_number}
             url = GITHUB_SERVICE_URL + "api/comment_issue/{chat_id}".format(
                 chat_id=chat_id)
             response = requests.post(url=url, data=json.dumps(data),
-                                        headers=headers)
+                                     headers=headers)
             response.raise_for_status()
         except HTTPError:
             dispatcher.utter_message(
@@ -44,6 +42,4 @@ class ActionCommentIssue(Action):
                 "Estou com problemas para me conectar, me manda "
                 "mais uma mensagem pra ver se dessa vez dá certo.")
         else:
-            text_message = "Certo! Comentei sua issue!"
-            dispatcher.utter_message(text_message)
-            return [SlotSet('issue_body', issue_body)]
+            return [SlotSet('issue_number', issue_number)]

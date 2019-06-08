@@ -64,7 +64,6 @@ entities:
   - repository_github
   - issue_name
   - issue_body
-  - comment_body
   - issue_number
 
 slots:
@@ -75,8 +74,6 @@ slots:
   issue_name:
     type: text
   issue_body:
-    type: text
-  comment_body:
     type: text
   issue_number:
     type: text
