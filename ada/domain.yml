@@ -36,12 +36,11 @@ intents:
   - marry_or_date
   - adas_architecture
   - rerun_pipeline
-<<<<<<< HEAD
   - stable_deploy
-=======
   - action_get_report_github
   - find_project_collaborators
->>>>>>> devel
+  - stable_deploy
+  - action_get_report_github
 
 entities:
   - command
@@ -115,21 +114,19 @@ actions:
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
-<<<<<<< HEAD
   - utter_stable_deploy
   - utter_stable_deploy_dont_try_again
   - utter_stable_deploy_happy
   - action_stable_deploy
-templates:
 
-=======
+templates:
+  - action_get_report_github
   - action_get_report_github
   - utter_find_project_collaborators
   - action_find_project_collaborators
   - utter_find_project_collaborators_sad
   - utter_find_project_collaborators_happy
   - utter_find_project_collaborators_thanks
->>>>>>> devel
 
 templates:
   utter_default:
