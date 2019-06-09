@@ -1,5 +1,5 @@
 ## path_start
-* start{"command": "start"}
+* start
   - action_start
 
 ## path_set_repository_github
@@ -20,7 +20,7 @@
   - action_create_issue
 
 ## path_help
-* help{"command": "help"}
+* help
   - utter_help
 
 ## path_begin

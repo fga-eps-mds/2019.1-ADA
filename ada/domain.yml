@@ -41,19 +41,6 @@ intents:
 
 entities:
   - command
-  - oi
-  - religion
-  - good
-  - name
-  - joke
-  - license
-  - night
-  - afternoon
-  - morning
-  - sad
-  - creators
-  - begin
-  - help
   - affirm
 
   ## SlotsSets(Entities)
