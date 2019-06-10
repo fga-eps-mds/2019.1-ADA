@@ -118,6 +118,14 @@
 - Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
 - descricao: [1 salvar dados](issue_body)
 
+## intent:comment_issue
+- Comentar #[1](issue_number) : Quero criar um banco capaz de guardar informações
+- comentar #[3](issue_number) : Nessa historia foi realiza as seguintes funcionalidades
+- Comentar #[23](issue_number) : Criterios de aceitação
+- Comentar #[456](issue_number) : teste teste teste
+- Comentar #[7891](issue_number) : Tasks 1, 2, 3, 4, 5
+- Comentar #[12345](issue_number) : 1 salvar dados 
+
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
 
@@ -150,3 +158,22 @@
 - monitora ai meu dominio
 - monitora ai meu domínio
 - monitora ai meu deploy
+
+## intent:find_project_collaborators
+- quem são os colaboradores do meu projeto ?
+- quem está colaborando pro meu projeto ?
+- com quem eu trabalho no projeto
+- me fala quem mais trabalha no mesmo projeto que eu
+- Ada, quem, além de mim, está no mesmo projeto que eu
+- com quem estou trabalhando ?
+- quem mais trabalha comigo no projeto ?
+- quem contribui pro meu projeto ?
+- Quem está no mesmo projeto que eu ?
+- diz ai os colaboradores do meu projeto
+- sou só eu, ou tem mais gente trabalhando no meu projeto ?
+- Sou so eu, ou tem mais gente trabalhando no mesmo projeto que eu
+- encontra quem mais ta no projeto comigo
+- me diz quem ta trabalhando comigo
+- me manda os colaboradores
+- manda os contribuidores
+- quem esta contribuindo para o projeto ?
