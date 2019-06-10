@@ -32,6 +32,9 @@ intents:
   - action_set_repository_gitlab
   - start_create_issue
   - create_issue
+  - start_comment_issue
+  - comment_issue
+
   - issue_name
   - marry_or_date
   - adas_architecture
@@ -61,6 +64,7 @@ entities:
   - repository_github
   - issue_name
   - issue_body
+  - issue_number
 
 slots:
   repository_gitlab:
@@ -70,6 +74,8 @@ slots:
   issue_name:
     type: text
   issue_body:
+    type: text
+  issue_number:
     type: text
 
 actions:
@@ -108,6 +114,7 @@ actions:
   - action_issue_name
   - utter_issue_name
   - action_create_issue
+  - action_comment_issue
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
