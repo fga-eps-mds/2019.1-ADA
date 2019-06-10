@@ -33,12 +33,16 @@ intents:
   - action_set_repository_gitlab
   - start_create_issue
   - create_issue
+  - start_comment_issue
+  - comment_issue
+
   - issue_name
   - marry_or_date
   - adas_architecture
   - rerun_pipeline
   - action_get_report_github
   - action_get_domain
+  - find_project_collaborators
 
 entities:
   - command
@@ -63,6 +67,7 @@ entities:
   - issue_name
   - issue_body
   - url_name
+  - issue_number
 
 slots:
   repository_gitlab:
@@ -74,6 +79,8 @@ slots:
   issue_body:
     type: text
   url_name:
+    type: text
+  issue_number:
     type: text
 
 actions:
@@ -115,6 +122,7 @@ actions:
   - action_issue_name
   - utter_issue_name
   - action_create_issue
+  - action_comment_issue
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
@@ -122,6 +130,11 @@ actions:
   - action_get_url_domain
   - action_get_domain
 
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+  - utter_find_project_collaborators_sad
+  - utter_find_project_collaborators_happy
+  - utter_find_project_collaborators_thanks
 
 templates:
   utter_default:
@@ -441,3 +454,32 @@ templates:
   utter_deny_msg_url_domain:
   - text: |
         Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
+  utter_find_project_collaborators:
+  - text: |
+      É pra já !
+
+  - text: |
+      Claro, deixa eu checar 💻
+
+      Já volto.
+
+  utter_find_project_collaborators_sad:
+  - text: |
+      Tudo bem... te entendo
+
+      Mas relaxa que no final tudo dá certo. E estou aqui para te ajudar!
+
+  - text: |
+      Ah... ok...
+
+      Lembre-se que dará tudo certo e que estou aqui para te ajudar!
+
+  utter_find_project_collaborators_happy:
+  - text: |
+      Legal ! Te aguardo, então! Obrigada 💜
+
+  utter_find_project_collaborators_thanks:
+  - text: |
+      De nada 💜
+
+      Estou aqui para o que vc precisar.
