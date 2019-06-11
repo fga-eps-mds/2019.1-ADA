@@ -1,41 +1,16 @@
-![Ada_logo_horizontal](https://user-images.githubusercontent.com/22121504/56839465-006c8200-6859-11e9-8feb-ad76c573b844.png)
+## Setando variáveis de ambiente
 
-[![pipeline status](https://gitlab.com/adabot/ada/badges/master/pipeline.svg)](https://gitlab.com/adabot/ada/commits/master) [![Percentage of issues still open](http://isitmaintained.com/badge/open/fga-eps-mds/2019.1-ADA.svg)](http://isitmaintained.com/project/fga-eps-mds/2019.1-ADA "Percentage of issues still open") [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Maintainability](https://api.codeclimate.com/v1/badges/87b77c0a20222afea5d0/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.1-ADA/maintainability)
+##### Crie um bot no Telegram
+Converse com o [@BotFather do Telegram](https://t.me/BotFather) e crie um bot de teste unicamente seu seguindo as instruções dele.
 
-## Sobre a Ada  
 
-<p align="justify"> &emsp;&emsp;
-  A Ada é um chatbot com objetivo de facilitar a transformação full-stack e a integração entre equipes multidisciplinares em organizações envolvidas com desenvolvimento de software. Esse objetivo é concretizado por meio  de dois aspectos principais: comunicação fácil e em linguagem natural e monitoramento completo do pipeline de produção de softwares. Além de monitorar o pipeline, a Ada também permite a realização de uma série de atividades relacionadas ao gerenciamento da produção nas plataformas entregues. A Ada, em sua versão básica, inclui suporte para um pipeline GitHub, GitLab CI e Amazon. Além disso, nessa versão a comunicação entre a Ada e o usuário ocorre através do Telegram. </p>
+##### Exporte as variáveis do seu bot
+Após escolher um nome para seu bot, o @BotFather lhe dará um token para utilizar para acessar a API do Telegram. Exporte ambos no terminal como a seguir. Substitua o TELEGRAM_ACESS_TOKEN pelo token lhe enviado pelo @BotFather e TELEGRAM_BOT_NAME pelo nome do seu bot.
 
-## Contribuindo
-
-### Guia de Contribuição
-
-Para contribuir com o projeto, temos um [Guia de Contribuição Inicial](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/CONTRIBUTING.md).
-
-### Políticas
-
-As políticas de _[branches](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/branches)_, _[commits](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/commits)_, _[pull requests](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/pull_request)_ e _[issues](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/issues)_ se encontram [aqui](https://fga-eps-mds.github.io/2019.1-ADA/#/docs/policies/policies).
-
-### Código de Conduta
-
-O código de conduta para contribuição está disponível [aqui](https://github.com/fga-eps-mds/2019.1-ADA/blob/master/CODE_OF_CONDUCT.md).
-
-### Desenvolvimento
-
-#### Primeiros passos
-##### Instale o Docker
-Seguindo as instruções dos links a seguir, instale o docker conforme seu sistema operacional.
-
-* [docker](https://docs.docker.com/install/)
-* [docker-compose](https://docs.docker.com/compose/install/#install-compose) (já incluído na instalação do Docker Desktop para MacOS)
-
-#### Subir a Ada no Telegram
-Siga esses passos para executar a Ada utilizando o Telegram através de um bot criado por você.
-
-##### Instale o ngrok
-Utilizando as instruções do [link](https://ngrok.com/download), faça a instalação do ngrok.
+```sh
+export ACCESS_TOKEN='TELEGRAM_ACCESS_TOKEN'
+export BOT_NAME='TELEGRAM_BOT_NAME'
+```
 
 ##### Execute o ngrok
 Conforme a seguir, execute o ngrok na porta 5001.
@@ -44,74 +19,92 @@ Conforme a seguir, execute o ngrok na porta 5001.
 ./ngrok http 5001
 ```
 
-#### Exporte as variáveis de ambiente
-Exporte as variáveis de ambiente conforme as instruções presentes nesse [documento](/env_vars.md).
- 
-<strong><em>Antes de seguir adiante. Importante:</strong></em> As variáveis de ambiente são necessárias para o correto funcionamento do bot, por isso não esqueça de exportá-las.
+##### Exporte a URL do Webhook e conecte ao Telegram
 
-
-##### Execute o Docker
-```sh
-docker-compose -f docker-compose-dev.yml up --build
-```
-
-
-##### Converse com o bot
-E está tudo pronto pra conversar com o bot no telegram!
-
-#### Subir a Ada no Terminal
-Siga esses passos para executar a Ada localmente utilizando o Terminal.
-
-##### Execute o comando a seguir para criar a imagem do container
+Enquanto o ngrok estiver em execução, ele apresentará uma série de informações da sessão atual. Copie a primeira url do campo Forwarding, ela será similar à seguinte.
 
 ```sh
-docker-compose -f docker-compose-dev.yml up --build
+https://0x00000x.ngrok.io
 ```
 
-##### Execute o Docker
-Após criar a imagem do container, em um outro terminal, digite o seguinte comando para obter a id de seus contêineres.
+Em seguida, exporte-a como a seguir, substituindo-a em NGROK_WEBHOOK_URL.
 
+
+```sh
+export WEBHOOK_URL='NGROK_WEBHOOK_URL'
+```
+
+::Lembre-se::: sempre que executar o ngrok essa url deve ser exportada.
+
+Depois, você deve configurar essa url na api do telegram. Isso deve ser feito visitando um link específico para seu bot. Ele é da maneira a seguir. Não se esqueça de substituir TELEGRAM_ACESS_TOKEN e NGROK_WEBHOOK_URL.
+
+```sh
+http://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/setWebhook?url=https://NGROK_WEBHOOK_URL/webhooks/telegram/webhook
+```
+
+Para verificar que tudo funcionou corretamente:
+
+```sh
+https://api.telegram.org/botTELEGRAM_ACCESS_TOKEN/getWebhookInfo
+```
+
+##### Exporte a variável de ambiente do GitLab
+Siga as instruções em [ADA-gitlab ReadMe](https://github.com/fga-eps-mds/2019.1-ADA-gitlab) e depois rode o comando para obter as ids dos contêineres.
 ```sh
 docker ps
 ```
 
-Copie o CONTAINER_ID  da imagem 20191-ada_ada e substitui no comando a seguir.
-
+Exporte o nome da imagem referente ao serviço do GitLab, tal como:
 ```sh
-docker exec -it container_id bash
+export GITLAB_SERVICE_URL='http://20191-ada-gitlab_api_1:5000/'
 ```
 
-Após rodar esse comando, o container estará em execução. Algo como a seguir aparecerá no terminal.
+##### Exporte a variável de ambiente do Github
+Siga as instruções em [ADA-github ReadMe](https://github.com/fga-eps-mds/2019.1-ADA-github) e depois rode o comando para obter as ids dos contêineres.
 ```sh
-root@00x00xx00000:/ada#
+docker ps
 ```
 
-Dentro dele, rode o comando para treinar o bot.
-
+Exporte o nome da imagem referente ao serviço do GitHub, tal como:
 ```sh
-python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
+export GITHUB_SERVICE_URL='http://20191-ada-github_api_1:5000/'
 ```
 
-Após executar esse comando, é possível conversar com o bot bem como visualizar os logs do Rasa.
+##### Crie um OAuth App no github
+Crie um OAuth app no github para a Ada realizar autenticação junto aos usuários, seguindo os passos a seguir:
+- No seu perfil do github clique em **Developer Settings** > **OAuth Apps** e selecione **New OAuth app**.
+- No formulário de registro do app, escolha o nome do seu app e preencha os campos **Homepage URL** com as urls ```http://localhost:5015/user``` e ```http://localhost:5015/user/github/authorize``` respectivamente.
+- Ao clicar em **Register application** o github irá retornar os tokens _Client id_ e _Client secret_.
+
+Agora seu app está pronto.
+
+Para maiores informações clique nesse [link da documentação do github](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/).
 
 
-## Equipe
+##### Exporte as variáveis do seu app
+Após cadastrar um app o github irá disponibilizar dois tokens. Para a execução da Ada é necessário a exportação do Client ID gerado na criação do APP, além dessa variável também é preciso de exportar a variável utilizada no Authorization callback URL do app. Exporte ambos no terminal como a seguir. Substitua o CLIENT_ID pelo token gerado pelo GitHub na criação do app e a variável GITHUB_SIGNUP_URL pode ser mantida como no exemplo, conforme explicado acima.
 
-| Nome | Papel | GitHub | Email |
-| --- | --- | --- | --- |
-| Ateldy Borges Brasil Filho | Scrum Master | ateldyfilho | ateldybfilho@gmail.com |
-| Bruno Oliveira Dantas | Arquiteto de Software | Brunooliveiradantas | oliveiradantas96@gmail.com |
-| João Vitor Ramos de Souza | DevOps | joaovitor3 | joaovytor0@gmail.com |
-| Vítor Gomes | Product Owner | vitorandos | torandoing@gmail.com |
-| Caio Vinicius Fernandes de Araújo | Desenvolvedor | caiovfernandes | caiovf13@gmail.com |
-| Erick Giffoni Felicíssimo | Desenvolvedor | ErickGiffoni | giffoni.erick@gmail.com |
-| Guilherme Mendes Pereira | Desenvolvedor | guilherme-mendes | guimendesp12@gmail.com |
-| João Pedro José Santos da Silva Guedes | Desenvolvedor | sudjoao | isudjoao@gmail.com |
-| Lucas Fellipe Carvalho Moreira | Desenvolvedor | lucasfcm9 | lucasfcm9@gmail.com |
+```sh
+export CLIENT_ID_GITHUB='CLIENT_ID'
+export GITHUB_SIGNUP_URL=http://localhost:5015/user/github/authorize
+```
+
+##### Crie uma Application no gitlab
+Crie uma application no gitlab para a Ada realizar autenticação junto aos usuários, seguindo os passos a seguir:
+- No seu perfil do gitlab clique em **Profile Settings** > **Applications** e selecione **New Application**.
+- No formulário de registro da aplicação, escolha o nome da sua aplicação e preencha o campo **Redirect URI** com a url ```http://localhost:5000/user/gitlab/authorize```.
+- Dentre os scopes disponíveis, selecione _api_ e _read_user_
+- Ao clicar em **Save application** o gitlab irá retornar os tokens _Application id_ e _Secret_.
+
+Agora sua application está pronta.
+
+Para maiores informações clique nesse [link da documentação do gitlab](https://docs.gitlab.com/ee/integration/oauth_provider.html#adding-an-application-through-the-profile).
 
 
-<p align="center"><b>Grupo 3</b></p>
-<p align="center">Engenharia de Produto de <i>Software</i> (EPS) / Métodos de Desenvolvimento de <i>Software</i> (MDS)<br /><br />
-<p align="center">2019</p>
-<a href="https://fga.unb.br" target="_blank"><img width="230"src="https://4.bp.blogspot.com/-0aa6fAFnSnA/VzICtBQgciI/AAAAAAAARn4/SxVsQPFNeE0fxkCPVgMWbhd5qIEAYCMbwCLcB/s1600/unb-gama.png"></a>
-</p>
+##### Exporte as variáveis do seu app
+Após cadastrar um application o gitlab irá disponibilizar dois tokens. Para a execução da Ada é necessário a exportação do Application ID gerado na criação do App, além dessa variável também é preciso de exportar a variável utilizada no Authorization callback URL do app. Exporte ambos no terminal como a seguir. Substitua o APPLICATION_ID pelo token gerado pelo GitLab na criação do app e a variável GITLAB_SIGNUP_URL pode ser mantida como no exemplo, conforme explicado acima.
+
+```sh
+export CLIENT_ID_GITLAB='APPLICATION_ID'
+export GITLAB_SIGNUP_URL=http://localhost:5000/user/gitlab/authorize
+```
