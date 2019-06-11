@@ -24,6 +24,7 @@ intents:
   - intended_for_next_release
   - whats_pipeline
   - get_url_domain
+  - contributor_issues
 
   ##Actions
   - action_start
@@ -42,6 +43,7 @@ intents:
   - rerun_pipeline
   - action_get_report_github
   - action_get_domain
+  - action_get_issues_of_contributor
   - find_project_collaborators
 
 entities:
@@ -79,6 +81,8 @@ slots:
   issue_body:
     type: text
   url_name:
+    type: text
+  contributor_name:
     type: text
   issue_number:
     type: text
@@ -130,6 +134,7 @@ actions:
   - action_get_url_domain
   - action_get_domain
 
+  - action_get_issues_of_contributor
   - utter_find_project_collaborators
   - action_find_project_collaborators
   - utter_find_project_collaborators_sad
