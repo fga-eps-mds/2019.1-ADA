@@ -54,31 +54,25 @@
 - Ada, me mostra o resultado do pipeline
 
 ## intent:action_set_repository_gitlab
-- o nome do repositório do gitlab é [gitlab-runner](repository_gitlab)
-- o nome do repositório do gitlab é [quests](repository_gitlab)
-- meu repositório do gitlab é [abcde12345](repository_gitlab)
-- meu repositório do gitlab é [owner/repo](repository_gitlab)
-- meu repositório do gitlab é [adabot/ada](repository_gitlab)
-- meu repositório do gitlab é [adabot/ada-gitlab](repository_gitlab)
-- meu repositório do gitlab é [gitlab-org/gitlab-runner](repository_gitlab)
-- meu repositório do gitlab é [terrakok/gitlab-client](repository_gitlab)
-- meu repositório do gitlab é [gitlab-org/gitaly](repository_gitlab)
-- repositorio é [trabalho1](repository_gitlab)
-- repositório: [2019.1-MDS](repository_gitlab)
-- [esseaqui](repository_gitlab)
-- [abc123](repository_gitlab)
-- [vitor_123](repository_gitlab)
-- [caio.c12](repository_gitlab)
-- [SUD](repository_gitlab)
-- [gui.a.](repository_gitlab)
+- labrepo: [gitlab-runner](repository_gitlab)
+- labrepo: [quests](repository_gitlab)
+- labrepo: [abcde12345](repository_gitlab)
+- labrepo: [owner/repo](repository_gitlab)
+- labrepo: [adabot/ada](repository_gitlab)
+- labrepo: [adabot/ada-gitlab](repository_gitlab)
+- labrepo: [gitlab-org/gitlab-runner](repository_gitlab)
+- labrepo: [terrakok/gitlab-client](repository_gitlab)
+- labrepo: [gitlab-org/gitaly](repository_gitlab)
+- labrepo: [trabalho1](repository_gitlab)
+- labrepo: [2019.1-MDS](repository_gitlab)
 
 ## intent:action_set_repository_github
-- meu repositório do github é [uri-online-judge](repository_github)
-- meu repositorio do github é [gitlab_user](repository_github)
-- meu repositório do github é [gitlab-runner](repository_github)
+- hubrepo: [uri-online-judge](repository_github)
+- hubrepo: [gitlab_user](repository_github)
+- hubrepo: [gitlab-runner](repository_github)
 - o nome do repositório do github é [adabot](repository_github)
-- meu repositorio do github e [lucasfcm9](repository_github)
-- meu repositório do github é [caiovf13](repository_github)
+- hubrepo: [lucasfcm9](repository_github)
+- hubrepo: [caiovf13](repository_github)
 
 ## intent:action_get_report
 - me manda o relatório do projeto
