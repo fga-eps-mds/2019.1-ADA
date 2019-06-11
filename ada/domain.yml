@@ -449,7 +449,7 @@ templates:
 
   utter_ask_url_domain:
   - text: |
-        Me envia a url(domínio) da sua aplicação.
+        Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
 
   utter_deny_msg_url_domain:
   - text: |
