@@ -36,7 +36,6 @@ intents:
   - create_issue
   - start_comment_issue
   - comment_issue
-
   - issue_name
   - marry_or_date
   - adas_architecture
@@ -45,6 +44,9 @@ intents:
   - action_get_domain
   - action_get_issues_of_contributor
   - find_project_collaborators
+
+  - action_change_gitlab_repository
+  - action_change_github_repository
 
 entities:
   - command
@@ -140,6 +142,9 @@ actions:
   - utter_find_project_collaborators_sad
   - utter_find_project_collaborators_happy
   - utter_find_project_collaborators_thanks
+
+  - action_change_github_repository
+  - action_change_gitlab_repository
 
 templates:
   utter_default:
