@@ -1,20 +1,12 @@
 ## path_start
 * start{"command": "start"}
   - action_start
+
+## path_set_repository_github
 * action_set_repository_github
   - action_set_repository_github
 
-## path_start
-* start{"command": "start"}
-  - action_start
-* action_set_repository_gitlab
-  - action_set_repository_gitlab
-
-## path_start
-* start{"command": "start"}
-  - action_start
-* action_set_repository_github
-  - action_set_repository_github
+## path_set_repository_gitlab
 * action_set_repository_gitlab
   - action_set_repository_gitlab
 
@@ -26,7 +18,10 @@
   - action_issue_name
 * create_issue
   - action_create_issue
-  - utter_restart
+
+## path_comment_issue
+* comment_issue
+  - action_comment_issue
 
 ## path_help
 * help{"command": "help"}
@@ -146,3 +141,29 @@
 ## path_contributor_issues
 * action_get_issues_of_contributor
   - action_get_issues_of_contributor
+
+## path_find_project_collaborators_basic
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+
+## path_find_project_collaborators_sad
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+* deny OR sad
+  - utter_find_project_collaborators_sad
+
+## path_find_project_collaborators_happy
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+* affirm OR begin
+  - utter_find_project_collaborators_happy
+
+## path_find_project_collaborators_thanks
+* find_project_collaborators
+  - utter_find_project_collaborators
+  - action_find_project_collaborators
+* thanks
+  - utter_find_project_collaborators_thanks
