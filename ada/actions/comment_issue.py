@@ -20,6 +20,10 @@ class ActionCommentIssue(Action):
             chat_id = tracker_state["sender_id"]
 
             message = tracker.latest_message.get('text')
+
+            print("**********\nTracker latest message:\n",tracker.latest_message,"\n***********")
+            print("Type do latest_message: ", type(tracker.latest_message),"\n********")
+
             splited_message = message.split(": ")
             comment_body = splited_message[-1]
             splited_message = splited_message[0].split('#')
