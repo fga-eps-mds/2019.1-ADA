@@ -138,6 +138,10 @@
   - utter_start_report
   - action_get_report_github
 
+## path_contributor_issues
+* action_get_issues_of_contributor
+  - action_get_issues_of_contributor
+
 ## path_find_project_collaborators_basic
 * find_project_collaborators
   - utter_find_project_collaborators
