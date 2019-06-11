@@ -196,3 +196,8 @@
   - action_find_project_collaborators
 * thanks
   - utter_find_project_collaborators_thanks
+
+
+##path_change_github_repository
+* action_change_github_repository
+    - action_change_github_repository
