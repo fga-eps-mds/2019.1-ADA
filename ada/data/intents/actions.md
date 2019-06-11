@@ -158,6 +158,7 @@
 - monitora ai meu dominio
 - monitora ai meu domínio
 - monitora ai meu deploy
+
 ## intent:action_get_issues_of_contributor
 - Quero saber quais são as issues do [caiovferas](contributor_name) 
 - Quero saber quais sao as issues de [guilhermemender](contributor_name) 
@@ -192,3 +193,15 @@
 - me manda os colaboradores
 - manda os contribuidores
 - quem esta contribuindo para o projeto ?
+
+##intent:action_change_github_repository
+- Desejo alterar meu repositório do github
+- Quero mudar meu repositório do github
+- quero recadastrar meu repositório github
+- recadastra meu repositório do github
+- muda meu repositório do github
+- quero me cadastrar em um novo repositório do github
+- Quero me cadastrar em um novo repositório do github
+- me cadastra em um novo repositório do gihub
+- Me cadastra em um novo repositório do gihub por favor
+- Poderia me cadastrar em um novo repositório no github?
