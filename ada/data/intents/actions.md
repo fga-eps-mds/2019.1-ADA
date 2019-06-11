@@ -1,5 +1,6 @@
 ## intent:action_start
 - [/start](command)
+
 ## intent:set_pipeline
 - me mostra o pipeline do repositorio por favor
 - pipeline repositorio por favor
@@ -117,6 +118,14 @@
 - Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
 - descricao: [1 salvar dados](issue_body)
 
+## intent:comment_issue
+- Comentar #[1](issue_number) : Quero criar um banco capaz de guardar informações
+- comentar #[3](issue_number) : Nessa historia foi realiza as seguintes funcionalidades
+- Comentar #[23](issue_number) : Criterios de aceitação
+- Comentar #[456](issue_number) : teste teste teste
+- Comentar #[7891](issue_number) : Tasks 1, 2, 3, 4, 5
+- Comentar #[12345](issue_number) : 1 salvar dados 
+
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
 
@@ -141,6 +150,44 @@
 - me manda o relatório do github
 - me mostra o relatório do github, ada
 - Ada, me mostra o relatório do github
+
+## intent:get_url_domain
+- [https://fga-eps-mds.github.io/2019.1-ADA](url_name)
+- [http://fga-eps-mds.github.io/2019.1-ADA](url_name)
+- [https://fga-eps-mds.github.io/](url_name)
+- [https://123.com.br](url_name)
+- [www.example.com](url_name)
+- [www.example.com/example](url_name)
+- [www.example.com/example/1234](url_name)
+- [https://123.com](url_name)
+
+## intent:action_get_domain
+- cadastra meu dominio
+- cadastra meu domínio
+- fica de olha na minha url
+- fica de olho no meu site
+- fica de olho no meu dominio
+- fica de olho no meu domínio
+- fica de olho no meu deploy
+- monitora ai meu site
+- monitora ai meu dominio
+- monitora ai meu domínio
+- monitora ai meu deploy
+## intent:action_get_issues_of_contributor
+- Quero saber quais são as issues do [caiovferas](contributor_name) 
+- Quero saber quais sao as issues de [guilhermemender](contributor_name) 
+- Quero saber quais sao as issues de [Gudimender](contributor_name)
+- Quais são as issues do [João_vvdsad](contributor_name)
+- Quais são as issues do [ana](contributor_name)
+- Quais são as issues do [CARLOS](contributor_name)
+- Quais são as issues do [mariop](contributor_name)
+- Quais são as issues do [jose](contributor_name) 
+- Quais são as issues do [caio](contributor_name)
+- Quais são as issues do [CARLA](contributor_name) 
+- Quais são as issues do [igor](contributor_name)
+- Quais são as issues do [erick](contributor_name) 
+- quais são as issues de [Vitor](contributor_name)
+- me fala as issues do [Fulano](contributor_name)
 
 ## intent:find_project_collaborators
 - quem são os colaboradores do meu projeto ?

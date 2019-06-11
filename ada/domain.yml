@@ -23,6 +23,8 @@ intents:
   - deny
   - intended_for_next_release
   - whats_pipeline
+  - get_url_domain
+  - contributor_issues
 
   ##Actions
   - action_start
@@ -32,12 +34,17 @@ intents:
   - action_set_repository_gitlab
   - start_create_issue
   - create_issue
+  - start_comment_issue
+  - comment_issue
+
   - issue_name
   - marry_or_date
   - adas_architecture
   - rerun_pipeline
   - stable_deploy
   - action_get_report_github
+  - action_get_domain
+  - action_get_issues_of_contributor
   - find_project_collaborators
   - stable_deploy
   - action_get_report_github
@@ -64,6 +71,8 @@ entities:
   - repository_github
   - issue_name
   - issue_body
+  - url_name
+  - issue_number
 
 slots:
   repository_gitlab:
@@ -73,6 +82,12 @@ slots:
   issue_name:
     type: text
   issue_body:
+    type: text
+  url_name:
+    type: text
+  contributor_name:
+    type: text
+  issue_number:
     type: text
 
 actions:
@@ -100,6 +115,9 @@ actions:
   - utter_creators
   - utter_intended_for_next_release
   - utter_whats_pipeline
+  - utter_get_url_domain
+  - utter_ask_url_domain
+  - utter_deny_msg_url_domain
 
   - utter_start_report
   - action_get_report
@@ -111,6 +129,7 @@ actions:
   - action_issue_name
   - utter_issue_name
   - action_create_issue
+  - action_comment_issue
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
@@ -122,6 +141,10 @@ actions:
 templates:
   - action_get_report_github
   - action_get_report_github
+  - action_get_url_domain
+  - action_get_domain
+
+  - action_get_issues_of_contributor
   - utter_find_project_collaborators
   - action_find_project_collaborators
   - utter_find_project_collaborators_sad
@@ -455,6 +478,18 @@ templates:
   utter_stable_deploy_happy:
   - text: |
       Imagina ! Conte comigo sempre ❤️
+
+  utter_get_url_domain:
+  - text: |
+        Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
+
+  utter_ask_url_domain:
+  - text: |
+        Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
+
+  utter_deny_msg_url_domain:
+  - text: |
+        Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
 
   utter_find_project_collaborators:
   - text: |

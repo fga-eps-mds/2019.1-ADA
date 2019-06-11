@@ -67,13 +67,13 @@ docker ps
 
 Exporte o nome da imagem referente ao serviço do GitHub, tal como:
 ```sh
-export GITLAB_SERVICE_URL='http://20191-ada-github_api_1:5000/'
+export GITHUB_SERVICE_URL='http://20191-ada-github_api_1:5000/'
 ```
 
 ##### Crie um OAuth App no github
 Crie um OAuth app no github para a Ada realizar autenticação junto aos usuários, seguindo os passos a seguir:
 - No seu perfil do github clique em **Developer Settings** > **OAuth Apps** e selecione **New OAuth app**.
-- No formulário de registro do app, escolha o nome do seu app e preencha os campos **Homepage URL** com as urls ```http://localhost:5015/user``` e ```http://localhost:5000/user/gitlab/authorize``` respectivamente.
+- No formulário de registro do app, escolha o nome do seu app e preencha os campos **Homepage URL** com as urls ```http://localhost:5015/user``` e ```http://localhost:5015/user/github/authorize``` respectivamente.
 - Ao clicar em **Register application** o github irá retornar os tokens _Client id_ e _Client secret_.
 
 Agora seu app está pronto.

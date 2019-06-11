@@ -1,6 +1,26 @@
 ## path_start
 * start{"command": "start"}
   - action_start
+* action_set_repository_github
+  - action_set_repository_github
+* action_set_repository_gitlab
+  - action_set_repository_gitlab
+  - utter_get_url_domain
+* affirm
+  - utter_ask_url_domain
+* get_url_domain
+  - action_get_url_domain
+
+## path_start_deny
+* start{"command": "start"}
+  - action_start
+* action_set_repository_github
+  - action_set_repository_github
+* action_set_repository_gitlab
+  - action_set_repository_gitlab
+  - utter_get_url_domain
+* deny
+  - utter_deny_msg_url_domain 
 
 ## path_set_repository_github
 * action_set_repository_github
@@ -9,6 +29,9 @@
 ## path_set_repository_gitlab
 * action_set_repository_gitlab
   - action_set_repository_gitlab
+  - utter_get_url_domain
+* deny
+  - utter_deny_msg_url_domain
 
 ## path_create_issue
 * start_create_issue
@@ -18,6 +41,10 @@
   - action_issue_name
 * create_issue
   - action_create_issue
+
+## path_comment_issue
+* comment_issue
+  - action_comment_issue
 
 ## path_help
 * help{"command": "help"}
@@ -160,6 +187,16 @@
 * action_get_report_github
   - utter_start_report
   - action_get_report_github
+
+## path_get_domain
+* action_get_domain
+  - utter_ask_url_domain
+* get_url_domain
+  - action_get_url_domain
+  
+## path_contributor_issues
+* action_get_issues_of_contributor
+  - action_get_issues_of_contributor
 
 ## path_find_project_collaborators_basic
 * find_project_collaborators
