@@ -5,6 +5,7 @@ import requests
 import json
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
+import sys
 
 GITHUB_SERVICE_URL = os.getenv("GITHUB_SERVICE_URL", "")
 
@@ -21,8 +22,8 @@ class ActionCommentIssue(Action):
 
             message = tracker.latest_message.get('text')
 
-            print("**********\nTracker latest message:\n",tracker.latest_message,"\n***********")
-            print("Type do latest_message: ", type(tracker.latest_message),"\n********")
+            print("**********\nTracker latest message:\n",tracker.latest_message,"\n***********", file=sys.stderr)
+            print("Type do latest_message: ", type(tracker.latest_message),"\n********", file=sys.stderr)
 
             splited_message = message.split(": ")
             comment_body = splited_message[-1]
