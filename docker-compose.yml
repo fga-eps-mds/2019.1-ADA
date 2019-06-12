@@ -1,4 +1,3 @@
-
 version: '3.7'
 
 services:
@@ -16,7 +15,6 @@ services:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - BOT_NAME=${BOT_NAME}
       - WEBHOOK_URL=${WEBHOOK_URL}
-      - ACTIONS_URL=${ACTIONS_URL}
     depends_on:
       - actions
       - mongo-telegram
@@ -31,8 +29,12 @@ services:
       - ./adabot/Makefile:/ada/Makefile
     environment:
       - ACCESS_TOKEN=${ACCESS_TOKEN}
+      - GITHUB_SERVICE_URL=${GITHUB_SERVICE_URL}
       - GITLAB_SERVICE_URL=${GITLAB_SERVICE_URL}
-      - GITLAB_WEBHOOK_URL=${GITLAB_WEBHOOK_URL}
+      - GITHUB_SIGNUP_URL=${GITHUB_SIGNUP_URL}
+      - CLIENT_ID_GITHUB=${CLIENT_ID_GITHUB}
+      - CLIENT_ID_GITLAB=${CLIENT_ID_GITLAB}
+      - GITLAB_SIGNUP_URL=${GITLAB_SIGNUP_URL}
     networks:
       - adanetwork
     command: "make run-actions"
