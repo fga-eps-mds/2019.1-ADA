@@ -50,19 +50,6 @@ intents:
 
 entities:
   - command
-  - oi
-  - religion
-  - good
-  - name
-  - joke
-  - license
-  - night
-  - afternoon
-  - morning
-  - sad
-  - creators
-  - begin
-  - help
   - affirm
 
   ## SlotsSets(Entities)
@@ -165,15 +152,17 @@ templates:
   - text: |
       Ficou interessado, né? Bom, vamos lá.
 
-      Vou te passar uma lista do que você pode me pedir
+      Caso você se cadastre, vou te notificar sobre qualquer alteração que ocorrer no seu repositório!
+
+      Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
           - Andamendo das builds dos seus projetos do GitLab;
-          - Relatório sobre seu projeto do GitLab;
-          - Commit's (Previsto para a R2);
-          - Criar e comentar Issues (Previsto para a R2);
+          - Relatório sobre seu projeto do GitLab e do GitHub;
+          - Criar issues;
+          - Comentar issues através das notificações;
+          - Quem são os colaboradores do projeto;
+          - Quais são as issues de um determinado usuário;
           - Comentar Pull Request's (Previsto para a R2);
-
-      Caso você se cadastre, vou te notificar sobre qualquer alteração que ocorrer no seu repositório!
 
       Basta você me pedir.
 

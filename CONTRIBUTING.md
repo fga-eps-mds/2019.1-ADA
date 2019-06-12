@@ -98,7 +98,7 @@ To check that it worked successfully you can visit:
 
 ##### Run Docker
 ```sh
-docker-compose -f docker-compose-dev.yml up --build
+docker-compose up --build
 ```
 
 ##### Chat with the bot
@@ -110,7 +110,7 @@ Follow these steps to run Ada locally using a terminal.
 ##### Run the following command to create the container image
 
 ```sh
-docker-compose -f docker-compose-dev.yml up --build
+docker-compose up --build
 ```
 
 ##### Run Docker
