@@ -1,21 +1,18 @@
 ## intent:religion
-- você acredita em [Deus](religion)?
-- [Deus] (religion) existe
-- você é [católica protestante](religion)
-- você tem [religião]?(religion)
-- [jesus](religion)
-- [Deus](religion)
-- [crente](religion)
-- voce é [evangélica](religion)?
-- voce é [anglicana](religion)?
-- voce é [católica](religion)?
-- voce é [atéia](religion)?
-- qual a sua [religião](religion)?
+- você acredita em Deus)?
+- Quem é seu Deus?
+- Deus existe
+- você é católica protestante
+- você tem religião?
+- voce é evangélica?
+- voce é anglicana?
+- voce é católica?
+- voce é atéia?
+- qual a sua religião?
 - qual a religião na inglaterra?
-- Ada, você acredita em alguma [religião](religion)?
-- ada, você acredita em alguma [religião](religion)?
-- [bíblia](religion)
-- [religião](religion)
+- Ada, você acredita em alguma religião?
+- ada, você acredita em alguma religião?
+
 
 ## intent:who_am_i
 - como você é?
@@ -32,65 +29,61 @@
 ## intent:name_complete
 - Qual o seu nome?
 - qual o seu nome?
-- Qual o seu [nome](name)?
-- Qual seu [nome completo](name)
-- [nome](name)
-- qual seu [nome](name)?
+- Qual é o seu nome?
+- Qual seu nome completo
+- qual seu nome?
 - me fala seu nome, por favor
-- como você se [chama](name)?
-- como você se [chama](name)
+- como você se chama
 
 ## intent:joke
-- me conta uma [piada](joke)
-- [piada](joke)
-- voce sabe contar [piadas](joke)
-- conte-me uma [piada](joke)
-- manda uma [piada ai](joke)
-- conhece alguma [piada](joke)
+- me conta uma piada
+- voce sabe contar piadas
+- conte-me uma piada
+- manda uma piada ai
+- conhece alguma piada
 
 ## intent:license
-- qual é a sua [licença](license)
-- qual e a sua [licença](license)
-- voce e [licenciado](license)
-- sua [licença de software](license)
-- voce e [opensource](license)
-- voce e um [software livre](license)
-- [software livre](license)
-- [licença](license)
-- [licença](license)
+- qual é a sua licença
+- qual e a sua licença
+- voce e licenciado
+- sua licença de software
+- voce e opensource
+- voce e um software livre
+- software livre
+- licença
 
 ## intent:good_night
-- boa [noitee](night)
-- Boa [noitee](night)
-- Boa [noite](night)
-- Boa [Noite](night)
-- boa [noite](night), ada
-- boa [noite](night)
-- [boa noite](night)
-- otima [noite](night)
-- [good night](night)
+- boa noitee
+- Boa noitee
+- Boa noite
+- Boa Noite
+- boa noite, ada
+- boa noite
+- boa noite
+- otima noite
+- good night
 
 ## intent:good_afternoon
-- boa [tardee](afternoon)
-- Boa [tardee](afternoon)
-- Boa [tarde](afternoon)
-- Boa [tarde](afternoon)
-- boa [tarde](afternoon), ada
-- boa [tarde](afternoon)
-- [boa tarde](afternoon)
-- otima [tarde](afternoon)
-- [good afternoon](afternoon)
+- boa tardee
+- Boa tardee
+- Boa tarde
+- Boa tarde
+- boa tarde, ada
+- boa tarde
+- boa tarde
+- otima tarde
+- good afternoon
 
 ## intent:good_morning
-- bom [diaa](morning)
-- Bom [diaa](morning)
-- bom [dia](morning)
-- bom [dia](morning)
-- bom [dia](morning), ada
-- bom [dia](morning)
-- [boa dia](morning)
-- otima [dia](morning)
-- [good morning](morning)
+- bom diaa
+- Bom diaa
+- bom dia
+- bom dia
+- bom dia, ada
+- bom dia
+- boa dia
+- otima dia
+- good morning
 
 ## intent:sad
 - estou [triste](sad)
@@ -110,12 +103,30 @@
 - [ninguém me completa](not_good)
 - [tô mal](not_good)
 - [estou ruim](not_good)
+- estou triste
+- estou muito triste
+- Estou bem triste
+- Estou triste
+- Estou muito triste
+- Estou bem mal
+- Estou mal
+- estou mal
+- estou bem mal
+- depressão
+- depressao
+- to nao
+- não estou bem
+- to muito bem nao
+- me sinto mal
+- ninguém me completa
+- tô mal
+- estou ruim
 - nao estou me sentindo bem
 - tenho dor de cabeça
 - to com dor de barriga
 - meu coração doi
-- [quero morrer](not_good)
-- [sou um lixo](not_good)
+- quero morrer
+- sou um lixo
 - nao to que nem vc
 - ai que pena
 - poxa vida, Ada
@@ -124,20 +135,20 @@
 - neeeiiimmmm
 
 ## intent:creators
-- quem são os seus [criadores](creators)?
-- quem te [criou](creators)?
+- quem são os seus criadores?
+- quem te criou?
 - Você foi feito por quem?
-- Quem te [fez](creators)?
-- quem são os seus [desenvolvedores](creators)?
-- Quem são os seus [desenvolvedores](creators)?
-- Quem sao os seus [desenvolvedores](creators)?
-- Quem te [criou](creators)?
-- Como você foi [feita](creators)?
-- como voce foi [feita](creators)?
-- quem te [fez](creators)?
-- quem te [criou](creators)?
-- quem sao os seus [criadores](creators)?
-- quem sao os seus [criadores](creators)
+- Quem te fez?
+- quem são os seus desenvolvedores?
+- Quem são os seus desenvolvedores?
+- Quem sao os seus desenvolvedores?
+- Quem te criou?
+- Como você foi feita?
+- como voce foi feita?
+- quem te fez?
+- quem te criou?
+- quem sao os seus criadores?
+- quem sao os seus criadores
 - voce foi feito por quem?
 
 ## intent:marry_or_date
@@ -157,7 +168,6 @@
 ## intent:adas_architecture
 - qual a sua arquitetura?
 - me fala sua arquitetura atual?
-- sua arquitetura
 - quais as tecnologias que você usa?
 - que tecnologias a Ada usa?
 - vc trabalha com quais tecnologias?
@@ -169,9 +179,6 @@
 - sua arquitetura é complicada?
 - me mostra sua arquitetura
 - mostra ae as tecnologia que tu usa
-- vc usa git?
-- voce trabalha com github?
-- suas tecnologias
 - suas tecnologias são quais?
 - arquitetura da Ada
 - tecnologias da ADA

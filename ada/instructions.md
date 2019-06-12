@@ -21,5 +21,5 @@ export WEBHOOK_URL="xxxxxxxx.ngrok.io/webhooks/telegram/webhook"
 * Execute os seguintes comandos:
 
 ```sh
-docker-compose -f docker-compose-dev.yml up --build
+docker-compose up --build
 ```

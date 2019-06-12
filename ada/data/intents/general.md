@@ -1,19 +1,19 @@
 ## intent:help
 - [help](command)
 - [/help](command)
-- me [ajuda](help)
+- me ajuda
 - help
 - me salva
-- você poderia me [ajudar](help)?
-- [ajuda](help)
-- você poderia me [ajudar](help), ada?
-- me [ajuda](help), por favor
-- ei, me [ajuda](help)
-- ada, me [ajuda](help)
+- você poderia me ajudar?
+- ajuda
+- você poderia me ajudar, ada?
+- me ajuda, por favor
+- ei, me ajuda
+- ada, me ajuda
 - o que você faz
-- quais são [as coisas que voce faz](help)?
+- quais são as coisas que voce faz?
 - que que vc faz?
-- [o que vc consegue fazer](help)
+- o que vc consegue fazer
 - consegue fazer o q?
 - tu consegue fzr o q?
 - como vc pode me ajudar?
@@ -21,78 +21,77 @@
 - como podes me ajudar?
 - vc me ajuda?
 - me ajuda por favor?
-- quais [os seus serviços](help)?
-- me fala seus [servicos](help)
+- quais os seus serviços?
+- me fala seus servicos
 - quero saber sobre seus serviços
 - o que vc consegue fazer?
-- qual [servico](help) vc tem?
+- qual servico vc tem?
 - os seus servicos sao quais?
 - vc tem muitos serviços?
 - vc pode me ajudar?
-- ayuda
-- [socorro](help) ada
+- socorro ada
 - to entendendo nada
-- nao entendi [o que vc faz](help)
+- nao entendi o que vc faz
 - nao to te entendendo, Ada
 
 ## intent:begin
-- [vamos](begin)
+- vamos
 - começa
-- [vamos](begin) lá
+- vamos lá
 - vamos comecar
 - ok
-- podemos [começar](begin)
+- podemos começar
 - vamos, ada
 - bora bora
-- br [br](begin)
-- go [go](begin)
+- br br
+- go go
 - vamo nessa Ada
-- bora [bora](begin)
+- bora bora
 - bora aeeee
 - bora aiiii
 - vamos logo
-- [commom](begin) ada
-- [lets go](begin)
+- commom ada
+- lets go
 
 ## intent:greet
 - oi
-- [hey](oi)
-- [olá](oi)
-- [ola](oi)
-- [oie](oi)
+- hey
+- olá
+- ola
+- oie
 - tudo bem
 - oi Ada
 - bom dia
 - boa tarde
 - boa noite
-- [eai](oi)
-- [iai](oi)
-- [eae](oi)
-- [iae](oi)
+- eai
+- iai
+- eae
+- iae
 - fala ai
 - fala aí
-- [ADA](oi)
-- [ada](oi)
-- [Ada](oi)
-- [olar](oi)
+- ADA
+- ada
+- Ada
+- olar
 - tudo bom
 - oi amiga
-- [amiga](oi)
-- [miga](oi)
-- [princesa](oi)
+- amiga
+- miga
+- princesa
 - oi bb
 - oi bebê
-- [oiii](oi)
-- [hello](oi)
-- [eae](oi)
+- oiii
+- hello
+- eae
 - fala ae
-- [ei](oi)
+- ei
 - oi princesa
 - oi sumida
 - adinha
 - Oi, Ada
-- [Olaaaa](oi)
-- [Olaa](oi)
+- Olaaaa
+- Olaa
 - oi, miga
 - oi miga
 
@@ -119,18 +118,18 @@
 - eai ada de boa?
 
 ## intent:greet_reply
-- [estou bem](good)
-- [estou super bem](good)
-- [estou legal](good)
-- [estou feliz](good)
-- [to bem](good)
-- [to legal](good)
+- estou bem
+- estou super bem
+- estou legal
+- estou feliz
+- to bem
+- to legal
 - to ok
-- [to otimo](good)
-- [estou otimo](good)
-- [to bem demais](good)
-- [tô bem](good)
-- [estou muito bem](good)
+- to otimo
+- estou otimo
+- to bem demais
+- tô bem
+- estou muito bem
 - tô ok
 - sim
 - to de boa
