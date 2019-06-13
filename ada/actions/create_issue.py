@@ -28,11 +28,8 @@ class ActionCreateIssue(Action):
                     chat_id=chat_id)
             response = requests.post(url=url, data=json.dumps(data),
                                      headers=headers)
-            received_repositories = response.json()
-            dispatcher.utter_message("Criei sua issue aqui, para acessar"
-                                     " clique nesse link: {link}".format(
-                                      link=str(
-                                        received_repositories['html_url'])))
+            response.json()
+            dispatcher.utter_message("Criei sua issue aqui!")
         except HTTPError:
             dispatcher.utter_message(
                 "Não consegui criar a issue, tente novamente")
