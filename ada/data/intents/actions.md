@@ -197,6 +197,18 @@
 - muda meu repositório do github
 - quero me cadastrar em um novo repositório do github
 - Quero me cadastrar em um novo repositório do github
-- me cadastra em um novo repositório do gihub
-- Me cadastra em um novo repositório do gihub por favor
+- me cadastra em um novo repositório do github
+- Me cadastra em um novo repositório do github por favor
 - Poderia me cadastrar em um novo repositório no github?
+
+##intent:action_change_gitlab_repository
+- Desejo alterar meu repositório do gitlab
+- Quero mudar meu repositório do gitlab
+- quero recadastrar meu repositório gitlab
+- recadastra meu repositório do gitlab
+- muda meu repositório do gitlab
+- quero me cadastrar em um novo repositório do gitlab
+- Quero me cadastrar em um novo repositório do gitlab
+- me cadastra em um novo repositório do gitlab
+- Me cadastra em um novo repositório do gitlab por favor
+- Poderia me cadastrar em um novo repositório no gitlab?

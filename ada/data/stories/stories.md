@@ -194,3 +194,7 @@
 ##path_change_github_repository
 * action_change_github_repository
     - action_change_github_repository
+
+##path_change_gitlab_repository
+* action_change_gitlab_repository
+    - action_change_gitlab_repository
