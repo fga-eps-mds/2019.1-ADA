@@ -450,30 +450,30 @@ templates:
         Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
   utter_find_project_collaborators:
   - text: |
-      É pra já !
+        É pra já !
 
   - text: |
-      Claro, deixa eu checar 💻
+        Claro, deixa eu checar 💻
 
-      Já volto.
+        Já volto.
 
   utter_find_project_collaborators_sad:
   - text: |
-      Tudo bem... te entendo
+        Tudo bem... te entendo
 
-      Mas relaxa que no final tudo dá certo. E estou aqui para te ajudar!
+        Mas relaxa que no final tudo dá certo. E estou aqui para te ajudar!
 
   - text: |
-      Ah... ok...
+        Ah... ok...
 
-      Lembre-se que dará tudo certo e que estou aqui para te ajudar!
+        Lembre-se que dará tudo certo e que estou aqui para te ajudar!
 
   utter_find_project_collaborators_happy:
   - text: |
-      Legal ! Te aguardo, então! Obrigada 💜
+        Legal ! Te aguardo, então! Obrigada 💜
 
   utter_find_project_collaborators_thanks:
   - text: |
-      De nada 💜
+        De nada 💜
 
-      Estou aqui para o que vc precisar.
+        Estou aqui para o que vc precisar.
