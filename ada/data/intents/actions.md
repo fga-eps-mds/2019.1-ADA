@@ -96,15 +96,15 @@
 - Cria uma issue para mim, Ada
 
 ## intent:issue_name
-- Titulo: [abc](issue_name)
-- Título: [2019a](issue_name)
-- titulo: [abc](issue_name)
-- titulo: [2019a](issue_name)
-- Título: [122345](issue_name)
-- Titulo: [HEHEHEHE](issue_name)
-- titulo: [US26-Ada](issue_name)
-- titulo: [Eu como Usuário](issue_name)
-- título: [#135 ABC](issue_name)
+- Titulo: [Issue#1](issue_name)
+- Título: [Issue#2](issue_name)
+- titulo: [issue#3](issue_name)
+- titulo: [Eu, como usuário, desejo que a ada me informa os colaboradores](issue_name)
+- Título: [Issue#11233](issue_name)
+- Titulo: [abcdefghijklmnopqrstuvxywz](issue_name)
+- titulo: [US26-Ada, me ajuda a informar os repositórios](issue_name)
+- titulo: [Quero criar uma nova issue](issue_name)
+- título: [Issue#1345: Teste](issue_name)
 
 ## intent:create_issue
 - Descrição: [Quero criar um banco capaz de guardar informações](issue_body)
@@ -133,12 +133,12 @@
 - quero criar um pull request
 
 ## intent:pull_request_name
-- Título do PR: [aabbcc](pull_request_title)
-- título do pull request: [112233](pull_request_title)
-- título do pr: [Eu como usuário](pull_request_title)
+- Título do PR: [PullRequest#1](pull_request_title)
+- título do pull request: [PullRequest#2](pull_request_title)
+- título do pr: [PullRequest#3](pull_request_title)
 - Título do Pull Request: [Neste pull request se realizou](pull_request_title)
-- titulo do pr: [US26-Adinha](pull_request_title)
-- Título do PR: [ABCDEFGHIZ](pull_request_title)
+- titulo do pr: [US12-Eu, como usuário, desejo que a Ada](pull_request_title)
+- Título do PR: [PullRequest#10234](pull_request_title)
 
 ## intent:head_branch
 - Head: [265-NovaBranch](head_branch)
@@ -152,12 +152,12 @@
 - Base: [develMaster](head_branch)
 
 ## intent:create_pull_request
-- Descrição: [12321323](pull_request_body)
-- Descrição: [Neste pull request se realizou](pull_request_body)
-- Descrição: [Os comentários foram realizados com sucesso](pull_request_body)
-- descrição: [Testes passando](pull_request_body)
-- descricao: [Flake8](pull_request_body)
-- Descricao: [KIKO HA HA HA](pull_request_body)
+- Descrição: [Neste pull request se realizou o flake8](pull_request_body)
+- Descrição: [Neste pull request se realizou os testes unitários](pull_request_body)
+- Descrição: [Os comentários foram realizados com sucesso no seu Pull Request](pull_request_body)
+- descrição: [Aprimoração do fluxo de conversa com a ADA](pull_request_body)
+- descricao: [Querido Pull Request, você é muito legal](pull_request_body)
+- Descricao: [Os testes estão funcionando perfeitamente](pull_request_body)
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline

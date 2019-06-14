@@ -427,11 +427,11 @@ templates:
 
   utter_start_pull_request:
   - text: |
-      Vamos lá, para criar um novo Pull Request preciso que primeiro me manda qual o título do pull request que você vai criar, por exemplo, tente fazer algo nesse estilo: "Título: O Título É Esse"
+      Vamos lá, para criar um novo Pull Request preciso que primeiro me manda qual o título do pull request que você vai criar, por exemplo, tente fazer algo nesse estilo: "Título do PR: O Título É Esse"
 
   utter_head_name:
   - text: |
-      Agora que você colocou o título, vou trazer as branches do seu repositório!
+      Agora escolha a branch que você está trabalhando para fazer o merge com a branch mais estável do seu projeto!
 
   utter_branch_base:
   - text: |
