@@ -128,9 +128,9 @@ class ReportGitHub(Action):
                 "que seus dados estão certos?")
         except ValueError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me mande "
-                "mais tarde uma mensagem pra ver se dá certo.")
+                "Estou com problemas para me conectar agora, me mande "
+                "novamente uma mensagem mais tarde.")
         except NewConnectionError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me mande "
-                "mais tarde uma mensagem pra ver se dá certo.")
+                "Estou com problemas para me conectar agora, me mande "
+                "novamente uma mensagem mais tarde.")

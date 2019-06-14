@@ -57,6 +57,7 @@ entities:
   - issue_body
   - url_name
   - issue_number
+  - contributor_name
 
 slots:
   repository_gitlab:
@@ -151,14 +152,14 @@ templates:
 
       Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
-          - Reiniciar pipelines;
-          - Andamendo das builds dos seus projetos do GitLab;
-          - Relatório sobre seu projeto do GitLab e do GitHub;
+          - Reiniciar o pipeline mais recente;
+          - Relatório sobre seu projeto do GitLab; 
+          - Relatório sobre seu projeto do GitHub;
           - Criar issues;
-          - Comentar issues através das notificações;
+          - Comentar issue #número: o que você quer comentar;
           - Quem são os colaboradores do projeto;
-          - Quais são as issues de um determinado usuário;
-          - Criar Pull Request's;
+          - Quais são as issues abertas do usuário X;
+          - Saber status da build em andamento;
 
       Basta você me pedir.
 

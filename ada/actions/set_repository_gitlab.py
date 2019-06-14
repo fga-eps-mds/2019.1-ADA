@@ -33,10 +33,9 @@ class SetRepositoryGitLab(Action):
             bot.send_message(chat_id=sender_id,
                              text=selected_repo)
             info_message = "Caso queira saber o que eu faço, "\
-                                   "me peça ajuda 😉"
+                           "me peça ajuda 😉"
             bot.send_message(chat_id=sender_id,
                              text=info_message)
-            
             return [SlotSet('repository_gitlab', repo_name)]
         except ValueError:
             dispatcher.utter_message("Estou tendo dificuldade pra encontrar "
