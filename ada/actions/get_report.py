@@ -146,9 +146,9 @@ class Report(Action):
                 "que seus dados estão certos?")
         except ValueError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda "
-                "mais uma mensagem pra ver se dessa vez dá certo.")
+                "Estou com problemas para me conectar, me mande "
+                "mais tarde uma mensagem pra ver se dá certo.")
         except NewConnectionError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda "
-                "mais uma mensagem pra ver se dessa vez dá certo.")
+                "Estou com problemas para me conectar, me mande "
+                "mais tarde uma mensagem pra ver se dá certo.")

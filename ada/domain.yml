@@ -151,28 +151,16 @@ templates:
 
       Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
+          - Reiniciar pipelines;
           - Andamendo das builds dos seus projetos do GitLab;
           - Relatório sobre seu projeto do GitLab e do GitHub;
           - Criar issues;
           - Comentar issues através das notificações;
           - Quem são os colaboradores do projeto;
           - Quais são as issues de um determinado usuário;
-          - Comentar Pull Request's (Previsto para a R2);
+          - Criar Pull Request's;
 
       Basta você me pedir.
-
-  - text: |
-      Eu vou te ajudar a gerenciar a pipeline da produção do seu serviço/software.
-
-      Você pode falar comigo sobre vários aspectos, tais como:
-        - Criar e comentar Issues (Previsto para a R2);
-        - Relatório sobre seu projeto do GitLab;
-        - Commit's (Previsto para a R2);
-        - Andamendo das builds dos seus projetos do GitLab;
-        - Comentar Pull Request's (Previsto para a R2);
-        - Resultado dos pipelines;
-
-      O que você precisar saber, é só me perguntar ❤️
 
   utter_begin:
   - text: |
@@ -436,18 +424,17 @@ templates:
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
 
-
   utter_get_url_domain:
   - text: |
-        Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
+      Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
 
   utter_ask_url_domain:
   - text: |
-        Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
+      Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
 
   utter_deny_msg_url_domain:
   - text: |
-        Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
+      Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
   utter_find_project_collaborators:
   - text: |
       É pra já !
