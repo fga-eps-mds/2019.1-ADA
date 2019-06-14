@@ -23,11 +23,11 @@ class ActionCommentIssue(Action):
 
             message = tracker.latest_message.get('text')
 
-            #print("**********\nTracker latest message:\n",tracker.latest_message,"\n***********", file=sys.stderr)
-            #print("Type do latest_message: ", type(tracker.latest_message),"\n********", file=sys.stderr)
-            delete_webhook_url = "https://api.telegram.org/bot" + ACCESS_TOKEN + "/deleteWebhook"
+            delete_webhook_url = "https://api.telegram.org/bot" +
+                                 ACCESS_TOKEN + "/deleteWebhook"
             print("Delete url: ", delete_webhook_url, "\n\n",file=sys.stderr)
-            get_updates_url = "https://api.telegram.org/bot" + ACCESS_TOKEN + "/getUpdates"
+            get_updates_url = "https://api.telegram.org/bot" + ACCESS_TOKEN +
+                              "/getUpdates"
             print("Updates url: ", get_updates_url, "\n\n",file=sys.stderr)
             peguei_issue_number = False
             try: # delete webhook
@@ -40,17 +40,21 @@ class ActionCommentIssue(Action):
                 try: # get updates
                     get_updates_response = requests.get(url=get_updates_url)
                     get_updates_response.raise_for_status()
-                except HTTPError:
-                    dispatcher.utter_message("Get updates falhou")
-                else:
                     get_updates_response = get_updates_response.json()
                     reply_to_message = get_updates_response["result"][-1]\
                                        ["message"]["reply_to_message"]
+                except HTTPError:
+                    print("Get updates falhou", file=sys.stderr)
+                except KeyError:
+                    print("Reply to message ERROR -> não existe",
+                          file=sys.stderr)
+                else:
                     reply_text = reply_to_message["text"]
                     print("Reply text: ", reply_text, "\n\n", file=sys.stderr)
                     issue_number = reply_text.split("#")
                     issue_number = issue_number[1][0]
-                    print("issue number: ", issue_number, "\n\n", file=sys.stderr)
+                    print("issue number: ", issue_number, "\n\n",
+                          file=sys.stderr)
                     peguei_issue_number = True
 
             splited_message = message.split(": ")
@@ -64,7 +68,7 @@ class ActionCommentIssue(Action):
 
             data = {"body": comment_body, "issue_number": issue_number}
             url = GITHUB_SERVICE_URL + "api/comment_issue/{chat_id}".format(
-                chat_id=chat_id)
+                  chat_id=chat_id)
             response = requests.post(url=url, data=json.dumps(data),
                                      headers=headers)
             response.raise_for_status()
