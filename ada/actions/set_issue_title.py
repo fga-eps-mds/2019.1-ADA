@@ -8,21 +8,30 @@ class ActionIssueName(Action):
         return "action_issue_name"
 
     def run(self, dispatcher, tracker, domain):
-        try:
-            message = tracker.latest_message.get('text')
-            message = message.split(": ")
-            issue_name = message[1]
+        slot_repo = tracker.get_slot("repository_github")
+        if slot_repo:
+            try:
+                message = tracker.latest_message.get('text')
+                message = message.split(": ")
+                issue_name = message[1]
 
-            print("O titulo da Issue é: {issue_name}\n".format
-                  (issue_name=issue_name))
-        except ValueError:
-            dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda "
-                "mais uma mensagem pra ver se dessa vez dá certo.")
-        except NewConnectionError:
-            dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda "
-                "mais uma mensagem pra ver se dessa vez dá certo.")
+                print("O titulo da Issue é: {issue_name}\n".format(
+                     issue_name=issue_name))
+            except ValueError:
+                dispatcher.utter_message(
+                    "Estou com problemas para me conectar, me manda "
+                    "mais uma mensagem pra ver se dessa vez dá certo.")
+            except NewConnectionError:
+                dispatcher.utter_message(
+                    "Estou com problemas para me conectar, me manda "
+                    "mais uma mensagem pra ver se dessa vez dá certo.")
 
+            else:
+                return [SlotSet('issue_name', issue_name)]
         else:
-            return [SlotSet('issue_name', issue_name)]
+            dispatcher.utter_message("Para criar uma issue"
+                                     " é necessário que você tenha um "
+                                     "repositório do github cadastrado!")
+            dispatcher.utter_message("Para se cadastrar digite /start"
+                                     " e clique no link que será enviado.")
+            return []
