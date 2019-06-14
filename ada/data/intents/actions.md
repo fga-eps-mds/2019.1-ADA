@@ -96,9 +96,9 @@
 - Cria uma issue para mim, Ada
 
 ## intent:issue_name
-- Titulo: [Issue#1](issue_name)
-- Título: [Issue#2](issue_name)
-- titulo: [issue#3](issue_name)
+- Titulo: [Issue1](issue_name)
+- Título: [Issue2](issue_name)
+- titulo: [issue3](issue_name)
 - titulo: [Eu, como usuário, desejo que a ada me informa os colaboradores](issue_name)
 - Título: [Issue#11233](issue_name)
 - Titulo: [abcdefghijklmnopqrstuvxywz](issue_name)
@@ -133,23 +133,33 @@
 - quero criar um pull request
 
 ## intent:pull_request_name
-- Título do PR: [PullRequest#1](pull_request_title)
-- título do pull request: [PullRequest#2](pull_request_title)
-- título do pr: [PullRequest#3](pull_request_title)
+- Título do PR: [PullRequest1](pull_request_title)
+- título do pull request: [pullRequest2](pull_request_title)
+- título do pr: [pullRequest3](pull_request_title)
 - Título do Pull Request: [Neste pull request se realizou](pull_request_title)
 - titulo do pr: [US12-Eu, como usuário, desejo que a Ada](pull_request_title)
-- Título do PR: [PullRequest#10234](pull_request_title)
+- Título do PR: [pullRequest10234](pull_request_title)
+- Título do PR: [Teste](pull_request_title)
+- Título do PR: [Testes](pull_request_title)
+
 
 ## intent:head_branch
 - Head: [265-NovaBranch](head_branch)
 - Head: [12345678](head_branch)
 - Head: [265-HotFixCreateIssue](head_branch)
+- Head: [branch12345](head_branch)
+- Head: [aaaaaaaa](head_branch)
+- Head: [Branch1234](head_branch)
+- Head: [Branch123-CriarIssue](head_branch)
 
 ## intent:base_branch
 - Base: [devel](base_branch)
 - Base: [master](base_branch)
 - Base: [devel](head_branch)
 - Base: [develMaster](head_branch)
+- Base: [aaaaaaa](head_branch)
+- Base: [Branch1234](head_branch)
+- Base: [Branch123-CriarIssue](head_branch)
 
 ## intent:create_pull_request
 - Descrição: [Neste pull request se realizou o flake8](pull_request_body)
