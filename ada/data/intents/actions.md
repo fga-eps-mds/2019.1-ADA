@@ -119,7 +119,11 @@
 - Comentar #[23](issue_number) : Criterios de aceitação
 - Comentar #[456](issue_number) : teste teste teste
 - Comentar #[7891](issue_number) : Tasks 1, 2, 3, 4, 5
-- Comentar #[12345](issue_number) : 1 salvar dados 
+- Comentar #[12345](issue_number) : 1 salvar dados
+- Comentar issue
+- comenta essa issue pra mim
+- comenta aii
+- comentar essa issue aqui 
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
@@ -154,18 +158,18 @@
 - monitora ai meu domínio
 - monitora ai meu deploy
 ## intent:action_get_issues_of_contributor
-- Quero saber quais são as issues do [caiovferas](contributor_name) 
-- Quero saber quais sao as issues de [guilhermemender](contributor_name) 
+- Quero saber quais são as issues do [caiovferas](contributor_name)
+- Quero saber quais sao as issues de [guilhermemender](contributor_name)
 - Quero saber quais sao as issues de [Gudimender](contributor_name)
 - Quais são as issues do [João_vvdsad](contributor_name)
 - Quais são as issues do [ana](contributor_name)
 - Quais são as issues do [CARLOS](contributor_name)
 - Quais são as issues do [mariop](contributor_name)
-- Quais são as issues do [jose](contributor_name) 
+- Quais são as issues do [jose](contributor_name)
 - Quais são as issues do [caio](contributor_name)
-- Quais são as issues do [CARLA](contributor_name) 
+- Quais são as issues do [CARLA](contributor_name)
 - Quais são as issues do [igor](contributor_name)
-- Quais são as issues do [erick](contributor_name) 
+- Quais são as issues do [erick](contributor_name)
 - quais são as issues de [Vitor](contributor_name)
 - me fala as issues do [Fulano](contributor_name)
 
