@@ -438,9 +438,8 @@ templates:
 
 
   utter_get_url_domain:
-  - text: |
-        Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
-
+    - text: |
+         Agora que você está cadastrado, você pode me mandar o link da sua aplicação para que, quando ela sair do ar, eu te avise. Você gostaria que eu ficasse de olho?
   utter_ask_url_domain:
   - text: |
         Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
