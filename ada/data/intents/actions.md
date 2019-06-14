@@ -124,6 +124,9 @@
 - comenta essa issue pra mim
 - comenta aii
 - comentar essa issue aqui 
+- comentar essa issue aqui
+- issue comentário
+- Issue #[64](issue_number) Comentário: texto do comentario
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
