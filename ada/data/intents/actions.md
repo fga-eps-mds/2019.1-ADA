@@ -54,6 +54,7 @@
 - saber pipeline
 - Ada, me mostra o resultado do pipeline
 - Resultado dos pipelines
+- Saber status da build em andamento
 
 ## intent:action_set_repository_gitlab
 - labrepo: [gitlab-runner](repository_gitlab)
@@ -126,6 +127,8 @@
 - Comentar #[456](issue_number) : teste teste teste
 - Comentar #[7891](issue_number) : Tasks 1, 2, 3, 4, 5
 - Comentar #[12345](issue_number) : 1 salvar dados 
+- Comentar issue #[12345](issue_number) : 1 salvar dados
+- Comentar issue #[5](issue_number) : Após fazermos alguns testes com nomes de repositórios, descobrimos que a função send
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
@@ -183,6 +186,7 @@
 - me fala as issues do [Fulano](contributor_name)
 - Quais são as issues de um determinado usuário[joao](contributor_name)
 - quais sao as issues de um determinado usuario[roberto](contributor_name)
+- Quais são as issues abertas do usuário [vitor](contributor_name)
 
 ## intent:find_project_collaborators
 - quem são os colaboradores do meu projeto ?
