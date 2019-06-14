@@ -14,32 +14,41 @@ class ActionCommentIssue(Action):
         return "action_comment_issue"
 
     def run(self, dispatcher, tracker, domain):
-        try:
-            headers = {'Content-Type': 'application/json'}
-            tracker_state = tracker.current_state()
-            chat_id = tracker_state["sender_id"]
+        slot_repo = tracker.get_slot("repository_github")
+        if slot_repo:
+            try:
+                headers = {'Content-Type': 'application/json'}
+                tracker_state = tracker.current_state()
+                chat_id = tracker_state["sender_id"]
 
-            message = tracker.latest_message.get('text')
-            splited_message = message.split(": ")
-            comment_body = splited_message[-1]
-            splited_message = splited_message[0].split('#')
-            issue_number = splited_message[-1]
-            data = {"body": comment_body, "issue_number": issue_number}
-            url = GITHUB_SERVICE_URL + "api/comment_issue/{chat_id}".format(
-                chat_id=chat_id)
-            response = requests.post(url=url, data=json.dumps(data),
-                                     headers=headers)
-            response.raise_for_status()
-        except HTTPError:
-            dispatcher.utter_message(
-                "Não consegui comentar a issue, tente novamente")
-        except ValueError:
-            dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda "
-                "mais uma mensagem pra ver se dessa vez dá certo.")
-        except NewConnectionError:
-            dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda "
-                "mais uma mensagem pra ver se dessa vez dá certo.")
+                message = tracker.latest_message.get('text')
+                splited_message = message.split(": ")
+                comment_body = splited_message[-1]
+                splited_message = splited_message[0].split('#')
+                issue_number = splited_message[-1]
+                data = {"body": comment_body, "issue_number": issue_number}
+                url = GITHUB_SERVICE_URL + "api/comment_issue/{chat_id}".\
+                    format(chat_id=chat_id)
+                response = requests.post(url=url, data=json.dumps(data),
+                                         headers=headers)
+                response.raise_for_status()
+            except HTTPError:
+                dispatcher.utter_message(
+                    "Não consegui comentar a issue, tente novamente")
+            except ValueError:
+                dispatcher.utter_message(
+                    "Estou com problemas para me conectar, me manda "
+                    "mais uma mensagem pra ver se dessa vez dá certo.")
+            except NewConnectionError:
+                dispatcher.utter_message(
+                    "Estou com problemas para me conectar, me manda "
+                    "mais uma mensagem pra ver se dessa vez dá certo.")
+            else:
+                return [SlotSet('issue_number', issue_number)]
         else:
-            return [SlotSet('issue_number', issue_number)]
+            dispatcher.utter_message("Para comentar uma issue"
+                                     " é necessário que você tenha um "
+                                     "repositório do github cadastrado!")
+            dispatcher.utter_message("Para se cadastrar digite /start"
+                                     " e clique no link que será enviado.")
+            return []
