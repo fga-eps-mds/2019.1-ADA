@@ -1,6 +1,11 @@
 ## intent:action_start
 - [/start](command)
 - [start](command)
+- quero me cadastrar
+- quero fazer o cadastro
+- me cadastra
+- como faço para cadastrar
+- faz o meu cadastro
 
 ## intent:set_pipeline
 - me mostra o pipeline do repositorio por favor

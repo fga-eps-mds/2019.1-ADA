@@ -110,6 +110,5 @@ class ActionSetPipeline(Action):
             dispatcher.utter_message("Para ter acesso ao pipeline"
                                      " é necessário que você tenha um "
                                      "repositório do gitlab cadastrado!")
-            dispatcher.utter_message("Para se cadastrar digite /start"
-                                     " e clique no link que será enviado.")
+            dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []

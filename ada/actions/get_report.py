@@ -171,9 +171,8 @@ class Report(Action):
                     "Estou com problemas para me conectar, me manda "
                     "mais uma mensagem pra ver se dessa vez dá certo.")
         else:
-            dispatcher.utter_message("Para ter aceso ao relatório"
+            dispatcher.utter_message("Para ter acesso ao relatório"
                                      " é necessário que você tenha um "
                                      "repositório do gitlab cadastrado!")
-            dispatcher.utter_message("Para se cadastrar digite /start"
-                                     " e clique no link que será enviado.")
+            dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []

@@ -71,6 +71,5 @@ class ActionGetContributorIssues(Action):
             dispatcher.utter_message("Para ter acesso as issues"
                                      " é necessário que você tenha um "
                                      "repositório do github cadastrado!")
-            dispatcher.utter_message("Para se cadastrar digite /start"
-                                     " e clique no link que será enviado.")
+            dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []

@@ -60,6 +60,5 @@ class RerunPipeline(Action):
             dispatcher.utter_message("Para rodar novamente um pipeline"
                                      " é necessário que você tenha um "
                                      "repositório do gitlab cadastrado!")
-            dispatcher.utter_message("Para se cadastrar digite /start"
-                                     " e clique no link que será enviado.")
+            dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []

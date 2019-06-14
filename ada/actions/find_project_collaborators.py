@@ -67,9 +67,8 @@ class FindProjectCollaborators(Action):
                      "Que pena...ninguém está contribuindo para o seu projeto"
                      " :(")
         else:
-            dispatcher.utter_message("Para ter aceso aos contribuidores"
+            dispatcher.utter_message("Para ter acesso aos contribuidores"
                                      " é necessário que você tenha um "
                                      "repositório do github cadastrado!")
-            dispatcher.utter_message("Para se cadastrar digite /start"
-                                     " e clique no link que será enviado.")
+            dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []
