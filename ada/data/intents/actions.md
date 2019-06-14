@@ -6,6 +6,12 @@
 - me cadastra
 - como faço para cadastrar
 - faz o meu cadastro
+- ok, faz o meu cadastro
+- cadastra meu github
+- cadastra meu gitlab
+- quero cadastrar o github
+- quero cadastrar o gitlab
+- quero cadastrar
 
 ## intent:set_pipeline
 - me mostra o pipeline do repositorio por favor
