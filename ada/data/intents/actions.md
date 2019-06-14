@@ -170,14 +170,21 @@
 - me fala as issues do [Fulano](contributor_name)
 
 ## intent:find_project_collaborators
+- quem contribui com o projeto?
+- quem está colaborando
+- quem colabora com esse repositório?
+- quem são os contribuidores do repositório?
+- quem contribui no repositório?
+- quem ajuda no repositorio? 
 - quem são os colaboradores do meu projeto ?
+- quem são os colaboradores?
 - quem está colaborando pro meu projeto ?
 - com quem eu trabalho no projeto
 - me fala quem mais trabalha no mesmo projeto que eu
 - Ada, quem, além de mim, está no mesmo projeto que eu
 - com quem estou trabalhando ?
 - quem mais trabalha comigo no projeto ?
-- quem contribui pro meu projeto ?
+- quem contribui para o projeto ?
 - Quem está no mesmo projeto que eu ?
 - diz ai os colaboradores do meu projeto
 - sou só eu, ou tem mais gente trabalhando no meu projeto ?
@@ -187,3 +194,4 @@
 - me manda os colaboradores
 - manda os contribuidores
 - quem esta contribuindo para o projeto ?
+- quem colabora no projeto?
