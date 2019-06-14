@@ -16,7 +16,7 @@
   - action_set_repository_gitlab
   - utter_get_url_domain
 * deny
-  - utter_deny_msg_url_domain 
+  - utter_deny_msg_url_domain
 
 ## path_register_github
 * action_set_repository_github
@@ -34,6 +34,21 @@
   - action_issue_name
 * create_issue
   - action_create_issue
+
+## path_create_pull_request
+* start_create_pull_request
+  - utter_start_pull_request
+* pull_request_title
+  - utter_head_name
+  - action_pull_request_title
+* pull_request_branch_head
+  - utter_branch_base
+  - action_head_branch
+* pull_request_branch_base
+  - utter_create_pull_request
+  - action_base_branch
+* create_pull_request
+  - action_create_pull_request
 
 ## path_comment_issue
 * comment_issue
@@ -159,7 +174,7 @@
   - utter_ask_url_domain
 * get_url_domain
   - action_get_url_domain
-  
+
 ## path_contributor_issues
 * action_get_issues_of_contributor
   - action_get_issues_of_contributor

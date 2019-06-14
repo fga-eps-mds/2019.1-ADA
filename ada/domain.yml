@@ -46,6 +46,13 @@ intents:
   - action_get_issues_of_contributor
   - find_project_collaborators
 
+  ##PullRequests
+  - start_create_pull_request
+  - pull_request_title
+  - pull_request_branch_head
+  - pull_request_branch_base
+  - create_pull_request
+
 entities:
   - command
   - affirm
@@ -57,6 +64,11 @@ entities:
   - issue_body
   - url_name
   - issue_number
+
+  - pull_request_title
+  - head_branch
+  - base_branch
+  - pull_request_body
 
 slots:
   repository_gitlab:
@@ -73,6 +85,14 @@ slots:
     type: text
   issue_number:
     type: text
+  pull_request_title:
+      type: text
+  head_branch:
+      type: text
+  base_branch:
+      type: text
+  pull_request_body:
+      type: text
 
 actions:
   - utter_defalut
@@ -114,6 +134,10 @@ actions:
   - utter_issue_name
   - action_create_issue
   - action_comment_issue
+  - utter_start_pull_request
+  - utter_head_name
+  - utter_branch_base
+  - utter_create_pull_request
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
@@ -127,6 +151,12 @@ actions:
   - utter_find_project_collaborators_sad
   - utter_find_project_collaborators_happy
   - utter_find_project_collaborators_thanks
+
+  ##ActionsPullRequest
+  - action_pull_request_title
+  - action_head_branch
+  - action_base_branch
+  - action_create_pull_request
 
 templates:
   utter_default:
@@ -394,6 +424,22 @@ templates:
   utter_issue_name:
   - text: |
       Tudo certo, agora me fala qual vai ser a descrição da sua issue, tente escrever algo como: "Descrição: Essa é a descrição"
+
+  utter_start_pull_request:
+  - text: |
+      Vamos lá, para criar um novo Pull Request preciso que primeiro me manda qual o título do pull request que você vai criar, por exemplo, tente fazer algo nesse estilo: "Título: O Título É Esse"
+
+  utter_head_name:
+  - text: |
+      Agora que você colocou o título, vou trazer as branches do seu repositório!
+
+  utter_branch_base:
+  - text: |
+      Agora que você escolheu a branch que você estava trabalhando, vou trazer novamente as branches para que você a incorpore a branch mais estável do projeto!
+
+  utter_create_pull_request:
+  - text: |
+      Tudo certo, agora me fala qual vai ser a descrição do seu Pull Request, tente escrever algo como: "Descrição: Essa é a Descrição"
 
   utter_affirm:
   - text: |

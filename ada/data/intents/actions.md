@@ -119,7 +119,45 @@
 - Comentar #[23](issue_number) : Criterios de aceitação
 - Comentar #[456](issue_number) : teste teste teste
 - Comentar #[7891](issue_number) : Tasks 1, 2, 3, 4, 5
-- Comentar #[12345](issue_number) : 1 salvar dados 
+- Comentar #[12345](issue_number) : 1 salvar dados
+
+## intent:start_create_pull_request
+- Quero fazer um novo pull request
+- Cria um pull request pra mim, por favor
+- Cria um pr pra mim, Ada
+- Tem como criar um pull request para mim, por favor
+- Ada, cria um pr pra mim
+- Ada, cria um pull request para mim
+- Adinha, cria um pull request pra mim
+- Quero criar um novo pull request
+- quero criar um pull request
+
+## intent:pull_request_name
+- Título do PR: [aabbcc](pull_request_title)
+- título do pull request: [112233](pull_request_title)
+- título do pr: [Eu como usuário](pull_request_title)
+- Título do Pull Request: [Neste pull request se realizou](pull_request_title)
+- titulo do pr: [US26-Adinha](pull_request_title)
+- Título do PR: [ABCDEFGHIZ](pull_request_title)
+
+## intent:head_branch
+- Head: [265-NovaBranch](head_branch)
+- Head: [12345678](head_branch)
+- Head: [265-HotFixCreateIssue](head_branch)
+
+## intent:base_branch
+- Base: [devel](base_branch)
+- Base: [master](base_branch)
+- Base: [devel](head_branch)
+- Base: [develMaster](head_branch)
+
+## intent:create_pull_request
+- Descrição: [12321323](pull_request_body)
+- Descrição: [Neste pull request se realizou](pull_request_body)
+- Descrição: [Os comentários foram realizados com sucesso](pull_request_body)
+- descrição: [Testes passando](pull_request_body)
+- descricao: [Flake8](pull_request_body)
+- Descricao: [KIKO HA HA HA](pull_request_body)
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
@@ -153,19 +191,20 @@
 - monitora ai meu dominio
 - monitora ai meu domínio
 - monitora ai meu deploy
+
 ## intent:action_get_issues_of_contributor
-- Quero saber quais são as issues do [caiovferas](contributor_name) 
-- Quero saber quais sao as issues de [guilhermemender](contributor_name) 
+- Quero saber quais são as issues do [caiovferas](contributor_name)
+- Quero saber quais sao as issues de [guilhermemender](contributor_name)
 - Quero saber quais sao as issues de [Gudimender](contributor_name)
 - Quais são as issues do [João_vvdsad](contributor_name)
 - Quais são as issues do [ana](contributor_name)
 - Quais são as issues do [CARLOS](contributor_name)
 - Quais são as issues do [mariop](contributor_name)
-- Quais são as issues do [jose](contributor_name) 
+- Quais são as issues do [jose](contributor_name)
 - Quais são as issues do [caio](contributor_name)
-- Quais são as issues do [CARLA](contributor_name) 
+- Quais são as issues do [CARLA](contributor_name)
 - Quais são as issues do [igor](contributor_name)
-- Quais são as issues do [erick](contributor_name) 
+- Quais são as issues do [erick](contributor_name)
 - quais são as issues de [Vitor](contributor_name)
 - me fala as issues do [Fulano](contributor_name)
 
