@@ -50,12 +50,12 @@ class RerunPipeline(Action):
                     sugiro entrar no GitLab e tenta reiniciar você mesmo...")
             except ValueError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
             except NewConnectionError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
         else:
             dispatcher.utter_message("Para rodar novamente um pipeline"
                                      " é necessário que você tenha um "

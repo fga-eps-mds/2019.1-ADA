@@ -59,12 +59,12 @@ class ActionGetContributorIssues(Action):
                     "Não consegui encontrar as issues, tente novamente")
             except NewConnectionError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
             except ValueError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
             else:
                 return [SlotSet('contributor_name', name_by_msg)]
         else:

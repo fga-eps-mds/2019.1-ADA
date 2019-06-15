@@ -35,12 +35,12 @@ class FindProjectCollaborators(Action):
                     "você me lembrar !")
             except ValueError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
             except NewConnectionError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
 
             else:
                 project_collaborators = response.json()
@@ -55,7 +55,10 @@ class FindProjectCollaborators(Action):
                                              "projeto, os usuários delas são "
                                              "➡️" +
                                              project_collaborators
-                                             ["collaborators"][0])
+                                             ["collaborators"][0] +
+                                             "➡️" +
+                                             project_collaborators
+                                             ["collaborators"][1])
                 elif len_collaborators > 2:
                     dispatcher.utter_message("Existem vários colaboradores "
                                              "no seu projeto.")

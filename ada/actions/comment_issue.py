@@ -37,12 +37,12 @@ class ActionCommentIssue(Action):
                     "Não consegui comentar a issue, tente novamente")
             except ValueError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
             except NewConnectionError:
                 dispatcher.utter_message(
-                    "Estou com problemas para me conectar, me manda "
-                    "mais uma mensagem pra ver se dessa vez dá certo.")
+                 "Estou com problemas para me conectar agora, me mande "
+                 "novamente uma mensagem mais tarde.")
             else:
                 return [SlotSet('issue_number', issue_number)]
         else:
