@@ -231,6 +231,7 @@
 - não adinha
 - não, por favor
 - de jeito nenhum
+- nao obrigado , deixa pra depois
 
 ## intent:thanks
 - Muito obrigado

@@ -135,6 +135,21 @@
 - Reiniciar pipelines;
 - reiniciar pipelines;
 
+## intent:stable_deploy
+- Ada, quero que você encontre a versão estável mais recente do meu projeto e a reinicie
+- ada, quero que você encontre a última versão estável do meu software e faça o deploy dela  
+- parece que meu projeto falhou. Faz o deploy da última versao pra mim ?
+- encontre a versão estável mais recente do meu projeto e a reinicie
+- a última versão estável do meu software e faça o deploy dela
+- faca o deploy da versao mais recente
+- faz o deploy do pipeline que nao falhou ai
+- coloca meu servico no ar ?
+- põe meu software na versao mais recente ?
+- vc pode fazer o deploy mais recente pra mim ?
+- faz o deploy para mim ?
+- poe a pipeline mais recente que tenha sucesso para rodar de novo
+- põe a pipeline mais recente em deploy por favor ?
+
 ## intent:action_get_report_github
 - me manda o relatório do github, ada
 - me manda o relatorio do github
