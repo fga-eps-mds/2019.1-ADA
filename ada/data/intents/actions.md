@@ -49,9 +49,12 @@
 - me mostra o resultado do pipeline
 - resultado da pipeline
 - resultados das pipelines
+- Andamendo das builds dos seus projetos do GitLab;
 - resultados das builds
 - saber pipeline
 - Ada, me mostra o resultado do pipeline
+- Resultado dos pipelines
+- Saber status da build em andamento
 
 ## intent:action_set_repository_gitlab
 - labrepo: [gitlab-runner](repository_gitlab)
@@ -86,6 +89,8 @@
 - me mostra o relatório, ada
 - me mostra o relatorio, ada
 - relatório
+- Relatório sobre seu projeto do GitLab
+- Relatório sobre meu projeto do GitLab
 
 ## intent:start_create_issue
 - quero criar uma nova issue
@@ -94,6 +99,8 @@
 - cria uma issue
 - tem como criar uma issue pra mim
 - Cria uma issue para mim, Ada
+- Criar issues;
+- criar issues;
 
 ## intent:issue_name
 - Titulo: [abc](issue_name)
@@ -120,9 +127,13 @@
 - Comentar #[456](issue_number) : teste teste teste
 - Comentar #[7891](issue_number) : Tasks 1, 2, 3, 4, 5
 - Comentar #[12345](issue_number) : 1 salvar dados 
+- Comentar issue #[12345](issue_number) : 1 salvar dados
+- Comentar issue #[5](issue_number) : Após fazermos alguns testes com nomes de repositórios, descobrimos que a função send
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
+- Reiniciar pipelines;
+- reiniciar pipelines;
 
 ## intent:stable_deploy
 - Ada, quero que você encontre a versão estável mais recente do meu projeto e a reinicie
@@ -145,6 +156,10 @@
 - me manda o relatório do github
 - me mostra o relatório do github, ada
 - Ada, me mostra o relatório do github
+- Relatório sobre seu projeto do GitHub
+- Relatório sobre meu projeto do GitHub
+- relatorio sobre seu projeto do GitHub
+- relatorio sobre meu projeto do GitHub
 
 ## intent:get_url_domain
 - [https://fga-eps-mds.github.io/2019.1-ADA](url_name)
@@ -168,6 +183,7 @@
 - monitora ai meu dominio
 - monitora ai meu domínio
 - monitora ai meu deploy
+
 ## intent:action_get_issues_of_contributor
 - Quero saber quais são as issues do [caiovferas](contributor_name) 
 - Quero saber quais sao as issues de [guilhermemender](contributor_name) 
@@ -183,6 +199,9 @@
 - Quais são as issues do [erick](contributor_name) 
 - quais são as issues de [Vitor](contributor_name)
 - me fala as issues do [Fulano](contributor_name)
+- Quais são as issues de um determinado usuário[joao](contributor_name)
+- quais sao as issues de um determinado usuario[roberto](contributor_name)
+- Quais são as issues abertas do usuário [vitor](contributor_name)
 
 ## intent:find_project_collaborators
 - quem são os colaboradores do meu projeto ?
@@ -202,3 +221,5 @@
 - me manda os colaboradores
 - manda os contribuidores
 - quem esta contribuindo para o projeto ?
+- Quem são os colaboradores do projeto
+- quem sao os colaboradores do projeto
