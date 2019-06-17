@@ -17,9 +17,9 @@ class ChangeGithubRepo(Action):
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
             requests.get(GITHUB_SERVICE_URL +
-                        "user/change_repo/{chat_id}"
-                        .format(chat_id=chat_id),
-                        headers=headers)
+                         "user/change_repo/{chat_id}"
+                         .format(chat_id=chat_id),
+                         headers=headers)
         except KeyError:
             dispatcher.utter_message(
                 "Não consegui encontrar o seu usuário no GitHub, "
@@ -32,4 +32,3 @@ class ChangeGithubRepo(Action):
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
                 "mais uma mensagem pra ver se dessa vez dá certo.")
-          
