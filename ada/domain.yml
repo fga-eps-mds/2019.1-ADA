@@ -47,6 +47,7 @@ intents:
 
   - action_change_gitlab_repository
   - action_change_github_repository
+  - action_change_repository
 
 entities:
   - command
@@ -132,6 +133,7 @@ actions:
 
   - action_change_github_repository
   - action_change_gitlab_repository
+  - action_change_repository
 
 templates:
   utter_default:
