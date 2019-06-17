@@ -194,7 +194,7 @@
 - Quero mudar meu repositório do github
 - quero recadastrar meu repositório github
 - recadastra meu repositório do github
-- muda meu repositório do github
+- muda meu repositório do Github
 - quero me cadastrar em um novo repositório do github
 - Quero me cadastrar em um novo repositório do github
 - me cadastra em um novo repositório do github
@@ -206,9 +206,22 @@
 - Quero mudar meu repositório do gitlab
 - quero recadastrar meu repositório gitlab
 - recadastra meu repositório do gitlab
-- muda meu repositório do gitlab
+- muda meu repositório do Gitlab
 - quero me cadastrar em um novo repositório do gitlab
 - Quero me cadastrar em um novo repositório do gitlab
 - me cadastra em um novo repositório do gitlab
 - Me cadastra em um novo repositório do gitlab por favor
 - Poderia me cadastrar em um novo repositório no gitlab?
+
+
+##intent:action_change_repository
+- Desejo alterar meu repositório 
+- Quero mudar meu repositório 
+- Quero recadastrar meu repositório 
+- Recadastra meu repositório 
+- Muda meu repositório 
+- Quero me cadastrar em um novo repositório 
+- Quero me cadastrar em um novo repositório 
+- Me cadastra em um novo repositório 
+- Me cadastra em um novo repositório por favor
+- Poderia me cadastrar em um novo repositório ?
