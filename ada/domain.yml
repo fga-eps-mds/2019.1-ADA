@@ -25,6 +25,8 @@ intents:
   - whats_pipeline
   - get_url_domain
   - contributor_issues
+  - marry_or_date
+  - adas_architecture
 
   ##Actions
   - action_start
@@ -36,15 +38,13 @@ intents:
   - create_issue
   - start_comment_issue
   - comment_issue
-
   - issue_name
-  - marry_or_date
-  - adas_architecture
   - rerun_pipeline
   - action_get_report_github
   - action_get_domain
   - action_get_issues_of_contributor
   - find_project_collaborators
+  - stable_deploy
 
 entities:
   - command
@@ -127,6 +127,10 @@ actions:
   - utter_find_project_collaborators_sad
   - utter_find_project_collaborators_happy
   - utter_find_project_collaborators_thanks
+  - utter_stable_deploy
+  - utter_stable_deploy_dont_try_again
+  - utter_stable_deploy_happy
+  - action_stable_deploy
 
 templates:
   utter_default:
@@ -437,6 +441,27 @@ templates:
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
 
 
+  utter_stable_deploy:
+  - text: |
+      Beleza, já vou fazer isso
+
+      Aguarda um pouquinho :)
+
+  - text: |
+      Farei esse deploy agora! 💙
+
+      Espera um pouquinho que eu já volto...
+
+  utter_stable_deploy_dont_try_again:
+  - text: |
+      Ah tudo bem, então. Se quiser podemos tentar novamente mais tarde
+
+      Só me lembra de fazer isso :)
+
+  utter_stable_deploy_happy:
+  - text: |
+      Imagina ! Conte comigo sempre ❤️
+
   utter_get_url_domain:
   - text: |
         Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
@@ -448,6 +473,7 @@ templates:
   utter_deny_msg_url_domain:
   - text: |
         Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
+
   utter_find_project_collaborators:
   - text: |
       É pra já !
