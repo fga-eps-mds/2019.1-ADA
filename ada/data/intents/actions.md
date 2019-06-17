@@ -202,4 +202,3 @@
 - me manda os colaboradores
 - manda os contribuidores
 - quem esta contribuindo para o projeto ?
-- Ada, me mostra o relatório do github

@@ -86,23 +86,6 @@
 - good morning
 
 ## intent:sad
-- estou [triste](sad)
-- estou muito [triste](sad)
-- Estou bem [triste](sad)
-- Estou [triste](sad)
-- Estou muito [triste](sad)
-- Estou bem [mal](sad)
-- Estou [mal](sad)
-- estou [mal](sad)
-- estou bem [mal](sad)
-- [depressão](sad)
-- [depressao](sad)
-- [não estou bem](not_good)
-- to muito [bem nao](not_good)
-- [me sinto mal](not_good)
-- [ninguém me completa](not_good)
-- [tô mal](not_good)
-- [estou ruim](not_good)
 - estou triste
 - estou muito triste
 - Estou bem triste

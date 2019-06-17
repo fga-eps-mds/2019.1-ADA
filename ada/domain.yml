@@ -25,6 +25,8 @@ intents:
   - whats_pipeline
   - get_url_domain
   - contributor_issues
+  - marry_or_date
+  - adas_architecture
 
   ##Actions
   - action_start
@@ -36,18 +38,13 @@ intents:
   - create_issue
   - start_comment_issue
   - comment_issue
-
   - issue_name
-  - marry_or_date
-  - adas_architecture
   - rerun_pipeline
-  - stable_deploy
   - action_get_report_github
   - action_get_domain
   - action_get_issues_of_contributor
   - find_project_collaborators
   - stable_deploy
-  - action_get_report_github
 
 entities:
   - command
@@ -120,13 +117,6 @@ actions:
   - utter_marry_or_date
   - utter_adas_architecture
   - action_rerun_pipeline
-  - utter_stable_deploy
-  - utter_stable_deploy_dont_try_again
-  - utter_stable_deploy_happy
-  - action_stable_deploy
-
-templates:
-  - action_get_report_github
   - action_get_report_github
   - action_get_url_domain
   - action_get_domain
@@ -137,6 +127,10 @@ templates:
   - utter_find_project_collaborators_sad
   - utter_find_project_collaborators_happy
   - utter_find_project_collaborators_thanks
+  - utter_stable_deploy
+  - utter_stable_deploy_dont_try_again
+  - utter_stable_deploy_happy
+  - action_stable_deploy
 
 templates:
   utter_default:

@@ -23,8 +23,8 @@ class StableDeploy(Action):
         # informar ao usuário : caso de falha / tratamento de erros
         except HTTPError:
             dispatcher.utter_message(
-                "Ai que pena... não consegui fazer o deploy da versão\
-                 estável mais recente do seu projeto 😔")
+                "Ai que pena... não consegui fazer o deploy da versão"
+                "estável mais recente do seu projeto 😔")
             dispatcher.utter_message(
                 "Você quer que eu tente novamente agora ?")
         except ValueError:
@@ -38,6 +38,6 @@ class StableDeploy(Action):
 
         else:
             # informar ao usuário : caso de sucesso
-            dispatcher.utter_message("🏆 Pronto! Seu projeto está sendo \
-                                      colocado na versão estável mais \
-                                      recente.")
+            dispatcher.utter_message("🏆 Pronto! Seu projeto está sendo"
+                                     "colocado na versão estável mais"
+                                     "recente.")

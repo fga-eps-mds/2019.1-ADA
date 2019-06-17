@@ -217,7 +217,3 @@
 * thanks
   - utter_find_project_collaborators_thanks
 
-## path_report_github
-* action_get_report_github
-  - utter_start_report
-  - action_get_report_github
