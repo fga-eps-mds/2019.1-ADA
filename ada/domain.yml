@@ -48,9 +48,9 @@ intents:
 
   ##PullRequests
   - start_create_pull_request
-  - pull_request_title
-  - pull_request_branch_head
-  - pull_request_branch_base
+  - pull_request_name
+  - head_branch
+  - base_branch
   - create_pull_request
 
 entities:
@@ -439,7 +439,7 @@ templates:
 
   utter_create_pull_request:
   - text: |
-      Tudo certo, agora me fala qual vai ser a descrição do seu Pull Request, tente escrever algo como: "Descrição: Essa é a Descrição"
+      Tudo certo, agora me fala qual vai ser a descrição do seu Pull Request, tente escrever algo como: "Descrição do PR: Essa é a Descrição"
 
   utter_affirm:
   - text: |

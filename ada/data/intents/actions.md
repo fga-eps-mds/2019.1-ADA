@@ -144,30 +144,32 @@
 
 
 ## intent:head_branch
-- Head: [265-NovaBranch](head_branch)
-- Head: [12345678](head_branch)
-- Head: [265-HotFixCreateIssue](head_branch)
-- Head: [branch12345](head_branch)
-- Head: [aaaaaaaa](head_branch)
-- Head: [Branch1234](head_branch)
-- Head: [Branch123-CriarIssue](head_branch)
+- head: [265-NovaBranch](head_branch)
+- head: [12345678](head_branch)
+- head: [265-HotFixCreateIssue](head_branch)
+- head: [branch12345](head_branch)
+- head: [aaaaaaaa](head_branch)
+- head: [Branch1234](head_branch)
+- head: [Branch123-CriarIssue](head_branch)
 
 ## intent:base_branch
-- Base: [devel](base_branch)
-- Base: [master](base_branch)
-- Base: [devel](head_branch)
-- Base: [develMaster](head_branch)
-- Base: [aaaaaaa](head_branch)
-- Base: [Branch1234](head_branch)
-- Base: [Branch123-CriarIssue](head_branch)
+- base: [devel](base_branch)
+- base: [master](base_branch)
+- base: [devel](head_branch)
+- base: [develMaster](head_branch)
+- base: [aaaaaaa](head_branch)
+- base: [Branch1234](head_branch)
+- base: [Branch123-CriarIssue](head_branch)
 
 ## intent:create_pull_request
-- Descrição: [Neste pull request se realizou o flake8](pull_request_body)
-- Descrição: [Neste pull request se realizou os testes unitários](pull_request_body)
-- Descrição: [Os comentários foram realizados com sucesso no seu Pull Request](pull_request_body)
-- descrição: [Aprimoração do fluxo de conversa com a ADA](pull_request_body)
-- descricao: [Querido Pull Request, você é muito legal](pull_request_body)
-- Descricao: [Os testes estão funcionando perfeitamente](pull_request_body)
+- Descrição do PR: [Neste pull request se realizou o flake8](pull_request_body)
+- Descrição do PR: [Neste pull request se realizou os testes unitários](pull_request_body)
+- Descrição do PR: [Os comentários foram realizados com sucesso no seu Pull Request](pull_request_body)
+- descrição do PR: [Aprimoração do fluxo de conversa com a ADA](pull_request_body)
+- descricao do pr: [Querido Pull Request, você é muito legal](pull_request_body)
+- Descricao do PR: [Os testes estão funcionando perfeitamente](pull_request_body)
+- Descrição do PR : [Os testes realizados neste pull request foram feitos com sucesso](pull_request_body)
+
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline

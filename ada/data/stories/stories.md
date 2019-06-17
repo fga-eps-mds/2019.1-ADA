@@ -38,13 +38,13 @@
 ## path_create_pull_request
 * start_create_pull_request
   - utter_start_pull_request
-* pull_request_title
+* pull_request_name
   - utter_head_name
   - action_pull_request_title
-* pull_request_branch_head
+* head_branch
   - utter_branch_base
   - action_head_branch
-* pull_request_branch_base
+* base_branch
   - utter_create_pull_request
   - action_base_branch
 * create_pull_request

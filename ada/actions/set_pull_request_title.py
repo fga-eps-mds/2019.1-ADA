@@ -21,7 +21,7 @@ class ActionPullRequestTitle(Action):
                 chat_id = tracker_state["sender_id"]
                 message = tracker.latest_message.get('text')
                 message = message.split(": ")
-                pull_request_title = message[1]
+                pull_request_title = message[-1]
 
                 headers = {"Content-Type": "application/json"}
                 bot = telegram.Bot(token=ACCESS_TOKEN)
@@ -67,7 +67,7 @@ class ActionPullRequestTitle(Action):
             for value in branches:
                 buttons.append(telegram.InlineKeyboardButton(
                     text=branches["name"],
-                    callback_data="Head: " +
+                    callback_data="head: " +
                                   branches["name"]))
         branches_names = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
         return branches_names

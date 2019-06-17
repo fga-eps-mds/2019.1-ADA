@@ -35,7 +35,6 @@ class ActionHeadBranch(Action):
                              text="Escolha uma branch para fazer o pull "
                                   "request!",
                              reply_markup=reply_markup)
-            return [SlotSet('head_branch', head_branch)]
         except ValueError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
@@ -44,6 +43,8 @@ class ActionHeadBranch(Action):
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
                 "mais uma mensagem pra ver se dessa vez dá certo.")
+        else:
+            return [SlotSet('head_branch', head_branch)]
 
     def select_branches_by_buttons(self, chat_id, headers, selected_branch):
 
@@ -60,6 +61,6 @@ class ActionHeadBranch(Action):
             for value in branches:
                 buttons.append(telegram.InlineKeyboardButton(
                     text=branches["name"],
-                    callback_data="Base: " + branches["name"]))
+                    callback_data="base: " + branches["name"]))
         branches_names = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
         return branches_names
