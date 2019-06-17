@@ -67,3 +67,4 @@
         - [Resultado Sprint 11](/docs/sprints/sprint11/resultados_sprint11.md)
     - [**Sprint 12**](#)
         - [Planejamento Sprint 12](/docs/sprints/sprint12/planejamento_sprint12.md)  
+        - [Resultado Sprint 12](/docs/sprints/sprint12/resultados_sprint12.md)
