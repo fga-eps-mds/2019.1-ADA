@@ -27,6 +27,8 @@ intents:
   - contributor_issues
   - marry_or_date
   - adas_architecture
+  - how_to_create_issue
+  - how_to_comment_issue
 
   ##Actions
   - action_start
@@ -45,6 +47,7 @@ intents:
   - action_get_issues_of_contributor
   - find_project_collaborators
   - stable_deploy
+
 
 entities:
   - command
@@ -103,6 +106,8 @@ actions:
   - utter_get_url_domain
   - utter_ask_url_domain
   - utter_deny_msg_url_domain
+  - utter_how_to_create_issue
+  - utter_how_to_comment_issue
 
   - utter_start_report
   - action_get_report
@@ -429,7 +434,6 @@ templates:
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
 
-
   utter_stable_deploy:
   - text: |
       Beleza, já vou fazer isso
@@ -492,3 +496,11 @@ templates:
       De nada 💜
 
       Estou aqui para o que vc precisar.
+  
+  utter_how_to_create_issue:
+  - text: |
+      Ficou interessado em criar uma issue? Basta escrever algo como "quero criar uma issue", que eu te guiarei.
+
+  utter_how_to_comment_issue:
+  - text: |
+      Ah, você quer comentar uma issue? Vou te ensinar. Basta digitar "Comentar #X: Mensagem", lembre-se de substituir o X pelo número da issue.
