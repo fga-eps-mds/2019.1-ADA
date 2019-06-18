@@ -18,7 +18,6 @@ class FindProjectCollaborators(Action):
             headers = {'Content-Type': 'application/json'}
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
-            # tentar fazer a requisicao
             url = (GITHUB_SERVICE_URL + "api/find_collaborators/{chat_id}"
                    .format(chat_id=chat_id))
             response = requests.get(url, headers=headers)

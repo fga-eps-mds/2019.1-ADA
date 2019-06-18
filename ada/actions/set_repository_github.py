@@ -30,7 +30,10 @@ class SetRepositoryGitHub(Action):
             selected_repo = "Ok, vou ficar monitorando "\
                             "o repositório {rep}.".format(
                                 rep=repo_name)
+            info_message = "Caso queira saber o que eu faço, "\
+                "me peça ajuda 😉"
             dispatcher.utter_message(selected_repo)
+            dispatcher.utter_message(info_message)
             return [SlotSet('repository_github', repo_name)]
         except KeyError:
             dispatcher.utter_message(

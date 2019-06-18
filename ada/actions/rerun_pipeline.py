@@ -19,11 +19,9 @@ class RerunPipeline(Action):
             headers = {'Content-Type': 'application/json'}
             tracker_state = tracker.current_state()
             chat_id = tracker_state["sender_id"]
-            # pegar a mensagem do user referente ao botao pressionado
             message = tracker.latest_message.get("text")
             splitted_message = message.split()
             pipeline_id = splitted_message[-1]
-            # fazer a outra requisicao com o id da pipeline para reinicia-la
             try:
                 response = requests.get(GITLAB_SERVICE_URL +
                                         "rerun_pipeline/{chat_id}/\
@@ -37,10 +35,8 @@ class RerunPipeline(Action):
                 bot = telegram.Bot(token=ACCESS_TOKEN)
                 bot = bot.send_message(chat_id=chat_id, text=text)
             else:
-                # mensagem de sucesso
                 response.raise_for_status()
                 dispatcher.utter_message("Tudo certo, reiniciei sua pipeline!")
-                # tratamento de erros
         except HTTPError:
             dispatcher.utter_message(
                 "Ai que pena... não consegui reiniciar a pipeline que você\

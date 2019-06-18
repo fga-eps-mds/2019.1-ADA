@@ -25,6 +25,8 @@ intents:
   - whats_pipeline
   - get_url_domain
   - contributor_issues
+  - marry_or_date
+  - adas_architecture
 
   ##Actions
   - action_start
@@ -37,13 +39,12 @@ intents:
   - start_comment_issue
   - comment_issue
   - issue_name
-  - marry_or_date
-  - adas_architecture
   - rerun_pipeline
   - action_get_report_github
   - action_get_domain
   - action_get_issues_of_contributor
   - find_project_collaborators
+  - stable_deploy
 
   - action_change_gitlab_repository
   - action_change_github_repository
@@ -60,6 +61,7 @@ entities:
   - issue_body
   - url_name
   - issue_number
+  - contributor_name
 
 slots:
   repository_gitlab:
@@ -130,6 +132,10 @@ actions:
   - utter_find_project_collaborators_sad
   - utter_find_project_collaborators_happy
   - utter_find_project_collaborators_thanks
+  - utter_stable_deploy
+  - utter_stable_deploy_dont_try_again
+  - utter_stable_deploy_happy
+  - action_stable_deploy
 
   - action_change_github_repository
   - action_change_gitlab_repository
@@ -158,28 +164,16 @@ templates:
 
       Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
-          - Andamendo das builds dos seus projetos do GitLab;
-          - Relatório sobre seu projeto do GitLab e do GitHub;
+          - Reiniciar o pipeline mais recente;
+          - Relatório sobre seu projeto do GitLab; 
+          - Relatório sobre seu projeto do GitHub;
           - Criar issues;
-          - Comentar issues através das notificações;
+          - Comentar issue #número: o que você quer comentar;
           - Quem são os colaboradores do projeto;
-          - Quais são as issues de um determinado usuário;
-          - Comentar Pull Request's (Previsto para a R2);
+          - Quais são as issues abertas do usuário X;
+          - Saber status da build em andamento;
 
       Basta você me pedir.
-
-  - text: |
-      Eu vou te ajudar a gerenciar a pipeline da produção do seu serviço/software.
-
-      Você pode falar comigo sobre vários aspectos, tais como:
-        - Criar e comentar Issues (Previsto para a R2);
-        - Relatório sobre seu projeto do GitLab;
-        - Commit's (Previsto para a R2);
-        - Andamendo das builds dos seus projetos do GitLab;
-        - Comentar Pull Request's (Previsto para a R2);
-        - Resultado dos pipelines;
-
-      O que você precisar saber, é só me perguntar ❤️
 
   utter_begin:
   - text: |
@@ -444,17 +438,39 @@ templates:
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
 
 
+  utter_stable_deploy:
+  - text: |
+      Beleza, já vou fazer isso
+
+      Aguarda um pouquinho :)
+
+  - text: |
+      Farei esse deploy agora! 💙
+
+      Espera um pouquinho que eu já volto...
+
+  utter_stable_deploy_dont_try_again:
+  - text: |
+      Ah tudo bem, então. Se quiser podemos tentar novamente mais tarde
+
+      Só me lembra de fazer isso :)
+
+  utter_stable_deploy_happy:
+  - text: |
+      Imagina ! Conte comigo sempre ❤️
+
   utter_get_url_domain:
   - text: |
-        Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
+      Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
 
   utter_ask_url_domain:
   - text: |
-        Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
+      Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
 
   utter_deny_msg_url_domain:
   - text: |
-        Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
+      Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
+
   utter_find_project_collaborators:
   - text: |
       É pra já !
