@@ -33,6 +33,9 @@
 - to entendendo nada
 - nao entendi o que vc faz
 - nao to te entendendo, Ada
+- o que eu faço agora?
+- não entendi
+- o que tenho que fazer?
 
 ## intent:begin
 - vamos
@@ -228,6 +231,7 @@
 - não adinha
 - não, por favor
 - de jeito nenhum
+- nao obrigado , deixa pra depois
 
 ## intent:thanks
 - Muito obrigado

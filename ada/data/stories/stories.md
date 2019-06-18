@@ -149,6 +149,33 @@
 * rerun_pipeline
   - action_rerun_pipeline
 
+## path_stable_deploy
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+
+## path_stable_deploy_dont_try_again
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* deny OR sad
+  - utter_stable_deploy_dont_try_again
+
+## path_stable_deploy_try_again
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* affirm OR begin
+  - utter_stable_deploy
+  - action_stable_deploy
+
+## path_stable_deploy_happy
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* thanks
+  - utter_stable_deploy_happy
+
 ## path_report_github
 * action_get_report_github
   - utter_start_report
@@ -189,3 +216,4 @@
   - action_find_project_collaborators
 * thanks
   - utter_find_project_collaborators_thanks
+
