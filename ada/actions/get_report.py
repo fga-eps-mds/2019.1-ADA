@@ -14,12 +14,11 @@ class Report(Action):
         return "action_get_report"
 
     def run(self, dispatcher, tracker, domain):
-        slot_repo = tracker.get_slot("repository_gitlab")
-        if slot_repo:
+        headers = {'Content-Type': 'application/json'}
+        tracker_state = tracker.current_state()
+        chat_id = tracker_state["sender_id"]
+        if self.check_user(chat_id, headers):
             try:
-                headers = {'Content-Type': 'application/json'}
-                tracker_state = tracker.current_state()
-                chat_id = tracker_state["sender_id"]
                 try:
                     response_branches = requests.get(
                                             GITLAB_SERVICE_URL +
@@ -164,15 +163,24 @@ class Report(Action):
                     "tem certeza que seus dados estão certos?")
             except ValueError:
                 dispatcher.utter_message(
-                 "Estou com problemas para me conectar agora, me mande "
+                 "Estou com problemas para encontrar seus dados, me mande "
                  "novamente uma mensagem mais tarde.")
             except NewConnectionError:
                 dispatcher.utter_message(
-                 "Estou com problemas para me conectar agora, me mande "
-                 "novamente uma mensagem mais tarde.")
+                 "Estou com problemas para encontrar seus dados agora,"
+                 "me mande novamente uma mensagem mais tarde.")
         else:
             dispatcher.utter_message("Para ter acesso ao relatório"
                                      " é necessário que você tenha um "
                                      "repositório do gitlab cadastrado!")
             dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []
+
+    def check_user(self, chat_id, headers):
+        url = GITLAB_SERVICE_URL + "user/infos/{chat_id}".\
+            format(chat_id=chat_id)
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        if data["username"] and data["repository"]:
+            return True
+        return False

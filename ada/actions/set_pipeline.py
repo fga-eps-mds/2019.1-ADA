@@ -15,24 +15,22 @@ class ActionSetPipeline(Action):
         return "action_set_pipeline"
 
     def run(self, dispatcher, tracker, domain):
-        slot_repo = tracker.get_slot("repository_gitlab")
-        if slot_repo:
-
+        tracker_state = tracker.current_state()
+        chat_id = tracker_state["sender_id"]
+        headers = {"Content-Type": "application/json"}
+        if self.check_user(chat_id, headers):
             try:
-                tracker_state = tracker.current_state()
-                sender_id = tracker_state["sender_id"]
-                headers = {"Content-Type": "application/json"}
                 try:
                     response = requests.get(GITLAB_SERVICE_URL +
                                             "build/{sender_id}"
-                                            .format(sender_id=sender_id),
+                                            .format(sender_id=chat_id),
                                             timeout=SECS,
                                             headers=headers)
                 except requests.exceptions.Timeout:
                     text = "Desculpa, não consegui fazer o "\
                            "que você me pediu! 😕"
                     bot = telegram.Bot(token=ACCESS_TOKEN)
-                    bot = bot.send_message(chat_id=sender_id, text=text)
+                    bot = bot.send_message(chat_id=chat_id, text=text)
                 else:
                     job_build = response.json()
                     dispatcher.utter_message(
@@ -100,8 +98,8 @@ class ActionSetPipeline(Action):
                     "tenta conferir se existe um e tente novamente.")
             except ValueError:
                 dispatcher.utter_message(
-                 "Estou com problemas para me conectar agora, me mande "
-                 "novamente uma mensagem mais tarde.")
+                 "Estou com problemas para encontrar seus dados agora,"
+                 "me mande novamente uma mensagem mais tarde.")
             except NewConnectionError:
                 dispatcher.utter_message(
                  "Estou com problemas para me conectar agora, me mande "
@@ -112,3 +110,12 @@ class ActionSetPipeline(Action):
                                      "repositório do gitlab cadastrado!")
             dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []
+
+    def check_user(self, chat_id, headers):
+        url = GITLAB_SERVICE_URL + "user/infos/{chat_id}".\
+            format(chat_id=chat_id)
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        if data["username"] and data["repository"]:
+            return True
+        return False

@@ -14,13 +14,11 @@ class FindProjectCollaborators(Action):
         return "action_find_project_collaborators"
 
     def run(self, dispatcher, tracker, domain):
-        slot_repo = tracker.get_slot("repository_github")
-        if slot_repo:
+        headers = {'Content-Type': 'application/json'}
+        tracker_state = tracker.current_state()
+        chat_id = tracker_state["sender_id"]
+        if self.check_user(chat_id, headers):
             try:
-                headers = {'Content-Type': 'application/json'}
-                tracker_state = tracker.current_state()
-                chat_id = tracker_state["sender_id"]
-                # tentar fazer a requisicao
                 url = (GITHUB_SERVICE_URL + "api/find_collaborators/{chat_id}"
                        .format(chat_id=chat_id))
                 response = requests.get(url, headers=headers)
@@ -35,8 +33,8 @@ class FindProjectCollaborators(Action):
                     "você me lembrar !")
             except ValueError:
                 dispatcher.utter_message(
-                 "Estou com problemas para me conectar agora, me mande "
-                 "novamente uma mensagem mais tarde.")
+                 "Estou com problemas para encontrar seus dados agora,"
+                 "me mande novamente uma mensagem mais tarde.")
             except NewConnectionError:
                 dispatcher.utter_message(
                  "Estou com problemas para me conectar agora, me mande "
@@ -75,3 +73,12 @@ class FindProjectCollaborators(Action):
                                      "repositório do github cadastrado!")
             dispatcher.utter_message("Quando quiser cadastrar é só avisar!")
             return []
+
+    def check_user(self, chat_id, headers):
+        url = GITHUB_SERVICE_URL + "user/infos/{chat_id}".\
+            format(chat_id=chat_id)
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        if data["username"] and data["repository"]:
+            return True
+        return False
