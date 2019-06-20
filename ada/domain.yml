@@ -162,7 +162,7 @@ templates:
       Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
           - Reiniciar o pipeline mais recente;
-          - Relatório sobre seu projeto do GitLab; 
+          - Relatório sobre seu projeto do GitLab;
           - Relatório sobre seu projeto do GitHub;
           - Criar issues;
           - Comentar issue #número: o que você quer comentar;
@@ -496,11 +496,27 @@ templates:
       De nada 💜
 
       Estou aqui para o que vc precisar.
-  
+
   utter_how_to_create_issue:
   - text: |
-      Ficou interessado em criar uma issue? Basta escrever algo como "quero criar uma issue", que eu te guiarei.
+      Ah é bem tranquilo
+
+      Basta escrever algo como "quero criar uma issue", que eu te guiarei.
+
+  - text : |
+      Vc pode me pedir para criar uma issue para você...como :
+
+      "Cria uma nova issue"
+
+      Ai eu vou te guiar no processo :)
 
   utter_how_to_comment_issue:
   - text: |
-      Ah, você quer comentar uma issue? Vou te ensinar. Basta digitar "Comentar #X: Mensagem", lembre-se de substituir o X pelo número da issue.
+      Vou te ensinar. Basta digitar "Comentar #X: 'Mensagem'", lembre-se de substituir o X pelo número da issue
+      e de colocar o comentário na parte da 'Mensagem'.
+
+  - text: |
+      Para comentar uma issue é bem fácil !
+
+      É só vc escrever "Comentar #X: 'Mensagem'" e substituir o X pelo número da issue e
+      'Mensagem' pelo comentário que vc quiser :)
