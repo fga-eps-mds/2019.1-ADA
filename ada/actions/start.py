@@ -33,12 +33,12 @@ class ActionStart(Action):
                      client_id=CLIENT_ID_GITLAB)
             message_github = "Olá, sou a Ada! Sou responsável "\
                              "por ajudar você no monitoramento de "\
+                             "produção com seus repositórios. "\
                              "Caso queira saber mais, me peça ajuda. "\
                              "Agora, pra gente começar, caso você "\
-                             "produção com seus repositórios. "\
                              "queira que eu monitore seu repositório "\
                              "do GitHub, clique [aqui]({url}) "\
-                             "para cadastrá-lo".format(url=url)
+                             "para cadastrá-lo.".format(url=url)
             bot = telegram.Bot(token=ACCESS_TOKEN)
             bot.send_message(chat_id=sender_id,
                              text=message_github, parse_mode=telegram.
@@ -47,7 +47,7 @@ class ActionStart(Action):
 
             message_gitlab = "Caso você queira que eu monitore seu repositó"\
                              "rio do GitLab, clique [aqui]({url}) para "\
-                             "cadastrá-lo".format(
+                             "cadastrá-lo.".format(
                               url=url_2)
 
             bot.send_message(chat_id=sender_id,
