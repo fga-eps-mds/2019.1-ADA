@@ -81,8 +81,6 @@ class SetRepositoryGitLab(Action):
         project_splited = project_full_name.split('/')
         project_owner = project_splited[0]
         project_name = project_splited[-1]
-        print(project_full_name, project_owner, project_name,
-              file=sys.stderr)
         get_user_repo = GITLAB_SERVICE_URL + \
             "user/repo/{chat_id}/{project_owner}/"\
             "{project_name}".format(

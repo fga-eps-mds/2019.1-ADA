@@ -90,7 +90,7 @@ class Report(Action):
                                              "pipelines! 😕")
                 else:
                     dispatcher.utter_message("O atual pipeline possui id "
-                                            "{pipeline_id}"
+                                            "{pipeline_id} "
                                             "e nome {pipeline_name}"
                                             .format(
                                                 pipeline_id=(
@@ -134,8 +134,7 @@ class Report(Action):
                                                 fail=last_7["failed_pipelines"],
                                                 perc_suc=(
                                                 last_7["percent_succeded"]),
-                                                perc_fail=100-(
-                                                last_7["percent_succeded"])))
+                                                perc_fail=last_7["percent_failed"]))
 
                     dispatcher.utter_message("Sobre os últimos 30 dias:\n⚒ "
                                             "Número total de pipelines: {total}\n"
@@ -152,8 +151,7 @@ class Report(Action):
                                                 fail=last_30["failed_pipelines"],
                                                 perc_suc=(
                                                 last_30["percent_succeded"]),
-                                                perc_fail=100-(
-                                                last_30["percent_succeded"])))
+                                                perc_fail= last_30["percent_failed"]))
                 return []
             except HTTPError:
                 dispatcher.utter_message(

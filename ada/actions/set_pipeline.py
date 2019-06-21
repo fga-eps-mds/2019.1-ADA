@@ -66,7 +66,7 @@ class ActionSetPipeline(Action):
 
                     dispatcher.utter_message("A build #{job_id} "
                                              "da branch {branch}, "
-                                             "commit {commit}",
+                                             "commit {commit}"
                                              "está no estágio de {stage}"
                                              .format(job_id=job_build
                                                      [0]["job_id"],
