@@ -217,3 +217,10 @@
 * thanks
   - utter_find_project_collaborators_thanks
 
+## path how_to_create_issue
+* how_to_create_issue
+  - utter_how_to_create_issue
+
+## path how_to_comment_issue
+* how_to_comment_issue
+  - utter_how_to_comment_issue

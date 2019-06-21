@@ -14,45 +14,51 @@ class Report(Action):
         return "action_get_report"
 
     def run(self, dispatcher, tracker, domain):
-        try:
-            headers = {'Content-Type': 'application/json'}
-            tracker_state = tracker.current_state()
-            chat_id = tracker_state["sender_id"]
+        headers = {'Content-Type': 'application/json'}
+        tracker_state = tracker.current_state()
+        chat_id = tracker_state["sender_id"]
+        if self.check_user(chat_id, headers):
             try:
-                response_branches = requests.get(
-                                        GITLAB_SERVICE_URL +
-                                        "report/branches/{chat_id}"
-                                        .format(chat_id=chat_id), timeout=SECS,
-                                        headers=headers)
-                response_commits = requests.get(
-                                        GITLAB_SERVICE_URL +
-                                        "report/commits/{chat_id}"
-                                        .format(chat_id=chat_id), timeout=SECS,
-                                        headers=headers)
-                response_pipelines = requests.get(
-                                        GITLAB_SERVICE_URL +
-                                        "report/pipelines/{chat_id}"
-                                        .format(chat_id=chat_id), timeout=SECS,
-                                        headers=headers)
-                response_project = requests.get(
-                                        GITLAB_SERVICE_URL +
-                                        "report/project/{chat_id}"
-                                        .format(chat_id=chat_id), timeout=SECS,
-                                        headers=headers)
+                try:
+                    response_branches = requests.get(
+                                            GITLAB_SERVICE_URL +
+                                            "report/branches/{chat_id}"
+                                            .format(chat_id=chat_id),
+                                            timeout=SECS,
+                                            headers=headers)
+                    response_commits = requests.get(
+                                            GITLAB_SERVICE_URL +
+                                            "report/commits/{chat_id}"
+                                            .format(chat_id=chat_id),
+                                            timeout=SECS,
+                                            headers=headers)
+                    response_pipelines = requests.get(
+                                            GITLAB_SERVICE_URL +
+                                            "report/pipelines/{chat_id}"
+                                            .format(chat_id=chat_id),
+                                            timeout=SECS,
+                                            headers=headers)
+                    response_project = requests.get(
+                                            GITLAB_SERVICE_URL +
+                                            "report/project/{chat_id}"
+                                            .format(chat_id=chat_id),
+                                            timeout=SECS,
+                                            headers=headers)
 
-            except requests.exceptions.Timeout:
-                text = "Desculpa, não consegui fazer o que você me pediu! 😕"
-                bot = telegram.Bot(token=ACCESS_TOKEN)
-                bot = bot.send_message(chat_id=chat_id, text=text)
-            else:
-                branches = response_branches.json()
-                branches = branches["branches"]
-                commits = response_commits.json()
-                commits = commits["commits"]
-                pipeline = response_pipelines.json()
-                pipeline = pipeline["pipeline"]
-                project = response_project.json()
-                project = project["project"]
+                except requests.exceptions.Timeout:
+                    text = "Desculpa, não consegui fazer"\
+                           " o que você me pediu! 😕"
+                    bot = telegram.Bot(token=ACCESS_TOKEN)
+                    bot = bot.send_message(chat_id=chat_id, text=text)
+                else:
+                    branches = response_branches.json()
+                    branches = branches["branches"]
+                    commits = response_commits.json()
+                    commits = commits["commits"]
+                    pipeline = response_pipelines.json()
+                    pipeline = pipeline["pipeline"]
+                    project = response_project.json()
+                    project = project["project"]
 
                 dispatcher.utter_message("Primeiramente, o seu projeto "
                                          "se chama {project_name}"
@@ -148,16 +154,25 @@ class Report(Action):
                                                 last_30["percent_succeded"]),
                                                 perc_fail=100-(
                                                 last_30["percent_succeded"])))
-                    return []
-        except HTTPError:
-            dispatcher.utter_message(
-                "Não estou conseguindo ter acesso a seus dados, tem certeza"
-                "que seus dados estão certos?")
-        except ValueError:
-            dispatcher.utter_message(
-                "Estou com problemas para me conectar agora, me mande "
-                "novamente uma mensagem mais tarde.")
-        except NewConnectionError:
-            dispatcher.utter_message(
-                "Estou com problemas para me conectar agora, me mande "
-                "novamente uma mensagem mais tarde.")
+                return []
+            except HTTPError:
+                dispatcher.utter_message(
+                    "Não estou conseguindo ter acesso a seus dados, tem certeza"
+                    "que seus dados estão certos?")
+            except ValueError:
+                dispatcher.utter_message(
+                    "Estou com problemas para me conectar agora, me mande "
+                    "novamente uma mensagem mais tarde.")
+            except NewConnectionError:
+                dispatcher.utter_message(
+                    "Estou com problemas para me conectar agora, me mande "
+                    "novamente uma mensagem mais tarde.")
+
+    def check_user(self, chat_id, headers):
+        url = GITLAB_SERVICE_URL + "user/infos/{chat_id}".\
+            format(chat_id=chat_id)
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        if data["username"] and data["repository"]:
+            return True
+        return False
