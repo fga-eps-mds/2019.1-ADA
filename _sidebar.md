@@ -23,7 +23,7 @@
   - [Git flow](docs/project/gitflow.md)
   - [Plano de Comunicação](docs/project/communication_plan.md)
   - [Plano de Gerenciamento de Riscos](docs/project/risk_management_plan.md)
-  - [Plano de Medição](docs/project/measuring_plane.md)
+  - [Métricas e Indicadores](docs/project/metrics_and_indicators.md)
   - [Pipeline Rasa NLU](docs/project/machine_learning_pipeline.md)
 - [**Roadmaps**](#)
   - [Roadmap de Papéis](/docs/roadmaps/roles_roadmap.md)
