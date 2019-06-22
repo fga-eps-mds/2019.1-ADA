@@ -133,3 +133,8 @@ A falta de testes fez com que algumas histórias se tornassem dívidas, como a [
 Após a finalização da história de [Criar webhook GitHub](https://github.com/fga-eps-mds/2019.1-ADA/issues/218) pelo DevOps, foi possível adicionar mais 5 histórias de usuário relacionadas à notificações: [US25](https://github.com/fga-eps-mds/2019.1-ADA/issues/243), [US33](https://github.com/fga-eps-mds/2019.1-ADA/issues/246), [US36](https://github.com/fga-eps-mds/2019.1-ADA/issues/247), [US37](https://github.com/fga-eps-mds/2019.1-ADA/issues/244) e [US38](https://github.com/fga-eps-mds/2019.1-ADA/issues/245). Todas as histórias adicionadas foram concluídas.
 
 _\* Riscos relacionados à __tecnologia usada apresentar problemas__, __falta de comunicação da equipe__ e __problemas de saúde de algum membro__ foram diminuídos. As tecnologias usadas mostram estabilidade e o time maturidade em usá-las. Além disso, o grupo já consegue manter uma constância no uso dos meios de comunicação._
+
+_\*\* O arquiteto Bruno Dantas atuou como __desenvolvedor__ na __Refatoração do repositório Ada Gitlab__._
+_O DevOps João Vítor atuou como __desenvolvedor__ nas issues __Refatoração repositório Ada Gitlab,Criar webhook GitHub, US25, US33, US36, US36, US37, US38__._
+_O P.O. Vítor Gomes também atuou como __desenvolvedor__ e __DevOps__ nas issues __Corrigir configuração de testes__ e __Garantir exclusão do banco após execução de testes__._
+_O Scrum Master Ateldy atuou como __P.O__. na atualização da __estimativa de custo__ no Termo de Abertura do Projeto._

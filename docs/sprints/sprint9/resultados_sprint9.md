@@ -96,4 +96,7 @@ Nessa sprint, cerca de dois terços dos pontos planejados foram entregues. As hi
 
 Ainda há problemas para a entrega de histórias de última hora, principalmente por causa da negligencia de testes, o que interfere nas avaliações de _Pull Requests_ pelo time de _EPS_. O Burndown da sprint demonstra isto.
 
-_\* Riscos relacionados à __arquitetura__, __adaptação à tecnologias escolhidas__, __Sprint mal planejada__, __mudança de escopo__ e __qualidade do software não atender às expectativas do cliente__ foram diminuídos. Já o relacionado à __dificuldades em realizar os testes__, foi aumentada, pois o time de desenvolvimento relatou problemas em relação à testes_. Em conversa com o time de EPS, foi sugerido a adição de mais dois riscos no _Burndown de riscos_, um risco relacionado à __problemas de saúde de algum membro__ e outro à __desintendimento entre os membros__. 
+_\* Riscos relacionados à __arquitetura__, __adaptação à tecnologias escolhidas__, __Sprint mal planejada__, __mudança de escopo__ e __qualidade do software não atender às expectativas do cliente__ foram diminuídos. Já o relacionado à __dificuldades em realizar os testes__, foi aumentada, pois o time de desenvolvimento relatou problemas em relação à testes. Em conversa com o time de EPS, foi sugerido a adição de mais dois riscos no _Burndown de riscos_, um risco relacionado à __problemas de saúde de algum membro__ e outro à __desintendimento entre os membros__._
+
+_\*\* O Scrum Master Ateldy atuou como __P.O.__ na __criação da EVM__.
+O arquiteto Bruno Dantas e o DevOps João Vítor atuaram como __desenvolvedores__ na __refatoração do repositório AdaBot__._
