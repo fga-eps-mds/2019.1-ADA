@@ -7,7 +7,8 @@
   - [Entrevista](/docs/product/interview_summary.md)
   - [Escopo](docs/product/scope.md)
   - [Estrátegia do Oceano Azul](/docs/product/blue_ocean_strategy.md)
-  - [Estrutura Analítica do Projeto](docs/product/eap.md)  
+  - [Estrutura Analítica do Projeto](docs/product/eap.md)
+  - [EVM](docs/product/agile_earned_value_management.md)  
   - [Identidade visual](docs/product/visual_identity.md)
   - [Personalidade da Ada](docs/product/bot_personality.md)
   - [Políticas](docs/policies/policies.md)
@@ -72,3 +73,4 @@
     - [**Sprint 13**](#)
         - [Planejamento Sprint 13](/docs/sprints/sprint13/planejamento_sprint13.md) 
         - [Resultado Sprint 13](/docs/sprints/sprint13/resultados_sprint13.md)
+
