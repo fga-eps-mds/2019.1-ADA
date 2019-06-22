@@ -56,9 +56,9 @@ Essa métrica demonstra o quão maior/menor é a entrega de pontos em relação 
 ## 3. Indicadores de Qualidade do Código
 
 ### 3.1 Code Climate
-É uma ferramenta de análise estática de qualidade do código onde ele é varrido para a procura por problemas de duplicação, _code smells_ e outros. A partir dos problemas encontrados, é dado uma nota para a __manutenibilidade__ que pode ser F, E, D, C, B, A, em que F é muito ruim e A muito boa.
+É uma ferramenta de análise estática de qualidade do código no qual ele é varrido para a procura por problemas de duplicação, _code smells_ e outros. A partir dos problemas encontrados, é dado uma nota para a __manutenibilidade__ que pode ser F, E, D, C, B, A, em que F é muito ruim e A muito boa.
 
-Além da manutenibilidade, é possível analisar através do Code Climate a __cobertura de testes__, porcentagem de linhas cobertas em comparação com o número total de linhas de código.
+Além da manutenibilidade, é possível analisar através do Code Climate a __cobertura de testes__, que é a porcentagem de linhas cobertas em comparação com o número total de linhas de código.
 
 ## 4. Referências
 
