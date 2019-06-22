@@ -103,3 +103,7 @@ A US30 não foi concluída pela complexidade e inexperiência do time de desenvo
 O time de desenvolvimento prosseguiu mais maduro em relação ao código nesta sprint e em colaboração coletiva.
 
 A métrica Work Capacity foi retirada, já que seu intuito era alinhar a equipe com o valor do _ponto_ na pontuação de histórias. Esse objetivo foi alcançado.
+
+_\* O DevOps João Vítor atuou também como desenvolvedor na issue __Criar webhook receiver no serviço de gitlab__.
+O P.O. Vítor Gomes atuou como desenvolvedor e arquiteto, corrigindo a modelagem do banco de dados na issue __Cadastrar e consultar informações no banco__.
+O arquiteto Bruno Dantas atuou como P.O na padronização de documentos com a __identidade visual__._

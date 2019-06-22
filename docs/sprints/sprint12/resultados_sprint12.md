@@ -12,7 +12,7 @@ Essa Sprint foi focada em melhorias de funcionalidades já implementadas e teste
 | [Melhoria no fluxo de conversa](https://github.com/fga-eps-mds/2019.1-ada/issues/265) | 5 | Concluída |
 | [Mockar testes do serviço do GitHub](https://github.com/fga-eps-mds/2019.1-ada/issues/266) | 8 | Concluída |
 | [Teste em Uso Sprint 12](https://github.com/fga-eps-mds/2019.1-ada/issues/267) | 5 | Concluída |
-| [Cadastrar Repositório de organizações no AdaGithub](https://github.com/fga-eps-mds/2019.1-ADA/issues/272) | 8 | Concluída |
+| [US41 - Eu, como usuário, desejo poder me cadastrar em repositórios de organizações do Github para poder utilizar todos os repositórios em que eu contribuo.](https://github.com/fga-eps-mds/2019.1-ADA/issues/272) | 8 | Concluída |
 
 __Pontos Planejados:__ 47
 
@@ -113,3 +113,5 @@ O _burndown da sprint_ continua caindo apenas na reta final da sprint, o que pod
 A cobertura de testes tanto nos repositórios [ADA GitHub](https://github.com/fga-eps-mds/2019.1-ADA-github) e [ADA GitLab](https://github.com/fga-eps-mds/2019.1-ADA-gitlab) estão 96% e 98% respectivamente, o que demostra a maturidade do time em relação à testes. 
 
 _\* Riscos relacionados à __atividades não entregues no prazo__, __dificuldades em testes__, __falta de comunicação da equipe__ e __perda/defeito em equipamentos__ foram diminuídos. Para melhoria da comunicação e relacionamento entre membros, foram feitos feedbacks e constante alinhamento entre os pareamentos._
+
+_\*\* O arquiteto Bruno Dantas atuou como desenvolvedor na issue __US39__ e __US41__._

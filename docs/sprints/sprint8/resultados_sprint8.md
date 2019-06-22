@@ -86,3 +86,5 @@ Ainda há problemas para a entrega de histórias de última hora, o que interfer
 Foi cobrado mais comunicação nas _dailies meetings_, com mais detalhamento sobre o que foi e o que será feito por cada membro do time, pois foi notado uma falta de alinhamento da equipe. 
 
 _\* Riscos relacionados ao __projeto não atender os requisitos__, __adaptação à tecnologias escolhidas__ e __histórias de usuário mal definidas__ foram diminuídos. Já o relacionado à __mudança de escopo aumentou__, já que a redução foi requerida pela professora Carla Rocha._  
+
+_\*\* O arquiteto Bruno Dantas atuou como __DevOps__ na issue __Criar cronjob para limpeza de imagens do rancher__._

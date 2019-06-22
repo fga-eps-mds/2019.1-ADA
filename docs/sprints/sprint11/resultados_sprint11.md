@@ -122,3 +122,6 @@ Nessa sprint, o time volta a completar todas as histórias planejadas juntamente
 Para entender alguns gargalos referentes ao entrosamento da equipe, o _Scrum Master_ juntamente com o time de EPS organizou uma conversa com cada um do time de desenvolvimento para coletar insumos sobre o que podemos melhorar. Isso resultou em _feedbacks_ para aprimorar a comunicação e organização do grupo como um todo.
 
 _\* Riscos relacionados à __mudança de escopo__, __atividades não entregues no prazo__, __dificuldades em testes__, __execução da arquitetura__ e __problemas nas tecnologias__ foram diminuídos. Apesar do time apresentar maturidade, foi notado falhas na comunicação ém alguns pareamentos e que foram tratadas na Sprint Review como um feedback para melhoria profissional_
+
+_\*\* O P.O. Vítor Gomes também atuou como __desenvolvedor__ na issue __Realizar Mock de testes do repositório Ada-gitlab__._
+_O arquiteto Bruno Dantas atuou como __desenvolvedor__ nas issues __Cronjob para verificar o deploy__ e __US35__._

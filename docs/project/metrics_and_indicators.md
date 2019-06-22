@@ -1,8 +1,9 @@
-# Plano de Medição
+# Métricas e Indicadores
 
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
 | 17/04/2019 | 1.0 | Criação da primeira versão do documento | Ateldy Brasil |
+| 19/06/2019 | 2.0 | Adição do indicador de qualidade do código | Ateldy Brasil |
 
 ## 1. Objetivo
 
@@ -52,6 +53,13 @@ Essa métrica demonstra o quão maior/menor é a entrega de pontos em relação 
 |baixo|	1|
 |nenhum|	0|
 
-## 3. Referências
+## 3. Indicadores de Qualidade do Código
+
+### 3.1 Code Climate
+É uma ferramenta de análise estática de qualidade do código no qual ele é varrido para a procura por problemas de duplicação, _code smells_ e outros. A partir dos problemas encontrados, é dado uma nota para a __manutenibilidade__ que pode ser F, E, D, C, B, A, em que F é muito ruim e A muito boa.
+
+Além da manutenibilidade, é possível analisar através do Code Climate a __cobertura de testes__, que é a porcentagem de linhas cobertas em comparação com o número total de linhas de código.
+
+## 4. Referências
 
 Downey, Scott, e Jeff Sutherland. **“Scrum Metrics for Hyperproductive Teams: How They Fly like Fighter Aircraft”**. In 2013 46th Hawaii International Conference on System Sciences, 4870–78. Wailea, HI, USA: IEEE, 2013. https://doi.org/10.1109/HICSS.2013.471.

@@ -78,3 +78,5 @@ A equipe de EPS elaborou um quadro de conhecimento com tecnologias consideradas 
 ## Avaliação do Scrum Master
 
 Devido à duração menor da sprint, má gestão de tempo pela equipe de EPS e dificuldades de implementação de parte do time de desenvolvimento, houveram _27 pontos de dívida_. Apesar disso, foi feito _teste em uso_ e agora é possível cria uma _issue_ através da _ADA_.
+
+_\* O Scrum Master Ateldy atuou como P.O na implementação de __teste em uso__._
