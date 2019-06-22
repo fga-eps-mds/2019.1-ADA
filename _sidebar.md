@@ -24,7 +24,7 @@
   - [Git flow](docs/project/gitflow.md)
   - [Plano de Comunicação](docs/project/communication_plan.md)
   - [Plano de Gerenciamento de Riscos](docs/project/risk_management_plan.md)
-  - [Plano de Medição](docs/project/measuring_plane.md)
+  - [Métricas e Indicadores](docs/project/metrics_and_indicators.md)
   - [Pipeline Rasa NLU](docs/project/machine_learning_pipeline.md)
 - [**Roadmaps**](#)
   - [Roadmap de Papéis](/docs/roadmaps/roles_roadmap.md)
@@ -69,3 +69,8 @@
     - [**Sprint 12**](#)
         - [Planejamento Sprint 12](/docs/sprints/sprint12/planejamento_sprint12.md)  
         - [Resultado Sprint 12](/docs/sprints/sprint12/resultados_sprint12.md)
+<<<<<<< HEAD
+=======
+    - [**Sprint 13**](#)
+        - [Planejamento Sprint 13](/docs/sprints/sprint13/planejamento_sprint13.md) 
+>>>>>>> gh-pages
