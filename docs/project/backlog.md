@@ -3,6 +3,7 @@
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | --- | --- | --- | --- |
 | 04/04/2019 | 1.0 | Construção do Backlog | Vítor Gomes |
+| 22/06/2019 | 2.0 | Atualização do Backlog | Vítor Gomes |
 
 Todos as features e histórias de usuário são apresentados em sua ordem de priorização.
 
@@ -61,6 +62,23 @@ Todos as features e histórias de usuário são apresentados em sua ordem de pri
 | E3 | F8 | US28 | Eu, como usuário, desejo receber um relatório sobre um número de informações do repositório no GitHub para analisar meu repositório mais detalhadamente. | 20 |
 | E3 | F8 | US29 | Eu, como usuário, desejo agendar o recebimento de relatórios do GitHub para organizar a análise detalhada do repositório. | 13 |
 
+## 3.1 Histórias que surgiram durante o projeto
+
+| **Épico** | **Feature** | **História de Usuário** | **Descrição** | **Pontos** |
+| --- | --- | --- | --- | --- |
+| E3 | F9 | US30 | Eu, como usuário, desejo receber o relatório informativo de um repositório específico do GitLab. | 21 |
+| E2 | F6 | US34 | Eu, como usuário, desejo que a Ada me informe os colaboradores do projeto para auxiliar no gerenciamento de atividades. | 3 |
+| E1 | F1 | US35 | Eu, como usuário, desejo que a Ada cadastre a minha url do deploy do meu projeto. | 3 |
+| E2 | F6 | US36 | Eu, como usuário, desejo que a Ada me informe quando uma issue for criada. | 1 |
+| E2 | F7 | US37 | Eu, como usuário, desejo que a Ada me informe quando um pull request receber uma solicitação de revisão para que eu tenha conhecimento do andamento do projeto. | 1 |
+| E2 | F6 | US38 | Eu, como usuário, desejo que a Ada me informe quando um pull request for aberto para que eu tenha conhecimento do andamento do projeto. | 1 |
+| E1 | F1 | US39 | Eu, como usuário, desejo poder recadastrar meu repositório do Github para o utilizar a Ada em outro repositório. | 8 |
+| E1 | F1 | US40 | Eu, como usuário, desejo poder recadastrar meu repositório do GitLab para o utilizar a Ada em outro repositório. | 8 |
+| E1 | F1 | US41 | Eu, como usuário, desejo poder me cadastrar em repositórios de organizações do Github para poder utilizar todos os repositórios em que eu contribuo. | 8 |
+
 > As seguintes histórias foram retiradas do escopo do produto no contexto do projeto:
 > - E2F7US21 Eu, como usuário, desejo que a Ada me informe os pull requests abertos para que eu saiba quais mudanças estão esperando por revisão. (13 pontos)
 > - E2F3US22 Eu, como usuário, desejo que a Ada me informe acerca da última release do repositório cadastrado para inteirar-me das últimas atualizações do projeto. (8 pontos)
+> - E3F9US31 Eu, como usuário, desejo que a Ada agende um relatório sobre o GitLab para recebê-lo em uma data específica.
+> - E3F8US32 Eu, como usuário, desejo que a Ada exporte o relatório do GitHub para o Google Sheets para que eu posso analisá-los mais facilmente.
+> - E3F9US33 Eu, como usuário, desejo que a Ada exporte o relatório do GitLab para o Google Sheets para que eu posso analisá-los mais facilmente.
