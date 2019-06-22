@@ -25,6 +25,7 @@
   - [Plano de Gerenciamento de Riscos](docs/project/risk_management_plan.md)
   - [Métricas e Indicadores](docs/project/metrics_and_indicators.md)
   - [Pipeline Rasa NLU](docs/project/machine_learning_pipeline.md)
+  - [Post Mortem](docs/project/postmortem.md)
 - [**Roadmaps**](#)
   - [Roadmap de Papéis](/docs/roadmaps/roles_roadmap.md)
   - [Roadmap do Produto](/docs/roadmaps/product_roadmap.md)
@@ -70,3 +71,4 @@
         - [Resultado Sprint 12](/docs/sprints/sprint12/resultados_sprint12.md)
     - [**Sprint 13**](#)
         - [Planejamento Sprint 13](/docs/sprints/sprint13/planejamento_sprint13.md) 
+        - [Resultado Sprint 13](/docs/sprints/sprint13/resultados_sprint13.md)
