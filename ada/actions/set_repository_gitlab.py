@@ -6,7 +6,6 @@ import os
 from urllib3.exceptions import NewConnectionError
 from requests.exceptions import HTTPError
 import telegram
-import sys
 
 GITLAB_SERVICE_URL = os.environ.get("GITLAB_SERVICE_URL", "")
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
@@ -71,7 +70,6 @@ class SetRepositoryGitLab(Action):
         project_json = response.json()
         project_name = project_json["project_fullname"]
         return project_name
-
 
     def save_repo_to_db(self, headers, project_id, project_fullname,
                         sender_id):
