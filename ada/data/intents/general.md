@@ -282,3 +282,25 @@
  - pipeline é o que?
  - o que significa pipeline?
  - qual o significado de: pipeline?
+
+## intent:how_to_comment_issue
+  - Ada, como comento uma issue?
+  - Como criar um comentário de issue?
+  - como comentar uma issue?
+  - como faço para comentar uma issue?
+  - Ada, como crio um comentário em uma issue?
+  - Não estou conseguindo comentar uma issue
+  - me ensina a comentar uma issue
+  - me mostra como comento uma issue
+  - demonstra um comentário de issue
+
+## intent:how_to_create_issue
+  - Ada, como crio uma issue?
+  - Como criar uma issue?
+  - como criar uma nova issue?
+  - como faço para criar uma issue?
+  - Ada, como crio um uma nova issue?
+  - Não estou conseguindo criar uma issue
+  - me ensina a criar uma issue
+  - me mostra como criar uma issue
+  - demonstra uma criação de issue

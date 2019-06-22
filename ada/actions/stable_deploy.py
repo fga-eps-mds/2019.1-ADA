@@ -29,8 +29,8 @@ class StableDeploy(Action):
                 "Você quer que eu tente novamente agora ?")
         except ValueError:
             dispatcher.utter_message(
-                "Estou com problemas para me conectar, me manda "
-                "mais uma mensagem pra ver se dessa vez dá certo.")
+                "Estou com problemas para encontrar seus dados agora,"
+                "me mande novamente uma mensagem mais tarde.")
         except NewConnectionError:
             dispatcher.utter_message(
                 "Estou com problemas para me conectar, me manda "
@@ -41,3 +41,12 @@ class StableDeploy(Action):
             dispatcher.utter_message("🏆 Pronto! Seu projeto está sendo"
                                      "colocado na versão estável mais"
                                      "recente.")
+
+    def check_user(self, chat_id, headers):
+        url = GITLAB_SERVICE_URL + "user/infos/{chat_id}".\
+            format(chat_id=chat_id)
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        if data["username"] and data["repository"]:
+            return True
+        return False

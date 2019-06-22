@@ -1,10 +1,12 @@
 from rasa_core_sdk import Action
 import os
+import telegram
 
 GITLAB_SIGNUP_URL = os.environ.get("GITLAB_SIGNUP_URL", "")
 GITHUB_SIGNUP_URL = os.environ.get("GITHUB_SIGNUP_URL", "")
 CLIENT_ID_GITHUB = os.environ.get("CLIENT_ID_GITHUB", "")
 CLIENT_ID_GITLAB = os.environ.get("CLIENT_ID_GITLAB", "")
+ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "")
 
 
 class ActionStart(Action):
@@ -29,23 +31,29 @@ class ActionStart(Action):
                     "{url}&response_type=code&state={chat_id}".format(
                      url=gitlab_signup_url, chat_id=sender_id,
                      client_id=CLIENT_ID_GITLAB)
-
-            message_github = "Oláaaaa, sou a Ada! Sou responsável "\
+            message_github = "Olá, sou a Ada! Sou responsável "\
                              "por ajudar você no monitoramento de "\
                              "produção com seus repositórios. "\
                              "Caso queira saber mais, me peça ajuda. "\
                              "Agora, pra gente começar, caso você "\
                              "queira que eu monitore seu repositório "\
-                             "do GitHub, vou pedir para você "\
-                             "clicar nesse link aqui, {link_github}.".format(
-                              link_github=url)
+                             "do GitHub, clique [aqui]({url}) "\
+                             "para cadastrá-lo.".format(url=url)
+            bot = telegram.Bot(token=ACCESS_TOKEN)
+            bot.send_message(chat_id=sender_id,
+                             text=message_github, parse_mode=telegram.
+                             ParseMode.MARKDOWN,
+                             disable_web_page_preview=True)
 
             message_gitlab = "Caso você queira que eu monitore seu repositó"\
-                             "rio do GitLab, clica nesse link aqui,"\
-                             "{link_gitlab}".format(link_gitlab=url_2)
+                             "rio do GitLab, clique [aqui]({url}) para "\
+                             "cadastrá-lo.".format(
+                              url=url_2)
 
-            dispatcher.utter_message(message_github)
-            dispatcher.utter_message(message_gitlab)
+            bot.send_message(chat_id=sender_id,
+                             text=message_gitlab,
+                             parse_mode=telegram.ParseMode.MARKDOWN,
+                             disable_web_page_preview=True)
 
         except ValueError:
             dispatcher.utter_message("Não consegui me conectar, vamos tentar "

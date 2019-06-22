@@ -228,3 +228,10 @@
 ##path_change_repository
 * action_change_repository
     - action_change_repository
+## path how_to_create_issue
+* how_to_create_issue
+  - utter_how_to_create_issue
+
+## path how_to_comment_issue
+* how_to_comment_issue
+  - utter_how_to_comment_issue

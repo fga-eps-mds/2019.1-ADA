@@ -1,6 +1,17 @@
 ## intent:action_start
 - [/start](command)
 - [start](command)
+- quero me cadastrar
+- quero fazer o cadastro
+- me cadastra
+- como faço para cadastrar
+- faz o meu cadastro
+- ok, faz o meu cadastro
+- cadastra meu github
+- cadastra meu gitlab
+- quero cadastrar o github
+- quero cadastrar o gitlab
+- quero cadastrar
 
 ## intent:set_pipeline
 - me mostra o pipeline do repositorio por favor
@@ -204,14 +215,21 @@
 - Quais são as issues abertas do usuário [vitor](contributor_name)
 
 ## intent:find_project_collaborators
+- quem contribui com o projeto?
+- quem está colaborando
+- quem colabora com esse repositório?
+- quem são os contribuidores do repositório?
+- quem contribui no repositório?
+- quem ajuda no repositorio? 
 - quem são os colaboradores do meu projeto ?
+- quem são os colaboradores?
 - quem está colaborando pro meu projeto ?
 - com quem eu trabalho no projeto
 - me fala quem mais trabalha no mesmo projeto que eu
 - Ada, quem, além de mim, está no mesmo projeto que eu
 - com quem estou trabalhando ?
 - quem mais trabalha comigo no projeto ?
-- quem contribui pro meu projeto ?
+- quem contribui para o projeto ?
 - Quem está no mesmo projeto que eu ?
 - diz ai os colaboradores do meu projeto
 - sou só eu, ou tem mais gente trabalhando no meu projeto ?
@@ -221,6 +239,7 @@
 - me manda os colaboradores
 - manda os contribuidores
 - quem esta contribuindo para o projeto ?
+- quem colabora no projeto?
 - Quem são os colaboradores do projeto
 - quem sao os colaboradores do projeto
 
