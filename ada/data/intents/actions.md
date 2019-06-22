@@ -242,3 +242,101 @@
 - quem colabora no projeto?
 - Quem são os colaboradores do projeto
 - quem sao os colaboradores do projeto
+
+##intent:action_change_github_repository
+- Desejo alterar meu repositório do github
+- Quero mudar meu repositório do github
+- quero recadastrar meu repositório github
+- recadastra meu repositório do github
+- muda meu repositório do Github
+- quero me cadastrar em um novo repositório do github
+- Quero me cadastrar em um novo repositório do github
+- me cadastra em um novo repositório do github
+- Me cadastra em um novo repositório do github por favor
+- Poderia me cadastrar em um novo repositório no github?
+- me cadastra de novo no github
+- Me cadastra de novo no github
+- me recadastra no github
+- Me recadastra no github
+- Quero cadastrar de novo meu repositorio no github
+- quero cadastrar de novo meu repositório no github
+- Altera meu repositório no github
+- altera meu repositório no github
+- Quero alterar meu repositório no github
+- quero alterar meu repositório no github
+- troca meu repositorio no github
+- Troca meu repositorio no github
+- Quero trocar meu repositório no github
+- quero trocar meu repositório no github
+- Muda meu repositório no github
+- muda meu repositório no github
+- modifica meu repositório no github
+- Modifica meu repositório no github
+- Quero modificar meu repositório no github
+- quero modificar meu repositório no github
+
+
+##intent:action_change_gitlab_repository
+- Desejo alterar meu repositório do gitlab
+- Quero mudar meu repositório do gitlab
+- quero recadastrar meu repositório gitlab
+- recadastra meu repositório do gitlab
+- muda meu repositório do Gitlab
+- quero me cadastrar em um novo repositório do gitlab
+- Quero me cadastrar em um novo repositório do gitlab
+- me cadastra em um novo repositório do gitlab
+- Me cadastra em um novo repositório do gitlab por favor
+- Poderia me cadastrar em um novo repositório no gitlab?
+- me cadastra de novo no gitlab
+- Me cadastra de novo no gitlab
+- me recadastra no gitlab
+- Me recadastra no gitlab
+- Quero cadastrar de novo meu repositorio no gitlab
+- quero cadastrar de novo meu repositório no gitlab
+- Altera meu repositório no gitlab
+- altera meu repositório no gitlab
+- Quero alterar meu repositório no gitlab
+- quero alterar meu repositório no gitlab
+- troca meu repositorio no gitlab
+- Troca meu repositorio no gitlab
+- Quero trocar meu repositório no gitlab
+- quero trocar meu repositório no gitlab
+- Muda meu repositório no gitlab
+- muda meu repositório no gitlab
+- modifica meu repositório no gitlab
+- Modifica meu repositório no gitlab
+- Quero modificar meu repositório no gitlab
+- quero modificar meu repositório no gitlab
+
+
+##intent:action_change_repository
+- Desejo alterar meu repositório 
+- Quero mudar meu repositório 
+- Quero recadastrar meu repositório 
+- Recadastra meu repositório 
+- Muda meu repositório 
+- Quero me cadastrar em um novo repositório 
+- Quero me cadastrar em um novo repositório 
+- Me cadastra em um novo repositório 
+- Me cadastra em um novo repositório por favor
+- Poderia me cadastrar em um novo repositório ?
+- me cadastra de novo
+- Me cadastra de novo
+- me recadastra
+- Me recadastra
+- Quero cadastrar de novo meu repositorio
+- quero cadastrar de novo meu repositório
+- Altera meu repositório
+- altera meu repositório
+- Quero alterar meu repositório
+- quero alterar meu repositório
+- troca meu repositorio
+- Troca meu repositorio
+- Quero trocar meu repositório
+- quero trocar meu repositório
+- Muda meu repositório
+- muda meu repositório
+- modifica meu repositório
+- Modifica meu repositório
+- Quero modificar meu repositório
+- quero modificar meu repositório

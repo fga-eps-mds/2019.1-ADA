@@ -48,6 +48,9 @@ intents:
   - find_project_collaborators
   - stable_deploy
 
+  - action_change_gitlab_repository
+  - action_change_github_repository
+  - action_change_repository
 
 entities:
   - command
@@ -137,6 +140,10 @@ actions:
   - utter_stable_deploy_dont_try_again
   - utter_stable_deploy_happy
   - action_stable_deploy
+
+  - action_change_github_repository
+  - action_change_gitlab_repository
+  - action_change_repository
 
 templates:
   utter_default:
