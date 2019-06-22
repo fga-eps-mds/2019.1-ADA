@@ -68,17 +68,17 @@
 - Saber status da build em andamento
 
 ## intent:action_set_repository_gitlab
-- labrepo: [gitlab-runner](repository_gitlab)
-- labrepo: [quests](repository_gitlab)
-- labrepo: [abcde12345](repository_gitlab)
-- labrepo: [owner/repo](repository_gitlab)
-- labrepo: [adabot/ada](repository_gitlab)
-- labrepo: [adabot/ada-gitlab](repository_gitlab)
-- labrepo: [gitlab-org/gitlab-runner](repository_gitlab)
-- labrepo: [terrakok/gitlab-client](repository_gitlab)
-- labrepo: [gitlab-org/gitaly](repository_gitlab)
-- labrepo: [trabalho1](repository_gitlab)
-- labrepo: [2019.1-MDS](repository_gitlab)
+- labrepo: [71612161](repository_gitlab)
+- labrepo: [08721712](repository_gitlab)
+- labrepo: [12345213](repository_gitlab)
+- labrepo: [91281221](repository_gitlab)
+- labrepo: [17132529](repository_gitlab)
+- labrepo: [13337317](repository_gitlab)
+- labrepo: [37635333](repository_gitlab)
+- labrepo: [55555533](repository_gitlab)
+- labrepo: [01982763](repository_gitlab)
+- labrepo: [29187127](repository_gitlab)
+- labrepo: [01982776](repository_gitlab)
 
 ## intent:action_set_repository_github
 - hubrepo: [uri-online-judge](repository_github)
