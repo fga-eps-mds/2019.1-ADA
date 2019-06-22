@@ -79,4 +79,6 @@ A equipe de EPS elaborou um quadro de conhecimento com tecnologias consideradas 
 
 ## Avaliação do Scrum Master
 
-A sprint 6 foi feita durante a preparação e apresentação da sprint 6, portanto, foi planejada para ter uma duração maior, dez dias. Apesar disso, os esforços para preparar uma boa apresentação e corrigir falhas, o time acabou não dedicando tanto tempo para concluir as tarefas planejadas, o que ocasionou dívidas. A métrica Targeted Value Increase (TVI+) visto que já não auxilia tanto para análise do time.
+A sprint 6 foi feita durante a preparação e apresentação da Release 1, portanto, foi planejada para ter uma duração maior, dez dias. Apesar disso, os esforços para preparar uma boa apresentação e corrigir falhas, o time acabou não dedicando tanto tempo para concluir as tarefas planejadas, o que ocasionou dívidas. A métrica Targeted Value Increase (TVI+) visto que já não auxilia tanto para análise do time.
+
+_\* O arquiteto Bruno Dantas atuou como DevOps na issue __Criar repositório para serviço do github__._

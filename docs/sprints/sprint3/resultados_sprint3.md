@@ -91,3 +91,5 @@ A equipe de EPS elaborou um quadro de conhecimento com tecnologias consideradas 
 ## Avaliação do Scrum Master
 
 Nessa sprint houveram dificuldades para concluir a US10 e US26. As histórias exigiram um esforço a mais para serem executadas e não foram estregues a tempo, tornando-as dívidas técnicas para a sprint seguinte.
+
+_\* O arquiteto Bruno também atuou como P.O. ao definir a identidade visual do produto_
