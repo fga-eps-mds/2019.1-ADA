@@ -217,6 +217,17 @@
 * thanks
   - utter_find_project_collaborators_thanks
 
+##path_change_github_repository
+* action_change_github_repository
+    - action_change_github_repository
+
+##path_change_gitlab_repository
+* action_change_gitlab_repository
+    - action_change_gitlab_repository
+
+##path_change_repository
+* action_change_repository
+    - action_change_repository
 ## path how_to_create_issue
 * how_to_create_issue
   - utter_how_to_create_issue
