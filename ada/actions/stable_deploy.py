@@ -24,7 +24,7 @@ class StableDeploy(Action):
         except HTTPError:
             dispatcher.utter_message(
                 "Ai que pena... não consegui fazer o deploy da versão"
-                "estável mais recente do seu projeto 😔")
+                " estável mais recente do seu projeto 😔")
             dispatcher.utter_message(
                 "Você quer que eu tente novamente agora ?")
         except ValueError:

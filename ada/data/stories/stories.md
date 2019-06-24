@@ -11,6 +11,11 @@
 * get_url_domain
   - action_get_url_domain
 
+## path_register_gitlab_no_answer
+* action_set_repository_gitlab
+  - action_set_repository_gitlab
+  - utter_get_url_domain
+
 ## path_register_gitlab_deny
 * action_set_repository_gitlab
   - action_set_repository_gitlab
@@ -133,10 +138,6 @@
 * set_pipeline
   - action_set_pipeline
 
-## path_next_release
-* intended_for_next_release
-  - utter_intended_for_next_release
-
 ## path_whats_pipeline
 * whats_pipeline
   - utter_whats_pipeline
@@ -228,10 +229,15 @@
 ##path_change_repository
 * action_change_repository
     - action_change_repository
-## path how_to_create_issue
+
+## path_how_to_create_issue
 * how_to_create_issue
   - utter_how_to_create_issue
 
-## path how_to_comment_issue
+## path_how_to_comment_issue
 * how_to_comment_issue
   - utter_how_to_comment_issue
+
+## path_restart_pipeline
+* restart_pipeline
+  - utter_restart_pipeline

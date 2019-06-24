@@ -21,7 +21,6 @@ intents:
   - creators
   - affirm
   - deny
-  - intended_for_next_release
   - whats_pipeline
   - get_url_domain
   - contributor_issues
@@ -29,6 +28,7 @@ intents:
   - adas_architecture
   - how_to_create_issue
   - how_to_comment_issue
+  - restart_pipeline
 
   ##Actions
   - action_start
@@ -104,13 +104,13 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-  - utter_intended_for_next_release
   - utter_whats_pipeline
   - utter_get_url_domain
   - utter_ask_url_domain
   - utter_deny_msg_url_domain
   - utter_how_to_create_issue
   - utter_how_to_comment_issue
+  - utter_restart_pipeline
 
   - utter_start_report
   - action_get_report
@@ -169,6 +169,7 @@ templates:
       Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
           - Reiniciar o pipeline mais recente;
+          - Reiniciar pipelines que falharam a partir do botão enviado na notificação;
           - Relatório sobre seu projeto do GitLab;
           - Relatório sobre seu projeto do GitHub;
           - Criar issues;
@@ -380,10 +381,6 @@ templates:
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
 
-  utter_intended_for_next_release:
-  - text: |
-      Desculpe, ainda não consigo fazer isso, mas até o final de junho aprenderei isso e conseguirei te ajudar.
-
   utter_whats_pipeline:
   - text: |
       Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy.
@@ -525,3 +522,7 @@ templates:
       Para comentar uma issue é bem fácil !
 
       É só vc escrever "Comentar #X: 'Mensagem'" e substituir o X pelo número da issue e 'Mensagem' pelo comentário que vc quiser :)
+
+  utter_restart_pipeline:
+  - text: |
+      Eu posso reiniciar sua pipeline de duas formas diferentes, caso você queira que eu reinicie a última pipeline que deu certo, basta pedir algo como "reinicia a ultima pipeline que passou". No caso de pipelines que falharam, eu vou te notificar sobre essa falha e te mandar um botão e, caso queira que eu reinicie, basta clicar nele que eu faço. 😉
