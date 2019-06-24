@@ -25,8 +25,8 @@ class RerunPipeline(Action):
                 pipeline_id = splitted_message[-1]
                 try:
                     response = requests.get(GITLAB_SERVICE_URL +
-                                            "rerun_pipeline/{chat_id}/\
-                                            {pipeline_id}"
+                                            "rerun_pipeline/{chat_id}/"
+                                            "{pipeline_id}"
                                             .format(chat_id=chat_id,
                                                     pipeline_id=pipeline_id),
                                             timeout=SECS,
@@ -39,18 +39,18 @@ class RerunPipeline(Action):
                 else:
                     response.raise_for_status()
                     dispatcher.utter_message("Tudo certo, reiniciei sua"
-                                             "pipeline!")
+                                             " pipeline!")
             except HTTPError:
                 dispatcher.utter_message(
-                    "Ai que pena... não consegui reiniciar a pipeline que você\
-                    me pediu 😔")
+                    "Ai que pena... não consegui reiniciar a pipeline que você"
+                    " me pediu 😔")
                 dispatcher.utter_message(
-                    "Tenta clicar novamente ai nesse botão. Se não der certo, \
-                    sugiro entrar no GitLab e tenta reiniciar você mesmo...")
+                    "Tenta clicar novamente ai nesse botão. Se não der certo,"
+                    " sugiro entrar no GitLab e tenta reiniciar você mesmo...")
             except ValueError:
                 dispatcher.utter_message(
                  "Estou com problemas para encontrar seus dados agora,"
-                 "me mande novamente uma mensagem mais tarde.")
+                 " me mande novamente uma mensagem mais tarde.")
             except NewConnectionError:
                 dispatcher.utter_message(
                  "Estou com problemas para me conectar agora, me mande "
