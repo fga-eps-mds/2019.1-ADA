@@ -21,7 +21,6 @@ intents:
   - creators
   - affirm
   - deny
-  - intended_for_next_release
   - whats_pipeline
   - get_url_domain
   - contributor_issues
@@ -105,7 +104,6 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-  - utter_intended_for_next_release
   - utter_whats_pipeline
   - utter_get_url_domain
   - utter_ask_url_domain
@@ -381,10 +379,6 @@ templates:
       Fui criada pelos meus pais, né?
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
-
-  utter_intended_for_next_release:
-  - text: |
-      Desculpe, ainda não consigo fazer isso, mas até o final de junho aprenderei isso e conseguirei te ajudar.
 
   utter_whats_pipeline:
   - text: |

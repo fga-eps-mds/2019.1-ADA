@@ -133,10 +133,6 @@
 * set_pipeline
   - action_set_pipeline
 
-## path_next_release
-* intended_for_next_release
-  - utter_intended_for_next_release
-
 ## path_whats_pipeline
 * whats_pipeline
   - utter_whats_pipeline

@@ -265,15 +265,6 @@
 - Me fala de vc, Ada
 - me fala de vc ada
 
-## intent:intended_for_next_release
-- comentar pull request
-- pull request
-- commit
-- comenta a pull request pra mim
-- quero comentar pull request
-- quero ser notificado sobre commits
-- quero ser notificado
-
 ## intent:whats_pipeline
  - O que é pipeline?
  - Oq e pipeline?

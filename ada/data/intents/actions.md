@@ -21,8 +21,6 @@
 - qual o resultado do pipeline
 - pode me mostrar o resultado do pipeline
 - qual foi a  situação final do pipeline
-- o pipeline deu certo
-- pipeline por favor
 - tem alguma build em andamento
 - há alguma build
 - tem build em progresso
@@ -48,13 +46,10 @@
 - tem job em andamento?
 - qual a job atual
 - quantas builds eu tenho?
-- minhas builds
 - mostre a build
 - builds recentes
 - quais são as builds
 - diga-me as builds
-- as builds, me mostra ai
-- git build
 - quais as builds
 - me mostra a build mais recente
 - me mostra o resultado do pipeline
@@ -84,7 +79,6 @@
 - hubrepo: [uri-online-judge](repository_github)
 - hubrepo: [gitlab_user](repository_github)
 - hubrepo: [gitlab-runner](repository_github)
-- o nome do repositório do github é [adabot](repository_github)
 - hubrepo: [lucasfcm9](repository_github)
 - hubrepo: [caiovf13](repository_github)
 
@@ -123,6 +117,8 @@
 - titulo: [US26-Ada](issue_name)
 - titulo: [Eu como Usuário](issue_name)
 - título: [#135 ABC](issue_name)
+- título: [HOTFIX](issue_name)
+- Titulo: [Isso é um título](issue_name) 
 
 ## intent:create_issue
 - Descrição: [Quero criar um banco capaz de guardar informações](issue_body)
@@ -130,6 +126,14 @@
 - descrição: [Criterios de aceitação](issue_body)
 - Descrição: [Tasks 1, 2, 3, 4, 5](issue_body)
 - descricao: [1 salvar dados](issue_body)
+- descricao: [estou fazendo a descricao de um comentario de issue](issue_body)
+- descricao: [aqui estão alguns links uteis www.google.com.br](issue_body)
+- descricao: [pareamento responsável: esses 2](issue_body)
+- descricao: [isso é uma descrição](issue_body)
+- descricao: [o pull request está aberto aguardando aprovação dos revisores para que vá para a devel](issue_body)
+- Descrição: [tudo foi feito e está funcionando](issue_body)
+- Descrição: [o PO pediu para modificar algumas coisas](issue_body)
+- Descriçaõ: [é necessário fazer os testes](issue_body)
 
 ## intent:comment_issue
 - Comentar #[1](issue_number) : Quero criar um banco capaz de guardar informações
@@ -142,6 +146,8 @@
 - Comentar issue #[5](issue_number) : Após fazermos alguns testes com nomes de repositórios, descobrimos que a função send
 - Comentar  #[09231](issue_number): isso é um comentário
 - Comentar #[1923](issue_number): mensagem qualquer
+- Comentar #[3213](issue_number): estou comentando uma issue
+- Comentar #[2244](issue_number): pode abrir o Pull request
 
 ## intent:rerun_pipeline
 - rerunpipe 1
@@ -153,11 +159,13 @@
 
 ## intent:restart_pipeline
 - reinicia meu pipeline
-- reinciia a pipeline
+- reinicia a pipeline
 - reincia o pipeline
 - ada roda minha pipeline
 - tem como reiniciar minha pipeline?
-- você pode reinciiar minha pipeline?
+- você pode reiniciar minha pipeline?
+- como reinicio o pipeline?
+- reinicia meu pipeline
 
 ## intent:stable_deploy
 - Ada, quero que você encontre a versão estável mais recente do meu projeto e a reinicie
@@ -228,6 +236,13 @@
 - Quais são as issues de um determinado usuário[joao](contributor_name)
 - quais sao as issues de um determinado usuario[roberto](contributor_name)
 - Quais são as issues abertas do usuário [vitor](contributor_name)
+- quais as issues do @[abcdefg](contributor_name)
+- manda as issue do @[a1234](contributor_name)
+- mostra as issues da @[carla123](contributor_name)
+- quais são as issues abertas do usuário [abc](contributor_name)
+- quais são as issues abertas do [1x145afga](contributor_name)
+- as issues abertas do usuário @[134adff](contributor_name)
+- issues do usuário @[agsg134](contributor_name)
 
 ## intent:find_project_collaborators
 - quem contribui com o projeto?
@@ -339,6 +354,11 @@
 - Me cadastra de novo
 - me recadastra
 - Me recadastra
+- recadastra meu repositório
+- quero me recadastrar
+- tem como eu me recadastrar?
+- quero recadastrar meu repositório
+- recadastra meu projeto
 - Quero cadastrar de novo meu repositorio
 - quero cadastrar de novo meu repositório
 - Altera meu repositório
