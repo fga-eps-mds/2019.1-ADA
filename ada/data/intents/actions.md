@@ -136,14 +136,14 @@
 - Descriçaõ: [é necessário fazer os testes](issue_body)
 
 ## intent:comment_issue
-- Comentar #[1](issue_number) : Quero criar um banco capaz de guardar informações
-- comentar #[3](issue_number) : Nessa historia foi realiza as seguintes funcionalidades
-- Comentar #[23](issue_number) : Criterios de aceitação
-- Comentar #[456](issue_number) : teste teste teste
-- Comentar #[7891](issue_number) : Tasks 1, 2, 3, 4, 5
-- Comentar #[12345](issue_number) : 1 salvar dados 
-- Comentar issue #[12345](issue_number) : 1 salvar dados
-- Comentar issue #[5](issue_number) : Após fazermos alguns testes com nomes de repositórios, descobrimos que a função send
+- Comentar #[1](issue_number): Quero criar um banco capaz de guardar informações
+- comentar #[3](issue_number): Nessa historia foi realiza as seguintes funcionalidades
+- Comentar #[23](issue_number): Criterios de aceitação
+- Comentar #[456](issue_number): teste teste teste
+- Comentar #[7891](issue_number): Tasks 1, 2, 3, 4, 5
+- Comentar #[12345](issue_number): 1 salvar dados 
+- Comentar issue #[12345](issue_number): 1 salvar dados
+- Comentar issue #[5](issue_number): Após fazermos alguns testes com nomes de repositórios, descobrimos que a função send
 - Comentar  #[09231](issue_number): isso é um comentário
 - Comentar #[1923](issue_number): mensagem qualquer
 - Comentar #[3213](issue_number): estou comentando uma issue
@@ -183,6 +183,7 @@
 - põe a pipeline mais recente em deploy por favor ?
 - reinicia a última pipeline estavel
 - reinicia a última pipeline que passou
+- Reiniciar o pipeline mais recente
 
 ## intent:action_get_report_github
 - me manda o relatório do github, ada

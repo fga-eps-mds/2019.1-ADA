@@ -37,14 +37,14 @@ class ActionSetPipeline(Action):
                         "Vou procurar o resultado do seu pipeline aqui,"
                         " já volto.")
                     if job_build[0]["pipeline_status"] == "success":
-                        status = "passou nos critérios de aceitação"
+                        status = "passou nos critérios de aceitação."
                     elif job_build[0]["pipeline_status"] == "failed":
-                        status = "não passou nos critérios de aceitação"
+                        status = "não passou nos critérios de aceitação."
                     else:
-                        status = "ainda está em andamento"
+                        status = "ainda está em andamento."
 
                     text_message_2 = "Encontrei seu pipeline mais " \
-                        "recente, e ele " + "{status}.".format(status=status)
+                        "recente, ele " + "{status}.".format(status=status)
 
                     dispatcher.utter_message(text_message_2)
 
@@ -67,7 +67,7 @@ class ActionSetPipeline(Action):
                     dispatcher.utter_message("A build #{job_id} "
                                              "da branch {branch}, "
                                              "commit {commit}"
-                                             "está no estágio de {stage}"
+                                             " está no estágio de {stage}."
                                              .format(job_id=job_build
                                                      [0]["job_id"],
                                                      branch=job_build
@@ -81,7 +81,7 @@ class ActionSetPipeline(Action):
 
                     dispatcher.utter_message("Para visualizar seu Pipeline "
                                              "no GitLab, acesse o link"
-                                             " {web_url}".format(
+                                             " {web_url}.".format(
                                                web_url=job_build[0]
                                                ["pipeline_url"]))
             except KeyError:

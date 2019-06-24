@@ -11,6 +11,11 @@
 * get_url_domain
   - action_get_url_domain
 
+## path_register_gitlab_no_answer
+* action_set_repository_gitlab
+  - action_set_repository_gitlab
+  - utter_get_url_domain
+
 ## path_register_gitlab_deny
 * action_set_repository_gitlab
   - action_set_repository_gitlab

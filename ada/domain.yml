@@ -169,6 +169,7 @@ templates:
       Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
           - Reiniciar o pipeline mais recente;
+          - Reiniciar pipelines que falharam a partir do botão enviado na notificação;
           - Relatório sobre seu projeto do GitLab;
           - Relatório sobre seu projeto do GitHub;
           - Criar issues;
