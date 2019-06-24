@@ -99,33 +99,54 @@ class Report(Action):
                          pipeline_name=(
                           pipeline["current_pipeline_name"]
                          )))
-
-                    dispatcher.utter_message(
-                        "Sobre o projeto como um todo:\n📌 "
-                        "Número total de pipelines: {total}\n"
-                        "☑️ {success} obtiveram sucesso\n"
-                        "❗️ {fail} falharam\nE {another}"
-                        " tiveram outro estado\n"
-                        "☑️ A porcentagem de sucesso foi: "
-                        "{perc_suc}%\n❗️ E a porcentagem "
-                        "de falhas "
-                        "foi: {perc_fail}%\n".format(
-                         total=(
-                          pipeline["number_of_pipelines"]),
-                         success=(
-                          pipeline["succeded_pipelines"]),
-                         fail=pipeline["failed_pipelines"],
-                         another=pipeline["another_status"],
-                         perc_suc=(
-                          pipeline["percent_succeded"]),
-                         perc_fail=(
-                          pipeline["percent_failed"])))
+                    if pipeline["another_status"] > 1:
+                        dispatcher.utter_message(
+                            "Sobre todos os pipelines do projeto\n📌 "
+                            "Número total de pipelines: {total}\n"
+                            "☑️ {success} obtiveram sucesso\n"
+                            "❗️ {fail} falharam\n🛠 E {another}"
+                            " tiveram outro estado\n"
+                            "☑️ A porcentagem de sucesso foi: "
+                            "{perc_suc}%\n❗️ E a porcentagem "
+                            "de falhas "
+                            "foi: {perc_fail}%\n".format(
+                             total=(
+                              pipeline["number_of_pipelines"]),
+                             success=(
+                              pipeline["succeded_pipelines"]),
+                             fail=pipeline["failed_pipelines"],
+                             another=pipeline["another_status"],
+                             perc_suc=(
+                              pipeline["percent_succeded"]),
+                             perc_fail=(
+                              pipeline["percent_failed"])))
+                    else:
+                        dispatcher.utter_message(
+                            "Sobre todos os pipelines do projeto:\n📌 "
+                            "Número total de pipelines: {total}\n"
+                            "☑️ {success} obtiveram sucesso\n"
+                            "❗️ {fail} falharam\n🛠 E {another}"
+                            " teve outra estado\n"
+                            "☑️ A porcentagem de sucesso foi: "
+                            "{perc_suc}%\n❗️ E a porcentagem "
+                            "de falhas "
+                            "foi: {perc_fail}%\n".format(
+                             total=(
+                              pipeline["number_of_pipelines"]),
+                             success=(
+                              pipeline["succeded_pipelines"]),
+                             fail=pipeline["failed_pipelines"],
+                             another=pipeline["another_status"],
+                             perc_suc=(
+                              pipeline["percent_succeded"]),
+                             perc_fail=(
+                              pipeline["percent_failed"])))
                     pipeline_50_last = pipeline["50_last"]
                     if pipeline_50_last["another_status"] > 1:
                         dispatcher.utter_message(
                             "Sobre os últimos 50 pipelines:\n"
                             "☑️ {success} obtiveram sucesso\n"
-                            "❗️ {fail} falharam\nE {another}"
+                            "❗️ {fail} falharam\n🛠 E {another}"
                             " tiveram outro estado\n"
                             "☑️ A porcentagem de sucesso foi: "
                             "{perc_suc}%\n❗️ E a porcentagem "
@@ -150,7 +171,7 @@ class Report(Action):
                         dispatcher.utter_message(
                             "Sobre os últimos 50 pipelines:\n"
                             "☑️ {success} obtiveram sucesso\n"
-                            "❗️ {fail} falharam\nE {another}"
+                            "❗️ {fail} falharam\n🛠 E {another}"
                             " teve outro estado\n"
                             "☑️ A porcentagem de sucesso foi: "
                             "{perc_suc}%\n❗️ E a porcentagem "

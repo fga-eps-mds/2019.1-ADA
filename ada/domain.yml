@@ -524,5 +524,4 @@ templates:
   - text: |
       Para comentar uma issue é bem fácil !
 
-      É só vc escrever "Comentar #X: 'Mensagem'" e substituir o X pelo número da issue e
-      'Mensagem' pelo comentário que vc quiser :)
+      É só vc escrever "Comentar #X: 'Mensagem'" e substituir o X pelo número da issue e 'Mensagem' pelo comentário que vc quiser :)

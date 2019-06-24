@@ -140,6 +140,8 @@
 - Comentar #[12345](issue_number) : 1 salvar dados 
 - Comentar issue #[12345](issue_number) : 1 salvar dados
 - Comentar issue #[5](issue_number) : Após fazermos alguns testes com nomes de repositórios, descobrimos que a função send
+- Comentar  #[09231](issue_number): isso é um comentário
+- Comentar #[1923](issue_number): mensagem qualquer
 
 ## intent:rerun_pipeline
 - quero reiniciar a pipeline
