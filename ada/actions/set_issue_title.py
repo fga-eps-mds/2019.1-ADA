@@ -20,8 +20,6 @@ class ActionIssueName(Action):
                 message = message.split(": ")
                 issue_name = message[1]
 
-                print("O titulo da Issue é: {issue_name}\n".format(
-                     issue_name=issue_name))
             except ValueError:
                 dispatcher.utter_message(
                  "Estou com problemas para encontrar seus dados agora,"
