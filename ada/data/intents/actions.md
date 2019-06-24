@@ -144,9 +144,20 @@
 - Comentar #[1923](issue_number): mensagem qualquer
 
 ## intent:rerun_pipeline
-- quero reiniciar a pipeline
-- Reiniciar pipelines;
-- reiniciar pipelines;
+- rerunpipe 1
+- rerunpipe 23
+- rerunpipe 456
+- rerunpipe 7589
+- rerunpipe 38218
+- rerunpipe 3291485
+
+## intent:restart_pipeline
+- reinicia meu pipeline
+- reinciia a pipeline
+- reincia o pipeline
+- ada roda minha pipeline
+- tem como reiniciar minha pipeline?
+- você pode reinciiar minha pipeline?
 
 ## intent:stable_deploy
 - Ada, quero que você encontre a versão estável mais recente do meu projeto e a reinicie
@@ -162,6 +173,8 @@
 - faz o deploy para mim ?
 - poe a pipeline mais recente que tenha sucesso para rodar de novo
 - põe a pipeline mais recente em deploy por favor ?
+- reinicia a última pipeline estavel
+- reinicia a última pipeline que passou
 
 ## intent:action_get_report_github
 - me manda o relatório do github, ada
