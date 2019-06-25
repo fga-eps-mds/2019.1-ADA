@@ -60,9 +60,12 @@ class FindProjectCollaborators(Action):
                 elif len_collaborators > 2:
                     dispatcher.utter_message("Existem vários colaboradores "
                                              "no seu projeto.")
-                    dispatcher.utter_message("Esses são os usuários deles:")
+                    text = "Olha, esses são os colaboradores do projeto:\n"
                     for item in project_collaborators["collaborators"]:
-                        dispatcher.utter_message(item)
+                        text += "▶️ {collaborators}\n".format(
+                                                       collaborators=item)
+                    dispatcher.utter_message(text)
+
                 else:
                     dispatcher.utter_message(
                      "Que pena...ninguém está contribuindo para o seu projeto"

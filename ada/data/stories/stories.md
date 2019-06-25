@@ -27,10 +27,6 @@
 * action_set_repository_github
   - action_set_repository_github
 
-## path_set_repository_github
-* action_set_repository_github
-  - action_set_repository_github
-
 ## path_create_issue
 * start_create_issue
   - utter_start_issue
@@ -181,12 +177,6 @@
 * action_get_report_github
   - utter_start_report
   - action_get_report_github
-
-## path_get_domain
-* action_get_domain
-  - utter_ask_url_domain
-* get_url_domain
-  - action_get_url_domain
   
 ## path_contributor_issues
 * action_get_issues_of_contributor
