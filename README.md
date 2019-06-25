@@ -6,7 +6,7 @@
 ## Sobre a Ada  
 
 <p align="justify"> &emsp;&emsp;
-  A Ada é um chatbot com objetivo de facilitar a transformação full-stack e a integração entre equipes multidisciplinares em organizações envolvidas com desenvolvimento de software. Esse objetivo é concretizado por meio  de dois aspectos principais: comunicação fácil e em linguagem natural e monitoramento completo do pipeline de produção de softwares. Além de monitorar o pipeline, a Ada também permite a realização de uma série de atividades relacionadas ao gerenciamento da produção nas plataformas entregues. A Ada, em sua versão básica, inclui suporte para um pipeline GitHub, GitLab CI e Amazon. Além disso, nessa versão a comunicação entre a Ada e o usuário ocorre através do Telegram. </p>
+  A Ada é um chatbot com objetivo de facilitar a transformação full-stack e a integração entre equipes multidisciplinares em organizações envolvidas com desenvolvimento de software. Esse objetivo é concretizado por meio  de dois aspectos principais: comunicação fácil e em linguagem natural e monitoramento completo do pipeline de produção de softwares. Além de monitorar o pipeline, a Ada também permite a realização de uma série de atividades relacionadas ao gerenciamento da produção nas plataformas entregues. A Ada, em sua versão básica, inclui suporte para um pipeline GitHub com GitLab CI. Além disso, nessa versão a comunicação entre a Ada e o usuário ocorre através do Telegram. </p>
 
 ## Contribuindo
 
