@@ -51,7 +51,7 @@
 
 O software ADA funciona com base na seguinte representação arquitetural:
 
-![arquitetura](../assets/img/project/architecture/Arquitetura_nova.png)
+![arquitetura](../assets/img/project/architecture/Arquitetura_final.png)
 
 Imagem 1 - Representação Arquitetural
 
@@ -59,9 +59,7 @@ Imagem 1 - Representação Arquitetural
 
 * Ada
 * ADA - Conexão com GitHub
-* ADA - Conexão com GitLab
-
-<p style="text-align:justify">&emsp;&emsp; Nota-se que a Conexão com a Amazon não é um microsserviço, pois é necessario apenas uma requisição para a API externa da Amazon, para pegar dados do deploy da aplicação do usuário.</p> 
+* ADA - Conexão com GitLab 
 
 <p style="text-align:justify">&emsp;&emsp; No centro do diagrama acima encontra-se a ADA. Ela é responsável por, via Rasa, interpretar diferentes mensagens e gerar respostas, as quais são passadas ao usuário via Telegram, assim estabelecendo uma comunicação ativa, rápida, simples e eficiente. O Rasa é dividido em duas partes de extrema importante o Rasa Nlu e o Rasa Core. O Rasa Nlu é responsável pelo processamento de linguagem natural, já o Rasa Core encarregado do machine learning, no qual é possível treinar as conversar do bot.</p> 
 
@@ -82,9 +80,8 @@ Encontra-se a escolha do pipeline do Nlu para o projeto:
 * API do Telegram;
 * API do Github;
 * API do Gitlab;
-* API da Amazon;
 
-<p style="text-align:justify">&emsp;&emsp; É importante ressaltar que os usuários que utilizarão a Ada deverão ter necessariamente as tecnologias que definimos previamente, Github, Gitlab e Amazon. Como plano básico, previsto no modelo de negócios.</p>
+<p style="text-align:justify">&emsp;&emsp; É importante ressaltar que os usuários que utilizarão a Ada deverão ter necessariamente as tecnologias que definimos previamente, Github e Gitlab. Como plano básico, previsto no modelo de negócios.</p>
 
 Para mais informação consulte o modelo de negócios:
 
@@ -95,11 +92,11 @@ Para mais informação consulte o modelo de negócios:
 
 #### 2.2.1 ADA
 
-A ADA é o serviço responsável pela comunicação entre o usuário e o chatbot, através do Rasa. Ele reconhece as intenções que usuário deseja, as trata e retorna com uma resposta adequada para o mesmo. É aqui o onde as "conversas" são treinadas pelo Rasa e para que possa compreender e responder o interessado de uma forma mais natural.
+<p style="text-align:justify">&emsp;&emsp;A ADA é o serviço responsável pela comunicação entre o usuário e o chatbot, através do Rasa. Ele reconhece as intenções que usuário deseja, as trata e retorna com uma resposta adequada para o mesmo. É aqui o onde as "conversas" são treinadas pelo Rasa e para que possa compreender e responder o interessado de uma forma mais natural. </p>
 
 #### 2.2.2 ADA - Conexão com GitHub
 
-O microsserviço da conexão com Github é responsável por monitorar e gerenciar issues, commits e pull requests que são informações a respeito do versionamento e gerenciamento do projeto do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Github através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é possivel também fazer agendamentos de relatórios usando o Cronjob, que é um script no qual está sempre rodando, ele executa tarefas de forma automatica em determinados intervalos, na ADA ele será responsável por enviar os relatórios agendados pelo usuário. Ainda é possível visualizar a modelagem feita no banco de dados desse microsserviço, logo abaixo.
+<p style="text-align:justify">&emsp;&emsp;O microsserviço da conexão com Github é responsável por monitorar e gerenciar issues, commits e pull requests que são informações a respeito do versionamento e gerenciamento do projeto do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Github através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é o bot consegui monitorar o seu dominio no qual está hospedado a aplicação do usuário (também é possivel fazer agendamentos de relatórios, que será uma futura funcionalidade) usando o Cronjob, que é um script no qual está sempre rodando, ele executa tarefas de forma automatica em determinados intervalos. Ainda é possível visualizar a modelagem feita no banco de dados desse microsserviço, logo abaixo. </p>
 
 ![arquitetura](../assets/img/project/architecture/data_modeling/ModelagemdeDados2.png)
 
@@ -107,9 +104,9 @@ Imagem 02 - Diagrama de modelagem do microsserviço do GitHub.
 
 #### 2.2.3 ADA - Conexão com GitLab
 
-O microsserviço Conexão com GitLab é responsável por monitorar e gerenciar pipelines, jobs e builds que são informações a respeito da integração contínua do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Gitlab através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é possivel também fazer agendamentos de relatórios usando o Cronjob, como visto anteriormente no tópico acima. Ainda é possível visualizar a modelagem feita no banco de dados desse microsserviço, logo abaixo.
+<p style="text-align:justify">&emsp;&emsp;O microsserviço Conexão com GitLab é responsável por monitorar e gerenciar pipelines, jobs e builds que são informações a respeito da integração contínua do repositório do usuário, além de gerar relatórios detalhados contendo mais informações. Para que isso acontece o serviço acessa a API externa do Gitlab através de requisições e guarda e trata os dados na API feita em MongoDB do próprio serviço, e retorna os dados para o usuário usando o Rasa como ponte. Além disso é possivel também fazer agendamentos de relatórios usando o Cronjob, como visto anteriormente no tópico acima. Ainda é possível visualizar a modelagem feita no banco de dados desse microsserviço, logo abaixo. </p>
 
-![arquitetura](../assets/img/project/architecture/data_modeling/ModelagemdeDados.jpg)
+![arquitetura](../assets/img/project/architecture/data_modeling/ModelagemdeDados.png)
 
 Imagem 03 - Diagrama de modelagem do microsserviço do Gitlab.
 
@@ -124,10 +121,6 @@ Imagem 03 - Diagrama de modelagem do microsserviço do Gitlab.
 <p style="text-align:justify">&emsp;&emsp;A integração contínua é uma prática de desenvolvimento de software de DevOps em que os desenvolvedores, com frequência, juntam suas alterações de código em um repositório central. Depois disso, criações e testes são executados.</p>
 
 <p style="text-align:justify">&emsp;&emsp;Com a ADA, desenvolvedores recebem feedback do resultado dos testes da Integração Contínua e, de acordo com esse resultados, podem tomar decisões e novamente utilizar a ADA para monitorá-las.</p>
-
-#### Amazon
-
-<p style="text-align:justify">&emsp;&emsp;Com o Deploy contínuo, as alterações de código são criadas, testadas e preparadas automaticamente para que a produção seja liberada. O deploy contínuo expande com base na integração contínua ao implantar todas as alterações de código em um ambiente de teste e/ou ambiente de produção, após o estágio de criação.</p>
 
 <p style="text-align:justify">&emsp;&emsp;Utilizando a ADA, pode-se configurar o deploy da sua aplicação e torná-lo automatizado, assim como receber informações de desempenho da atual versão do software em produção. </p>
 
