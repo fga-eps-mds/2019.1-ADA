@@ -24,7 +24,8 @@ class SetRepositoryGitHub(Action):
             repo_fullname = message_list[-1]
             project_owner = repo_fullname.split("/")[0]
             repo_name = repo_fullname.split("/")[-1]
-            self.save_repo_to_db(headers, message, repo_name, sender_id)
+            self.save_repo_to_db(headers, message, repo_name, sender_id,
+                                 project_owner)
             self.set_webhook(headers, project_owner,
                              repo_name, sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
@@ -58,8 +59,9 @@ class SetRepositoryGitHub(Action):
                             " do GitHub ou alterá-lo."
             dispatcher.utter_message(existent_user)
 
-    def save_repo_to_db(self, headers, message, repo_name, sender_id):
-        db_json = {"repository_name": repo_name, "chat_id": sender_id}
+    def save_repo_to_db(self, headers, message, repo_name, sender_id, owner):
+        db_json = {"repository_name": repo_name, "chat_id": sender_id,
+                   "owner": owner}
         db_url = GITHUB_SERVICE_URL + \
             "user/repo/{sender_id}".format(sender_id=sender_id)
         db_json = json.dumps(db_json)

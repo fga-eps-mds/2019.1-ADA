@@ -81,6 +81,12 @@
 - hubrepo: [gitlab-runner](repository_github)
 - hubrepo: [lucasfcm9](repository_github)
 - hubrepo: [caiovf13](repository_github)
+- hubrepo: [fga-eps-mds/2019.1-ADA](repository_github)
+- hubrepo: [fga-eps-mds/2019.1-ADA-github](repository_github)
+- hubrepo: [fga-eps-mds/mais-monitoria-1.2018](repository_github)
+- hubrepo: [joaovitor3/treinamento-flask-mongo](repository_github)
+- hubrepo: [eda1](repository_github)
+- hubrepo: [code_forces](repository_github)
 
 ## intent:action_get_report
 - me manda o relatório do projeto
