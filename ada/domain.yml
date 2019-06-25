@@ -21,10 +21,14 @@ intents:
   - creators
   - affirm
   - deny
-  - intended_for_next_release
   - whats_pipeline
   - get_url_domain
   - contributor_issues
+  - marry_or_date
+  - adas_architecture
+  - how_to_create_issue
+  - how_to_comment_issue
+  - restart_pipeline
 
   ##Actions
   - action_start
@@ -36,15 +40,17 @@ intents:
   - create_issue
   - start_comment_issue
   - comment_issue
-
   - issue_name
-  - marry_or_date
-  - adas_architecture
   - rerun_pipeline
   - action_get_report_github
   - action_get_domain
   - action_get_issues_of_contributor
   - find_project_collaborators
+  - stable_deploy
+
+  - action_change_gitlab_repository
+  - action_change_github_repository
+  - action_change_repository
 
 entities:
   - command
@@ -57,6 +63,7 @@ entities:
   - issue_body
   - url_name
   - issue_number
+  - contributor_name
 
 slots:
   repository_gitlab:
@@ -97,11 +104,13 @@ actions:
   - utter_good_morning
   - utter_sad
   - utter_creators
-  - utter_intended_for_next_release
   - utter_whats_pipeline
   - utter_get_url_domain
   - utter_ask_url_domain
   - utter_deny_msg_url_domain
+  - utter_how_to_create_issue
+  - utter_how_to_comment_issue
+  - utter_restart_pipeline
 
   - utter_start_report
   - action_get_report
@@ -127,6 +136,14 @@ actions:
   - utter_find_project_collaborators_sad
   - utter_find_project_collaborators_happy
   - utter_find_project_collaborators_thanks
+  - utter_stable_deploy
+  - utter_stable_deploy_dont_try_again
+  - utter_stable_deploy_happy
+  - action_stable_deploy
+
+  - action_change_github_repository
+  - action_change_gitlab_repository
+  - action_change_repository
 
 templates:
   utter_default:
@@ -151,28 +168,17 @@ templates:
 
       Além disso essa é uma lista do que você pode me pedir
           - Resultado dos pipelines;
-          - Andamendo das builds dos seus projetos do GitLab;
-          - Relatório sobre seu projeto do GitLab e do GitHub;
+          - Reiniciar o pipeline mais recente;
+          - Reiniciar pipelines que falharam a partir do botão enviado na notificação;
+          - Relatório sobre seu projeto do GitLab;
+          - Relatório sobre seu projeto do GitHub;
           - Criar issues;
-          - Comentar issues através das notificações;
+          - Comentar issue #número: o que você quer comentar;
           - Quem são os colaboradores do projeto;
-          - Quais são as issues de um determinado usuário;
-          - Comentar Pull Request's (Previsto para a R2);
+          - Quais são as issues abertas do usuário X;
+          - Saber status da build em andamento;
 
       Basta você me pedir.
-
-  - text: |
-      Eu vou te ajudar a gerenciar a pipeline da produção do seu serviço/software.
-
-      Você pode falar comigo sobre vários aspectos, tais como:
-        - Criar e comentar Issues (Previsto para a R2);
-        - Relatório sobre seu projeto do GitLab;
-        - Commit's (Previsto para a R2);
-        - Andamendo das builds dos seus projetos do GitLab;
-        - Comentar Pull Request's (Previsto para a R2);
-        - Resultado dos pipelines;
-
-      O que você precisar saber, é só me perguntar ❤️
 
   utter_begin:
   - text: |
@@ -375,10 +381,6 @@ templates:
 
       Brincadeira... Fui criada por um time de desenvolvimento incrível da FGA 🤩
 
-  utter_intended_for_next_release:
-  - text: |
-      Desculpe, ainda não consigo fazer isso, mas até o final de junho aprenderei isso e conseguirei te ajudar.
-
   utter_whats_pipeline:
   - text: |
       Bom, pipeline é uma sequência de atividades definidas pelos desenvolvedores para integrar novo código na cadeia de produção. Geralmente isso envolve atividades de teste, build e deploy.
@@ -436,18 +438,38 @@ templates:
       e a API da Amazon, onde eu consigo saber sobre o deploy contínuo do seu produto!
       Além do MongoDB, onde eu anoto alguns desses dados para eu poder consultar depois.
 
+  utter_stable_deploy:
+  - text: |
+      Beleza, já vou fazer isso
+
+      Aguarda um pouquinho :)
+
+  - text: |
+      Farei esse deploy agora! 💙
+
+      Espera um pouquinho que eu já volto...
+
+  utter_stable_deploy_dont_try_again:
+  - text: |
+      Ah tudo bem, então. Se quiser podemos tentar novamente mais tarde
+
+      Só me lembra de fazer isso :)
+
+  utter_stable_deploy_happy:
+  - text: |
+      Imagina ! Conte comigo sempre ❤️
 
   utter_get_url_domain:
-  - text: |
-        Ahh, você gostaria que eu ficasse de olho na sua aplicação(deploy/domínio)? Posso te informar caso ele saia do ar.
-
+    - text: |
+         Agora que você está cadastrado, você pode me mandar o link da sua aplicação para que, quando ela sair do ar, eu te avise. Você gostaria que eu ficasse de olho?
   utter_ask_url_domain:
   - text: |
-        Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
+      Me envia a url(domínio) da sua aplicação, não se esquece de colocar o link completo, como por exemplo "https://www.google.com/".
 
   utter_deny_msg_url_domain:
   - text: |
-        Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
+      Tudo bem, caso você mude de ideia, eu posso cadastrar sua url mais tarde.
+
   utter_find_project_collaborators:
   - text: |
       É pra já !
@@ -477,3 +499,30 @@ templates:
       De nada 💜
 
       Estou aqui para o que vc precisar.
+
+  utter_how_to_create_issue:
+  - text: |
+      Ah é bem tranquilo
+
+      Basta escrever algo como "quero criar uma issue", que eu te guiarei.
+
+  - text : |
+      Vc pode me pedir para criar uma issue para você...como :
+
+      "Cria uma nova issue"
+
+      Ai eu vou te guiar no processo :)
+
+  utter_how_to_comment_issue:
+  - text: |
+      Vou te ensinar. Basta digitar "Comentar #X: 'Mensagem'", lembre-se de substituir o X pelo número da issue
+      e de colocar o comentário na parte da 'Mensagem'.
+
+  - text: |
+      Para comentar uma issue é bem fácil !
+
+      É só vc escrever "Comentar #X: 'Mensagem'" e substituir o X pelo número da issue e 'Mensagem' pelo comentário que vc quiser :)
+
+  utter_restart_pipeline:
+  - text: |
+      Eu posso reiniciar sua pipeline de duas formas diferentes, caso você queira que eu reinicie a última pipeline que deu certo, basta pedir algo como "reinicia a ultima pipeline que passou". No caso de pipelines que falharam, eu vou te notificar sobre essa falha e te mandar um botão e, caso queira que eu reinicie, basta clicar nele que eu faço. 😉

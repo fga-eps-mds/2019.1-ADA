@@ -11,6 +11,11 @@
 * get_url_domain
   - action_get_url_domain
 
+## path_register_gitlab_no_answer
+* action_set_repository_gitlab
+  - action_set_repository_gitlab
+  - utter_get_url_domain
+
 ## path_register_gitlab_deny
 * action_set_repository_gitlab
   - action_set_repository_gitlab
@@ -19,10 +24,6 @@
   - utter_deny_msg_url_domain 
 
 ## path_register_github
-* action_set_repository_github
-  - action_set_repository_github
-
-## path_set_repository_github
 * action_set_repository_github
   - action_set_repository_github
 
@@ -133,10 +134,6 @@
 * set_pipeline
   - action_set_pipeline
 
-## path_next_release
-* intended_for_next_release
-  - utter_intended_for_next_release
-
 ## path_whats_pipeline
 * whats_pipeline
   - utter_whats_pipeline
@@ -149,16 +146,37 @@
 * rerun_pipeline
   - action_rerun_pipeline
 
+## path_stable_deploy
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+
+## path_stable_deploy_dont_try_again
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* deny OR sad
+  - utter_stable_deploy_dont_try_again
+
+## path_stable_deploy_try_again
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* affirm OR begin
+  - utter_stable_deploy
+  - action_stable_deploy
+
+## path_stable_deploy_happy
+* stable_deploy
+  - utter_stable_deploy
+  - action_stable_deploy
+* thanks
+  - utter_stable_deploy_happy
+
 ## path_report_github
 * action_get_report_github
   - utter_start_report
   - action_get_report_github
-
-## path_get_domain
-* action_get_domain
-  - utter_ask_url_domain
-* get_url_domain
-  - action_get_url_domain
   
 ## path_contributor_issues
 * action_get_issues_of_contributor
@@ -189,3 +207,27 @@
   - action_find_project_collaborators
 * thanks
   - utter_find_project_collaborators_thanks
+
+##path_change_github_repository
+* action_change_github_repository
+    - action_change_github_repository
+
+##path_change_gitlab_repository
+* action_change_gitlab_repository
+    - action_change_gitlab_repository
+
+##path_change_repository
+* action_change_repository
+    - action_change_repository
+
+## path_how_to_create_issue
+* how_to_create_issue
+  - utter_how_to_create_issue
+
+## path_how_to_comment_issue
+* how_to_comment_issue
+  - utter_how_to_comment_issue
+
+## path_restart_pipeline
+* restart_pipeline
+  - utter_restart_pipeline

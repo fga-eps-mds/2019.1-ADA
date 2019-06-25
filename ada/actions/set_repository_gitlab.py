@@ -22,17 +22,23 @@ class SetRepositoryGitLab(Action):
             message = tracker.latest_message.get('text')
 
             headers = {"Content-Type": "application/json"}
-            message_list = message.split('/')
-            repo_name = message_list[-1]
+            message_list = message.split()
+            repo_id = message_list[-1]
             bot = telegram.Bot(token=ACCESS_TOKEN)
-            self.save_repo_to_db(headers, repo_name,
-                                 message, sender_id)
+            project_name = self.get_project_name(headers, repo_id,
+                                                 sender_id)
+            self.save_repo_to_db(headers, repo_id, project_name,
+                                 sender_id)
             selected_repo = "Ok, vou ficar monitorando "\
-                            "o repositório {rep}.".format(
-                                rep=repo_name)
+                            "o repositório {rep}!".format(
+                                rep=project_name)
             bot.send_message(chat_id=sender_id,
                              text=selected_repo)
-            return [SlotSet('repository_gitlab', repo_name)]
+            info_message = "Caso queira saber o que eu faço, "\
+                           "me peça ajuda 😉"
+            bot.send_message(chat_id=sender_id,
+                             text=info_message)
+            return [SlotSet('repository_gitlab', repo_id)]
         except ValueError:
             dispatcher.utter_message("Estou tendo dificuldade pra encontrar "
                                      "os dados do repositório. "
@@ -55,26 +61,19 @@ class SetRepositoryGitLab(Action):
                 "Estou tendo alguns problemas, tenta me mandar essa "
                 "mensagem de novo ou de uma forma diferente")
 
-    def get_project_id(self, headers, message, sender_id):
-        message_list = message.split('/')
-        project_owner = message_list[0]
-        project_owner = project_owner.split(' ')
-        project_owner = project_owner[-1]
-        project_name = message_list[-1]
-        get_user_repo = GITLAB_SERVICE_URL + \
-            "user/repo/{chat_id}/{project_owner}/"\
-            "{project_name}".format(
-                chat_id=sender_id,
-                project_owner=project_owner,
-                project_name=project_name)
-        project_response = requests.get(
-            url=get_user_repo, headers=headers)
-        project_id = project_response.json()
-        return project_id["project_id"]
+    def get_project_name(self, headers, project_id, sender_id):
+        url = GITLAB_SERVICE_URL + \
+              "user/project/{sender_id}/"\
+              "{project_id}".format(sender_id=sender_id,
+                                    project_id=project_id)
+        response = requests.get(url=url, headers=headers)
+        project_json = response.json()
+        project_name = project_json["project_fullname"]
+        return project_name
 
-    def save_repo_to_db(self, headers, project_name, message, sender_id):
-        project_id = self.get_project_id(headers, message, sender_id)
-        db_json = {"project_name": project_name, "chat_id": sender_id,
+    def save_repo_to_db(self, headers, project_id, project_fullname,
+                        sender_id):
+        db_json = {"project_name": project_fullname, "chat_id": sender_id,
                    "project_id": str(project_id)}
         db_url = GITLAB_SERVICE_URL + \
             "webhooks/repo"\

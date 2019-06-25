@@ -33,6 +33,9 @@
 - to entendendo nada
 - nao entendi o que vc faz
 - nao to te entendendo, Ada
+- o que eu faço agora?
+- não entendi
+- o que tenho que fazer?
 
 ## intent:begin
 - vamos
@@ -228,6 +231,7 @@
 - não adinha
 - não, por favor
 - de jeito nenhum
+- nao obrigado , deixa pra depois
 
 ## intent:thanks
 - Muito obrigado
@@ -261,15 +265,6 @@
 - Me fala de vc, Ada
 - me fala de vc ada
 
-## intent:intended_for_next_release
-- comentar pull request
-- pull request
-- commit
-- comenta a pull request pra mim
-- quero comentar pull request
-- quero ser notificado sobre commits
-- quero ser notificado
-
 ## intent:whats_pipeline
  - O que é pipeline?
  - Oq e pipeline?
@@ -278,3 +273,25 @@
  - pipeline é o que?
  - o que significa pipeline?
  - qual o significado de: pipeline?
+
+## intent:how_to_comment_issue
+  - Ada, como comento uma issue?
+  - Como criar um comentário de issue?
+  - como comentar uma issue?
+  - como faço para comentar uma issue?
+  - Ada, como crio um comentário em uma issue?
+  - Não estou conseguindo comentar uma issue
+  - me ensina a comentar uma issue
+  - me mostra como comento uma issue
+  - demonstra um comentário de issue
+
+## intent:how_to_create_issue
+  - Ada, como crio uma issue?
+  - Como criar uma issue?
+  - como criar uma nova issue?
+  - como faço para criar uma issue?
+  - Ada, como crio um uma nova issue?
+  - Não estou conseguindo criar uma issue
+  - me ensina a criar uma issue
+  - me mostra como criar uma issue
+  - demonstra uma criação de issue

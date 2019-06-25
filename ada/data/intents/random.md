@@ -13,7 +13,6 @@
 - Ada, você acredita em alguma religião?
 - ada, você acredita em alguma religião?
 
-
 ## intent:who_am_i
 - como você é?
 - como vc é?
