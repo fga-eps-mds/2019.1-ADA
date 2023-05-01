@@ -1,4 +1,4 @@
-Flask==1.0.2
+Flask==2.3.2
 rasa-core==0.13.1
 rasa-nlu==0.14.1
 sklearn_crfsuite
